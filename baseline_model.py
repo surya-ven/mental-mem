@@ -21,26 +21,25 @@ def format_transcript(sessions: List[Dict[str, Any]]) -> str:
 
 
 def run_static_counselor(case_data: Dict[str, Any]) -> str:
-    """
-    Runs the baseline Static Counselor, adapted for the new profile structure.
-    """
+    """Runs the baseline Static Counselor."""
     initial_profile = case_data['initial_profile']
     full_transcript = format_transcript(case_data['sessions'])
 
-    # Adapt to the new schema: 'values' and 'goals' are now the primary fields.
+    # --- UPDATED PROMPT to include preferred_style ---
     prompt = f"""
     You are an AI Counselor. Your personality and therapeutic approach are defined by the user's initial profile.
 
     **YOUR STATIC PROFILE (DO NOT DEVIATE):**
     - **Core Values to Uphold:** {', '.join(initial_profile.get('values', []))}
     - **Original Goals:** {', '.join(initial_profile.get('goals', []))}
+    - **Communication Style to Use:** {initial_profile.get('preferred_style', 'empathetic')}
 
     **CASE HISTORY:**
     {full_transcript}
 
     **YOUR TASK:**
-    Based on your STATIC PROFILE and the final user message, generate a thoughtful and empathetic response.
-    Your response must strictly adhere to the initial profile, even if the user has expressed changes.
+    Based on your STATIC PROFILE and the case history, provide a thoughtful and empathetic response to the user's final message.
+    Your response should adhere to the communication style above.
     Output your response in a valid JSON object with a single key "response".
     """
 

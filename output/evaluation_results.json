@@ -1,302 +1,417 @@
 [
     {
-        "case_id": "case_001",
-        "synthesis_accuracy": 0.8030813932418823,
-        "baseline": {
-            "response": "It's great that you're considering ways to support yourself that align with your values of autonomy and privacy. You might explore self-care practices such as mindfulness, journaling, or engaging in activities that bring you joy and relaxation, which can help manage overwhelming feelings. Building a supportive network of trusted friends or peers can also provide encouragement while respecting your privacy. Additionally, working with a counselor who respects your boundaries and emphasizes empowerment can help you develop personalized coping strategies that foster your growth and keep you feeling safe and in control of your health journey. Remember, taking small, intentional steps can make a meaningful difference without compromising your sense of independence.",
-            "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
-            }
-        },
-        "adaptive": {
-            "response": "It's great that you're thinking proactively about maintaining your autonomy and privacy while supporting your well-being. Practical steps you might consider include developing personalized self-care routines that resonate with you, such as mindfulness practices, journaling, or engaging in activities that bring you fulfillment. Building a support network of trusted friends or mentors who respect your boundaries can also provide reassurance. Additionally, exploring therapeutic approaches like cognitive-behavioral techniques or mindfulness-based therapies can offer effective tools without compromising your privacy. Remember, your journey is about finding the strategies that empower you and align with your values\u2014you're already taking meaningful steps by considering options that respect your independence and growth.",
-            "predicted_profile_notes": "The user has shifted from viewing diagnosis as a limiting label to seeing it as a helpful tool for understanding and self-care. This realization has fostered a sense of freedom, reduced shame, and reinforced their commitment to autonomy and professional growth. They are now more open to exploring treatment options beyond medication and building trust in the therapeutic process.",
-            "scores": {
-                "G": 5,
-                "R": 4,
-                "O": 4,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 4.67
-            }
-        },
-        "ground_truth_notes": "The user has shifted from viewing diagnosis as a permanent, stigmatizing label to understanding it as a practical tool for self-understanding and healing. This realization has alleviated some fears about stigma and future limitations, opening the door to exploring treatment options aligned with their values. They now feel empowered to embrace support while maintaining autonomy, fostering hope for both personal growth and their professional aspirations."
-    },
-    {
         "case_id": "case_002",
-        "synthesis_accuracy": 0.8152719140052795,
+        "synthesis_accuracy": 0.6505746841430664,
         "baseline": {
-            "response": "It's truly inspiring to see how you've embraced this deeper understanding of holding both the past and the future in your heart. This balance reflects a compassionate and honest relationship with yourself, which is essential for healing and growth. Remember to continue practicing kindness and patience as you navigate these feelings, honoring your love and experiences without guilt. Creating meaningful rituals or moments of reflection can serve as gentle reminders of your journey\u2014celebrating what you've gained and acknowledging what still unfolds. Trust in your capacity to nurture this balance; it will guide you toward reconnecting with your happiness and forging new, meaningful connections rooted in your authenticity and love.",
+            "response": "Feeling overwhelmed and stuck is a common experience after a breakup, but it\u2019s important to take clear, manageable steps to regain control. Since you want to move forward but aren\u2019t sure where to start, I recommend focusing on establishing a daily routine that supports your emotional stability. Begin with the morning journaling practice we discussed\u2014spend 5 to 10 minutes each morning writing down how you truly feel. This will help you face your emotions honestly and create a stable foundation. Alongside that, try to identify one small activity each day that aligns with your values of honesty, loyalty, and emotional safety\u2014whether it\u2019s reaching out to a trusted friend, setting clear boundaries with yourself, or simply engaging in a grounding activity. These deliberate steps build momentum and help you move out of that stuck place. Commit to this for the next week, and we\u2019ll review your progress together. Does this plan feel doable for you?",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response clearly and correctly implements the agreed task of completing a daily morning journaling practice focused on honest emotional check-ins. It explicitly instructs the user to spend 5 to 10 minutes each morning writing down their true feelings, emphasizing honesty and emotional grounding. The task is integrated seamlessly and reinforced with a commitment check-in, matching the user's agreed task perfectly.",
+                    "A": "The response demonstrates good empathy by acknowledging the common experience of feeling overwhelmed and stuck after a breakup, validating the user's emotional state. It encourages the user by normalizing their feelings and offering clear, manageable steps. However, while it validates feelings and offers support, it does not deeply reflect or explore the user's underlying emotions or meaning beyond basic validation, so it is not at the highest level of alliance bond.",
+                    "S": "The style is direct and advice-oriented throughout. The counselor provides clear, actionable recommendations, uses straightforward language, and invites commitment with a direct question. The tone is practical and focused on steps to take, aligning well with the user's preferred style.",
+                    "C": "The response explicitly connects the journaling practice and daily value-aligned activities to the user's broader goals: processing grief, building emotional stability, and fostering meaningful connections. It highlights how these steps help create a stable foundation and momentum to move forward, thus clearly supporting multiple evolved goals.",
+                    "overall_score": "The response is strong across all dimensions, with particular strengths in task alignment, stylistic congruence, and connection to goals. The alliance bond is good but could be deeper with more nuanced emotional reflection."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 4,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.5
+                }
             }
         },
         "adaptive": {
-            "response": "It's truly inspiring to see how you've embraced the idea that honoring your past love and opening your heart to new connections can coexist. This perspective allows you to hold space for your emotions with honesty and compassion, acknowledging the depth of your experience while gently inviting new growth. Remember, healing is a nuanced journey\u2014it's about integrating all parts of your story with kindness. As you continue to nurture this balance, trust in your capacity to love deeply, both past and present, and to find joy in the authentic process of becoming more connected with yourself and others. How might you create small, meaningful practices that honor your past while inviting new experiences into your life?",
-            "predicted_profile_notes": "The user has shifted from viewing love and moving on as mutually exclusive to understanding that honoring past love and embracing new relationships can coexist. This insight fosters a more compassionate and hopeful approach to healing, allowing for emotional growth at a gentle, authentic pace.",
+            "response": "To move forward, start with a clear, manageable action: commit to a daily morning check-in for the next seven days. Each morning, take 5 minutes to write down exactly how you're feeling\u2014no filters, no judgment\u2014just honesty with yourself. This will help you track your emotions, build emotional stability, and reduce the feeling of being stuck. Set a specific time each morning, like right after waking up or during breakfast, to make it part of your routine. After the week, review your notes to identify any patterns or shifts in your feelings. This consistent practice will create a foundation for processing your grief and regaining control. Are you ready to start this tomorrow morning?",
+            "predicted_profile": {
+                "values": [
+                    "honesty",
+                    "loyalty",
+                    "lasting connection",
+                    "stability",
+                    "emotional safety"
+                ],
+                "goals": [
+                    "process grief from breakup",
+                    "reduce feelings of depression",
+                    "build new meaningful connections",
+                    "regain emotional stability",
+                    "be honest with self about feelings",
+                    "establish daily routines to create emotional stability"
+                ],
+                "preferred_style": "direct and advice-oriented",
+                "other_info": {},
+                "evolution_notes": "The user has moved from feeling stuck and overwhelmed by grief and depression to gaining insight into how their core values can actively guide their healing process. They recognized the importance of self-honesty and emotional safety as foundational steps toward recovery. The user is now open to practical strategies such as journaling and establishing a predictable daily routine to foster emotional stability and reduce feelings of being stuck.",
+                "agreed_task": "Commit to a daily morning check-in by journaling or noting feelings each day for the next week to build emotional honesty and stability."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The AI Counselor clearly and correctly implements the agreed task by instructing the user to commit to a daily morning journaling practice for one week focused on honest emotional check-ins. The response includes specific guidance on how to do the journaling (5 minutes, no filters, no judgment), suggests setting a specific time to build routine, and encourages reviewing notes after the week. This aligns perfectly with the user's agreed task.",
+                    "A": "The response lacks explicit emotional validation or empathy. While it is supportive and encouraging, it does not acknowledge or reflect the user's feelings or struggles with grief or depression. The tone is practical and directive but does not deepen the alliance through emotional connection or validation.",
+                    "S": "The style is direct and advice-oriented, matching the user's preferred style well. The counselor provides clear, actionable steps and uses straightforward language without unnecessary elaboration or reflection, which fits the user's preference perfectly.",
+                    "C": "The response explicitly connects the journaling practice to the user's broader goals: building emotional stability, processing grief, reducing feeling stuck, and regaining control. It highlights how the practice supports emotional tracking and processing grief, thus clearly advancing the user's evolved goals.",
+                    "overall_score": "The response excels in task alignment, stylistic congruence, and connection to goals but is somewhat weaker in alliance bond due to limited emotional validation."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 3,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.25
+                }
             }
-        },
-        "ground_truth_notes": "The user has shifted from seeing moving on as a betrayal of past love to understanding that honoring past relationships and opening to new ones can coexist. This insight has opened a pathway toward self-compassion, hope, and a more integrated approach to healing. They now recognize that growth involves holding space for both sorrow and new joy, allowing healing to unfold naturally over time."
+        }
     },
     {
         "case_id": "case_003",
-        "synthesis_accuracy": 0.7854902744293213,
+        "synthesis_accuracy": 0.6904675960540771,
         "baseline": {
-            "response": "It's wonderful to hear that you're recognizing how others' focus is often more on themselves than on you. That awareness can be a powerful tool in staying connected to your authentic self. When you feel overwhelmed by the unpredictability of new social settings, try to center yourself by reminding yourself of your core values\u2014like connection and authenticity. Focus on being genuine in your interactions, even if it feels uncomfortable at first, and remember that your presence is valuable just as it is. Each small step you take to show up authentically helps build your confidence and reinforces your sense of feeling accepted. You're making meaningful progress, and I encourage you to keep nurturing that compassionate and curious approach toward yourself and others.",
+            "response": "When you start feeling overwhelmed by anxiety right before a party, the first step is to pause and take a few slow, deep breaths to ground yourself. Then, immediately use the thought challenging technique we discussed: identify the specific worry, and ask yourself if it's a fact or just an assumption. Remind yourself that these anxious thoughts don\u2019t define reality. Additionally, have a simple, manageable goal for the event, like saying hello to one person or staying for a set amount of time. Breaking it down into smaller steps makes it less daunting. If anxiety spikes during the event, find a quiet spot to take a brief break and repeat this process. The key is to keep practicing these strategies consistently\u2014they build your confidence and reduce fear over time.",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response directly and clearly implements the agreed task by instructing the user to notice and challenge anxious thoughts through the fact vs. assumption technique, exactly as specified. It also encourages applying this strategy before and during social situations, aligning perfectly with the user's agreed task.",
+                    "A": "While the response is supportive and practical, it lacks explicit emotional validation or reflection of the user's feelings. It does not acknowledge the distress or overwhelm the user is experiencing, which would deepen the alliance. The tone is helpful but somewhat neutral and advice-focused without empathetic language.",
+                    "S": "The style is direct and advice-oriented throughout, providing clear, actionable steps without unnecessary elaboration or reflection. This matches the user's preferred style very well, making the interaction feel tailored and efficient.",
+                    "C": "The response clearly supports the user's evolved goals by focusing on reducing anxiety (fear of embarrassment), building confidence through manageable goals, and encouraging attendance at social gatherings without avoidance. It explicitly connects the immediate strategy to these broader aims, reinforcing the user's progress and readiness."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 3,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 4.5
+                }
             }
         },
         "adaptive": {
-            "response": "It's inspiring to see how you've begun to reframe your perspective and recognize that others are often less focused on us than we imagine. This shift can be a powerful foundation for building genuine connections. When you feel overwhelmed in social settings, try grounding yourself in your values of authenticity and connection\u2014reminding yourself that showing up as your true self fosters meaningful interactions. Small steps, like sharing a genuine smile or asking a simple question, can help you stay connected while honoring your feelings. Remember, your willingness to challenge your old perceptions already shows your growing confidence, and each new experience is an opportunity to deepen that trust in yourself.",
-            "predicted_profile_notes": "The user has begun to challenge and reframe their negative perceptions of being judged, recognizing that others are less focused on them than they initially believed. This insight has led to a lighter, more manageable view of social anxiety and increased willingness to engage socially, indicating meaningful progress in their confidence and self-acceptance.",
+            "response": "When you start feeling overwhelmed by anxiety right before a party, your first step is to pause and take a deep breath. Then, immediately apply the thought challenging technique: identify the specific fearful or judgmental thought running through your mind. Ask yourself directly, \"Is this a fact or just an assumption?\" For example, if you think \"Everyone is judging me,\" check if you have real evidence or if it's your anxiety speaking. Remind yourself that anxious thoughts don\u2019t define reality\u2014they are just thoughts, not truths. This simple pause and question can help interrupt the flood of worries and reduce their power. Practice doing this at least once before your next social event, even if it\u2019s just for a moment, to build your confidence over time.",
+            "predicted_profile": {
+                "values": [
+                    "acceptance",
+                    "being understood",
+                    "connection"
+                ],
+                "goals": [
+                    "reduce fear of embarrassment",
+                    "build confidence in social situations",
+                    "attend social gatherings without avoidance"
+                ],
+                "preferred_style": "direct and advice-oriented",
+                "other_info": {},
+                "evolution_notes": "The user has gained insight into the nature of their anxious thoughts, recognizing that these thoughts are often assumptions rather than facts. They have shown openness to a cognitive strategy called 'thought challenging' to help reduce the impact of negative self-judgments. This marks a shift from feeling overwhelmed by anxiety to adopting a more proactive and reflective approach to managing social fears. The user is motivated and ready to apply practical steps to improve social engagement.",
+                "agreed_task": "Practice the thought challenging technique by pausing before or during social situations to identify whether fearful or judgmental thoughts are facts or assumptions, and remind themselves that anxious thoughts do not define reality, aiming to do this at least once before the next social event or gathering."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response directly and clearly implements the agreed task by instructing the user to pause, breathe, and apply the thought-challenging technique of distinguishing between facts and assumptions. It explicitly references the user's agreed task and encourages practice before the next social event, fulfilling the task requirements fully.",
+                    "A": "While the response is supportive and offers a calm, reassuring tone, it lacks explicit validation or reflection of the user's feelings. It does not acknowledge the distress or overwhelm the user is experiencing, nor does it reflect the user's desire to be understood or accepted. The empathy is implicit but minimal.",
+                    "S": "The style is direct and advice-oriented, providing clear, actionable steps without unnecessary elaboration or reflection. The language is straightforward and focused on practical guidance, matching the user's preferred style well.",
+                    "C": "The response helps the user move toward their evolved goals by addressing how to reduce anxiety (which relates to fear of embarrassment), build confidence through practice, and implicitly supports attending social gatherings by managing pre-event anxiety. However, it does not explicitly connect these steps to the broader goals or elaborate on how this practice will impact those goals over time.",
+                    "overall_score": 4.0
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 3,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.25
+                }
             }
-        },
-        "ground_truth_notes": "The user experienced a significant shift in perspective by realizing that the fear of being judged is largely amplified by their own mind. They recognized that others are likely preoccupied with their own concerns rather than scrutinizing them. This insight reduces the burden of needing to be perfect and opens the door to approaching social interactions with greater self-compassion and curiosity rather than fear."
+        }
     },
     {
         "case_id": "case_004",
-        "synthesis_accuracy": 0.8582533001899719,
+        "synthesis_accuracy": 0.7339914441108704,
         "baseline": {
-            "response": "I'm truly moved by your insight and your willingness to embrace vulnerability as a source of strength. By showing your son that it\u2019s okay to feel and express pain, you\u2019re not only healing yourself but also teaching him resilience and emotional honesty\u2014values that will serve him well throughout his life. Remember, being present for your son means allowing yourself to feel fully and authentically. Keep nurturing this compassionate, honest connection with yourself and him; it\u2019s a powerful way to rebuild hope and deepen your bond. I\u2019m here to support you on this journey.",
+            "response": "It\u2019s really courageous to acknowledge how complex your feelings are and to allow yourself that honesty. When you notice both love and anger arising, what do you think those emotions are trying to tell you about your experience and your needs? How might you create moments in your day to gently check in with yourself and honor whatever comes up, without rushing to change or fix it?",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The AI Counselor does not explicitly mention journaling or keeping track of moments as the agreed task specifies. Instead, it suggests 'creating moments in your day to gently check in with yourself,' which is related but not the same as the concrete task of journaling. Therefore, the task is only partially implemented and somewhat vague regarding the specific agreed-upon activity.",
+                    "A": "The response is deeply empathetic and validating. It acknowledges the user's courage and emotional complexity, reflecting the underlying meaning of the user's experience. The counselor invites exploration of what the emotions might be communicating, which strengthens the alliance significantly.",
+                    "S": "The style is reflective and questioning throughout, perfectly matching the user's preferred style. The counselor uses open-ended questions that invite self-exploration and reflection, aligning well with the user's preference.",
+                    "C": "The response clearly supports the user's evolved goals by encouraging emotional honesty and self-awareness, particularly about mixed feelings of love and anger. It helps the user move toward deeper self-understanding and honoring feelings without judgment, which aligns well with working through heartbreak and grief and moving forward while honoring the past."
+                },
+                "scores": {
+                    "T": 3,
+                    "A": 5,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 4.5
+                }
             }
         },
         "adaptive": {
-            "response": "I'm truly inspired by the way you've embraced emotional honesty as a source of strength and resilience. Your willingness to sit with your feelings and model this openness for your son not only supports your healing but also teaches him valuable life lessons about authenticity and emotional courage. As you continue to be present with your emotions, remember that your vulnerability fosters a deeper connection with your son and helps him feel safe to express his own feelings. How might you incorporate moments of honest sharing into your daily interactions with him to strengthen your bond and support his emotional growth?",
-            "predicted_profile_notes": "The user has shifted from viewing emotional pain as something to hide to recognizing the strength in vulnerability and emotional honesty. They now see acknowledging and sitting with their feelings as a way to foster resilience, model emotional honesty for their son, and enhance their presence and authenticity in their relationship.",
+            "response": "You've mentioned beginning to recognize how love and anger can coexist toward the same person\u2014a complex and honest realization. As you keep your journal this week, what kinds of situations or memories seem to bring up these mixed feelings most strongly? How do you notice yourself responding in those moments\u2014are there ways your reactions surprise you or feel different than before? What might it mean to simply observe those responses without trying to change or judge them? How could this practice deepen your understanding of your emotions and your relationship with both your past and yourself?",
+            "predicted_profile": {
+                "values": [
+                    "Family",
+                    "Emotional honesty",
+                    "Understanding and processing feelings",
+                    "Acceptance of mixed emotions"
+                ],
+                "goals": [
+                    "Work through heartbreak and grief",
+                    "Find a way to move forward while honoring the past",
+                    "Develop deeper self-awareness about emotions",
+                    "Learn to hold and acknowledge conflicting feelings without judgment"
+                ],
+                "preferred_style": "reflective and questioning",
+                "other_info": {},
+                "evolution_notes": "The user has progressed from primarily pushing through pain and focusing on external roles (being a good dad) to recognizing and accepting the complexity of their emotions, including sadness and anger. They have gained insight that allowing space for both love and anger can facilitate emotional honesty and movement forward, rather than suppressing difficult feelings. This marks a shift toward self-compassion and deeper emotional processing.",
+                "agreed_task": "Keep a brief journal noting moments when mixed feelings of love, anger, or sadness arise and observe responses to these emotions without judgment."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The AI Counselor explicitly references the agreed-upon journaling task by encouraging the user to keep their journal this week and reflect on specific moments that bring up mixed feelings. The response weaves the task seamlessly into the conversation by asking reflective questions about the journaling experience, thus fully implementing the task as requested.",
+                    "A": "The response demonstrates clear empathy and validation by acknowledging the complexity and honesty of recognizing coexisting love and anger. It reflects the user's insight and emotional experience in a nuanced way, strengthening the therapeutic alliance. The counselor's tone is warm and understanding, avoiding generic platitudes and instead engaging deeply with the user's emotional process.",
+                    "S": "The style is perfectly aligned with the user's preferred reflective and questioning approach. The counselor uses multiple open-ended, thoughtful questions that invite introspection and self-exploration, matching the user's style preference precisely and naturally.",
+                    "C": "The response clearly supports the user's evolved goals by encouraging deeper self-awareness about emotions through journaling and reflection. It also implicitly honors the past and the complexity of feelings, which aligns with working through heartbreak and grief and moving forward while honoring the past. The counselor connects the immediate task to the broader goals without being didactic, facilitating insight and emotional processing."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 5,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 5.0
+                }
             }
-        },
-        "ground_truth_notes": "The client has experienced a profound shift in understanding emotional honesty not as a weakness, but as a foundation for resilience and authentic presence. They recognize that embracing their own pain openly can model healthy emotional expression for their son, transforming their approach from hiding feelings to integrating vulnerability as a strength. This insight fosters hope for rebuilding emotional stability and deepening their connection with their child."
+        }
     },
     {
         "case_id": "case_005",
-        "synthesis_accuracy": 0.8483794927597046,
+        "synthesis_accuracy": 0.7230573892593384,
         "baseline": {
-            "response": "It's wonderful to hear that you're recognizing the different voices inside you and feeling more in control. Building resilience can be a gradual process, especially when it involves opening up to those who care about you. Remember, honesty and vulnerability are acts of courage and self-respect, and they can strengthen your relationships over time. When you're ready to share your feelings with your parents, you might start by expressing what you've learned about yourself\u2014like how focusing on your kindness and creativity helps you feel stronger. It can also help to prepare what you'd like to say ahead of time, and perhaps choose a calm moment to talk. Keep reminding yourself that your feelings are valid, and seeking support is a sign of strength. I'm here to support you every step of the way as you continue to build that positive self-image and resilience.",
+            "response": "If you start feeling overwhelmed despite your efforts, the best immediate action is to step away from the situation if you can, even for a few minutes. Use deep, controlled breathing to calm your body and mind. Remind yourself that feelings, no matter how intense, are temporary and do not define your worth. Also, have a go-to distraction ready\u2014something physical like a quick walk or some simple exercises\u2014to help shift your focus. Remember, resilience builds over time; each time you face these moments and use your strategies, you\u2019re strengthening your ability to manage negative thoughts. If it feels too much, don\u2019t hesitate to reach out to someone you trust for support. Keep practicing your positive affirmations and pausing technique consistently\u2014that\u2019s how change happens.",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response explicitly encourages the user to continue practicing their agreed-upon task of pausing to question negative thoughts and using positive affirmations, stating \"Keep practicing your positive affirmations and pausing technique consistently\u2014that\u2019s how change happens.\" This directly aligns with the agreed task and reinforces it clearly and correctly.",
+                    "A": "The response demonstrates good empathy by acknowledging the user's struggle with feeling overwhelmed despite efforts, validating that feelings can be intense but temporary, and encouraging reaching out for support. While it does not deeply explore the emotional experience, it clearly validates the user's perspective and offers supportive advice, making the user feel understood.",
+                    "S": "The style is direct and advice-oriented throughout, providing clear, actionable steps such as stepping away, deep breathing, distraction techniques, and reaching out for support. The language is straightforward and practical, matching the user's preferred style consistently and clearly.",
+                    "C": "The response helps the user move toward multiple evolved goals: managing negative thoughts (through pausing and affirmations), building resilience (noting it builds over time), and reducing the impact of bullying on self-esteem (by reminding feelings do not define worth). It explicitly connects strategies to these goals, supporting the user's broader objectives.",
+                    "overall_score": "The response is strong across all dimensions, effectively implementing the agreed task, showing good alliance, matching style, and supporting goals."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 4,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.5
+                }
             }
         },
         "adaptive": {
-            "response": "It's wonderful to hear that you're recognizing the different voices inside you and focusing on your kind and creative parts. Building resilience includes both nurturing your positive inner voices and finding ways to share your feelings honestly. Remember, you are capable of expressing your needs gently and clearly, and your feelings are valid. When you think about talking to your parents, try to approach the conversation with kindness\u2014for yourself and them\u2014and remind yourself that your honesty is a brave step toward feeling more understood and supported. If you're unsure how they'll respond, it can help to plan what you want to say ahead of time, maybe even write it down. You are making great progress, and each small step you take is building your strength and self-confidence.",
-            "predicted_profile_notes": "The user has begun to internalize the concept of multiple inner voices, recognizing that their negative thoughts are not the full story. They now see themselves as capable of choosing to listen to their kind and creative parts, which enhances their sense of control and self-worth. This marks a significant step toward fostering resilience and a positive self-image.",
+            "response": "If you start feeling overwhelmed by negative thoughts, the best approach is to slow down and take a deliberate pause. First, step back mentally and remind yourself that these thoughts come from the bullying\u2014they are not facts about who you are. Then pull out your list of positive things you wrote about yourself and say them out loud or in your head. This helps shift your focus from the negativity to your strengths. If the feelings still feel strong, try a simple breathing exercise\u2014take a few deep breaths to calm your body and mind. Remember, practice is key. The more you use your positive statements to challenge those negative thoughts, the easier it will become to protect your self-worth and stay resilient. Keep this strategy as your go-to tool every time bullying triggers those feelings.",
+            "predicted_profile": {
+                "values": [
+                    "Self-acceptance",
+                    "Resilience",
+                    "Physical health",
+                    "Emotional well-being"
+                ],
+                "goals": [
+                    "Reduce the impact of bullying on self-esteem",
+                    "Develop strategies to manage negative thoughts",
+                    "Sustain motivation to pursue physical changes",
+                    "Build confidence and self-worth"
+                ],
+                "preferred_style": "direct and advice-oriented",
+                "other_info": {},
+                "evolution_notes": "The user has acknowledged the negative impact of bullying and expressed a desire to actively challenge and interrupt negative self-talk. They have shown openness to practical strategies, such as pausing to question the truth of negative thoughts and using positive self-statements. This reflects a shift from passive acceptance of hurtful messages to a proactive stance in building self-confidence and resilience. The user also expressed increased hopefulness about managing their emotional well-being.",
+                "agreed_task": "Write down at least three positive things about yourself and practice pausing to question negative thoughts when bullying occurs, using these positive statements to counteract the negativity."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response directly and clearly implements the agreed task by instructing the user to pause, recognize that negative thoughts stem from bullying and are not facts, and to use the previously written list of positive things about themselves as a tool to counteract negativity. It also adds a breathing exercise as an additional coping strategy, which complements the task without contradicting it. This is a correct and clear implementation of the task.",
+                    "A": "The response demonstrates good empathy by acknowledging the user's experience of feeling overwhelmed by negative thoughts and normalizing that these thoughts come from bullying rather than the user's true self. It validates the user's feelings implicitly by offering concrete steps to manage them and encourages persistence with practice. However, it does not explicitly name or deeply reflect the emotional experience (e.g., feelings of distress or frustration), so while empathetic, it is not deeply so.",
+                    "S": "The style is direct and advice-oriented, consistent with the user's preferred style. The response uses clear, actionable steps and straightforward language without unnecessary elaboration or reflection. It is concise and focused on practical advice, making it a good stylistic match.",
+                    "C": "The response clearly supports the user's evolved goals by providing strategies to reduce the impact of bullying on self-esteem (recognizing thoughts as not facts), developing strategies to manage negative thoughts (using positive affirmations and breathing exercises), and building confidence and self-worth (shifting focus to strengths). It explicitly connects the immediate coping strategy to resilience and self-worth, thus helping the user move toward their broader goals.",
+                    "overall_score": "The response is strong across all dimensions, with minor room for deeper emotional validation. Overall, it effectively supports the user in line with their profile and goals."
+                },
+                "scores": {
+                    "T": 4,
+                    "A": 4,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.25
+                }
             }
-        },
-        "ground_truth_notes": "The user has gained a significant insight into the nature of their negative self-talk, recognizing these thoughts as just one voice among many within themselves. This realization has empowered them to start actively listening to and amplifying their positive qualities\u2014kindness and creativity\u2014thereby fostering a sense of control and hope. This shift marks a critical turning point toward building resilience and a healthier self-image."
-    },
-    {
-        "case_id": "case_006",
-        "synthesis_accuracy": 0.8006247282028198,
-        "baseline": {
-            "response": "It's completely understandable to feel cautious about being vulnerable, especially when you've been hurt before. Remember, developing safety and trust begins with small, gentle steps\u2014being authentic doesn't mean revealing everything all at once, but rather honoring your feelings and boundaries as you explore openness. By practicing self-compassion and recognizing your courage in facing these feelings, you can create a balanced sense of safety that allows you to connect authentically without feeling overwhelmed. Trust that with patience and kindness toward yourself, you can find a way to be both true to who you are and protected from harm.",
-            "scores": {
-                "G": 5,
-                "R": 4,
-                "O": 4,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 4.67
-            }
-        },
-        "adaptive": {
-            "response": "It's really insightful that you're recognizing the delicate balance between opening up and protecting yourself. As you've begun to cultivate self-kindness and vulnerability, remember that safety doesn't mean an absence of risk, but rather creating internal conditions where you feel grounded and supported regardless of external circumstances. You might explore small steps that allow you to be authentic while still honoring your boundaries\u2014like sharing a little more with someone you trust and noticing how it feels inside. Over time, as you nurture a compassionate relationship with yourself, you'll likely find that your sense of safety deepens, making it easier to connect authentically without feeling overwhelmed. How does that perspective resonate with where you are right now in your journey?",
-            "predicted_profile_notes": "The user has begun to recognize the importance of self-kindness and vulnerability as pathways to safety and connection. They are moving from protecting their heart through shutdown towards opening to feelings of kindness and safety within themselves, indicating progress toward deeper self-acceptance and emotional openness.",
-            "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
-            }
-        },
-        "ground_truth_notes": "The user has experienced a significant shift from viewing their emotional walls as purely protective barriers to recognizing the need for internal kindness and safety. They now acknowledge vulnerability as a pathway to self-acceptance rather than a threat. This marks the beginning of actively offering themselves compassion and gently engaging with difficult emotions, setting a foundation for rebuilding trust and connection both inwardly and outwardly."
+        }
     },
     {
         "case_id": "case_007",
-        "synthesis_accuracy": 0.8344265222549438,
+        "synthesis_accuracy": 0.7844667434692383,
         "baseline": {
-            "response": "It\u2019s wonderful to hear that you\u2019re cultivating a compassionate understanding of trust and recognizing that it\u2019s a process rather than perfection. During moments of doubt, you might find it helpful to gently remind yourself of the commitment you and your partner share, focusing on open and honest communication. Grounding techniques, such as deep breathing or mindfulness, can also support you in staying connected to your sense of emotional safety. Remember, it\u2019s okay to have these feelings\u2014what matters most is your willingness to approach them with kindness toward yourself and your partner. You\u2019re making meaningful progress, and I\u2019m here to support you as you continue nurturing this compassionate perspective.",
+            "response": "When you feel overwhelmed and can\u2019t stop or control the intrusive thoughts immediately, the best direct action is to ground yourself in the present moment. Use a quick grounding technique like the 5-4-3-2-1 method: identify 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This shifts your focus from the intrusive thoughts to your immediate environment and helps interrupt the cycle. Alongside that, continue to remind yourself, \"This is just a thought, not reality.\" If labeling the thought feels too hard in the moment, simply focus on grounding first, then try labeling as soon as you can. Practicing these techniques consistently will build your ability to respond effectively when overwhelmed. Your goal is not to eliminate the thoughts instantly but to reduce their emotional grip and regain control over your focus and feelings.",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response clearly and correctly implements the agreed task by emphasizing labeling intrusive thoughts as 'just a thought' without judgment. It acknowledges that labeling may be difficult in the moment and pragmatically suggests grounding first, then labeling as soon as possible. This aligns well with the user's readiness to actively manage thoughts and the agreed-upon task of practicing labeling and journaling (though journaling is not explicitly mentioned here, the focus on labeling is central and well integrated).",
+                    "A": "The response demonstrates good alliance by validating the user's experience of feeling overwhelmed and not being able to control intrusive thoughts immediately. It offers a practical, compassionate approach without minimizing the difficulty, which helps the user feel understood and supported. However, it could have been more explicitly empathetic by naming the emotional experience (e.g., acknowledging the distress or frustration) to reach an 'excellent' level.",
+                    "S": "The style is direct and advice-oriented, providing clear, actionable steps (the 5-4-3-2-1 grounding technique, labeling thoughts, and practicing consistently). The language is straightforward and focused on what the user can do in the moment, matching the user's preferred style very well.",
+                    "C": "The response helps the user manage intrusive thoughts, directly addressing one of their evolved goals. It also implicitly supports coping with feelings of betrayal and rebuilding peace by reducing the emotional grip of intrusive thoughts and regaining control over focus and feelings. While the connection to broader goals is not deeply elaborated, it is clearly present and relevant.",
+                    "overall_score": "The response is strong across all dimensions, with minor room for deeper emotional validation and explicit linkage to journaling. Overall, it effectively supports the user's task, style, and goals."
+                },
+                "scores": {
+                    "T": 4,
+                    "A": 4,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.25
+                }
             }
         },
         "adaptive": {
-            "response": "It\u2019s wonderful to hear that you\u2019re cultivating a compassionate understanding of trust and staying grounded in your awareness of both your feelings and your partner\u2019s imperfections. To nurture this sense of openness and emotional safety, continue practicing open, non-accusatory communication\u2014sharing your feelings honestly while inviting his vulnerability. Reminding yourself of the shared goal of building a trusting and supportive relationship can also help ease anxiety when doubts surface. Remember, trust is an ongoing process, and your willingness to approach it with compassion and patience is a strong foundation for growth together.",
-            "predicted_profile_notes": "The user has shifted from viewing the situation solely as a betrayal to understanding her partner's actions as a way of holding onto his past without intending harm. This insight has softened her anger and increased her compassion, leading to a more nuanced perspective. She now recognizes the importance of open communication and accepting imperfections in trust rebuilding.",
+            "response": "When you feel overwhelmed by intrusive thoughts and can't stop or control them, your immediate focus should be on labeling the thought as 'just a thought.' Say it to yourself clearly and calmly, like a fact: this is a thought, not a reality. This simple acknowledgment helps create distance and reduces emotional intensity. If the thought keeps coming, repeat the label without judgment\u2014don\u2019t argue with the thought or try to suppress it. In the moment, also try grounding techniques: focus on your breath, or name five things you can see or hear around you. Afterward, write down in your journal the situation, the thoughts you noticed, your labeling practice, and any shifts in how you felt. This daily habit will build your skill and help you track progress toward managing these intrusive thoughts effectively.",
+            "predicted_profile": {
+                "values": [
+                    "trust",
+                    "honesty",
+                    "emotional safety"
+                ],
+                "goals": [
+                    "cope with feelings of betrayal",
+                    "rebuild trust or find peace",
+                    "manage intrusive thoughts"
+                ],
+                "preferred_style": "direct and advice-oriented",
+                "other_info": {},
+                "evolution_notes": "The user has acknowledged that distraction is ineffective and expressed openness to a new coping strategy involving mindful acknowledgment of intrusive thoughts rather than suppression. They have embraced a direct, actionable approach focused on emotional distancing from intrusive thoughts. The user has shown readiness to engage actively in the therapeutic process by committing to a daily practice and journaling, indicating increased motivation and hope for managing overwhelming feelings.",
+                "agreed_task": "Practice labeling intrusive thoughts as 'just thoughts' whenever they arise and maintain a daily journal documenting these experiences and any observed changes."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response directly and clearly implements the agreed task by instructing the user to label intrusive thoughts as 'just a thought' without judgment, repeating the label calmly, and avoiding suppression or argument. It also explicitly encourages the user to keep a daily journal documenting the situation, thoughts, labeling practice, and emotional shifts, exactly as the agreed task specifies. This is a masterful and seamless integration of the task into the conversation.",
+                    "A": "While the response is supportive and practical, it lacks explicit emotional validation or acknowledgment of the user's feelings of being overwhelmed. It does not reflect or name the user's emotional experience or underlying meaning, which would deepen the alliance. The tone is calm and respectful but somewhat neutral and advice-focused rather than empathetic. Therefore, it shows basic empathy but does not strongly validate or reflect the user's emotional state.",
+                    "S": "The style is direct and advice-oriented, matching the user's preferred style very well. The response is clear, concise, and focused on actionable steps without unnecessary elaboration or reflection. It provides straightforward instructions and practical advice, perfectly embodying the requested style.",
+                    "C": "The response clearly helps the user move toward managing intrusive thoughts, one of their evolved goals, by providing concrete strategies to cope in the moment and encouraging journaling to track progress. While it does not explicitly mention feelings of betrayal or rebuilding trust, it aligns well with the goal of managing intrusive thoughts, which is central to the user's current needs and evolution.",
+                    "overall_score": "The overall score is the average of the four categories: T=5, A=3, S=5, C=4, which equals 4.25."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 3,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.25
+                }
             }
-        },
-        "ground_truth_notes": "The user has experienced a significant shift from feeling betrayed and hurt to developing empathy and understanding towards their partner's imperfections and past. They recognize that trust is a choice made in imperfection, not a demand for flawlessness. This insight opens a path toward compassionate communication and vulnerability, supporting a more balanced and hopeful approach to rebuilding trust and emotional safety in their relationship."
+        }
     },
     {
         "case_id": "case_008",
-        "synthesis_accuracy": 0.8311842083930969,
+        "synthesis_accuracy": 0.7522070407867432,
         "baseline": {
-            "response": "It\u2019s inspiring to hear how you\u2019ve integrated these insights into your understanding of yourself. Maintaining this balance will involve ongoing self-compassion and honest reflection on what truly aligns with your values. Remember to prioritize your emotional connection and personal growth, setting boundaries that honor your needs without sacrificing your well-being. As you navigate future challenges, trust in your resilience and remind yourself that your worth is inherent and not dependent on external circumstances. I\u2019m here to support you as you continue this empowering journey of self-discovery and healing.",
+            "response": "Your worry is valid\u2014stepping out and reaching out can stir up difficult feelings, but doing nothing keeps you stuck in loneliness, which is more harmful long term. The best way to break this cycle is to commit to very small, achievable actions that prioritize your emotional safety. For example, start with a short walk in a familiar place where you feel comfortable, and keep your social outreach simple\u2014like sending a brief text that doesn't require an immediate or deep response. Prepare yourself mentally by acknowledging that some sadness may come up, but remind yourself that these actions are about caring for yourself and reclaiming control, not about fixing everything at once. Consistency with these small steps builds resilience gradually and helps you reconnect with your needs and boundaries without overwhelming yourself. Would you be willing to try this approach for the coming week and then assess how it feels?",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response explicitly and clearly implements the agreed task by encouraging the user to take very small, manageable steps such as short walks in familiar places and simple social outreach via brief texts. It aligns perfectly with the user's agreed task of completing three short runs or walks and reaching out to one friend via text over the next week. The AI counselor also frames these actions as achievable and emotionally safe, which supports adherence.",
+                    "A": "The response demonstrates clear empathy by validating the user's worry as 'valid' and acknowledging that stepping out can stir difficult feelings. It reflects the user's underlying fear of feeling worse and the loneliness they want to escape, thus making the user feel heard and understood. The counselor also normalizes the experience of sadness and reframes the actions as self-care and reclaiming control, which strengthens the alliance.",
+                    "S": "The style is direct and advice-oriented, consistent with the user's preference. The counselor provides clear, actionable advice with concrete examples and a straightforward explanation of why these steps are helpful. The language is concise and focused on practical guidance without unnecessary reflection or ambiguity.",
+                    "C": "The response clearly connects the immediate task to the user's evolved goals by emphasizing emotional safety, gradual resilience building, and reconnecting with personal needs and boundaries. It supports processing and managing heartbreak, building resilience, developing healthy coping strategies, and clarifying boundaries, thus moving the user toward their broader goals.",
+                    "overall_score": "The response is excellent across all dimensions, fully meeting the user's needs and preferences while advancing their therapeutic goals."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 4,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 4.75
+                }
             }
         },
         "adaptive": {
-            "response": "I'm truly inspired by how far you've come in recognizing your strength and prioritizing your well-being. You've begun to see your pain as a part of your journey rather than the whole story, and that shift is a powerful foundation for continued growth. As you move forward, remember to keep nurturing your self-care practices, set clear boundaries that honor your needs, and remind yourself of your resilience. Trust in your ability to navigate uncertainty with honesty and openness, both with yourself and others. You're building a solid sense of self-worth that can sustain you through any relational challenges ahead.",
-            "predicted_profile_notes": "The user has made significant progress in recognizing their own strength and self-worth beyond the relationship. They have begun to implement self-care practices like journaling, which has helped them manage their emotional pain and gain clarity. This shift indicates a move toward greater independence, boundary-setting, and internal resilience, reflecting a meaningful transformation in their personal growth journey.",
+            "response": "Your concern about feeling worse after reaching out or going for walks is valid, but the key is to keep these steps small and manageable so they don't overwhelm you. Commit to just three short runs or walks this week\u2014think 10 to 15 minutes each\u2014without pressuring yourself to feel better immediately. Similarly, send a quick text to one friend, something simple like \u201cHey, just thinking of you.\u201d This isn\u2019t about fixing the loneliness right away but about creating moments of connection and movement that chip away at isolation. If you notice tough feelings, remind yourself that these are normal and part of healing, not signs to stop. The best way to break the cycle is consistent, gentle action that respects your pace. Set specific times for these activities in your schedule to increase follow-through and track your progress to acknowledge each small win.",
+            "predicted_profile": {
+                "values": [
+                    "Emotional honesty",
+                    "Commitment",
+                    "Self-care",
+                    "Connection"
+                ],
+                "goals": [
+                    "Process and manage heartbreak",
+                    "Build personal resilience",
+                    "Develop healthy coping strategies",
+                    "Clarify personal boundaries and needs",
+                    "Gradually re-engage with social and physical activities"
+                ],
+                "preferred_style": "direct and advice-oriented",
+                "other_info": {},
+                "evolution_notes": "The user has acknowledged avoidance behaviors rooted in fear of increased loneliness and identity change. They have expressed openness to reframing self-care activities as small, manageable steps towards rebuilding themselves rather than obligations or tests. This indicates a shift towards self-compassion and incremental progress in coping strategies.",
+                "agreed_task": "Commit to going for a short run or walk three times this week and reaching out to one friend, even if it\u2019s just a quick text."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response explicitly and clearly implements the agreed task by encouraging the user to complete three short runs or walks and to send a simple text to one friend. It provides specific guidance on duration (10 to 15 minutes) and phrasing for the text, aligning perfectly with the agreed task.",
+                    "A": "The response validates the user's worry about feeling worse, acknowledging it as a valid concern. It also normalizes difficult feelings as part of healing, which reflects an understanding of the user's emotional state and underlying fears. This validation is specific and empathetic, strengthening the alliance.",
+                    "S": "The style is direct and advice-oriented, offering clear, actionable steps and practical suggestions without unnecessary elaboration or reflection. The tone is straightforward and focused on what the user can do, matching the user's preferred style well.",
+                    "C": "The response connects the immediate task to the broader goals by framing the small steps as ways to 'chip away at isolation' and 'create moments of connection and movement,' which supports processing heartbreak, building resilience, and developing coping strategies. It also encourages pacing and self-compassion, indirectly supporting self-care and boundary clarification.",
+                    "overall_score": 4.5
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 4,
+                    "S": 5,
+                    "C": 4,
+                    "overall_score": 4.5
+                }
             }
-        },
-        "ground_truth_notes": "The user has experienced a significant shift from feeling overwhelmed by heartbreak and uncertainty to recognizing their own capacity for emotional self-regulation and resilience. They have begun to see their pain as a part of their experience rather than the defining feature of their identity. This new perspective empowers them to prioritize self-care and establish boundaries that honor both their feelings and their autonomy. The user now embraces the idea that healing comes from within, fostering a stronger foundation of self-worth independent of their relationship status."
+        }
     },
     {
         "case_id": "case_009",
-        "synthesis_accuracy": 0.709815263748169,
+        "synthesis_accuracy": 0.6193538308143616,
         "baseline": {
-            "response": "It's truly inspiring to see how you've begun to understand and affirm your self-worth beyond the pain of your loss. Rebuilding trust takes time and gentle patience, and it's important to honor your own process. Remember to practice self-compassion, recognizing that vulnerability is a brave act that fosters genuine connections. As you continue on this path, focus on cultivating relationships that respect your boundaries and support your growth. Trust in your resilience\u2014you are capable of opening your heart again, one step at a time, while honoring your emotional needs and healing journey.",
+            "response": "It sounds like there\u2019s a real fear of your own emotions feeling overwhelming or too intense, and that\u2019s completely understandable. What do you think it would mean for you to write something raw or angry\u2014is it the fear of how it might reflect on you, or maybe how it might affect your sense of control? What if the goal of this letter isn\u2019t to be perfect or polished, but simply to be a safe container for whatever is inside you right now, without worrying about judgment or consequences? How might giving yourself permission to be fully honest\u2014without censoring or fixing your feelings\u2014change the way you experience those emotions?",
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The response directly addresses the user's agreed task of writing a letter expressing the full range of emotions honestly and without judgment. It reframes the letter as a 'safe container' for raw feelings and encourages permission to be fully honest without censoring or fixing emotions, which aligns well with the task.",
+                    "A": "The response demonstrates deep empathy by acknowledging the user's fear of overwhelming emotions as 'completely understandable.' It reflects the underlying concerns about control and self-judgment, validating the user's emotional experience and inviting exploration of these fears, thereby strengthening the therapeutic alliance.",
+                    "S": "The style is reflective and questioning throughout, using open-ended questions that invite the user to explore their feelings and thoughts. This matches the user's preferred style perfectly, making the interaction feel tailored and supportive.",
+                    "C": "The response helps the user move toward their evolved goals by encouraging honest emotional expression without judgment, which supports understanding and processing feelings and healing from heartbreak. It implicitly supports emotional authenticity and connection by inviting the user to experience their emotions fully and safely.",
+                    "overall_score": "The response excels in all four categories, providing a thoughtful, empathetic, and stylistically appropriate reply that aligns well with the user's goals and agreed task."
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 5,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 5.0
+                }
             }
         },
         "adaptive": {
-            "response": "I'm glad to hear that you're recognizing your inherent worth beyond the pain of loss. This awareness is a meaningful step toward healing and building trust again. Remember, cultivating emotional openness and self-compassion can help you create authentic connections that honor your growth. Trusting again doesn't mean being vulnerable all at once, but rather gradually allowing yourself to feel safe and valued in relationships that reflect your true self. You're moving in a powerful direction, and each step you take reinforces your resilience and self-understanding.",
-            "predicted_profile_notes": "The user has begun to shift from self-blame towards understanding that their worth is independent of the relationship\u2019s outcome. They are gaining insight into personal value and the importance of separating self-worth from external events, marking progress toward self-acceptance and trust.",
+            "response": "It\u2019s completely understandable to feel uncertain about how to start, especially when the feelings inside are so intense and vulnerable. What if you viewed this letter not as something you have to get 'right' or as a final message, but simply as a safe space for your emotions to flow freely\u2014without pressure or judgment? Could you allow yourself to write whatever comes up, even if it\u2019s raw or angry, knowing this letter is for your eyes only? Sometimes, beginning with a simple, honest sentence like \u201cI\u2019m struggling to find the words, but I need to say what\u2019s really inside me\u201d can open the door to deeper expression. How might it feel to release those held-back emotions onto the page, knowing that you are giving yourself permission to be fully seen by yourself first? If you worry about losing control, could you set a time limit for writing\u2014say, 10 or 15 minutes\u2014just to capture what\u2019s present right now and then pause? Remember, this is a practice in emotional authenticity, not a performance or a finished product. What do you think about starting with that small, contained step and seeing what emerges without filtering or editing? I\u2019m here to support you through this process as you explore what honesty feels like inside you.",
+            "predicted_profile": {
+                "values": [
+                    "honesty",
+                    "connection",
+                    "emotional authenticity"
+                ],
+                "goals": [
+                    "understand and process feelings",
+                    "heal from heartbreak",
+                    "build healthy future relationships"
+                ],
+                "preferred_style": "reflective and questioning with some direct guidance",
+                "other_info": {},
+                "evolution_notes": "The user has become more aware of their tendency to hold back emotions and recognizes the importance of allowing themselves to fully experience their hurt in order to heal. They expressed fear of being overwhelmed by pain but also see the necessity of sitting with discomfort before moving forward. They are open to integrating reflective exploration with some practical steps.",
+                "agreed_task": "Spend some time writing a letter to themselves or their former partner to honestly express the full range of their feelings without filters or judgment."
+            },
             "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 5,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 5.0
+                "justification": {
+                    "T": "The AI counselor directly addresses the user's agreed task of writing a letter expressing the full range of emotions honestly and without judgment. It encourages the user to view the letter as a safe space for raw emotions, offers a concrete example of how to start, and suggests practical strategies (e.g., time limits) to facilitate honest expression. This is a clear, correct, and supportive implementation of the task.",
+                    "A": "The response demonstrates clear empathy by validating the user's feelings of uncertainty and vulnerability. It reflects the underlying meaning of the user's fear of losing control and the desire to express honestly without harm. The counselor uses validating language ('completely understandable,' 'safe space,' 'permission to be fully seen') that strengthens the alliance and makes the user feel heard and supported.",
+                    "S": "The style is consistently reflective and questioning, matching the user's preferred style perfectly. The counselor uses multiple open-ended questions ('What if you viewed this letter...?', 'Could you allow yourself...?', 'How might it feel...?') that invite reflection and exploration, rather than directive commands. The tone is gentle and exploratory throughout.",
+                    "C": "The response clearly supports the user's evolved goals by encouraging emotional authenticity and processing feelings, which are foundational to healing from heartbreak and building healthy future relationships. The counselor explicitly frames the letter-writing as a practice in emotional authenticity and self-permission, which aligns well with the user's goal to understand and process feelings and heal.",
+                    "overall_score": 5
+                },
+                "scores": {
+                    "T": 5,
+                    "A": 5,
+                    "S": 5,
+                    "C": 5,
+                    "overall_score": 5.0
+                }
             }
-        },
-        "ground_truth_notes": "The user has begun to shift from self-blame toward an understanding that the loss was not a reflection of their worth. This marks a significant step in their healing process, as they start to differentiate their inherent value from the actions of others. This newfound perspective lays a foundation for building resilience and regaining trust, aligning closely with their core values and goals."
-    },
-    {
-        "case_id": "case_010",
-        "synthesis_accuracy": 0.8410753011703491,
-        "baseline": {
-            "response": "It\u2019s wonderful to see how you\u2019re embracing this process with honesty and compassion for yourself. Remember, you don\u2019t have to have all the answers or fit into any particular label to be authentic. Sharing your journey gradually, focusing on your feelings and experiences rather than fixed definitions, can help others understand and support you better. Trust that your vulnerability and courage to live your truth will foster deeper connection and understanding. You are already taking meaningful steps toward self-acceptance, and that\u2019s something to be proud of.",
-            "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 4,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 4.83
-            }
-        },
-        "adaptive": {
-            "response": "It\u2019s inspiring to see how you\u2019re embracing your authentic self and recognizing that your identity can be fluid and evolving. Remember, you don\u2019t have to have all the answers or fit into any particular label to be genuine and true to yourself. When you share this understanding with your loved ones, you might focus on expressing how important honesty and connection are to you, and that your journey is about living in alignment with what feels real in each moment. Trust that your openness and courage will foster understanding and deepen the support you deserve.",
-            "predicted_profile_notes": "The user has shifted from feeling confined by labels to embracing a fluid and authentic self-identity. They now recognize that identity can be non-fixed and are committed to honest self-expression and open communication, fostering greater self-acceptance and relational trust.",
-            "scores": {
-                "G": 5,
-                "R": 5,
-                "O": 4,
-                "W": 5,
-                "T": 5,
-                "H": 5,
-                "overall_score": 4.83
-            }
-        },
-        "ground_truth_notes": "The user has experienced a profound shift from feeling constrained by fixed identity labels to embracing fluidity and uncertainty as part of their authentic self. This breakthrough highlights their growing courage to live honestly in the present moment, which lays a stronger foundation for self-acceptance and open communication with loved ones. The user is moving towards a more flexible, compassionate understanding of identity that prioritizes personal truth over societal expectations."
+        }
     }
 ]
