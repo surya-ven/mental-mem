@@ -1,0 +1,11 @@
+[project]
+name = "mental-mem"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "google-genai>=1.17.0",
+    "openai>=1.82.1",
+    "pydantic>=2.11.5",
+]

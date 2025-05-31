@@ -1,0 +1,134 @@
+[
+    {
+        "questionText": "A few nights ago I talked to this girl I know about my self esteem issues for the first time. We talked for hours and she told me time and again that I was a great guy. She told me I was attractive, and have a great personality, etc. I really started to feel better about myself by the time I woke up the next morning. Now, though, I can't stop thinking about her, but I leave to go back to college in a few days and I go to school 4 hours away from her. So now I feel constantly depressed because even if I told her how I felt it wouldn't matter. I feel helpless and I don't know what to do.",
+        "answerText": "Hey! \u00a0It takes a lot of courage to share your feelings with someone! \u00a0And it sounds like you have been lucky to meet someone who makes you feel safe enough to explore some of your more painful feelings. \u00a0A big part of the process, however, of strengthening your self-concept is learning how to tell yourself those positive messages that you heard from your friend! \u00a0Leaving for college may also be contributing to your feelings of unsteadiness. \u00a0Try this - Make a list of all of the positive things that you know are true about yourself. \u00a0Ask your friends and family to contribute to the list. \u00a0Then carry it with you in your wallet - and when you need a self-esteem boost, take a look at it! \u00a0You are in a season of life that presents lots of challenges and opportunities. \u00a0Reach out to your long-distance friend when you need support - and take a walk over to the campus counseling center and check out what they might have to offer. \u00a0Be Wise!",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I've been feeling really down lately. A few nights ago, I opened up to a friend about my self-esteem issues for the first time. It felt good talking about it, and she was very supportive."
+            },
+            {
+                "role": "counselor",
+                "content": "It's great to hear that you had the courage to open up about your feelings and that you found support from your friend. It's important to have people we can trust and talk to. How are you feeling about that conversation now?"
+            },
+            {
+                "role": "client",
+                "content": "Honestly, it made me feel a lot better about myself at first. She said a lot of positive things about me, which was uplifting. But now, I can't stop thinking about her, and I'm feeling pretty depressed because I'm leaving for college soon, and we'll be far apart."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like you're experiencing a mix of emotions right now. On one hand, the conversation was affirming and helped boost your self-esteem. On the other, the thought of leaving and the distance it will create is causing you distress. It's understandable to feel this way given the circumstances."
+            },
+            {
+                "role": "client",
+                "content": "Yeah, exactly. I feel like even if I told her how I feel, it wouldn't matter because of the distance. It's making me feel helpless."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling helpless in this situation is a natural response. However, expressing your feelings can sometimes bring a sense of relief, regardless of the outcome. It's also important to remember the strength you showed in opening up about your self-esteem issues. Perhaps, there's a way to continue building on that strength, even with the distance?"
+            },
+            {
+                "role": "client",
+                "content": "I guess I haven't really thought about it like that. But it's hard to imagine feeling better without her being around."
+            },
+            {
+                "role": "counselor",
+                "content": "It's clear she has had a positive impact on you. Maybe you could think of this as an opportunity to work on reinforcing the positive messages about yourself, even in her absence. Making a list of positive affirmations, as you mentioned she did, could be a start. How does that sound?"
+            },
+            {
+                "role": "client",
+                "content": "That could be worth a try. I just wish this wasn't so hard."
+            },
+            {
+                "role": "counselor",
+                "content": "It's perfectly okay to feel that way. Change and dealing with emotions is often challenging, but you're not alone. Remember, you can still reach out to your friend for support, even from a distance. And, it might be beneficial to explore resources at your college, like the counseling center, for additional support. What do you think?"
+            },
+            {
+                "role": "client",
+                "content": "I think I might give that a try. Maybe talking more about it and getting some more support could help me navigate these feelings."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds like a positive step forward. Remember, it's a sign of strength to seek help and support when you need it. You've already shown a lot of courage by opening up, and continuing to do so can be incredibly beneficial. Is there anything else you'd like to talk about today?"
+            },
+            {
+                "role": "client",
+                "content": "No, I think that covers it for now. Thanks for helping me see things a bit differently."
+            },
+            {
+                "role": "counselor",
+                "content": "You're welcome. I'm glad I could help. Remember, it's okay to have these feelings, and reaching out is a good step. Take care, and don't hesitate to get in touch if you need to talk more."
+            }
+        ]
+    },
+    {
+        "questionText": "A few years ago I was making love to my wife when for no known reason I lost my erection,    Now I'm In my early 30s and my problem has become more and more frequent. This is causing major problems for my ego and it's diminishing my self esteem. This has resulted in ongoing depression and tearing apart my marriage.    I am devastated and cannot find a cause for these issues. I am very attracted to my wife and want to express it in the bedroom like I used to.    What could be causing this, and what can I do about it?",
+        "answerText": "First step always is to do a medical rule out so that you're sure the problem is psychological and emotion based, not a medical condition which requires care and attention.If you are medically clear in the reasons for losing your erection, then reflect on what may be creating a loss in confidence in either who you are and what you're doing with your life, or whether your wife has these sort of problems within herself.Often a problem transfers ownership of who shows it.If you are a sensitive person its possible your erection problem reflects your wife's insecurities and self-doubt. \u00a0If she is someone who is reluctant to talk about feeling unsure then in a certain way by you showing a problem, she can avoid looking at herself.There may not be a direct cause such as usually exists in a medical problem.Medicine looks for symptoms to treat.Our emotional lives are much more indirect.If you feel stress at work or are unhappy in the place you live, for example, then your frustration may show up in your sex life.Basically, do a broad inward search of your life and what it holds and maybe ask your wife to do the same.You may clear the air within yourselves and between each other so the problem goes away.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I've been facing a really tough situation for a while now. A few years ago, I lost my erection while being intimate with my wife, and it's been happening more frequently. I'm in my early 30s, and it's really starting to affect my self-esteem and causing depression."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm really sorry to hear that you're going through this. It sounds like it's been a very challenging and distressing experience for you. Can you tell me a bit more about how this issue is impacting your relationship and your feelings towards yourself?"
+            },
+            {
+                "role": "client",
+                "content": "It's tearing my marriage apart. I feel like I'm not man enough, and it's devastating. I'm very attracted to my wife and want to express it like I used to, but I just can't. I don't understand what's causing this."
+            },
+            {
+                "role": "counselor",
+                "content": "It's clear that this situation is causing you a lot of pain and confusion. Your feelings are completely valid, and it's understandable to feel this way given what you're experiencing. Have you had a chance to discuss these feelings with your wife or a medical professional?"
+            },
+            {
+                "role": "client",
+                "content": "I've talked to my wife, but I feel like she doesn't fully understand. I haven't seen a doctor yet; I guess I was hoping it would just resolve on its own."
+            },
+            {
+                "role": "counselor",
+                "content": "It's important to have open communication with your partner, but I understand that it can be difficult if you feel misunderstood. Regarding seeing a doctor, it could be a beneficial first step to rule out any medical conditions. Sometimes, physical health issues can manifest in ways we don't expect, and it's essential to address those possibilities."
+            },
+            {
+                "role": "client",
+                "content": "That makes sense. I guess I've been avoiding it because I'm scared of what I might find out."
+            },
+            {
+                "role": "counselor",
+                "content": "It's completely natural to feel scared about these things. Acknowledging your fear is a brave step towards addressing the problem. Remember, whatever the outcome, there are ways to manage and work through this situation. It's also worth considering that stress, emotional, and psychological factors can play a significant role in these experiences."
+            },
+            {
+                "role": "client",
+                "content": "I hadn't thought about it that way. Maybe my stress at work and our recent move have been affecting me more than I realized."
+            },
+            {
+                "role": "counselor",
+                "content": "Life changes and stress can definitely impact our well-being in unexpected ways, including our sexual health. It might be helpful to reflect on what's been happening in your life and how it's been affecting you. Sharing these reflections with your wife could also help in understanding each other's feelings and experiences more deeply."
+            },
+            {
+                "role": "client",
+                "content": "I'll try talking to her again. And I'll make an appointment with a doctor. Maybe understanding more about what's happening can help us find a way through this."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds like a positive step forward. Remember, seeking help is a sign of strength. If you find out that the issue is not medical, exploring your emotional and psychological world can also be very enlightening. Sometimes, understanding our inner selves can help resolve external issues."
+            },
+            {
+                "role": "client",
+                "content": "Thank you for listening and for your advice. It's given me a new perspective and a bit of hope."
+            },
+            {
+                "role": "counselor",
+                "content": "You're very welcome. I'm here to support you through this journey. Remember, you're not alone, and there's always a path towards healing and connection. If you have any more questions or need further support, please feel free to reach out."
+            }
+        ]
+    }
+]
