@@ -1,0 +1,218 @@
+[
+    {
+        "case_id": "case_001",
+        "seed_text": "A few nights ago I talked to this girl I know about my self esteem issues for the first time. We talked for hours and she told me time and again that I was a great guy. She told me I was attractive, and have a great personality, etc. I really started to feel better about myself by the time I woke up the next morning. Now, though, I can't stop thinking about her, but I leave to go back to college in a few days and I go to school 4 hours away from her. So now I feel constantly depressed because even if I told her how I felt it wouldn't matter. I feel helpless and I don't know what to do.",
+        "initial_profile": {
+            "values": [
+                "connection",
+                "self-worth",
+                "communication",
+                "understanding"
+            ],
+            "goals": [
+                "explore feelings about the recent conversation",
+                "develop strategies for maintaining connections",
+                "work on self-esteem outside of relationships",
+                "find ways to cope with feelings of helplessness"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "connection",
+                "self-worth",
+                "communication",
+                "understanding"
+            ],
+            "goals": [
+                "explore feelings about the recent conversation",
+                "develop strategies for maintaining connections",
+                "work on self-esteem outside of relationships",
+                "find ways to cope with feelings of helplessness"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has experienced a profound shift in perspective. They now recognize that their feelings of self-worth and connection can be cultivated through their own openness and vulnerability. This realization empowers them to take control of their interactions, fostering meaningful connections regardless of distance."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing that with me. It sounds like your conversation with her really made an impact on how you see yourself. Can you tell me more about how you felt after that talk?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I felt really good about myself for the first time in a while. She made me realize some positive things, but now I can't stop thinking about her and it\u2019s making me feel down."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It's completely understandable to have those feelings, especially after such a meaningful conversation. What do you think it is about her that\u2019s occupying your thoughts so much?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it\u2019s because she actually listened to me and made me feel valued. I don\u2019t know if I\u2019ll find that connection again, especially since I\u2019m leaving soon."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Feeling valued and understood is so important. It\u2019s hard when you feel a connection but are faced with distance. Have you considered how you might maintain that connection, even from afar?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I haven\u2019t really thought about that. I just feel helpless right now, like no matter what I do, it won\u2019t change the fact that I\u2019m leaving."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "I'm glad you're here today. Last time, we talked about the connection you felt. Have you had any thoughts about how that conversation could influence your future interactions?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I\u2019ve been thinking about it a lot. I realized that I felt good because I was open and vulnerable with her. It made me wonder if I could replicate that with others, even if they\u2019re not the same."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a significant insight! It sounds like you\u2019re beginning to see that the way you connect with others can be influenced by your own openness. How does that make you feel?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It makes me feel empowered! Like I have control over my connections. I don\u2019t have to wait for someone to make me feel valued; I can create that space myself."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Absolutely! By taking the initiative, you can foster connections that bring you the same warmth and understanding. What steps do you think you could take to start building those connections?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think I\u2019ll start reaching out more, being open about my feelings like I was with her. Maybe I can even share that experience with others to help them feel valued too."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "therapist",
+                        "content": "It sounds like you've made significant strides in understanding how your self-worth is tied to your openness with others. How do you feel about the recent conversation you had, and what did it reveal to you about your connections?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I felt vulnerable, but it also made me realize that I can still connect deeply with others, even if they are far away. Yet, sometimes I wonder if I'm relying too much on these connections to feel good about myself. How do I balance my need for connection with my own self-esteem?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_002",
+        "seed_text": "A few years ago I was making love to my wife when for no known reason I lost my erection,    Now I'm In my early 30s and my problem has become more and more frequent. This is causing major problems for my ego and it's diminishing my self esteem. This has resulted in ongoing depression and tearing apart my marriage.    I am devastated and cannot find a cause for these issues. I am very attracted to my wife and want to express it in the bedroom like I used to.    What could be causing this, and what can I do about it?",
+        "initial_profile": {
+            "values": [
+                "intimacy",
+                "self-esteem",
+                "communication",
+                "emotional connection"
+            ],
+            "goals": [
+                "understand the underlying causes of my erectile issues",
+                "improve my self-esteem and body image",
+                "enhance communication with my wife about our intimacy",
+                "reduce stress and anxiety in my life"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "intimacy",
+                "self-esteem",
+                "communication",
+                "emotional connection"
+            ],
+            "goals": [
+                "understand the underlying causes of my erectile issues",
+                "improve my self-esteem and body image",
+                "enhance communication with my wife about our intimacy",
+                "reduce stress and anxiety in my life"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has shifted their perspective to focus on emotional connection rather than performance in intimacy. They now recognize that their self-worth shouldn't be tied to their sexual performance and are looking to foster closeness with their wife beyond just physical aspects."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for coming in today. I want to assure you that this is a safe space where we can openly discuss your concerns. Can you tell me a bit more about how this issue has been affecting you and your relationship?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I feel devastated. It started a few years ago, and it\u2019s gotten worse. Losing my erection has really impacted my self-esteem, and it\u2019s causing strain in my marriage. I\u2019m scared of disappointing my wife."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It sounds like this situation has brought up a lot of feelings of inadequacy and fear. It\u2019s understandable that this would be difficult to cope with. Have there been any changes in your life or stressors that might be contributing to these feelings?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Well, I\u2019ve been under a lot of stress at work, and I guess I've been feeling more pressure to perform in every aspect of my life, not just in the bedroom. But I don\u2019t know if that\u2019s connected."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Stress can definitely play a significant role in sexual performance. It can affect our mental state and even our physical body. Let's explore some strategies to help you manage that stress and improve your self-esteem. How does that sound?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "That sounds good. I just want to feel like myself again and connect with my wife like we used to."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Welcome back! Last time, we touched on how stress impacts your self-esteem and intimacy. Have you had any thoughts since then about the connection between your stress and your feelings in the bedroom?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Yes, I\u2019ve been reflecting on what you said. I realized that I often see my worth through my performance at work and in my relationship, and that pressure is suffocating."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a powerful realization. It sounds like you\u2019re starting to see how external pressures might be clouding your self-image and affecting your intimacy."
+                    },
+                    {
+                        "role": "user",
+                        "content": "Exactly! I think I\u2019ve been equating my value with my ability to perform, and when I can\u2019t, I feel like I\u2019m failing. But I want to shift that perspective."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Shifting that perspective can be liberating. What would it look like for you to define your worth beyond your performance?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I guess I could focus on the emotional connection with my wife instead. Maybe intimacy isn\u2019t just about sex; it\u2019s about being close and open with each other, regardless of performance."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "therapist",
+                        "content": "It sounds like you've made significant progress in understanding the emotional aspects of intimacy. How do you feel about your ability to communicate these changes and needs with your wife?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I feel more confident in expressing my feelings, but sometimes I wonder if she truly understands that intimacy is more than just physical connection. How can I help her see that?"
+                    }
+                ]
+            }
+        ]
+    }
+]

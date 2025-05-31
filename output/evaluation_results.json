@@ -1,0 +1,62 @@
+[
+    {
+        "case_id": "case_001",
+        "synthesis_accuracy": 0.0,
+        "baseline": {
+            "response": "It's great to hear that you're reflecting on the balance between your need for connection and your self-esteem. It's a natural inclination to seek validation from others, especially when you've experienced meaningful connections. However, it's crucial to cultivate a sense of self-worth that is independent of those interactions. One way to achieve this is by recognizing and celebrating your own strengths and qualities outside of your relationships. What activities or personal achievements can you focus on that make you feel good about yourself? Additionally, while it's wonderful to connect with others, remember that you can be both open with them and also nurture your own self-esteem. How do you feel about setting aside time for self-reflection and self-care, alongside reaching out to others?",
+            "scores": {
+                "goal_congruence": 0,
+                "reflective_synthesis": 0,
+                "observational_acuity": 0,
+                "worldview_alignment": 0,
+                "therapeutic_adaptation": 0,
+                "holding_environment": 0,
+                "overall_score": 0.0
+            }
+        },
+        "adaptive": {
+            "response": "Error during profile synthesis.",
+            "predicted_profile_notes": "N/A",
+            "scores": {
+                "goal_congruence": 0,
+                "reflective_synthesis": 0,
+                "observational_acuity": 0,
+                "worldview_alignment": 0,
+                "therapeutic_adaptation": 0,
+                "holding_environment": 0,
+                "overall_score": 0.0
+            }
+        },
+        "ground_truth_notes": "The user has experienced a profound shift in perspective. They now recognize that their feelings of self-worth and connection can be cultivated through their own openness and vulnerability. This realization empowers them to take control of their interactions, fostering meaningful connections regardless of distance."
+    },
+    {
+        "case_id": "case_002",
+        "synthesis_accuracy": 0.9164234399795532,
+        "baseline": {
+            "response": "It's great to hear that you're feeling more confident in expressing your feelings. Helping your wife understand that intimacy goes beyond the physical can be approached with open and honest communication. You might consider sharing your thoughts about the emotional connection you value, emphasizing how important it is for both of you to feel close and secure together, irrespective of physical performance. You could also invite her to share her own feelings and perceptions about intimacy, creating a space for deeper dialogue. This could strengthen your bond and enhance your emotional connection, which is at the heart of intimacy. How do you feel about initiating that conversation with her?",
+            "scores": {
+                "goal_congruence": 0,
+                "reflective_synthesis": 0,
+                "observational_acuity": 0,
+                "worldview_alignment": 0,
+                "therapeutic_adaptation": 0,
+                "holding_environment": 0,
+                "overall_score": 0.0
+            }
+        },
+        "adaptive": {
+            "response": "It's great to hear that you're feeling more confident in expressing your feelings! Helping your wife understand that intimacy encompasses more than just the physical aspect can be a gradual process. You might start by sharing your own realizations about the emotional connection and how important it is for you. You could say something like, 'I've been reflecting on what intimacy means to me, and I realize it's not just about sex, but about how we connect emotionally and support each other.' This opens the door for a deeper conversation about both of your needs and desires. Encourage her to share her thoughts as well. This way, you both can explore intimacy together in a way that nurtures your emotional bond. How does that approach resonate with you?",
+            "predicted_profile_notes": "The user has recognized that their self-worth is overly tied to performance in both work and intimacy. They are beginning to shift their perspective towards valuing emotional connection with their wife, understanding that intimacy encompasses more than just sexual performance.",
+            "scores": {
+                "goal_congruence": 0,
+                "reflective_synthesis": 0,
+                "observational_acuity": 0,
+                "worldview_alignment": 0,
+                "therapeutic_adaptation": 0,
+                "holding_environment": 0,
+                "overall_score": 0.0
+            }
+        },
+        "ground_truth_notes": "The user has shifted their perspective to focus on emotional connection rather than performance in intimacy. They now recognize that their self-worth shouldn't be tied to their sexual performance and are looking to foster closeness with their wife beyond just physical aspects."
+    }
+]
