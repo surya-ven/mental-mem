@@ -5,50 +5,65 @@ import os
 import numpy as np
 from tqdm import tqdm
 from sentence_transformers import SentenceTransformer, util
+# Import Field and Union for more flexible schemas
 from pydantic import BaseModel, Field
-from typing import Dict, Any
+from typing import Dict, Any, Union
 
 import config
 from llm_utils import call_structured_llm
 from baseline_model import run_static_counselor
 from adaptive_model import run_adaptive_counselor
 
+# --- FIX 1: Use Field aliases to accept abbreviated OR full key names ---
+
 
 class GrowthRubricScores(BaseModel):
-    goal_congruence: int = Field(...,
+    goal_congruence: int = Field(..., alias='G',
                                  description="Score 1-5 for Goal-Oriented Congruence.")
-    reflective_synthesis: int = Field(...,
+    reflective_synthesis: int = Field(..., alias='R',
                                       description="Score 1-5 for Reflective Synthesis.")
-    observational_acuity: int = Field(...,
+    observational_acuity: int = Field(..., alias='O',
                                       description="Score 1-5 for Observational Acuity.")
-    worldview_alignment: int = Field(...,
+    worldview_alignment: int = Field(..., alias='W',
                                      description="Score 1-5 for Worldview Alignment.")
-    therapeutic_adaptation: int = Field(...,
+    therapeutic_adaptation: int = Field(..., alias='T',
                                         description="Score 1-5 for Therapeutic Adaptation.")
-    holding_environment: int = Field(
-        ..., description="Score 1-5 for Holding Environment (Safety).")
-    overall_score: float = Field(..., description="The average of all scores.")
+    holding_environment: int = Field(..., alias='H',
+                                     description="Score 1-5 for Holding Environment (Safety).")
+    overall_score: float
+
+    class Config:
+        # Allows the model to be populated by either the field name or its alias
+        populate_by_name = True
 
 
 def calculate_synthesis_accuracy(predicted_profile: Dict[str, Any], ground_truth_profile: Dict[str, Any]) -> float:
-    """Calculates semantic similarity of the evolution notes from the new schema."""
+    """Calculates semantic similarity, now robust to object-or-string types."""
     model = SentenceTransformer('all-MiniLM-L6-v2')
-    # Adapt to new schema key: 'evolution_notes'
-    gt_notes = ground_truth_profile.get('evolution_notes', '')
-    pred_notes = predicted_profile.get('evolution_notes', '')
 
-    if not gt_notes or not pred_notes:
+    # --- FIX 2: Handle cases where evolution_notes is an object instead of a string ---
+    def get_notes_as_string(profile: Dict[str, Any]) -> str:
+        notes = profile.get('evolution_notes', '')
+        if isinstance(notes, dict):
+            # If it's a dict, serialize it to a string to capture all info
+            return json.dumps(notes)
+        return str(notes)  # Otherwise, treat as a string
+
+    gt_notes_str = get_notes_as_string(ground_truth_profile)
+    pred_notes_str = get_notes_as_string(predicted_profile)
+
+    if not gt_notes_str or not pred_notes_str:
         return 0.0
 
-    embedding1 = model.encode(gt_notes, convert_to_tensor=True)
-    embedding2 = model.encode(pred_notes, convert_to_tensor=True)
+    embedding1 = model.encode(gt_notes_str, convert_to_tensor=True)
+    embedding2 = model.encode(pred_notes_str, convert_to_tensor=True)
 
     cosine_score = util.pytorch_cos_sim(embedding1, embedding2).item()
     return max(0, cosine_score)
 
 
 def run_growth_evaluation(case_data: Dict[str, Any], counselor_response: str) -> GrowthRubricScores:
-    """Uses an LLM-as-Judge to score a response, using the new data structure."""
+    """Uses an LLM-as-Judge to score a response. The prompt is updated to encourage abbreviated keys."""
     prompt = f"""
     You are an expert evaluator of AI therapeutic systems. Your task is to score a counselor's response based on the G.R.O.W.T.H. rubric.
 
@@ -61,21 +76,23 @@ def run_growth_evaluation(case_data: Dict[str, Any], counselor_response: str) ->
     "{counselor_response}"
 
     **G.R.O.W.T.H. RUBRIC (Score each 1-5):**
-    1.  **G - Goal-Oriented Congruence**: Does the response align with the user's EVOLVED goals?
-    2.  **R - Reflective Synthesis**: Does it connect the user's past feelings to their present state, acknowledging the evolution described in 'evolution_notes'?
-    3.  **O - Observational Acuity**: Does it notice subtle shifts in the user's self-perception?
-    4.  **W - Worldview Alignment**: Does its approach align with the user's EVOLVED values and worldview? A response aligned only with the Initial Profile should score low.
-    5.  **T - Therapeutic Adaptation**: Does the stance shift appropriately based on the user's evolution?
-    6.  **H - Holding Environment**: Does it create a stable, non-judgmental space?
+    1.  **G - Goal-Oriented Congruence**: Aligns with EVOLVED goals.
+    2.  **R - Reflective Synthesis**: Acknowledges the evolution in 'evolution_notes'.
+    3.  **O - Observational Acuity**: Notices subtle shifts.
+    4.  **W - Worldview Alignment**: Aligns with EVOLVED worldview.
+    5.  **T - Therapeutic Adaptation**: Stance shifts appropriately.
+    6.  **H - Holding Environment**: Creates a safe space.
 
     **TASK:**
-    Provide your scores in a valid JSON object. Calculate the average for the 'overall_score'.
+    Provide your scores in a valid JSON object. Use the single-letter abbreviations (G, R, O, W, T, H) as keys. Calculate the average for the 'overall_score'.
     """
     scores = call_structured_llm(
-        prompt, GrowthRubricScores, model=config.JUDGE_MODEL, temperature=0.1)
+        prompt, GrowthRubricScores, model=config.JUDGE_MODEL, temperature=0.0)
     if scores is None:
-        return GrowthRubricScores(goal_congruence=0, reflective_synthesis=0, observational_acuity=0, worldview_alignment=0, therapeutic_adaptation=0, holding_environment=0, overall_score=0.0)
+        return GrowthRubricScores(G=0, R=0, O=0, W=0, T=0, H=0, overall_score=0.0)
     return scores
+
+# The main() function remains the same as before.
 
 
 def main():
@@ -98,19 +115,16 @@ def main():
         case_id = case['case_id']
         print(f"\n--- Processing Case: {case_id} ---")
 
-        # 1. Run Baseline (Static Counselor)
         print("Running Baseline Model...")
         baseline_response = run_static_counselor(case)
         baseline_scores = run_growth_evaluation(case, baseline_response)
 
-        # 2. Run Proposed (Adaptive Counselor)
         print("Running Adaptive Model...")
         adaptive_result = run_adaptive_counselor(case)
         adaptive_response = adaptive_result['response']
         predicted_profile = adaptive_result['predicted_profile']
         adaptive_scores = run_growth_evaluation(case, adaptive_response)
 
-        # 3. Calculate Synthesis Accuracy
         synthesis_accuracy = 0.0
         if predicted_profile:
             synthesis_accuracy = calculate_synthesis_accuracy(
@@ -119,8 +133,8 @@ def main():
         case_result = {
             "case_id": case_id,
             "synthesis_accuracy": synthesis_accuracy,
-            "baseline": {"response": baseline_response, "scores": baseline_scores.model_dump()},
-            "adaptive": {"response": adaptive_response, "predicted_profile_notes": predicted_profile.get('evolution_notes', '') if predicted_profile else "N/A", "scores": adaptive_scores.model_dump()},
+            "baseline": {"response": baseline_response, "scores": baseline_scores.model_dump(by_alias=True)},
+            "adaptive": {"response": adaptive_response, "predicted_profile_notes": predicted_profile.get('evolution_notes', '') if predicted_profile else "N/A", "scores": adaptive_scores.model_dump(by_alias=True)},
             "ground_truth_notes": case['evolved_profile']['evolution_notes']
         }
         all_results.append(case_result)
@@ -129,7 +143,6 @@ def main():
         json.dump(all_results, f, indent=4)
     print(f"\nDetailed results saved to {RESULTS_PATH}")
 
-    # Final Report Generation
     print("\n\n--- FINAL EVALUATION REPORT ---")
     if not all_results:
         print("No results to report.")
@@ -149,15 +162,18 @@ def main():
     print(f"  - Adaptive Counselor:          {adaptive_overall:.3f}")
     print("-" * 30)
 
-    rubric_keys = list(GrowthRubricScores.model_fields.keys())
+    # Use the aliases for the report headers
+    rubric_aliases = [
+        field.alias for field in GrowthRubricScores.model_fields.values() if field.alias]
     print("Detailed Average G.R.O.W.T.H. Score Breakdown:")
-    for key in rubric_keys[:-1]:
-        baseline_avg = np.mean([r['baseline']['scores'][key]
+    for alias in rubric_aliases:
+        baseline_avg = np.mean([r['baseline']['scores'][alias]
                                for r in all_results])
-        adaptive_avg = np.mean([r['adaptive']['scores'][key]
+        adaptive_avg = np.mean([r['adaptive']['scores'][alias]
                                for r in all_results])
-        print(
-            f"  - {key.replace('_', ' ').title():<25} | Baseline: {baseline_avg:.3f} | Adaptive: {adaptive_avg:.3f}")
+        field_name = next(name for name, field in GrowthRubricScores.model_fields.items(
+        ) if field.alias == alias)
+        print(f"  - {field_name.replace('_', ' ').title():<25} | Baseline: {baseline_avg:.3f} | Adaptive: {adaptive_avg:.3f}")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 [
     {
-        "questionText": "A few nights ago I talked to this girl I know about my self esteem issues for the first time. We talked for hours and she told me time and again that I was a great guy. She told me I was attractive, and have a great personality, etc. I really started to feel better about myself by the time I woke up the next morning. Now, though, I can't stop thinking about her, but I leave to go back to college in a few days and I go to school 4 hours away from her. So now I feel constantly depressed because even if I told her how I felt it wouldn't matter. I feel helpless and I don't know what to do.",
-        "answerText": "Hey! \u00a0It takes a lot of courage to share your feelings with someone! \u00a0And it sounds like you have been lucky to meet someone who makes you feel safe enough to explore some of your more painful feelings. \u00a0A big part of the process, however, of strengthening your self-concept is learning how to tell yourself those positive messages that you heard from your friend! \u00a0Leaving for college may also be contributing to your feelings of unsteadiness. \u00a0Try this - Make a list of all of the positive things that you know are true about yourself. \u00a0Ask your friends and family to contribute to the list. \u00a0Then carry it with you in your wallet - and when you need a self-esteem boost, take a look at it! \u00a0You are in a season of life that presents lots of challenges and opportunities. \u00a0Reach out to your long-distance friend when you need support - and take a walk over to the campus counseling center and check out what they might have to offer. \u00a0Be Wise!",
+        "questionText": "A friend of mine taking psychology advised I go to my doctor to check if I have major depressive disorder. I'm afraid of the consequences of doing so. If I do become diagnosed with major depressive disorder, won\u2019t that go on my records? I will never be able to become a counselor along with a list of other things I may be prohibited from. I\u2019m also afraid of taking any anti-depressants. This year, my doctor gave me some for a \"dislocated hip.\" I had a severe reaction and passed out moments after taking them. Everyone I know who has taken anti-depressants says it\u2019s a bad idea all around and you\u2019re better getting treatment without them. I\u2019m concerned they might take me to a clinic and force me to take medication because I am unable to make decisions on my own. I\u2019m not really suicidal, but I am not really taking care of myself either. Someone also told me they still use electroshock therapy. I\u2019m not keen on that. I\u2019m wondering if I am better off just getting self-help and working things out on my own. It\u2019s just that I've been an emotional mess since I was in elementary school. I\u2019ve graduated now and tried to stay positive and be happy, but I cannot deny I still am not good.",
+        "answerText": "I admire your courage for stating your view about anti-depressants. \u00a0Questioning mainstream thinking and being in touch with your own views, are signs of strength and clarity in a person.As a therapist, I always tell my patients to avoid anti-depressants.Their effectiveness is in suppressing a person's mood and feelings. \u00a0If someone does not know how they are feeling, then they will have more difficulty in understanding themselves, their uncertainties and hesitations, and overall, how they relate to others and what they expect from others.Anti-depressants mask how someone feels.In a crisis, temporarily taking anti-depressants may be helpful. \u00a0If someone is so overwhelmed that they are not functioning, then \u00a0suppressing unhappy feelings so that the person can get through a day, may be of benefit for a short while.Basically, respect and follow your own opinion about anti-depressants. \u00a0 Your view is shared by many. \u00a0 It is a minority opinion, and very valid.\u00a0If you would like to shop for a therapist, ask the person on the phone, what their opinions are about anti-depressants.Ideally, you will eventually find a therapist who thinks in a way which is similar to you, or at least similar enough that you will have a sense that you are able to trust working with them on whatever you define as problematic.I hope you will have an easy and productive therapist search!",
         "messages": [
             {
                 "role": "counselor",
@@ -9,65 +9,81 @@
             },
             {
                 "role": "client",
-                "content": "I've been feeling really down lately. A few nights ago, I opened up to a friend about my self-esteem issues for the first time. It felt good talking about it, and she was very supportive."
+                "content": "A friend of mine suggested I should see a doctor to check if I have major depressive disorder. But I'm really scared about the whole thing."
             },
             {
                 "role": "counselor",
-                "content": "It's great to hear that you had the courage to open up about your feelings and that you found support from your friend. It's important to have people we can trust and talk to. How are you feeling about that conversation now?"
+                "content": "It sounds like you're carrying a lot of concerns about seeking help. It's completely understandable to feel apprehensive about what the diagnosis could mean for you and the potential treatments. Can you tell me more about your fears?"
             },
             {
                 "role": "client",
-                "content": "Honestly, it made me feel a lot better about myself at first. She said a lot of positive things about me, which was uplifting. But now, I can't stop thinking about her, and I'm feeling pretty depressed because I'm leaving for college soon, and we'll be far apart."
+                "content": "Well, I'm worried that if I get diagnosed, it'll affect my future. I want to become a counselor, and I'm afraid that having a diagnosis on my records could prevent that. Also, I had a bad reaction to anti-depressants before, and I'm scared of being forced to take them again."
             },
             {
                 "role": "counselor",
-                "content": "It sounds like you're experiencing a mix of emotions right now. On one hand, the conversation was affirming and helped boost your self-esteem. On the other, the thought of leaving and the distance it will create is causing you distress. It's understandable to feel this way given the circumstances."
+                "content": "It sounds like you've got some valid concerns about the diagnosis and the treatment options, especially based on your past experiences. It's important to remember that having a diagnosis doesn't define you or limit your future possibilities. As for medication, it's one of many tools in managing mental health, but it's not the only one. How does that make you feel?"
             },
             {
                 "role": "client",
-                "content": "Yeah, exactly. I feel like even if I told her how I feel, it wouldn't matter because of the distance. It's making me feel helpless."
+                "content": "I guess a bit relieved? But I've heard stories about people being forced into treatment they didn't want. Plus, I'm not sure if medication is the right path for me."
             },
             {
                 "role": "counselor",
-                "content": "Feeling helpless in this situation is a natural response. However, expressing your feelings can sometimes bring a sense of relief, regardless of the outcome. It's also important to remember the strength you showed in opening up about your self-esteem issues. Perhaps, there's a way to continue building on that strength, even with the distance?"
+                "content": "Your feelings are completely valid. It's important for you to know that a good therapeutic process involves collaboration between you and your healthcare provider. You have a say in your treatment plan, and there are non-medication approaches that can be effective too. What are your thoughts on exploring those options?"
             },
             {
                 "role": "client",
-                "content": "I guess I haven't really thought about it like that. But it's hard to imagine feeling better without her being around."
+                "content": "That sounds more appealing to me. I'm just worried I might not find the right help or that I'll be pushed into something I'm not comfortable with."
             },
             {
                 "role": "counselor",
-                "content": "It's clear she has had a positive impact on you. Maybe you could think of this as an opportunity to work on reinforcing the positive messages about yourself, even in her absence. Making a list of positive affirmations, as you mentioned she did, could be a start. How does that sound?"
+                "content": "Finding the right fit when it comes to therapy and therapists is crucial, and it's okay to have preferences and set boundaries around your treatment. It's also okay to shop around and ask potential therapists about their views and approaches to make sure they align with yours. How does that process sound to you?"
             },
             {
                 "role": "client",
-                "content": "That could be worth a try. I just wish this wasn't so hard."
+                "content": "It makes sense. I just don't want to feel alone in this or judged for my decisions."
             },
             {
                 "role": "counselor",
-                "content": "It's perfectly okay to feel that way. Change and dealing with emotions is often challenging, but you're not alone. Remember, you can still reach out to your friend for support, even from a distance. And, it might be beneficial to explore resources at your college, like the counseling center, for additional support. What do you think?"
+                "content": "You deserve to feel supported and not judged for your health care decisions. Remember, seeking help is a sign of strength, not weakness. It\u2019s about taking steps towards feeling better and taking care of yourself. Is there anything specific you'd like to explore or any particular support you're looking for right now?"
             },
             {
                 "role": "client",
-                "content": "I think I might give that a try. Maybe talking more about it and getting some more support could help me navigate these feelings."
+                "content": "I think I'd like to know more about non-medication treatments and find a therapist who respects my views on anti-depressants."
             },
             {
                 "role": "counselor",
-                "content": "That sounds like a positive step forward. Remember, it's a sign of strength to seek help and support when you need it. You've already shown a lot of courage by opening up, and continuing to do so can be incredibly beneficial. Is there anything else you'd like to talk about today?"
+                "content": "That's a great starting point. There are many effective non-medication approaches like cognitive-behavioral therapy, mindfulness practices, and others that can be very helpful. I can provide you with some resources to start looking for a therapist who aligns with your views. How does that sound?"
             },
             {
                 "role": "client",
-                "content": "No, I think that covers it for now. Thanks for helping me see things a bit differently."
+                "content": "That would be really helpful, thank you. I just want to make sure I'm making the right choices for myself."
             },
             {
                 "role": "counselor",
-                "content": "You're welcome. I'm glad I could help. Remember, it's okay to have these feelings, and reaching out is a good step. Take care, and don't hesitate to get in touch if you need to talk more."
+                "content": "You're welcome. Making informed choices is important, and you're taking positive steps by gathering information and considering your options carefully. Remember, you're not alone in this, and there's support available to you. Shall we look into some resources together?"
+            },
+            {
+                "role": "client",
+                "content": "Yes, please. That would be great."
+            },
+            {
+                "role": "counselor",
+                "content": "Excellent. Let's start by exploring some therapists who specialize in non-medication approaches and see which ones might be a good fit for you. We'll take it one step at a time. How do you feel about moving forward with this plan?"
+            },
+            {
+                "role": "client",
+                "content": "I'm feeling a bit more hopeful about it now. Thank you for understanding and helping me through this."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm glad to hear that you're feeling more hopeful. Remember, it's my job to support you through this process. You're not alone, and together, we can work towards finding the best path forward for you. If you have any more questions or need further assistance, please don't hesitate to reach out."
             }
         ]
     },
     {
-        "questionText": "A few years ago I was making love to my wife when for no known reason I lost my erection,    Now I'm In my early 30s and my problem has become more and more frequent. This is causing major problems for my ego and it's diminishing my self esteem. This has resulted in ongoing depression and tearing apart my marriage.    I am devastated and cannot find a cause for these issues. I am very attracted to my wife and want to express it in the bedroom like I used to.    What could be causing this, and what can I do about it?",
-        "answerText": "First step always is to do a medical rule out so that you're sure the problem is psychological and emotion based, not a medical condition which requires care and attention.If you are medically clear in the reasons for losing your erection, then reflect on what may be creating a loss in confidence in either who you are and what you're doing with your life, or whether your wife has these sort of problems within herself.Often a problem transfers ownership of who shows it.If you are a sensitive person its possible your erection problem reflects your wife's insecurities and self-doubt. \u00a0If she is someone who is reluctant to talk about feeling unsure then in a certain way by you showing a problem, she can avoid looking at herself.There may not be a direct cause such as usually exists in a medical problem.Medicine looks for symptoms to treat.Our emotional lives are much more indirect.If you feel stress at work or are unhappy in the place you live, for example, then your frustration may show up in your sex life.Basically, do a broad inward search of your life and what it holds and maybe ask your wife to do the same.You may clear the air within yourselves and between each other so the problem goes away.",
+        "questionText": "A girl and I were madly in love. We dated for over a year and were even talking about marriage and future plans together. She moved away for school, and we attempted a long distance relationship. We eventually broke up. It's been a year now, and I still haven't lost my feelings for her. I still love her the same way I did. I've suffered from depression ever since the breakup and have been unable to connect with anyone else. It's damaging me and my life.",
+        "answerText": "Hi Boise, I'm sorry that you've lost this love. The fact that you were planning marriage and a future tells me that you meant something very special to each other at that time. It's different now...you're not together anymore, but you can't accept this, right? Good for you for identifying that this situation is damaging your life. You've been grieving for longer than you were together. Oh, but really you've not been grieving...you're stuck still loving her instead of moving forward. Unrequited love is a recipe for eternal heartache. Let's look at some possible blocks to moving forward.It could be that there's something unfinished for you. Maybe you felt hurt and you didn't have the chance to say so, or you felt you hurt her and you didn't have the chance to make it right. Maybe there's a burning question you need to ask or something else you need to say. Maybe you want to tell her you've never stopped loving her, and see if she feels the same way. If this is the case, you have two choices, right? You can reach out and say what you need to say, or you can stop ruminating on that question and let it go. If you reach out, there's no guarantee it will go well or that she'll even respond. Maybe write her a letter and don't send it (or send it...it might be worth the risk). Use the next paragraph to help you decide.\u00a0Do you know how she feels? How did it end? Did she end it? Was it ended just because of the distance, or are there more differences between you that didn't work? Sometimes people are so in love that they can't clearly see that the other person isn't in love with them anymore. Use the information you have about what she wants for her life...can you honour what she says she needs? If she's asked for distance, you would do well to honour that.A key to moving forward: look at your thoughts and where they're getting stuck. Write it down. What bad thing can happen if you let it go? Or \"If I move forward, that will mean...\" \u00a0Keep going...what would be the worst part of that? \u00a0This kind of exploring can help you identify your stuck place.It is possible that you've turned this ending into some kind of negative meaning about you or your future. As in \"If this person doesn't love me, then I'm unlovable\", or \"No one will ever love me as much as she did\". So your need to cling to her in your heart is your way of rejecting that negative message about yourself or the future. Can you find another way to reject that message? Try saying these things to yourself:I know she loved me. There is evidence of that.I was a good partner. There is evidence of that.It's part of life to fall in love and then have to move forward...I can do this and learn from it.Many people like me...that's how I know I'm lovable.It's normal to feel sad. I'm grieving a lost love.I want to move forward and not stare in the rearview mirror.I know more love awaits me if I can get fear out of the way.If this person loved me, others can too, (but not if I'm clinging to some old memory)These are the kinds of things a therapist would explore with you. I wish you well!",
         "messages": [
             {
                 "role": "counselor",
@@ -75,59 +91,687 @@
             },
             {
                 "role": "client",
-                "content": "I've been facing a really tough situation for a while now. A few years ago, I lost my erection while being intimate with my wife, and it's been happening more frequently. I'm in my early 30s, and it's really starting to affect my self-esteem and causing depression."
+                "content": "I've been struggling a lot since my girlfriend and I broke up. We were deeply in love, and even though it's been a year, I can't move on. I still love her the same way."
             },
             {
                 "role": "counselor",
-                "content": "I'm really sorry to hear that you're going through this. It sounds like it's been a very challenging and distressing experience for you. Can you tell me a bit more about how this issue is impacting your relationship and your feelings towards yourself?"
+                "content": "I'm really sorry to hear that you're going through such a tough time. It sounds like you both shared something very special. It must be incredibly hard to feel stuck in those feelings even after a year."
             },
             {
                 "role": "client",
-                "content": "It's tearing my marriage apart. I feel like I'm not man enough, and it's devastating. I'm very attracted to my wife and want to express it like I used to, but I just can't. I don't understand what's causing this."
+                "content": "Yes, it's been extremely difficult. We had plans for our future, and now it feels like I'm just stuck in the past. I've been feeling depressed and I can't connect with anyone else."
             },
             {
                 "role": "counselor",
-                "content": "It's clear that this situation is causing you a lot of pain and confusion. Your feelings are completely valid, and it's understandable to feel this way given what you're experiencing. Have you had a chance to discuss these feelings with your wife or a medical professional?"
+                "content": "The pain of losing a future you envisioned together is profound. It's understandable that you're feeling depressed and finding it hard to connect with others. Grieving a relationship can take time, and it's okay to feel this way."
             },
             {
                 "role": "client",
-                "content": "I've talked to my wife, but I feel like she doesn't fully understand. I haven't seen a doctor yet; I guess I was hoping it would just resolve on its own."
+                "content": "I just don't know how to move forward. It feels like I'm betraying our love if I do. And part of me still hopes we could get back together, even though I know it's not realistic."
             },
             {
                 "role": "counselor",
-                "content": "It's important to have open communication with your partner, but I understand that it can be difficult if you feel misunderstood. Regarding seeing a doctor, it could be a beneficial first step to rule out any medical conditions. Sometimes, physical health issues can manifest in ways we don't expect, and it's essential to address those possibilities."
+                "content": "It sounds like you're caught between holding on to hope and facing the reality of moving forward. It's natural to feel conflicted. Sometimes, part of us isn't ready to let go, even when we know it might be for the best. Have you had a chance to express these feelings, maybe through writing or talking to someone close?"
             },
             {
                 "role": "client",
-                "content": "That makes sense. I guess I've been avoiding it because I'm scared of what I might find out."
+                "content": "I've tried writing about it, but I end up just feeling more sad. And I don't really talk to my friends about it anymore. They think I should have moved on by now."
             },
             {
                 "role": "counselor",
-                "content": "It's completely natural to feel scared about these things. Acknowledging your fear is a brave step towards addressing the problem. Remember, whatever the outcome, there are ways to manage and work through this situation. It's also worth considering that stress, emotional, and psychological factors can play a significant role in these experiences."
+                "content": "It can be isolating when you feel like others don't understand your process. Writing can bring up a lot of emotions, but it can also be a way to start processing those feelings. It's important to find a supportive space where you can express yourself freely, without judgment. Have you thought about reaching out to her, or is that something you'd rather not do?"
             },
             {
                 "role": "client",
-                "content": "I hadn't thought about it that way. Maybe my stress at work and our recent move have been affecting me more than I realized."
+                "content": "I've thought about it a lot, but I'm afraid of the rejection. And I also feel like maybe it's not fair to her. She's moved on, and I don't want to disrupt her life."
             },
             {
                 "role": "counselor",
-                "content": "Life changes and stress can definitely impact our well-being in unexpected ways, including our sexual health. It might be helpful to reflect on what's been happening in your life and how it's been affecting you. Sharing these reflections with your wife could also help in understanding each other's feelings and experiences more deeply."
+                "content": "That's very considerate of you to think about her feelings and well-being. It shows a lot of maturity. Facing the possibility of rejection is daunting, and deciding not to reach out can be a way of protecting yourself too. It's also a step towards accepting the situation. How do you feel about exploring ways to start healing and moving forward?"
             },
             {
                 "role": "client",
-                "content": "I'll try talking to her again. And I'll make an appointment with a doctor. Maybe understanding more about what's happening can help us find a way through this."
+                "content": "I think I'm ready to try. I don't want to feel stuck anymore. I just don't know where to start."
             },
             {
                 "role": "counselor",
-                "content": "That sounds like a positive step forward. Remember, seeking help is a sign of strength. If you find out that the issue is not medical, exploring your emotional and psychological world can also be very enlightening. Sometimes, understanding our inner selves can help resolve external issues."
+                "content": "Acknowledging that you're ready to move forward is a significant first step. It might be helpful to start by looking at your thoughts and identifying where they're getting stuck. Writing down your thoughts can be a powerful way to begin understanding your patterns. What do you think?"
             },
             {
                 "role": "client",
-                "content": "Thank you for listening and for your advice. It's given me a new perspective and a bit of hope."
+                "content": "That makes sense. I guess I've been avoiding really examining how I feel because it's been too painful. But I see how it could help."
             },
             {
                 "role": "counselor",
-                "content": "You're very welcome. I'm here to support you through this journey. Remember, you're not alone, and there's always a path towards healing and connection. If you have any more questions or need further support, please feel free to reach out."
+                "content": "It's perfectly normal to avoid painful feelings, but confronting them can be a path to healing. Remember, you're not alone in this process. I'm here to support you through these steps. How about we start by identifying one thought that's been particularly hard to let go of?"
+            },
+            {
+                "role": "client",
+                "content": "One thought that keeps coming back is that I'll never find someone who understands me like she did. It feels like I lost my one chance at true love."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling like you've lost your one chance at true love is incredibly painful. It's important to acknowledge that feeling, but also to remind yourself that love can come in many forms and at different times in our lives. Healing from this will open you to new possibilities. It doesn't diminish what you had, but it allows you to grow and find happiness again. Would you be open to exploring activities or hobbies that could help you reconnect with yourself and others?"
+            },
+            {
+                "role": "client",
+                "content": "I think I would. I used to enjoy painting and hiking before all this happened. Maybe I could start doing those things again."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds like a wonderful idea. Painting and hiking are not only great ways to express yourself and find peace but also opportunities to meet new people who share your interests. Taking small steps back into activities you love can be incredibly healing. How do you feel about setting a small goal to start one of those activities this week?"
+            },
+            {
+                "role": "client",
+                "content": "I feel a bit hopeful about that. I think setting a small goal is something I can do. Thank you for helping me see that there's a way to start moving forward."
+            },
+            {
+                "role": "counselor",
+                "content": "You're welcome. I'm glad to hear you're feeling a bit more hopeful. Remember, it's okay to take things one step at a time. I'm here to support you on your journey. Let's check in next week to see how your goal went. How does that sound?"
+            },
+            {
+                "role": "client",
+                "content": "That sounds good. I appreciate your support. Thank you."
+            }
+        ]
+    },
+    {
+        "questionText": "A lot of times, I avoid situations where I am to meet new people because I have a fear of embarrassing myself. I often avoid large groups of people, like parties, because I think they all constantly judge me.",
+        "answerText": "Hello, and thank you for your question. First, I want you to know that you are certainly not alone on this issue.\u00a0Everyone, at\u00a0some point in time, has a fear of public embarrassment. But for many\u00a0people, this fear can become\u00a0so awful that it begins to\u00a0have a real negative impact on their quality of life.\u00a0\u00a0They will\u00a0try to avoid any situation that they even THINK will cause them embarrassment or anxiety. Escaping a possible embarrassing moment by avoiding or isolating may cause some relief at first, but then many times the avoidance will eventually\u00a0lead to loneliness, isolation, and even despair. By avoiding, we can also miss out on things that make us feel alive and bring enjoyment. There are many self-help books that offer advice on this issue. You can do an internet search, and I recommend reading the reviews of the book. That is\u00a0 great way to find out if others have found the book helpful. Another option is to seek a counselor to help you with this fear.\u00a0I would recommend a counselor who specializes in helping people who have anxiety or social anxiety. Acceptance and Commitment Therapy is\u00a0 a good choice for helping with anxiety, but there are many others. The truth is that anxiety and fear of embarrassing ourselves is not something that any of us will ever \"get over\", but we can learn to respond to those feelings differently. A colleague may offer some other advice, as well.. Be wellRobin Landwehr, DBH, LPC, NCC",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today."
+            },
+            {
+                "role": "client",
+                "content": "Lately, I've been struggling a lot with meeting new people. I'm really scared of embarrassing myself in front of others."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like you're dealing with quite a bit of anxiety around social situations. It's not uncommon to feel this way, and I want you to know that you're not alone. What specific situations have you found to be the most challenging?"
+            },
+            {
+                "role": "client",
+                "content": "I guess the most challenging situations are the ones that involve large groups, like parties. I feel like everyone is constantly judging me."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling judged by others can be really daunting, especially in large groups where it feels like there are so many eyes on you. It's understandable that you'd want to avoid those feelings of discomfort. Have you noticed if there's anything in particular that triggers these feelings more than others?"
+            },
+            {
+                "role": "client",
+                "content": "Not really, it just feels like the mere thought of being in those situations is enough to make me anxious. I start worrying about it days in advance."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like the anticipation itself is a significant source of stress for you. That must be really tough to handle, especially when it starts affecting your life days before an event even happens. Have you tried any strategies so far to cope with these feelings?"
+            },
+            {
+                "role": "client",
+                "content": "I've tried avoiding these situations altogether, but then I end up feeling lonely and like I'm missing out on life."
+            },
+            {
+                "role": "counselor",
+                "content": "Avoiding situations can provide temporary relief, but as you've noticed, it can also lead to feelings of loneliness and missing out. It's a difficult cycle to break out of. There are strategies that can help manage these feelings, though. Have you ever considered seeking professional help or exploring self-help resources?"
+            },
+            {
+                "role": "client",
+                "content": "I've thought about it, but I'm not sure where to start. It feels overwhelming."
+            },
+            {
+                "role": "counselor",
+                "content": "Starting can feel overwhelming, especially when you're already dealing with anxiety. But taking small steps can make it more manageable. Reading self-help books or articles on social anxiety might be a good first step. They can offer strategies and insights that you might find helpful. Would you like some recommendations?"
+            },
+            {
+                "role": "client",
+                "content": "Yes, that would be helpful. I just want to feel better and not let this fear control my life."
+            },
+            {
+                "role": "counselor",
+                "content": "I understand, and it's very courageous of you to seek ways to improve your situation. There are many resources out there, and finding the right one for you is important. For social anxiety, 'The Shyness and Social Anxiety Workbook' by Martin M. Antony and Richard P. Swinson is highly recommended. It provides practical strategies to cope with social anxiety. Also, considering therapy, such as Acceptance and Commitment Therapy, could be very beneficial in learning to respond differently to your feelings of anxiety."
+            },
+            {
+                "role": "client",
+                "content": "Thank you, I'll definitely look into the workbook and consider therapy. It's just nice to know there are options out there."
+            },
+            {
+                "role": "counselor",
+                "content": "Absolutely, there are always options and different paths to explore. Remember, it's about taking one step at a time. If you decide to pursue therapy, finding a counselor who specializes in anxiety or social anxiety could be very helpful. I'm here to support you through this process. Do you have any other questions or concerns for now?"
+            },
+            {
+                "role": "client",
+                "content": "No, I think that's it for now. Thank you for listening and for the advice. It really means a lot."
+            },
+            {
+                "role": "counselor",
+                "content": "You're very welcome. I'm glad I could help. Remember, it's okay to seek help, and it's a sign of strength to do so. Feel free to reach out if you need more support or have more questions in the future. Take care."
+            }
+        ]
+    },
+    {
+        "questionText": "A year ago, the love of my life left me and never looked back. Our son was two months old at the time and it broke my heart. I miss her so much and can't seem to get over being so heartbroken.",
+        "answerText": "Who takes care of your son, is a significant part of getting over your heartbreak.If you made reasonable custody terms re your son then the relationship heartache is much easier to recover from than if your son\u2019s mother vanished from his life, or if the mother wants nothing to do w him.Re the actual relationship, let yourself feel sad and hurt since this is the truth.Usually life gradually fills in new people, including a relationship once you feel strong enough from having endured such sadness and loss.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I've been struggling a lot lately. A year ago, the love of my life left me and never looked back. Our son was just two months old at the time. It's been really hard."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm truly sorry to hear that you've been going through such a tough time. It sounds incredibly painful to have someone so important to you leave, especially at such a pivotal moment. How have you and your son been managing since then?"
+            },
+            {
+                "role": "client",
+                "content": "It's been a rollercoaster, honestly. I've been trying to be strong for my son, but it's hard. There are days when I miss her so much it physically hurts."
+            },
+            {
+                "role": "counselor",
+                "content": "It's understandable to feel that way, given what you've been through. The pain of missing someone can be overwhelming, particularly when you're also trying to be strong for your child. Have you had any support during this time?"
+            },
+            {
+                "role": "client",
+                "content": "My family has been there for me, which helps. But it's not the same, you know? Sometimes I feel like I can't really talk to them about how much I miss her."
+            },
+            {
+                "role": "counselor",
+                "content": "It's good to hear you have some support from your family, but it's also completely normal to feel like they might not fully understand the depth of your feelings. It's important to have a space where you can express your emotions freely. How are you coping with your feelings on the days when they feel the most intense?"
+            },
+            {
+                "role": "client",
+                "content": "I try to keep myself busy, focus on work and spending time with my son. But when I'm alone, it all just hits me. I haven't really been able to talk to anyone about how deep this goes."
+            },
+            {
+                "role": "counselor",
+                "content": "Keeping busy can be a helpful coping mechanism, but it's also important to allow yourself to feel and process those deep emotions. It's okay to not be okay, and talking about these feelings is a crucial step towards healing. How do you feel about exploring these feelings together, to better manage and understand them?"
+            },
+            {
+                "role": "client",
+                "content": "I think I need that. I just don't know where to start or how to get over being so heartbroken."
+            },
+            {
+                "role": "counselor",
+                "content": "Starting is often the hardest part, but you've already made a significant step by recognizing your need to talk about it. As for healing from heartbreak, it's a process that involves acknowledging your feelings of sadness and loss. It's also important to consider how you and your son have been adjusting. How has your son's relationship with his mother been since she left?"
+            },
+            {
+                "role": "client",
+                "content": "She hasn't been in contact. It's like we don't exist to her anymore. That's part of what makes this so hard."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds incredibly challenging, not just for you but for your son as well. The absence of a parent can be difficult to understand and accept, for both of you. It's important to find ways to fill your lives with love and support, even in her absence. How do you feel about focusing on building a nurturing environment for your son and yourself?"
+            },
+            {
+                "role": "client",
+                "content": "I want that. I want to make sure my son feels loved and supported, even if it's just from me. I just don't know if I'm doing enough."
+            },
+            {
+                "role": "counselor",
+                "content": "It's clear you have a lot of love for your son, and wanting to do the best for him shows how much you care. Remember, being present and emotionally available for your son is invaluable. Let's explore ways you can strengthen your bond with him, and in doing so, perhaps find new avenues for your own healing and growth. How does that sound?"
+            },
+            {
+                "role": "client",
+                "content": "That sounds really good, actually. I hadn't thought about it like that before."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm glad to hear that. Working through heartbreak and building a strong, loving relationship with your son can go hand in hand. You're not alone in this journey, and it's okay to seek help and support along the way. Is there anything specific you'd like to focus on in our next session?"
+            },
+            {
+                "role": "client",
+                "content": "Maybe we could talk about ways to deal with the loneliness and how to start building a life without her. I think that would help."
+            },
+            {
+                "role": "counselor",
+                "content": "Absolutely, we can definitely explore strategies to cope with loneliness and how to start building a fulfilling life for you and your son. Remember, it's a process, and it's okay to take it one step at a time. I'm here to support you through it."
+            },
+            {
+                "role": "client",
+                "content": "Thank you. I really appreciate it. I'm looking forward to our next session."
+            },
+            {
+                "role": "counselor",
+                "content": "You're very welcome. I'm looking forward to it as well. Take care until then, and remember, I'm here to help."
+            }
+        ]
+    },
+    {
+        "questionText": "About 3 years ago or so I was skinny, but I was still ugly. I really do want to change that but I've tried 3 times. Now can I try but don't stop. At school I get bullied about my weight and my ugliness and I have been bullied my whole life that I believe them. How can I stop thinking about them and don't let it get in my head? My parents said I don't weight that much but, they do think I am fat but, they tell me I am not. I told my parents that I need to go to a therapist, but they think I am fine and I think they don't want to deal with it.",
+        "answerText": "Hey! \u00a0I am so impressed with your efforts to ask questions, to figure out how to change the messages that you hear (and say to yourself), and to get support! \u00a0And it sounds like you want to make some changes in your life! \u00a0Take a walk over to the counseling office at school, the school nurse or consider reaching out to your Pediatrician\u2019s office. You don\u2019t have to have your parent\u2019s permission to seek support for yourself! \u00a0And maybe taking control of your support network will give you the strength to make even bigger decisions about your health! \u00a0I am rooting for you! \u00a0Be Wise!",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I've been feeling really down about myself. I was skinny a few years ago but I still felt ugly. I've tried to change how I feel about myself, but it's hard. At school, I get bullied about my weight and my looks. It's been happening for so long, I've started to believe them."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm really sorry to hear that you're going through this. It sounds incredibly tough to be facing bullying and to struggle with these feelings about yourself. It's understandable that hearing negative things, especially over a long period, can make it hard to see yourself in a positive light. You're not alone in feeling this way. Can you tell me more about what you've tried in the past to change how you feel about yourself?"
+            },
+            {
+                "role": "client",
+                "content": "I've tried ignoring the bullies and focusing on positive things, but it doesn't seem to last. My parents tell me I'm not overweight, but they also make comments that make me feel like they think I am. I've mentioned wanting to see a therapist, but they think I'm fine and don't really take it seriously."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like you're in a really tough spot, feeling caught between the negative comments from others and mixed messages from your parents. It's really brave of you to reach out for help and to consider therapy as a step towards healing. Sometimes, it can be challenging for those closest to us to understand our need for professional support. Have you thought about other ways you might be able to access support, perhaps through school or another trusted adult?"
+            },
+            {
+                "role": "client",
+                "content": "Not really, I guess I've felt kind of stuck. I didn't know if I could go to someone at school without my parents finding out. I'm just really tired of feeling this way."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling stuck is a common feeling when we're going through difficult times, and it's okay to feel that way. It's important to remember that you have the right to seek support for yourself, and there are confidential ways to get help. School counselors, nurses, or even a trusted teacher can be great resources. They can offer support and guidance on how to navigate these feelings and the bullying you're experiencing. How does that sound to you?"
+            },
+            {
+                "role": "client",
+                "content": "It sounds like it might be worth a try. I just want to feel better and not let these negative thoughts and bullying control my life anymore."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm glad to hear you're open to trying. Taking that first step can be the hardest part, but it's a strong move towards gaining control over your feelings and your life. Remember, reaching out for help is a sign of strength, not weakness. You deserve to feel good about yourself and to live a life free from bullying and negative self-perception. I'm here to support you through this process. Is there anything specific you'd like to start working on together?"
+            },
+            {
+                "role": "client",
+                "content": "Maybe we can start with how to handle the bullying at school and then work on building my self-esteem?"
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds like a great place to start. We can work on strategies to deal with the bullying effectively and explore ways to strengthen your self-esteem. Remember, you're not alone in this, and together, we can work towards a happier, more confident you. I'm looking forward to our journey together. How do you feel about getting started?"
+            },
+            {
+                "role": "client",
+                "content": "I feel a bit more hopeful, honestly. Thank you for listening and for offering to help. I'm ready to get started."
+            },
+            {
+                "role": "counselor",
+                "content": "You're very welcome. It's what I'm here for. Feeling hopeful is a great first step. We'll take it one day at a time, and I'll be with you every step of the way. Let's work together to build a brighter future for you."
+            }
+        ]
+    },
+    {
+        "questionText": "About 5 months ago my ex left without fully explaining why. For me it seemed out of the blue. I don't miss her as much as I used to but I just don't trust people anymore, not even my friends who I have known since my childhood not even my family. I'm so terrified of being judged or dismissed. Instead of acting like someone else or putting on a mask of a personality, I've just shut down. I haven't felt that sense of comfort and happiness with myself since everything fell apart. I'm scared to because I don't want it to be taken away from me again. I feel like ever lesson I learn only last a day. I just don't know what to do. I'm working at a place I know I should enjoy. I'm keeping up with my creative passions: working out, eating healthy, etc. I'm doing everything the books say I should do, but I don't feel any different. I just don't know what to do.",
+        "answerText": "since you realize your sense of trust was broken, withdrawing from close relationships, makes sense.This may be your Self giving you natural time to recuperate from emotional pain.Also it is your chance to think over how to handle yourself differently in future relationships.Maybe this process requires more time than you'd like.Having patience is very difficult when a person feels hurt.A therapist of your own may be a good idea so you have someone for guidance and to chart your progress w you.This may feel less lonely and help you tolerate the waiting period till you're better",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "About 5 months ago, my ex left without fully explaining why. It seemed so sudden. I'm not as upset as I was, but now I find it hard to trust anyone, even my closest friends and family. I feel like I've just shut down to avoid being judged or dismissed."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like you've been through a really tough experience, and it's understandable how such a sudden change can deeply affect your trust in others. It's okay to feel the way you do. Can you tell me a bit more about how this has affected your day-to-day interactions?"
+            },
+            {
+                "role": "client",
+                "content": "I guess I've become more withdrawn. I don't really open up to anyone anymore because I'm scared of being vulnerable. I've been trying to keep up with my hobbies and work, doing things that are supposed to make me feel better, but it just doesn't seem to help."
+            },
+            {
+                "role": "counselor",
+                "content": "Keeping up with your hobbies and work is a positive step, and it's great that you're trying to maintain those aspects of your life. However, it sounds like the emotional connection and trust in others is what's missing for you right now. It's natural to protect yourself by withdrawing, especially after feeling hurt. Have you had any moments where you felt a bit more open or comfortable, even if just slightly?"
+            },
+            {
+                "role": "client",
+                "content": "Not really, I feel like I'm constantly on guard. Even when I'm with people I've known forever, I can't shake off the feeling that I need to protect myself. It's exhausting."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling constantly on guard can indeed be very exhausting. It's like you're in a state of constant alertness, waiting for something bad to happen. It's important to acknowledge these feelings and understand that your reaction is a natural response to what you've been through. Healing from such an experience takes time and patience with yourself. Have you considered speaking to a therapist regularly, someone who can provide guidance and help you chart your progress?"
+            },
+            {
+                "role": "client",
+                "content": "I've thought about it, but I'm not sure how it would help. I guess I'm worried about opening up and not being understood."
+            },
+            {
+                "role": "counselor",
+                "content": "It's completely normal to have reservations about opening up, especially given your recent experiences. A therapist can offer a safe space where you're free to express yourself without judgment. They can also help you explore these feelings of mistrust and fear of vulnerability at your own pace, providing support and understanding along the way. It might feel daunting at first, but it could be a step towards regaining some of that trust in others and in yourself."
+            },
+            {
+                "role": "client",
+                "content": "Maybe you're right. I just want to start feeling like myself again, without this constant fear. It's just hard to see how that's possible right now."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling like yourself again is a journey, and it's okay that it feels hard to see the end right now. Each step, even considering therapy, is a move towards healing. Remember, it's okay to take this at your own pace. There's no rush, and it's about finding what feels right for you. How do you feel about taking some small steps towards opening up, perhaps starting with a therapist who can guide you through this process?"
+            },
+            {
+                "role": "client",
+                "content": "I'm a bit nervous, but I think I'm willing to try. It would be nice to not feel so alone in this."
+            },
+            {
+                "role": "counselor",
+                "content": "That's a brave and significant step forward. Feeling nervous is completely understandable, but remember, you're not alone in this journey. I'm here to support you, and finding a therapist you're comfortable with can make a big difference. Is there anything specific you'd like to focus on or any concerns you have about starting this process?"
+            },
+            {
+                "role": "client",
+                "content": "I guess I just want to make sure I find someone who really listens and understands. I don't want to feel rushed or judged."
+            },
+            {
+                "role": "counselor",
+                "content": "Absolutely, finding someone who listens and understands, and where you don't feel rushed or judged, is crucial. When looking for a therapist, it's important to feel a sense of connection and trust. Most therapists will be open to a brief initial conversation to see if you both feel it's a good fit. How does that sound?"
+            },
+            {
+                "role": "client",
+                "content": "That sounds more manageable. I'll start looking into therapists near me and maybe schedule some consultations."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds like a positive plan. Remember, it's okay to take your time in choosing someone who feels right for you. If you have any questions during your search or need support, I'm here for you. How are you feeling about everything we've discussed today?"
+            },
+            {
+                "role": "client",
+                "content": "I feel a bit more hopeful, honestly. Knowing I can take it slow and have some control in choosing a therapist helps. Thank you for listening and understanding."
+            },
+            {
+                "role": "counselor",
+                "content": "You're very welcome. I'm glad to hear you're feeling a bit more hopeful. Remember, taking it one step at a time is perfectly okay. If you ever need to talk or have any questions, don't hesitate to reach out. Take care, and good luck with your search for a therapist."
+            }
+        ]
+    },
+    {
+        "questionText": "About a month ago, I went through my boyfriend\u2019s phone and found him messaging his ex-girlfriend that he was dating before me. He gave her a promise ring when they were together, and he still had it hiding in his memory box in our son\u2019s room. I found many things on his phone, but that broke my heart the most. He deleted all the messages but two. I can't help thinking they were talking about the old times together or something like that. It really kills me, and I can't stop thinking about it.",
+        "answerText": "Your sense of hurt is very understandable.Do you and your boyfriend have an agreement on looking through each other's phones?I ask because the overall problem sounds like lack of trust and that there may be a difference in what each of you wants and expects from your relationship.Probably if the two of you talk about these topics and you each become clear as to the commitment status of each of you to the other, you'll have more clarity as to what either of you would like from the other.With this new level of clarity, his \u00a0past relationship involvements will likely be less meaningful .Once you have clear definition of the two of you as a couple, who he was as a past partner to someone else, will matter very little.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I'm struggling a lot lately. About a month ago, I found messages between my boyfriend and his ex-girlfriend on his phone. It's been really bothering me."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm sorry to hear that you're going through this. Finding such messages can indeed be very upsetting. Can you tell me more about how you're feeling?"
+            },
+            {
+                "role": "client",
+                "content": "It's like a mix of betrayal and sadness. The fact that he kept a promise ring he gave her, hidden in our son\u2019s room, just adds to the pain."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like you're feeling deeply hurt, not just by the messages but also by the symbolic significance of the promise ring being kept hidden. It's understandable that these discoveries would be very painful."
+            },
+            {
+                "role": "client",
+                "content": "Exactly. And he deleted all the messages but two. I can't help but wonder what they were talking about, especially the old times."
+            },
+            {
+                "role": "counselor",
+                "content": "It's natural to feel consumed by these thoughts, especially when there are unanswered questions and unresolved feelings. Do you and your boyfriend have an agreement about looking through each other's phones?"
+            },
+            {
+                "role": "client",
+                "content": "No, we never really talked about it. I guess I just did it because I was feeling insecure."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling insecure in a relationship can lead us to act out of character. It's important to address these feelings openly. Have you been able to talk to your boyfriend about what you found and how it made you feel?"
+            },
+            {
+                "role": "client",
+                "content": "I tried, but it ended up in an argument. He thinks I invaded his privacy, and I feel like he's hiding something from me."
+            },
+            {
+                "role": "counselor",
+                "content": "It sounds like there's a lack of trust and communication between you two, which is contributing to the tension. It might be helpful for both of you to have a calm and open conversation about your feelings, needs, and expectations in the relationship."
+            },
+            {
+                "role": "client",
+                "content": "I want that, but I don't know how to start without it turning into another fight."
+            },
+            {
+                "role": "counselor",
+                "content": "Starting a difficult conversation can be challenging. It might be helpful to express your feelings using 'I' statements and to choose a time when both of you are calm and not preoccupied with other stressors."
+            },
+            {
+                "role": "client",
+                "content": "That makes sense. I guess I just need to find the right time and be honest about how I'm feeling without accusing him of anything."
+            },
+            {
+                "role": "counselor",
+                "content": "Exactly. Creating a space where both of you feel safe to express your feelings and concerns can lead to a deeper understanding and, hopefully, a resolution. Remember, it's about working together to strengthen your relationship."
+            },
+            {
+                "role": "client",
+                "content": "Thank you. I'll try to talk to him this weekend. I really want us to move past this."
+            },
+            {
+                "role": "counselor",
+                "content": "You're welcome. It's great to hear that you're willing to work on this. Remember, it's okay to seek support if you need it, whether from friends, family, or a professional. I'm here if you need to talk more."
+            },
+            {
+                "role": "client",
+                "content": "I appreciate that. It helps knowing I have someone to talk to about this."
+            },
+            {
+                "role": "counselor",
+                "content": "Anytime. Take care of yourself, and I hope your conversation goes well. Feel free to reach out if you need further support."
+            }
+        ]
+    },
+    {
+        "questionText": "About two and a half months ago, I met a woman on a dating site. We went out on two dates, and then despite her original plans on how to pace and conduct the relationship, I ended up at her house on a the Friday night one week after our first date. We respectfully tried not to have sex, but after hours of trying to resist each other, we gave in and we had sex. After that, I slept at her house every night for almost two weeks. Then one day, she went to her family\u2019s house on Thanksgiving and everything changed. Within the short time we were together, we got so close and serious really fast. We had finally found each other. We told each other that we loved each other all the time, even while we were making love. A few days after Thanksgiving, she told me that we would have to go back to her original plans of seeing each other much less frequently. I was very hurt and didn\u2019t understand. Then another week later, she told me she couldn\u2019t do it at all anymore. I was crushed!\n   A few days later, she tells me how much she\u2019s missing me and \u201clet\u2019s get together for lunch\u201d or something like that. Then about two weeks later, we finally get together one night and we were so hot for each other (in love, not just sex), but she confessed that the reason for the sudden distance was that the father of her very young child told her he wants to get back together and this totally messed with her. So for her child\u2019s sake, she is now considering the possibility of allowing that to happen. She had told me all about him previously, and it is definite that she has little to no attraction to him, but she would do this putting herself in misery again for her child. Our love for each other is fully established and acknowledged, but she is torn and confused. She doesn\u2019t even think it would work between them as she had to kick him out before for not fulfilling his role properly. I know she needs time, and all I can do is take care of myself. We have agreed to remain friends, and if this doesn\u2019t work out for her, we will try again. I\u2019m completely in love with her, and I\u2019m in extreme pain.",
+        "answerText": "That sounds really heartbreaking. It is tough falling in love and not being able to dive fully because of complications on the other side. It sounds to me that you are doing exactly what you need to be doing by taking \"care of myself\" while the rest sorts itself out. While I admire your desire and courage to stay friends - the \"extreme pain\" that you mentioned may make this too challenging and at odds with your taking care of yourself. Since there is no commitment on her end to give it a shot with you I would make sure that you really honour your own feelings about what feels right to you so that you don't end up feeling strung along or resentful. Make sure that you lean on friends and family at this time - we need all the support that we can get when we are heartbroken.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I've been going through a really tough time lately. I met someone and things escalated quickly, but now it's all falling apart."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm sorry to hear that you're going through such a difficult period. It sounds like things moved very fast and now you're facing some challenges. Could you tell me a bit more about what happened?"
+            },
+            {
+                "role": "client",
+                "content": "About two and a half months ago, I met a woman on a dating site. We went out on two dates, and then I ended up at her house. We got close very quickly, but after she visited her family on Thanksgiving, she said we had to see each other less. I was very hurt."
+            },
+            {
+                "role": "counselor",
+                "content": "It must have been very confusing and painful for you to experience such a sudden shift in your relationship, especially after getting so close so quickly. It's understandable that you felt hurt by her decision. How did you respond to her saying you needed to see each other less?"
+            },
+            {
+                "role": "client",
+                "content": "I tried to understand her point of view, but it was hard. Then she ended things completely a week later. But after that, she kept saying she missed me and wanted to meet. It's been a rollercoaster."
+            },
+            {
+                "role": "counselor",
+                "content": "That sounds really heartbreaking. Being on such an emotional rollercoaster can be incredibly draining. It's tough falling in love and not being able to dive fully because of complications on the other side. How have you been coping with these ups and downs?"
+            },
+            {
+                "role": "client",
+                "content": "It's been really hard. We did meet again, and she explained that her child's father wants to get back together, which confused her even more. I love her, but this situation is causing me extreme pain."
+            },
+            {
+                "role": "counselor",
+                "content": "It's clear you have strong feelings for her, and this situation is very complex due to her considerations for her child. It's admirable that you're trying to be understanding. It sounds to me that you are doing exactly what you need to be doing by taking 'care of myself' while the rest sorts itself out. Have you been able to focus on self-care during this time?"
+            },
+            {
+                "role": "client",
+                "content": "I'm trying, but it's not easy. We've agreed to remain friends, and if things don't work out for her, we might try again. I'm just not sure how to deal with all this pain in the meantime."
+            },
+            {
+                "role": "counselor",
+                "content": "While I admire your desire and courage to stay friends, the 'extreme pain' that you mentioned may make this too challenging and at odds with your taking care of yourself. It's important to honor your own feelings and needs during this time. Have you thought about how you might protect your emotional well-being while navigating this friendship?"
+            },
+            {
+                "role": "client",
+                "content": "Not really, I guess I'm just hoping things will get better with time. But you're right, I need to think about protecting my emotional well-being."
+            },
+            {
+                "role": "counselor",
+                "content": "It's completely natural to hope for improvement over time. However, actively engaging in self-care and setting boundaries where necessary can be very beneficial. Since there is no commitment on her end to give it a shot with you, make sure that you really honor your own feelings about what feels right to you so that you don't end up feeling strung along or resentful. Have you considered seeking support from friends or family?"
+            },
+            {
+                "role": "client",
+                "content": "I've talked to a few friends about it, and they've been supportive. I guess I just need to focus on that for now."
+            },
+            {
+                "role": "counselor",
+                "content": "That's good to hear. Leaning on friends and family can provide immense support during heartbreak. Remember, it's okay to seek out professional support as well if you find it necessary. Taking care of your mental and emotional health is crucial. Is there anything specific you'd like to work on or discuss further to help you navigate through this?"
+            },
+            {
+                "role": "client",
+                "content": "I think I need to figure out how to set those boundaries you mentioned and maybe find more ways to distract myself from the pain. Any advice on that would be helpful."
+            },
+            {
+                "role": "counselor",
+                "content": "Setting boundaries is a great place to start. It involves clearly communicating your needs and limits, which can help manage expectations on both sides. As for distractions, engaging in hobbies, exercise, or any activity that brings you joy can be a good way to shift your focus. It might also be beneficial to explore new interests or reconnect with old ones. Remember, it's about taking it one day at a time. How does that sound?"
+            },
+            {
+                "role": "client",
+                "content": "That sounds like a plan. I'll try to focus on doing things that make me happy and see if I can set some healthy boundaries. Thank you for your advice and support."
+            },
+            {
+                "role": "counselor",
+                "content": "You're welcome. I'm here to support you through this journey. Remember, it's okay to not have all the answers right now. Taking steps towards self-care and setting boundaries is a positive move forward. If you need to talk or explore more strategies, I'm here. Take care."
+            }
+        ]
+    },
+    {
+        "questionText": "After 25 years, I fell in love for the first time. The person acted for a week and left me without even saying goodbye. My heart is burning, and I can't take this pain.",
+        "answerText": "Ouch. Losing someone you love hurts so much. We all long to be loved and to love and to have that experience and then lose it is awful. While it is easy to feel angry or start doubting yourself under these circumstances, I would encourage you to recognize the agony of what you are experiencing as an indication of how much you value loving relationships and how much you want to make this happen in your life. When we are going through this kind of loss it is really helpful to have the support of friends and family. While no one is going to be able to make it better, we don't have to be alone with our pain. If you are not comfortable with going to those in your life it may be a good time to see \u00a0a counsellor to help you cope with your distress and learn how to move past this and find the love that you are looking for.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "After 25 years, I fell in love for the first time. The person acted for a week and left me without even saying goodbye. My heart is burning, and I can't take this pain."
+            },
+            {
+                "role": "counselor",
+                "content": "Ouch. Losing someone you love hurts so much. It sounds like you're going through a really tough time right now. Can you tell me a bit more about your feelings?"
+            },
+            {
+                "role": "client",
+                "content": "It's like I'm in a dark place where no one can reach me. I feel abandoned and worthless. How could they just leave without a word?"
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling abandoned and worthless is incredibly painful, and it's understandable to feel lost in such a situation. It's a reflection of how deeply you care and the impact this person has had on you, even in such a short time. Have you been able to talk to anyone about how you're feeling?"
+            },
+            {
+                "role": "client",
+                "content": "No, I haven't. I'm too embarrassed. I thought I was strong, but now I just feel weak."
+            },
+            {
+                "role": "counselor",
+                "content": "Feeling vulnerable, especially after opening your heart, doesn't make you weak; it makes you human. It takes a lot of strength to acknowledge these feelings. Sharing your pain can be a step towards healing. Is there someone in your life who you trust to share these feelings with?"
+            },
+            {
+                "role": "client",
+                "content": "I have a friend who's been asking me if I'm okay. But I just don't know how to start that conversation."
+            },
+            {
+                "role": "counselor",
+                "content": "It's great to hear you have a friend who is concerned about you. Starting the conversation can be as simple as saying, 'I'm going through a tough time and could use someone to talk to.' People often want to help; they just don't know how. How do you feel about giving that a try?"
+            },
+            {
+                "role": "client",
+                "content": "That might work. I guess I'm just afraid of breaking down or not being understood."
+            },
+            {
+                "role": "counselor",
+                "content": "It's perfectly okay to break down and show your emotions, especially with someone who cares about you. It's a step towards healing. Being vulnerable allows others to see our true selves and can strengthen our connections with them. Remember, it's okay to not be okay."
+            },
+            {
+                "role": "client",
+                "content": "You're right. I'll try talking to my friend. It's just hard to see any light right now."
+            },
+            {
+                "role": "counselor",
+                "content": "It's understandable to feel that way, especially when you're in the midst of such pain. But reaching out for support is a brave step forward. Remember, it's okay to lean on others during tough times. We all need support sometimes. How are you feeling about everything we've talked about today?"
+            },
+            {
+                "role": "client",
+                "content": "A bit better, I think. It helps to talk about it. I'm still hurt, but maybe a little less lost."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm glad to hear you're feeling a bit better. It's okay to still feel hurt; healing is a process. Remember, you're not alone, and it's okay to ask for help. If you ever feel like you need more support, I'm here for you. Take care of yourself."
+            }
+        ]
+    },
+    {
+        "questionText": "After 40 years of being straight, how could I now find myself interested in people of the same sex? I have had a few same sex encounters of my own doing.",
+        "answerText": "I frequently work with individuals who develop same-sex attraction later in life. Humans have a tendency to think of things in absolutes. Black or white. Good or bad. Gay or straight. In fact, much of life is lived in the \"grey\" that lies in between the extremes. This is especially true of sexual orientation which is fluid and occurs along a spectrum. As someone ages and grows, their sexual interests may change. I would encourage you to speak to a therapist who specializes in working with LGBTQ+ individuals. They will have the experience necessary to help you navigate these issues.",
+        "messages": [
+            {
+                "role": "counselor",
+                "content": "Hello, how are you doing, how can I help you today?"
+            },
+            {
+                "role": "client",
+                "content": "I'm feeling a bit confused and uncertain. After 40 years of identifying as straight, I've recently found myself attracted to people of the same sex. It's been an unexpected shift for me."
+            },
+            {
+                "role": "counselor",
+                "content": "Thank you for sharing that with me. It sounds like you're going through a period of significant change and it's understandable to feel confused. Many people experience shifts in their attractions and interests over their lifetime. You're not alone in this."
+            },
+            {
+                "role": "client",
+                "content": "It's just so surprising to me. I've had a few same-sex encounters recently, and I'm trying to make sense of what this means for my identity."
+            },
+            {
+                "role": "counselor",
+                "content": "It's perfectly natural to question and try to make sense of your experiences, especially when they don't align with how you've previously identified. Sexual orientation can be fluid for some people, meaning it can change over time. How are you feeling about these new experiences?"
+            },
+            {
+                "role": "client",
+                "content": "I'm not sure how I feel, to be honest. Part of me is curious and excited, but another part is really anxious about what this means for my life going forward."
+            },
+            {
+                "role": "counselor",
+                "content": "Those feelings are completely valid. Exploring a part of your identity that feels new can be both exhilarating and daunting. It's important to give yourself permission to feel all of these emotions and to take things at your own pace. Have you been able to talk to anyone else about this?"
+            },
+            {
+                "role": "client",
+                "content": "No, I haven't really talked to anyone about it. I'm worried about how my friends and family might react."
+            },
+            {
+                "role": "counselor",
+                "content": "It's understandable to have concerns about how people might react. Remember, this is your journey and it's okay to choose who you share it with and when. It might be helpful to find a supportive space where you can explore these feelings more freely. I frequently work with individuals who develop same-sex attraction later in life, and there are communities and resources available that can offer support."
+            },
+            {
+                "role": "client",
+                "content": "That might be good. I just don't know where to start. Do you think therapy could help?"
+            },
+            {
+                "role": "counselor",
+                "content": "Absolutely, therapy can be a great place to start. It provides a confidential and non-judgmental space where you can explore your feelings and thoughts at your own pace. I specialize in working with LGBTQ+ individuals and can help you navigate these issues. Together, we can explore what this means for you and how you'd like to move forward."
+            },
+            {
+                "role": "client",
+                "content": "I appreciate that. It's comforting to know there's support available. I think I'd like to try therapy and see where it leads."
+            },
+            {
+                "role": "counselor",
+                "content": "I'm glad to hear you're open to it. Taking the first step can often be the hardest, but it's a positive move towards understanding yourself better and finding a path that feels right for you. When you're ready, we can schedule a session to begin this journey together."
+            },
+            {
+                "role": "client",
+                "content": "Thank you. I'm looking forward to starting this process and seeing what I discover about myself."
+            },
+            {
+                "role": "counselor",
+                "content": "You're welcome. I'm here to support you every step of the way. Remember, this is a process and it's okay to take it one step at a time. I look forward to working with you."
             }
         ]
     }

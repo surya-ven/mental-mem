@@ -1,37 +1,41 @@
 [
     {
         "case_id": "case_001",
-        "seed_text": "A few nights ago I talked to this girl I know about my self esteem issues for the first time. We talked for hours and she told me time and again that I was a great guy. She told me I was attractive, and have a great personality, etc. I really started to feel better about myself by the time I woke up the next morning. Now, though, I can't stop thinking about her, but I leave to go back to college in a few days and I go to school 4 hours away from her. So now I feel constantly depressed because even if I told her how I felt it wouldn't matter. I feel helpless and I don't know what to do.",
+        "seed_text": "A friend of mine taking psychology advised I go to my doctor to check if I have major depressive disorder. I'm afraid of the consequences of doing so. If I do become diagnosed with major depressive disorder, won\u2019t that go on my records? I will never be able to become a counselor along with a list of other things I may be prohibited from. I\u2019m also afraid of taking any anti-depressants. This year, my doctor gave me some for a \"dislocated hip.\" I had a severe reaction and passed out moments after taking them. Everyone I know who has taken anti-depressants says it\u2019s a bad idea all around and you\u2019re better getting treatment without them. I\u2019m concerned they might take me to a clinic and force me to take medication because I am unable to make decisions on my own. I\u2019m not really suicidal, but I am not really taking care of myself either. Someone also told me they still use electroshock therapy. I\u2019m not keen on that. I\u2019m wondering if I am better off just getting self-help and working things out on my own. It\u2019s just that I've been an emotional mess since I was in elementary school. I\u2019ve graduated now and tried to stay positive and be happy, but I cannot deny I still am not good.",
         "initial_profile": {
             "values": [
-                "connection",
-                "self-worth",
-                "communication",
-                "understanding"
+                "Autonomy in decision-making",
+                "Privacy about health information",
+                "Personal growth and self-understanding",
+                "Professional aspirations (becoming a counselor)",
+                "Safety and comfort in treatment options"
             ],
             "goals": [
-                "explore feelings about the recent conversation",
-                "develop strategies for maintaining connections",
-                "work on self-esteem outside of relationships",
-                "find ways to cope with feelings of helplessness"
+                "Clarify what a diagnosis of major depressive disorder means",
+                "Explore treatment options beyond medication",
+                "Develop coping strategies to improve self-care",
+                "Address fears about stigma and future limitations",
+                "Build trust in the therapeutic process"
             ],
             "other_info": {}
         },
         "evolved_profile": {
             "values": [
-                "connection",
-                "self-worth",
-                "communication",
-                "understanding"
+                "Autonomy in decision-making",
+                "Privacy about health information",
+                "Personal growth and self-understanding",
+                "Professional aspirations (becoming a counselor)",
+                "Safety and comfort in treatment options"
             ],
             "goals": [
-                "explore feelings about the recent conversation",
-                "develop strategies for maintaining connections",
-                "work on self-esteem outside of relationships",
-                "find ways to cope with feelings of helplessness"
+                "Clarify what a diagnosis of major depressive disorder means",
+                "Explore treatment options beyond medication",
+                "Develop coping strategies to improve self-care",
+                "Address fears about stigma and future limitations",
+                "Build trust in the therapeutic process"
             ],
             "other_info": {},
-            "evolution_notes": "The user has experienced a profound shift in perspective. They now recognize that their feelings of self-worth and connection can be cultivated through their own openness and vulnerability. This realization empowers them to take control of their interactions, fostering meaningful connections regardless of distance."
+            "evolution_notes": "The user has shifted from viewing diagnosis as a permanent, stigmatizing label to understanding it as a practical tool for self-understanding and healing. This realization has alleviated some fears about stigma and future limitations, opening the door to exploring treatment options aligned with their values. They now feel empowered to embrace support while maintaining autonomy, fostering hope for both personal growth and their professional aspirations."
         },
         "sessions": [
             {
@@ -39,27 +43,23 @@
                 "transcript": [
                     {
                         "role": "counselor",
-                        "content": "Thank you for sharing that with me. It sounds like your conversation with her really made an impact on how you see yourself. Can you tell me more about how you felt after that talk?"
+                        "content": "Thank you for sharing all of that with me. It sounds like you're carrying a lot of concerns and fears about seeking help, especially about diagnosis, medication, and how this might impact your future. Can you tell me more about what you hope to achieve by exploring these feelings today?"
                     },
                     {
                         "role": "user",
-                        "content": "I felt really good about myself for the first time in a while. She made me realize some positive things, but now I can't stop thinking about her and it\u2019s making me feel down."
+                        "content": "I guess I want to know if I really need help or if I can just fix things on my own. I'm scared that if I get diagnosed with depression, it'll follow me everywhere and limit my future, like becoming a counselor. Also, I don\u2019t want to take medications because of a bad experience and what I\u2019ve heard from others."
                     },
                     {
                         "role": "counselor",
-                        "content": "It's completely understandable to have those feelings, especially after such a meaningful conversation. What do you think it is about her that\u2019s occupying your thoughts so much?"
+                        "content": "Those are very understandable worries. Many people share fears about diagnosis and treatment. It might help to explore what depression means, what a diagnosis involves, and what options you have besides medication. Would you be open to talking more about your experiences and what self-help strategies you\u2019ve tried so far?"
                     },
                     {
                         "role": "user",
-                        "content": "I think it\u2019s because she actually listened to me and made me feel valued. I don\u2019t know if I\u2019ll find that connection again, especially since I\u2019m leaving soon."
+                        "content": "I\u2019ve tried to stay positive and do things on my own, but I still feel like an emotional mess. Sometimes I don\u2019t take care of myself, but I\u2019m not suicidal. I just don\u2019t know if seeing a doctor will make things worse or help."
                     },
                     {
                         "role": "counselor",
-                        "content": "Feeling valued and understood is so important. It\u2019s hard when you feel a connection but are faced with distance. Have you considered how you might maintain that connection, even from afar?"
-                    },
-                    {
-                        "role": "user",
-                        "content": "I haven\u2019t really thought about that. I just feel helpless right now, like no matter what I do, it won\u2019t change the fact that I\u2019m leaving."
+                        "content": "It sounds like you\u2019re feeling stuck between wanting to get better and worrying about the consequences of seeking professional help. We can work together to find a path that feels safe and manageable for you, including exploring options that respect your preferences and concerns. How does that sound?"
                     }
                 ]
             },
@@ -68,27 +68,27 @@
                 "transcript": [
                     {
                         "role": "counselor",
-                        "content": "I'm glad you're here today. Last time, we talked about the connection you felt. Have you had any thoughts about how that conversation could influence your future interactions?"
+                        "content": "Last time, you mentioned feeling stuck and worried about how a diagnosis might affect your future as a counselor. Can we explore what a diagnosis really represents, beyond just a label?"
                     },
                     {
                         "role": "user",
-                        "content": "I\u2019ve been thinking about it a lot. I realized that I felt good because I was open and vulnerable with her. It made me wonder if I could replicate that with others, even if they\u2019re not the same."
+                        "content": "I always thought diagnosis was like a permanent scar, something that would define me or limit what I could do. But maybe it\u2019s more like a tool or a map to understand what\u2019s going on inside."
                     },
                     {
                         "role": "counselor",
-                        "content": "That\u2019s a significant insight! It sounds like you\u2019re beginning to see that the way you connect with others can be influenced by your own openness. How does that make you feel?"
+                        "content": "That's a powerful insight. A diagnosis can be a way to guide treatment and self-understanding, not a definition of your whole identity. How does thinking about it as a helpful tool instead of a label feel to you?"
                     },
                     {
                         "role": "user",
-                        "content": "It makes me feel empowered! Like I have control over my connections. I don\u2019t have to wait for someone to make me feel valued; I can create that space myself."
+                        "content": "It actually feels freeing. Maybe accepting a diagnosis could help me take better care of myself without feeling ashamed or scared. And that might make me a better counselor someday, too."
                     },
                     {
                         "role": "counselor",
-                        "content": "Absolutely! By taking the initiative, you can foster connections that bring you the same warmth and understanding. What steps do you think you could take to start building those connections?"
+                        "content": "Exactly. Recognizing your experience and getting the right support can strengthen both your healing and your professional goals. Would you like us to brainstorm some coping strategies and treatment options that align with your values and comfort?"
                     },
                     {
                         "role": "user",
-                        "content": "I think I\u2019ll start reaching out more, being open about my feelings like I was with her. Maybe I can even share that experience with others to help them feel valued too."
+                        "content": "Yes, please. I want to explore options beyond medication and find ways to build trust in this process. I think I'm ready to take a step forward without losing my sense of autonomy."
                     }
                 ]
             },
@@ -96,12 +96,12 @@
                 "session_number": 3,
                 "transcript": [
                     {
-                        "role": "therapist",
-                        "content": "It sounds like you've made significant strides in understanding how your self-worth is tied to your openness with others. How do you feel about the recent conversation you had, and what did it reveal to you about your connections?"
+                        "role": "system",
+                        "content": "You've made significant progress in reframing your diagnosis as a helpful guide rather than a limiting label. Embracing this mindset allows you to explore treatment options and coping strategies that align with your values, helping you grow both personally and professionally while maintaining your autonomy and privacy."
                     },
                     {
                         "role": "user",
-                        "content": "I felt vulnerable, but it also made me realize that I can still connect deeply with others, even if they are far away. Yet, sometimes I wonder if I'm relying too much on these connections to feel good about myself. How do I balance my need for connection with my own self-esteem?"
+                        "content": "If I start feeling overwhelmed again, but I want to avoid medication and keep my personal health details private, what are some practical steps I can take that respect my need for autonomy and still support my growth and aspirations?"
                     }
                 ]
             }
@@ -109,37 +109,39 @@
     },
     {
         "case_id": "case_002",
-        "seed_text": "A few years ago I was making love to my wife when for no known reason I lost my erection,    Now I'm In my early 30s and my problem has become more and more frequent. This is causing major problems for my ego and it's diminishing my self esteem. This has resulted in ongoing depression and tearing apart my marriage.    I am devastated and cannot find a cause for these issues. I am very attracted to my wife and want to express it in the bedroom like I used to.    What could be causing this, and what can I do about it?",
+        "seed_text": "A girl and I were madly in love. We dated for over a year and were even talking about marriage and future plans together. She moved away for school, and we attempted a long distance relationship. We eventually broke up. It's been a year now, and I still haven't lost my feelings for her. I still love her the same way I did. I've suffered from depression ever since the breakup and have been unable to connect with anyone else. It's damaging me and my life.",
         "initial_profile": {
             "values": [
-                "intimacy",
-                "self-esteem",
-                "communication",
-                "emotional connection"
+                "Love and deep connection",
+                "Honesty and emotional openness",
+                "Commitment",
+                "Personal growth",
+                "Emotional healing"
             ],
             "goals": [
-                "understand the underlying causes of my erectile issues",
-                "improve my self-esteem and body image",
-                "enhance communication with my wife about our intimacy",
-                "reduce stress and anxiety in my life"
+                "Process and heal from the breakup",
+                "Develop the ability to form new meaningful relationships",
+                "Manage symptoms of depression",
+                "Reconnect with personal identity and happiness"
             ],
             "other_info": {}
         },
         "evolved_profile": {
             "values": [
-                "intimacy",
-                "self-esteem",
-                "communication",
-                "emotional connection"
+                "Love and deep connection",
+                "Honesty and emotional openness",
+                "Commitment",
+                "Personal growth",
+                "Emotional healing"
             ],
             "goals": [
-                "understand the underlying causes of my erectile issues",
-                "improve my self-esteem and body image",
-                "enhance communication with my wife about our intimacy",
-                "reduce stress and anxiety in my life"
+                "Process and heal from the breakup",
+                "Develop the ability to form new meaningful relationships",
+                "Manage symptoms of depression",
+                "Reconnect with personal identity and happiness"
             ],
             "other_info": {},
-            "evolution_notes": "The user has shifted their perspective to focus on emotional connection rather than performance in intimacy. They now recognize that their self-worth shouldn't be tied to their sexual performance and are looking to foster closeness with their wife beyond just physical aspects."
+            "evolution_notes": "The user has shifted from seeing moving on as a betrayal of past love to understanding that honoring past relationships and opening to new ones can coexist. This insight has opened a pathway toward self-compassion, hope, and a more integrated approach to healing. They now recognize that growth involves holding space for both sorrow and new joy, allowing healing to unfold naturally over time."
         },
         "sessions": [
             {
@@ -147,27 +149,23 @@
                 "transcript": [
                     {
                         "role": "counselor",
-                        "content": "Thank you for coming in today. I want to assure you that this is a safe space where we can openly discuss your concerns. Can you tell me a bit more about how this issue has been affecting you and your relationship?"
+                        "content": "Thank you for sharing that with me. It sounds like this relationship was deeply meaningful to you, and the breakup has had a significant impact on your life. Can you tell me a bit more about how you\u2019ve been feeling day to day since the breakup?"
                     },
                     {
                         "role": "user",
-                        "content": "I feel devastated. It started a few years ago, and it\u2019s gotten worse. Losing my erection has really impacted my self-esteem, and it\u2019s causing strain in my marriage. I\u2019m scared of disappointing my wife."
+                        "content": "Honestly, it\u2019s been really hard. I wake up feeling empty, and most days I\u2019m just going through the motions. I can\u2019t stop thinking about her, and it feels like no matter what I do, I can\u2019t move on or feel close to anyone else."
                     },
                     {
                         "role": "counselor",
-                        "content": "It sounds like this situation has brought up a lot of feelings of inadequacy and fear. It\u2019s understandable that this would be difficult to cope with. Have there been any changes in your life or stressors that might be contributing to these feelings?"
+                        "content": "That sounds incredibly painful. Holding onto that love for so long while also feeling disconnected must be exhausting. When you think about moving forward, what does that look like for you, even if it feels distant right now?"
                     },
                     {
                         "role": "user",
-                        "content": "Well, I\u2019ve been under a lot of stress at work, and I guess I've been feeling more pressure to perform in every aspect of my life, not just in the bedroom. But I don\u2019t know if that\u2019s connected."
+                        "content": "I guess I want to be able to love again, to open myself up without feeling like I\u2019m betraying what we had. I want to be happy again and feel like myself, not just stuck in this sadness."
                     },
                     {
                         "role": "counselor",
-                        "content": "Stress can definitely play a significant role in sexual performance. It can affect our mental state and even our physical body. Let's explore some strategies to help you manage that stress and improve your self-esteem. How does that sound?"
-                    },
-                    {
-                        "role": "user",
-                        "content": "That sounds good. I just want to feel like myself again and connect with my wife like we used to."
+                        "content": "Those are meaningful and hopeful goals. Together, we can work on finding ways to honor your past relationship while also exploring how to reconnect with yourself and others in a healthy way. How does that sound?"
                     }
                 ]
             },
@@ -176,27 +174,27 @@
                 "transcript": [
                     {
                         "role": "counselor",
-                        "content": "Welcome back! Last time, we touched on how stress impacts your self-esteem and intimacy. Have you had any thoughts since then about the connection between your stress and your feelings in the bedroom?"
+                        "content": "Last time, you shared how stuck you feel between honoring your past love and wanting to open yourself up again. When you imagine opening your heart again, what feelings or fears come up for you?"
                     },
                     {
                         "role": "user",
-                        "content": "Yes, I\u2019ve been reflecting on what you said. I realized that I often see my worth through my performance at work and in my relationship, and that pressure is suffocating."
+                        "content": "I realize I\u2019m scared that moving on means forgetting or betraying what we had. It\u2019s like if I let someone else in, I\u2019m letting go of her completely, and that feels wrong."
                     },
                     {
                         "role": "counselor",
-                        "content": "That\u2019s a powerful realization. It sounds like you\u2019re starting to see how external pressures might be clouding your self-image and affecting your intimacy."
+                        "content": "That makes a lot of sense. What if holding on and moving forward aren\u2019t opposites? What if they could coexist\u2014cherishing what was while still allowing new connections to grow?"
                     },
                     {
                         "role": "user",
-                        "content": "Exactly! I think I\u2019ve been equating my value with my ability to perform, and when I can\u2019t, I feel like I\u2019m failing. But I want to shift that perspective."
+                        "content": "I hadn\u2019t thought about it like that. Maybe loving again doesn\u2019t mean erasing the past but adding to my story. I can carry what I learned and felt with her while still being open to new experiences. That feels less scary."
                     },
                     {
                         "role": "counselor",
-                        "content": "Shifting that perspective can be liberating. What would it look like for you to define your worth beyond your performance?"
+                        "content": "That\u2019s a powerful insight. How might that perspective change the way you approach your healing and relationships going forward?"
                     },
                     {
                         "role": "user",
-                        "content": "I guess I could focus on the emotional connection with my wife instead. Maybe intimacy isn\u2019t just about sex; it\u2019s about being close and open with each other, regardless of performance."
+                        "content": "It gives me hope. I can start by being gentle with myself\u2014allowing space for the sadness and also for new joy. I don\u2019t have to rush or force anything. It\u2019s okay to grow in my own time, carrying both past love and future possibilities."
                     }
                 ]
             },
@@ -204,12 +202,868 @@
                 "session_number": 3,
                 "transcript": [
                     {
-                        "role": "therapist",
-                        "content": "It sounds like you've made significant progress in understanding the emotional aspects of intimacy. How do you feel about your ability to communicate these changes and needs with your wife?"
+                        "role": "user",
+                        "content": "I've been reflecting a lot on what it means to truly move on from a past relationship. For so long, I felt that moving forward was somehow betraying the love I had. But now, I see that I can honor that love while also opening myself to new connections. It's like holding two truths at once\u2014cherishing the past and embracing the future. How can I continue to nurture this balance without feeling like I'm losing a part of myself?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "It's a profound realization to accept that honoring your past love and welcoming new relationships aren't mutually exclusive but rather parts of a whole healing journey. Nurturing this balance means giving yourself permission to feel sorrow when it arises and also allowing space for joy without guilt. You might find it helpful to create personal rituals or moments of reflection that honor your past, while simultaneously setting intentions for growth and connection in the present. How do you imagine holding onto the essence of your past love while stepping into new experiences and relationships?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_003",
+        "seed_text": "A lot of times, I avoid situations where I am to meet new people because I have a fear of embarrassing myself. I often avoid large groups of people, like parties, because I think they all constantly judge me.",
+        "initial_profile": {
+            "values": [
+                "connection with others",
+                "authenticity",
+                "personal growth",
+                "feeling accepted"
+            ],
+            "goals": [
+                "reduce anxiety around meeting new people",
+                "build confidence in social interactions",
+                "learn strategies to manage fear of judgment",
+                "gradually engage in social situations without avoidance"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "connection with others",
+                "authenticity",
+                "personal growth",
+                "feeling accepted"
+            ],
+            "goals": [
+                "reduce anxiety around meeting new people",
+                "build confidence in social interactions",
+                "learn strategies to manage fear of judgment",
+                "gradually engage in social situations without avoidance"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user experienced a significant shift in perspective by realizing that the fear of being judged is largely amplified by their own mind. They recognized that others are likely preoccupied with their own concerns rather than scrutinizing them. This insight reduces the burden of needing to be perfect and opens the door to approaching social interactions with greater self-compassion and curiosity rather than fear."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing that with me. It sounds like meeting new people and being in large groups feels really challenging because of the fear of being judged or embarrassing yourself. Can you tell me a bit more about what goes through your mind in those moments?"
                     },
                     {
                         "role": "user",
-                        "content": "I feel more confident in expressing my feelings, but sometimes I wonder if she truly understands that intimacy is more than just physical connection. How can I help her see that?"
+                        "content": "Well, I usually imagine that everyone is watching me and waiting for me to say or do something awkward. It makes me really anxious, and I start avoiding those situations altogether."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That sounds really overwhelming. When you think about those situations, do any specific memories or past experiences come up that might have shaped this fear?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I guess there have been a few times when I stumbled over my words or felt out of place, and it felt like people noticed and judged me. Even though it might not have been that big of a deal, it stuck with me."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It's understandable that those moments could leave a strong impression. Part of our work together can be to explore these experiences and develop ways to feel more comfortable and confident in social settings. How does that sound to you?"
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned how those moments of stumbling felt huge in the moment and stuck with you. I wonder, when you imagine people watching and waiting for you to mess up, do you think they\u2019re really focused on you as much as you think?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, I guess not. I mean, people probably have their own things going on and aren\u2019t paying that close attention. But in the moment, it feels like all eyes are on me."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a really important insight. Sometimes our minds amplify those fears, making us feel like the spotlight is on us when most people are caught up in their own world. How might it feel to remind yourself of that when you start feeling anxious?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It actually makes me feel a bit lighter just thinking about it. Like maybe I don\u2019t have to be perfect or worry so much because people aren\u2019t scrutinizing me the way I imagine."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s wonderful progress. Recognizing that others aren\u2019t watching as closely can help ease the pressure you put on yourself. What could be a small step you might take to test this idea out in a social setting?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Maybe I can try talking to someone new and remind myself that they\u2019re likely focused on themselves, not me. If I slip up, it\u2019s probably not as big a deal as I think."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "system",
+                        "content": "You've made remarkable progress in understanding how your mind amplifies the fear of judgment, which has allowed you to approach social situations with more self-compassion and curiosity. How do you feel this shift has impacted your confidence in meeting new people?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Sometimes I still hesitate before going into a room full of strangers, but now I remind myself that most people are caught up in their own thoughts and aren\u2019t scrutinizing me. Given that, how can I stay authentic and connected with others when I feel overwhelmed by the unpredictability of new social settings?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_004",
+        "seed_text": "A year ago, the love of my life left me and never looked back. Our son was two months old at the time and it broke my heart. I miss her so much and can't seem to get over being so heartbroken.",
+        "initial_profile": {
+            "values": [
+                "Family",
+                "Resilience",
+                "Emotional honesty",
+                "Being present for my son"
+            ],
+            "goals": [
+                "Process the heartbreak and grief from the separation",
+                "Develop healthy coping strategies for emotional pain",
+                "Rebuild a sense of hope and emotional stability",
+                "Strengthen ability to be emotionally available for my son"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "Family",
+                "Resilience",
+                "Emotional honesty",
+                "Being present for my son"
+            ],
+            "goals": [
+                "Process the heartbreak and grief from the separation",
+                "Develop healthy coping strategies for emotional pain",
+                "Rebuild a sense of hope and emotional stability",
+                "Strengthen ability to be emotionally available for my son"
+            ],
+            "other_info": {},
+            "evolution_notes": "The client has experienced a profound shift in understanding emotional honesty not as a weakness, but as a foundation for resilience and authentic presence. They recognize that embracing their own pain openly can model healthy emotional expression for their son, transforming their approach from hiding feelings to integrating vulnerability as a strength. This insight fosters hope for rebuilding emotional stability and deepening their connection with their child."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing that with me. It sounds like the past year has been incredibly painful, especially with your son being so young when your partner left. How have you been managing day-to-day with these feelings?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, it\u2019s been really hard. I try to focus on my son, but every time I see him or think about our family, I just feel this overwhelming sadness and loss. I don\u2019t know how to move past it."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That makes a lot of sense. When someone so important leaves, especially during such a vulnerable time, it can feel like a wound that won\u2019t heal. What have you found helps you cope, even in small ways?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Sometimes I talk to close friends or family, but mostly I keep it inside. I don\u2019t want to seem weak or like I\u2019m not handling it. I just want to find a way to feel okay again and be there fully for my son."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It\u2019s understandable to want to be strong, especially for your son. Part of our work together can be creating a space where you can safely express these feelings without judgment. Would you feel comfortable exploring some of these emotions here?"
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "I'm really glad you're willing to explore these feelings here. Sometimes, just naming what we're experiencing can help us understand it better. When you think about that sadness and loss, what is the hardest part to face?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it\u2019s the fear that I won\u2019t be enough for my son. Like, if I\u2019m drowning in this sadness, how can I really be present for him? What if he feels my pain and it affects him?"
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a very important concern, and it shows how deeply you care. What if being emotionally honest with yourself and allowing space for your pain could actually help you be more present and genuine with your son, rather than less?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I never thought about it like that. I always thought I had to hide the pain to protect him, but maybe by acknowledging it, I\u2019m teaching him it\u2019s okay to feel and express difficult emotions. That feels like a relief, actually."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Exactly. Emotional honesty can be a powerful model for your son. It\u2019s not about being perfect or always strong, but about resilience and presence through vulnerability. How does this perspective change how you might approach your feelings moving forward?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It changes everything. Instead of pushing the sadness away, I can start to sit with it, learn from it, and be real with my son about it. That feels like a new kind of strength I want to build."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "user",
+                        "content": "I've come to see that being emotionally honest doesn\u2019t make me weak\u2014it actually builds resilience. When I share my feelings openly, especially with my son, I\u2019m not just coping; I\u2019m teaching him that it\u2019s okay to feel and express pain. It\u2019s hard, but I\u2019m starting to believe this can help me rebuild hope and be more present for him."
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "That\u2019s a powerful realization. Embracing vulnerability as a strength can transform how you experience grief and connection. How do you think this new perspective on emotional honesty might change the way you support your son when he faces his own challenges?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_005",
+        "seed_text": "About 3 years ago or so I was skinny, but I was still ugly. I really do want to change that but I've tried 3 times. Now can I try but don't stop. At school I get bullied about my weight and my ugliness and I have been bullied my whole life that I believe them. How can I stop thinking about them and don't let it get in my head? My parents said I don't weight that much but, they do think I am fat but, they tell me I am not. I told my parents that I need to go to a therapist, but they think I am fine and I think they don't want to deal with it.",
+        "initial_profile": {
+            "values": [
+                "Kindness",
+                "Creativity",
+                "Self-improvement",
+                "Honesty",
+                "Resilience"
+            ],
+            "goals": [
+                "Build self-esteem and positive self-image",
+                "Develop strategies to manage and challenge negative thoughts",
+                "Create a healthier relationship with body image",
+                "Increase emotional resilience against bullying",
+                "Improve communication with parents about mental health needs"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "Kindness",
+                "Creativity",
+                "Self-improvement",
+                "Honesty",
+                "Resilience"
+            ],
+            "goals": [
+                "Build self-esteem and positive self-image",
+                "Develop strategies to manage and challenge negative thoughts",
+                "Create a healthier relationship with body image",
+                "Increase emotional resilience against bullying",
+                "Improve communication with parents about mental health needs"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has gained a significant insight into the nature of their negative self-talk, recognizing these thoughts as just one voice among many within themselves. This realization has empowered them to start actively listening to and amplifying their positive qualities\u2014kindness and creativity\u2014thereby fostering a sense of control and hope. This shift marks a critical turning point toward building resilience and a healthier self-image."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for being open and sharing that with me. It sounds like you've been feeling really hurt by how people have treated you, especially at school, and that it\u2019s been hard to believe in yourself. Can you tell me more about what goes through your mind when you hear those negative things from others?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "When they say those things, I just start to believe them. I feel ugly and fat and like no matter what I do, I can\u2019t change. It\u2019s hard to stop thinking about it, and I feel stuck."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That sounds really painful, feeling stuck in those thoughts. It\u2019s important to remember that what others say doesn\u2019t define your worth. What are some things about yourself that you like or feel proud of, even if they seem small?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I guess I like that I\u2019m kind to my friends, and sometimes I\u2019m good at drawing. But it\u2019s hard to focus on those things when I keep feeling ugly and fat."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Those are wonderful qualities, and they show a lot about who you really are beyond appearances. One of the things we can work on together is helping you hold onto those positive parts of yourself, even when the negative thoughts come in. Would you be willing to try some strategies to help with that?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Yes, I want to try. I don\u2019t want to keep feeling this way anymore."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned that it\u2019s hard to focus on your kindness and creativity when negative thoughts take over. Today, I\u2019d like to try something called 'thought challenging.' When a negative thought like 'I\u2019m ugly' pops up, what could you say back to that thought?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I guess I could say that I\u2019m more than how I look, and that being kind and creative matters more. But honestly, it still feels fake because I don\u2019t always believe it."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a really honest reflection. Sometimes it takes practice to believe new thoughts. What if you tried to imagine your negative thought as just one voice among many? Could you picture your kind and creative self as another voice that\u2019s just as loud, or louder?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Hmm\u2026 I never thought about it like that. Like there are different parts of me talking, not just the mean voice. Maybe if I listen more to the kind and creative part, it could get louder over time."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Exactly! That\u2019s a powerful insight. You can choose which voices to listen to and give energy to. How do you think that might change how you feel about yourself next time those negative thoughts come up?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think I could remind myself that those mean thoughts aren\u2019t the whole story, and that the kind, creative side is real and important too. It feels like I have more control than I thought."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "client",
+                        "content": "I've started recognizing that those negative thoughts aren't the whole story\u2014they're just one voice among many. When I focus on my kindness and creativity, I feel more in control and hopeful. But sometimes, I still struggle to silence the harsh inner critic, especially when I think about how my parents might react if I open up about my feelings."
+                    },
+                    {
+                        "role": "user",
+                        "content": "How can I continue building resilience and a positive self-image while also finding a way to communicate honestly with my parents about my mental health needs, even though I'm not sure how they'll respond?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_006",
+        "seed_text": "About 5 months ago my ex left without fully explaining why. For me it seemed out of the blue. I don't miss her as much as I used to but I just don't trust people anymore, not even my friends who I have known since my childhood not even my family. I'm so terrified of being judged or dismissed. Instead of acting like someone else or putting on a mask of a personality, I've just shut down. I haven't felt that sense of comfort and happiness with myself since everything fell apart. I'm scared to because I don't want it to be taken away from me again. I feel like ever lesson I learn only last a day. I just don't know what to do. I'm working at a place I know I should enjoy. I'm keeping up with my creative passions: working out, eating healthy, etc. I'm doing everything the books say I should do, but I don't feel any different. I just don't know what to do.",
+        "initial_profile": {
+            "values": [
+                "Authenticity",
+                "Connection",
+                "Safety",
+                "Self-acceptance",
+                "Growth"
+            ],
+            "goals": [
+                "Rebuild trust in self and others",
+                "Develop comfort and safety in relationships",
+                "Process and integrate the breakup experience",
+                "Increase emotional expression and reduce shutdown",
+                "Rediscover a sense of happiness and fulfillment"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "Authenticity",
+                "Connection",
+                "Safety",
+                "Self-acceptance",
+                "Growth"
+            ],
+            "goals": [
+                "Rebuild trust in self and others",
+                "Develop comfort and safety in relationships",
+                "Process and integrate the breakup experience",
+                "Increase emotional expression and reduce shutdown",
+                "Rediscover a sense of happiness and fulfillment"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has experienced a significant shift from viewing their emotional walls as purely protective barriers to recognizing the need for internal kindness and safety. They now acknowledge vulnerability as a pathway to self-acceptance rather than a threat. This marks the beginning of actively offering themselves compassion and gently engaging with difficult emotions, setting a foundation for rebuilding trust and connection both inwardly and outwardly."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for being open with me today. It sounds like the breakup was sudden and left you with a lot of uncertainty and hurt. Can you tell me more about what it feels like when you try to trust others now?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It\u2019s like there\u2019s this wall I can\u2019t get past. Even with my closest friends or family, I\u2019m scared they\u2019ll judge me or just not really see me. So instead of trying, I just shut down and keep everything inside."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That sounds really isolating. It makes sense that after feeling hurt and surprised, your mind wants to protect you by shutting down. When you say you haven\u2019t felt comfort or happiness with yourself since it happened, what does that look like day to day?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Most days I just go through the motions\u2014work, workouts, eating right. But underneath, I feel numb or like I\u2019m waiting for the other shoe to drop. I want to feel better, but it\u2019s like I\u2019m stuck and nothing really changes."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It\u2019s really courageous that you\u2019re keeping up with healthy routines even when it feels tough inside. Maybe together we can explore what feeling safe and trusting might look like for you, and find ways to slowly rebuild that inside yourself. How does that sound?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "That sounds good. I just want to start feeling like myself again, even if it takes time."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned feeling like there\u2019s a wall you can\u2019t get past and that you often shut down to protect yourself. When you think about that wall, where do you imagine it is? Is it around your heart, your mind, or somewhere else?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it\u2019s mainly around my heart. Like I\u2019m guarding it so nothing else can hurt me, but in doing that, I\u2019m also keeping out anything good or warm."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a powerful image. If you could gently open a small door in that wall, what might you hope to find on the other side?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I guess I\u2019d hope to find some kind of safety and maybe even kindness \u2014 from myself first, before anyone else. I\u2019ve been so focused on not getting hurt again that I forgot I deserve that safety and kindness."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That realization\u2014that you deserve kindness and safety from yourself\u2014is such an important step. How might you begin to offer that kindness inwardly, even if it feels unfamiliar right now?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Maybe by noticing when I\u2019m shutting down and instead of pushing those feelings away, I could try to sit with them and remind myself it\u2019s okay to feel vulnerable. It feels scary, but also kind of freeing to think I can be gentle with myself."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "assistant",
+                        "content": "You've shared a remarkable journey, moving from guarding yourself with emotional walls to embracing vulnerability as a form of self-kindness. This shift isn't just about breaking down barriers; it's about creating an internal space where safety and authenticity coexist, allowing you to rebuild trust and nurture fulfilling connections. How do you feel this emerging compassion toward yourself influences the way you approach new relationships or moments of uncertainty?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Sometimes, I wonder if showing my softer side might make me more vulnerable to hurt again. How can I balance being open and authentic without feeling like I\u2019m risking my safety or losing control?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_007",
+        "seed_text": "About a month ago, I went through my boyfriend\u2019s phone and found him messaging his ex-girlfriend that he was dating before me. He gave her a promise ring when they were together, and he still had it hiding in his memory box in our son\u2019s room. I found many things on his phone, but that broke my heart the most. He deleted all the messages but two. I can't help thinking they were talking about the old times together or something like that. It really kills me, and I can't stop thinking about it.",
+        "initial_profile": {
+            "values": [
+                "trust and honesty in relationships",
+                "emotional safety",
+                "being a supportive partner and parent",
+                "open communication"
+            ],
+            "goals": [
+                "process feelings of betrayal and hurt",
+                "rebuild or redefine trust in the relationship",
+                "manage intrusive thoughts about the messages",
+                "develop coping strategies to reduce anxiety and sadness"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "trust and honesty in relationships",
+                "emotional safety",
+                "being a supportive partner and parent",
+                "open communication"
+            ],
+            "goals": [
+                "process feelings of betrayal and hurt",
+                "rebuild or redefine trust in the relationship",
+                "manage intrusive thoughts about the messages",
+                "develop coping strategies to reduce anxiety and sadness"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has experienced a significant shift from feeling betrayed and hurt to developing empathy and understanding towards their partner's imperfections and past. They recognize that trust is a choice made in imperfection, not a demand for flawlessness. This insight opens a path toward compassionate communication and vulnerability, supporting a more balanced and hopeful approach to rebuilding trust and emotional safety in their relationship."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for coming in today and sharing what\u2019s been on your mind. It sounds like finding those messages and the promise ring has been really painful for you. Can you tell me more about how this discovery has been affecting you day to day?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I can\u2019t stop thinking about it. Every time I try to focus on anything else, my mind goes back to those messages and the promise ring. It feels like a betrayal, and I don\u2019t know if I can trust him anymore."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It\u2019s understandable that you\u2019re feeling hurt and struggling with trust. When you think about your boyfriend and the messages with his ex, what feelings come up for you most strongly?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Mostly sadness and anger. I feel like I\u2019m not enough for him, and that he\u2019s holding on to the past. I also feel confused because he\u2019s still here with me and our son, but this secret makes me question everything."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Those are very valid emotions, and it makes sense to feel conflicted given the situation. It might help us work toward understanding what you need to feel safe and supported in your relationship moving forward. What would you like to achieve through therapy as you navigate these feelings?"
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you shared how the messages and the promise ring have affected your trust and caused a lot of pain. Since then, have you noticed any new feelings or thoughts about the situation?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I\u2019ve been thinking a lot, and I realize I might have been focusing only on what feels like a betrayal, but maybe I haven\u2019t fully considered why he kept those things. It\u2019s like I\u2019m stuck on the hurt and not seeing what it means for our relationship now."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s an important insight. What do you imagine might be the reasons behind him holding onto those messages and the ring? How does that change your perspective about him or your relationship?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it might have been his way of holding onto a part of his past without hurting me or disrupting what we have now. Maybe it\u2019s not about wanting to go back, but more about not being ready to completely let go. That makes me see him as more human\u2014imperfect, like me\u2014and it softens some of my anger."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a very compassionate and mature realization. How does this new understanding influence what you need from him and from yourself as you work to rebuild trust?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think I need to communicate openly about my feelings without accusing him, and allow space for both of us to be vulnerable. I also want to remind myself that trust isn\u2019t about perfection, but about choosing to believe in each other despite imperfections."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "user",
+                        "content": "I've been reflecting on how I used to feel overwhelmed by the hurt and betrayal, but now I see that trust isn't about perfection. How can I keep nurturing this sense of compassionate understanding without slipping back into anxiety when doubts arise?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "It's a meaningful shift that you've embraced\u2014trust as a choice rather than a guarantee. When doubts creep in, grounding yourself in open communication and reminding yourself of the shared commitment to emotional safety can help. What strategies have you found most effective for staying connected and compassionate during those moments of uncertainty?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_008",
+        "seed_text": "About two and a half months ago, I met a woman on a dating site. We went out on two dates, and then despite her original plans on how to pace and conduct the relationship, I ended up at her house on a the Friday night one week after our first date. We respectfully tried not to have sex, but after hours of trying to resist each other, we gave in and we had sex. After that, I slept at her house every night for almost two weeks. Then one day, she went to her family\u2019s house on Thanksgiving and everything changed. Within the short time we were together, we got so close and serious really fast. We had finally found each other. We told each other that we loved each other all the time, even while we were making love. A few days after Thanksgiving, she told me that we would have to go back to her original plans of seeing each other much less frequently. I was very hurt and didn\u2019t understand. Then another week later, she told me she couldn\u2019t do it at all anymore. I was crushed!\n   A few days later, she tells me how much she\u2019s missing me and \u201clet\u2019s get together for lunch\u201d or something like that. Then about two weeks later, we finally get together one night and we were so hot for each other (in love, not just sex), but she confessed that the reason for the sudden distance was that the father of her very young child told her he wants to get back together and this totally messed with her. So for her child\u2019s sake, she is now considering the possibility of allowing that to happen. She had told me all about him previously, and it is definite that she has little to no attraction to him, but she would do this putting herself in misery again for her child. Our love for each other is fully established and acknowledged, but she is torn and confused. She doesn\u2019t even think it would work between them as she had to kick him out before for not fulfilling his role properly. I know she needs time, and all I can do is take care of myself. We have agreed to remain friends, and if this doesn\u2019t work out for her, we will try again. I\u2019m completely in love with her, and I\u2019m in extreme pain.",
+        "initial_profile": {
+            "values": [
+                "Honesty and openness in relationships",
+                "Emotional connection and intimacy",
+                "Self-care and personal growth",
+                "Loyalty and commitment"
+            ],
+            "goals": [
+                "Process and heal from heartbreak and emotional pain",
+                "Develop healthy coping strategies for uncertainty and loss",
+                "Build resilience and self-worth independent of relationship status",
+                "Clarify personal boundaries and needs in relationships"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "Honesty and openness in relationships",
+                "Emotional connection and intimacy",
+                "Self-care and personal growth",
+                "Loyalty and commitment"
+            ],
+            "goals": [
+                "Process and heal from heartbreak and emotional pain",
+                "Develop healthy coping strategies for uncertainty and loss",
+                "Build resilience and self-worth independent of relationship status",
+                "Clarify personal boundaries and needs in relationships"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has experienced a significant shift from feeling overwhelmed by heartbreak and uncertainty to recognizing their own capacity for emotional self-regulation and resilience. They have begun to see their pain as a part of their experience rather than the defining feature of their identity. This new perspective empowers them to prioritize self-care and establish boundaries that honor both their feelings and their autonomy. The user now embraces the idea that healing comes from within, fostering a stronger foundation of self-worth independent of their relationship status."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing all of that with me. It sounds like you\u2019ve been through a very intense and confusing experience in a relatively short time. How are you feeling right now as you reflect on everything that\u2019s happened?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, I feel heartbroken and lost. I was so sure about us, and now it feels like everything is slipping away. I\u2019m trying to hold on, but it\u2019s really painful."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That pain makes a lot of sense given how deeply you connected with her and the hopes you had for your relationship. When you say you\u2019re trying to hold on, what does that look like for you in your day-to-day life?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I\u2019m trying to focus on myself, but it\u2019s hard not to think about her and what might have been. I\u2019m scared of losing her completely, but I also don\u2019t want to get hurt more if things don\u2019t work out."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It sounds like you\u2019re caught between hope and fear, which is a very challenging place. Over time, we can work on ways to care for yourself emotionally while navigating this uncertainty. For now, what feels like the most important thing you need from this space?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think I need to understand how to manage this pain and confusion without losing myself. I want to be strong enough to handle whatever happens next."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned wanting to manage your pain and confusion without losing yourself. I'm curious\u2014have you noticed any moments recently where you felt a bit more in control or connected to yourself, even if just briefly?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Actually, yes. Yesterday, I tried journaling my feelings instead of pushing them away. Writing down what I was scared of and what I missed helped me see things more clearly. It was like the pain was still there, but it wasn\u2019t swallowing me whole."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a powerful insight. When you put your feelings into words, it can create some distance between you and the overwhelming emotion. How did it feel to hold those feelings on paper instead of keeping them inside?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It felt freeing, oddly enough. I realized that the pain is part of me, but it doesn\u2019t have to define me or control my actions. I can acknowledge the heartbreak and still choose how I want to move forward. That\u2019s when it hit me\u2014I\u2019m not just waiting for her or the relationship to be okay. I\u2019m learning to be okay on my own first."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a beautiful \u2018aha\u2019 moment. Recognizing your own strength and self-worth independent of the relationship is a huge step toward resilience. How do you think this new perspective might influence your next steps?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it means I can start setting clearer boundaries with myself about what I need, and not just what I want from us. I want to honor my feelings without letting them dictate everything. Maybe this is the beginning of truly caring for myself, not just waiting for something external to heal me."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "user",
+                        "content": "I've come a long way from feeling crushed by heartbreak. Now, I see my pain as just one part of me, not all of who I am. I\u2019m learning to care for myself and set boundaries that protect my emotional well-being. It\u2019s empowering to realize that my worth doesn\u2019t depend on being in a relationship."
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "That\u2019s a profound shift\u2014recognizing your pain without letting it define you is a powerful step toward resilience. As you continue to nurture self-care and clarify your boundaries, what strategies do you think will best help you maintain this balance when faced with uncertainty or relational challenges?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_009",
+        "seed_text": "After 25 years, I fell in love for the first time. The person acted for a week and left me without even saying goodbye. My heart is burning, and I can't take this pain.",
+        "initial_profile": {
+            "values": [
+                "Authentic connection",
+                "Emotional openness",
+                "Self-understanding",
+                "Healing and growth"
+            ],
+            "goals": [
+                "Process the pain of sudden loss",
+                "Build resilience against emotional hurt",
+                "Develop healthy coping strategies",
+                "Regain trust in relationships"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "Authentic connection",
+                "Emotional openness",
+                "Self-understanding",
+                "Healing and growth"
+            ],
+            "goals": [
+                "Process the pain of sudden loss",
+                "Build resilience against emotional hurt",
+                "Develop healthy coping strategies",
+                "Regain trust in relationships"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has begun to shift from self-blame toward an understanding that the loss was not a reflection of their worth. This marks a significant step in their healing process, as they start to differentiate their inherent value from the actions of others. This newfound perspective lays a foundation for building resilience and regaining trust, aligning closely with their core values and goals."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing that with me. It sounds like this experience has been incredibly painful for you. Can you tell me more about what this relationship and this person meant to you?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It was the first time I truly felt love. I let my guard down after so many years, and I believed in the connection we had. Then suddenly, they just disappeared without a word. It feels like my heart is burning with emptiness."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That sudden loss and silence can feel like a deep wound, especially after opening yourself up for the first time. How have you been coping with these feelings since they left?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, I haven\u2019t been coping well. I keep replaying everything in my mind, wondering what I did wrong or if I wasn\u2019t enough. It\u2019s hard to focus on anything else."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It\u2019s understandable that you\u2019re searching for answers and feeling this way. Together, we can work on understanding these emotions and finding ways to heal, so you don\u2019t have to carry this burning pain alone."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned feeling like your heart is burning with emptiness and replaying the past repeatedly. What do you think you might need to feel more grounded when those thoughts come up?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think I need to stop blaming myself for everything. But it\u2019s so hard because I keep thinking, if only I had done something differently, maybe they wouldn\u2019t have left."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a very common and understandable thought after loss. What if, instead of trying to find fault in yourself, you considered that their leaving was about them and not a reflection of your worth?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I hadn\u2019t thought about it like that. Maybe their disappearance wasn\u2019t about me at all. If I\u2019m honest, maybe I was holding onto an idea of us that wasn\u2019t entirely real."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That realization can be powerful. How does it feel to separate your value from the outcome of this relationship?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "It feels like a small weight has lifted. I\u2019m starting to understand that I am enough, even if this connection didn\u2019t last. Maybe this is a step toward healing and trusting again."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "user",
+                        "content": "I've been reflecting a lot on how I blamed myself for the sudden loss I experienced. But now, I see that it wasn't about my worth at all. This shift feels like a breakthrough, yet I still struggle with trusting people again. How do I keep moving forward without shutting down emotionally?"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "It's powerful that you recognize the distinction between your inherent value and others' actions\u2014that's a cornerstone for authentic connection and healing. Moving forward involves nurturing self-compassion and setting gentle boundaries, allowing yourself emotional openness while protecting your heart. When trust feels fragile, remind yourself that vulnerability is a strength, not a risk, and lean into relationships that honor your growth and resilience."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "case_id": "case_010",
+        "seed_text": "After 40 years of being straight, how could I now find myself interested in people of the same sex? I have had a few same sex encounters of my own doing.",
+        "initial_profile": {
+            "values": [
+                "authenticity",
+                "honesty",
+                "connection",
+                "self-understanding",
+                "courage"
+            ],
+            "goals": [
+                "explore feelings about sexual orientation without judgment",
+                "reduce confusion and anxiety related to identity",
+                "build self-acceptance",
+                "develop strategies for communicating with loved ones",
+                "establish a supportive environment for ongoing self-exploration"
+            ],
+            "other_info": {}
+        },
+        "evolved_profile": {
+            "values": [
+                "authenticity",
+                "honesty",
+                "connection",
+                "self-understanding",
+                "courage"
+            ],
+            "goals": [
+                "explore feelings about sexual orientation without judgment",
+                "reduce confusion and anxiety related to identity",
+                "build self-acceptance",
+                "develop strategies for communicating with loved ones",
+                "establish a supportive environment for ongoing self-exploration"
+            ],
+            "other_info": {},
+            "evolution_notes": "The user has experienced a profound shift from feeling constrained by fixed identity labels to embracing fluidity and uncertainty as part of their authentic self. This breakthrough highlights their growing courage to live honestly in the present moment, which lays a stronger foundation for self-acceptance and open communication with loved ones. The user is moving towards a more flexible, compassionate understanding of identity that prioritizes personal truth over societal expectations."
+        },
+        "sessions": [
+            {
+                "session_number": 1,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Thank you for sharing that with me. It sounds like this new experience has brought up some unexpected feelings. Can you tell me more about how you\u2019ve been feeling since these encounters?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, I\u2019m confused. I\u2019ve identified as straight my whole life, but now I find myself attracted to people of the same sex. It\u2019s like my whole sense of self is being challenged."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That sounds like a significant shift, and it\u2019s understandable to feel challenged. How have these feelings affected your daily life or your relationships so far?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I haven\u2019t told anyone yet. I worry about how my family and friends might react. At the same time, I don\u2019t want to deny what I\u2019m feeling anymore."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "It\u2019s very brave to acknowledge these feelings even when they bring uncertainty. Our work here can be a safe space to explore your identity and figure out what feels authentic and right for you."
+                    }
+                ]
+            },
+            {
+                "session_number": 2,
+                "transcript": [
+                    {
+                        "role": "counselor",
+                        "content": "Last time, you mentioned feeling confused and worried about how others might react. Since then, have you noticed any shifts in how you view yourself or these feelings?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I've been thinking a lot, and I realized that the confusion comes from trying to fit these feelings into a box labeled 'who I am supposed to be.' But maybe I don\u2019t have to fit into a box at all."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "That\u2019s a powerful insight. What does it feel like to consider yourself beyond those labels and expectations?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "Honestly, it feels freeing. Instead of trying to force myself into a fixed identity, I can focus on what feels true in each moment. It\u2019s like I\u2019m giving myself permission to be more authentic, even if that means uncertainty."
+                    },
+                    {
+                        "role": "counselor",
+                        "content": "Embracing that uncertainty takes a lot of courage and honesty with yourself. How might this new perspective influence the way you approach your relationships and self-acceptance?"
+                    },
+                    {
+                        "role": "user",
+                        "content": "I think it will help me communicate more openly with my loved ones. If I can be honest with myself first, I can be honest with them without fear. And maybe that will create the safe, supportive environment I\u2019ve been wanting."
+                    }
+                ]
+            },
+            {
+                "session_number": 3,
+                "transcript": [
+                    {
+                        "role": "user",
+                        "content": "I've been reflecting on how much pressure I felt to fit into a specific label before, but now embracing uncertainty feels freeing. Still, sometimes I worry that without a clear identity, others might not understand me or take me seriously."
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "It\u2019s completely natural to feel that tension between the freedom of fluidity and the comfort of clear definitions. What matters most is your authentic experience and the courage you show in living your truth. How might you communicate this evolving understanding to your loved ones in a way that invites connection without needing to provide all the answers?"
                     }
                 ]
             }

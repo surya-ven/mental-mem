@@ -1,62 +1,302 @@
 [
     {
         "case_id": "case_001",
-        "synthesis_accuracy": 0.0,
+        "synthesis_accuracy": 0.8030813932418823,
         "baseline": {
-            "response": "It's great to hear that you're reflecting on the balance between your need for connection and your self-esteem. It's a natural inclination to seek validation from others, especially when you've experienced meaningful connections. However, it's crucial to cultivate a sense of self-worth that is independent of those interactions. One way to achieve this is by recognizing and celebrating your own strengths and qualities outside of your relationships. What activities or personal achievements can you focus on that make you feel good about yourself? Additionally, while it's wonderful to connect with others, remember that you can be both open with them and also nurture your own self-esteem. How do you feel about setting aside time for self-reflection and self-care, alongside reaching out to others?",
+            "response": "It's great that you're considering ways to support yourself that align with your values of autonomy and privacy. You might explore self-care practices such as mindfulness, journaling, or engaging in activities that bring you joy and relaxation, which can help manage overwhelming feelings. Building a supportive network of trusted friends or peers can also provide encouragement while respecting your privacy. Additionally, working with a counselor who respects your boundaries and emphasizes empowerment can help you develop personalized coping strategies that foster your growth and keep you feeling safe and in control of your health journey. Remember, taking small, intentional steps can make a meaningful difference without compromising your sense of independence.",
             "scores": {
-                "goal_congruence": 0,
-                "reflective_synthesis": 0,
-                "observational_acuity": 0,
-                "worldview_alignment": 0,
-                "therapeutic_adaptation": 0,
-                "holding_environment": 0,
-                "overall_score": 0.0
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
             }
         },
         "adaptive": {
-            "response": "Error during profile synthesis.",
-            "predicted_profile_notes": "N/A",
+            "response": "It's great that you're thinking proactively about maintaining your autonomy and privacy while supporting your well-being. Practical steps you might consider include developing personalized self-care routines that resonate with you, such as mindfulness practices, journaling, or engaging in activities that bring you fulfillment. Building a support network of trusted friends or mentors who respect your boundaries can also provide reassurance. Additionally, exploring therapeutic approaches like cognitive-behavioral techniques or mindfulness-based therapies can offer effective tools without compromising your privacy. Remember, your journey is about finding the strategies that empower you and align with your values\u2014you're already taking meaningful steps by considering options that respect your independence and growth.",
+            "predicted_profile_notes": "The user has shifted from viewing diagnosis as a limiting label to seeing it as a helpful tool for understanding and self-care. This realization has fostered a sense of freedom, reduced shame, and reinforced their commitment to autonomy and professional growth. They are now more open to exploring treatment options beyond medication and building trust in the therapeutic process.",
             "scores": {
-                "goal_congruence": 0,
-                "reflective_synthesis": 0,
-                "observational_acuity": 0,
-                "worldview_alignment": 0,
-                "therapeutic_adaptation": 0,
-                "holding_environment": 0,
-                "overall_score": 0.0
+                "G": 5,
+                "R": 4,
+                "O": 4,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 4.67
             }
         },
-        "ground_truth_notes": "The user has experienced a profound shift in perspective. They now recognize that their feelings of self-worth and connection can be cultivated through their own openness and vulnerability. This realization empowers them to take control of their interactions, fostering meaningful connections regardless of distance."
+        "ground_truth_notes": "The user has shifted from viewing diagnosis as a permanent, stigmatizing label to understanding it as a practical tool for self-understanding and healing. This realization has alleviated some fears about stigma and future limitations, opening the door to exploring treatment options aligned with their values. They now feel empowered to embrace support while maintaining autonomy, fostering hope for both personal growth and their professional aspirations."
     },
     {
         "case_id": "case_002",
-        "synthesis_accuracy": 0.9164234399795532,
+        "synthesis_accuracy": 0.8152719140052795,
         "baseline": {
-            "response": "It's great to hear that you're feeling more confident in expressing your feelings. Helping your wife understand that intimacy goes beyond the physical can be approached with open and honest communication. You might consider sharing your thoughts about the emotional connection you value, emphasizing how important it is for both of you to feel close and secure together, irrespective of physical performance. You could also invite her to share her own feelings and perceptions about intimacy, creating a space for deeper dialogue. This could strengthen your bond and enhance your emotional connection, which is at the heart of intimacy. How do you feel about initiating that conversation with her?",
+            "response": "It's truly inspiring to see how you've embraced this deeper understanding of holding both the past and the future in your heart. This balance reflects a compassionate and honest relationship with yourself, which is essential for healing and growth. Remember to continue practicing kindness and patience as you navigate these feelings, honoring your love and experiences without guilt. Creating meaningful rituals or moments of reflection can serve as gentle reminders of your journey\u2014celebrating what you've gained and acknowledging what still unfolds. Trust in your capacity to nurture this balance; it will guide you toward reconnecting with your happiness and forging new, meaningful connections rooted in your authenticity and love.",
             "scores": {
-                "goal_congruence": 0,
-                "reflective_synthesis": 0,
-                "observational_acuity": 0,
-                "worldview_alignment": 0,
-                "therapeutic_adaptation": 0,
-                "holding_environment": 0,
-                "overall_score": 0.0
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
             }
         },
         "adaptive": {
-            "response": "It's great to hear that you're feeling more confident in expressing your feelings! Helping your wife understand that intimacy encompasses more than just the physical aspect can be a gradual process. You might start by sharing your own realizations about the emotional connection and how important it is for you. You could say something like, 'I've been reflecting on what intimacy means to me, and I realize it's not just about sex, but about how we connect emotionally and support each other.' This opens the door for a deeper conversation about both of your needs and desires. Encourage her to share her thoughts as well. This way, you both can explore intimacy together in a way that nurtures your emotional bond. How does that approach resonate with you?",
-            "predicted_profile_notes": "The user has recognized that their self-worth is overly tied to performance in both work and intimacy. They are beginning to shift their perspective towards valuing emotional connection with their wife, understanding that intimacy encompasses more than just sexual performance.",
+            "response": "It's truly inspiring to see how you've embraced the idea that honoring your past love and opening your heart to new connections can coexist. This perspective allows you to hold space for your emotions with honesty and compassion, acknowledging the depth of your experience while gently inviting new growth. Remember, healing is a nuanced journey\u2014it's about integrating all parts of your story with kindness. As you continue to nurture this balance, trust in your capacity to love deeply, both past and present, and to find joy in the authentic process of becoming more connected with yourself and others. How might you create small, meaningful practices that honor your past while inviting new experiences into your life?",
+            "predicted_profile_notes": "The user has shifted from viewing love and moving on as mutually exclusive to understanding that honoring past love and embracing new relationships can coexist. This insight fosters a more compassionate and hopeful approach to healing, allowing for emotional growth at a gentle, authentic pace.",
             "scores": {
-                "goal_congruence": 0,
-                "reflective_synthesis": 0,
-                "observational_acuity": 0,
-                "worldview_alignment": 0,
-                "therapeutic_adaptation": 0,
-                "holding_environment": 0,
-                "overall_score": 0.0
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
             }
         },
-        "ground_truth_notes": "The user has shifted their perspective to focus on emotional connection rather than performance in intimacy. They now recognize that their self-worth shouldn't be tied to their sexual performance and are looking to foster closeness with their wife beyond just physical aspects."
+        "ground_truth_notes": "The user has shifted from seeing moving on as a betrayal of past love to understanding that honoring past relationships and opening to new ones can coexist. This insight has opened a pathway toward self-compassion, hope, and a more integrated approach to healing. They now recognize that growth involves holding space for both sorrow and new joy, allowing healing to unfold naturally over time."
+    },
+    {
+        "case_id": "case_003",
+        "synthesis_accuracy": 0.7854902744293213,
+        "baseline": {
+            "response": "It's wonderful to hear that you're recognizing how others' focus is often more on themselves than on you. That awareness can be a powerful tool in staying connected to your authentic self. When you feel overwhelmed by the unpredictability of new social settings, try to center yourself by reminding yourself of your core values\u2014like connection and authenticity. Focus on being genuine in your interactions, even if it feels uncomfortable at first, and remember that your presence is valuable just as it is. Each small step you take to show up authentically helps build your confidence and reinforces your sense of feeling accepted. You're making meaningful progress, and I encourage you to keep nurturing that compassionate and curious approach toward yourself and others.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "It's inspiring to see how you've begun to reframe your perspective and recognize that others are often less focused on us than we imagine. This shift can be a powerful foundation for building genuine connections. When you feel overwhelmed in social settings, try grounding yourself in your values of authenticity and connection\u2014reminding yourself that showing up as your true self fosters meaningful interactions. Small steps, like sharing a genuine smile or asking a simple question, can help you stay connected while honoring your feelings. Remember, your willingness to challenge your old perceptions already shows your growing confidence, and each new experience is an opportunity to deepen that trust in yourself.",
+            "predicted_profile_notes": "The user has begun to challenge and reframe their negative perceptions of being judged, recognizing that others are less focused on them than they initially believed. This insight has led to a lighter, more manageable view of social anxiety and increased willingness to engage socially, indicating meaningful progress in their confidence and self-acceptance.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user experienced a significant shift in perspective by realizing that the fear of being judged is largely amplified by their own mind. They recognized that others are likely preoccupied with their own concerns rather than scrutinizing them. This insight reduces the burden of needing to be perfect and opens the door to approaching social interactions with greater self-compassion and curiosity rather than fear."
+    },
+    {
+        "case_id": "case_004",
+        "synthesis_accuracy": 0.8582533001899719,
+        "baseline": {
+            "response": "I'm truly moved by your insight and your willingness to embrace vulnerability as a source of strength. By showing your son that it\u2019s okay to feel and express pain, you\u2019re not only healing yourself but also teaching him resilience and emotional honesty\u2014values that will serve him well throughout his life. Remember, being present for your son means allowing yourself to feel fully and authentically. Keep nurturing this compassionate, honest connection with yourself and him; it\u2019s a powerful way to rebuild hope and deepen your bond. I\u2019m here to support you on this journey.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "I'm truly inspired by the way you've embraced emotional honesty as a source of strength and resilience. Your willingness to sit with your feelings and model this openness for your son not only supports your healing but also teaches him valuable life lessons about authenticity and emotional courage. As you continue to be present with your emotions, remember that your vulnerability fosters a deeper connection with your son and helps him feel safe to express his own feelings. How might you incorporate moments of honest sharing into your daily interactions with him to strengthen your bond and support his emotional growth?",
+            "predicted_profile_notes": "The user has shifted from viewing emotional pain as something to hide to recognizing the strength in vulnerability and emotional honesty. They now see acknowledging and sitting with their feelings as a way to foster resilience, model emotional honesty for their son, and enhance their presence and authenticity in their relationship.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The client has experienced a profound shift in understanding emotional honesty not as a weakness, but as a foundation for resilience and authentic presence. They recognize that embracing their own pain openly can model healthy emotional expression for their son, transforming their approach from hiding feelings to integrating vulnerability as a strength. This insight fosters hope for rebuilding emotional stability and deepening their connection with their child."
+    },
+    {
+        "case_id": "case_005",
+        "synthesis_accuracy": 0.8483794927597046,
+        "baseline": {
+            "response": "It's wonderful to hear that you're recognizing the different voices inside you and feeling more in control. Building resilience can be a gradual process, especially when it involves opening up to those who care about you. Remember, honesty and vulnerability are acts of courage and self-respect, and they can strengthen your relationships over time. When you're ready to share your feelings with your parents, you might start by expressing what you've learned about yourself\u2014like how focusing on your kindness and creativity helps you feel stronger. It can also help to prepare what you'd like to say ahead of time, and perhaps choose a calm moment to talk. Keep reminding yourself that your feelings are valid, and seeking support is a sign of strength. I'm here to support you every step of the way as you continue to build that positive self-image and resilience.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "It's wonderful to hear that you're recognizing the different voices inside you and focusing on your kind and creative parts. Building resilience includes both nurturing your positive inner voices and finding ways to share your feelings honestly. Remember, you are capable of expressing your needs gently and clearly, and your feelings are valid. When you think about talking to your parents, try to approach the conversation with kindness\u2014for yourself and them\u2014and remind yourself that your honesty is a brave step toward feeling more understood and supported. If you're unsure how they'll respond, it can help to plan what you want to say ahead of time, maybe even write it down. You are making great progress, and each small step you take is building your strength and self-confidence.",
+            "predicted_profile_notes": "The user has begun to internalize the concept of multiple inner voices, recognizing that their negative thoughts are not the full story. They now see themselves as capable of choosing to listen to their kind and creative parts, which enhances their sense of control and self-worth. This marks a significant step toward fostering resilience and a positive self-image.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user has gained a significant insight into the nature of their negative self-talk, recognizing these thoughts as just one voice among many within themselves. This realization has empowered them to start actively listening to and amplifying their positive qualities\u2014kindness and creativity\u2014thereby fostering a sense of control and hope. This shift marks a critical turning point toward building resilience and a healthier self-image."
+    },
+    {
+        "case_id": "case_006",
+        "synthesis_accuracy": 0.8006247282028198,
+        "baseline": {
+            "response": "It's completely understandable to feel cautious about being vulnerable, especially when you've been hurt before. Remember, developing safety and trust begins with small, gentle steps\u2014being authentic doesn't mean revealing everything all at once, but rather honoring your feelings and boundaries as you explore openness. By practicing self-compassion and recognizing your courage in facing these feelings, you can create a balanced sense of safety that allows you to connect authentically without feeling overwhelmed. Trust that with patience and kindness toward yourself, you can find a way to be both true to who you are and protected from harm.",
+            "scores": {
+                "G": 5,
+                "R": 4,
+                "O": 4,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 4.67
+            }
+        },
+        "adaptive": {
+            "response": "It's really insightful that you're recognizing the delicate balance between opening up and protecting yourself. As you've begun to cultivate self-kindness and vulnerability, remember that safety doesn't mean an absence of risk, but rather creating internal conditions where you feel grounded and supported regardless of external circumstances. You might explore small steps that allow you to be authentic while still honoring your boundaries\u2014like sharing a little more with someone you trust and noticing how it feels inside. Over time, as you nurture a compassionate relationship with yourself, you'll likely find that your sense of safety deepens, making it easier to connect authentically without feeling overwhelmed. How does that perspective resonate with where you are right now in your journey?",
+            "predicted_profile_notes": "The user has begun to recognize the importance of self-kindness and vulnerability as pathways to safety and connection. They are moving from protecting their heart through shutdown towards opening to feelings of kindness and safety within themselves, indicating progress toward deeper self-acceptance and emotional openness.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user has experienced a significant shift from viewing their emotional walls as purely protective barriers to recognizing the need for internal kindness and safety. They now acknowledge vulnerability as a pathway to self-acceptance rather than a threat. This marks the beginning of actively offering themselves compassion and gently engaging with difficult emotions, setting a foundation for rebuilding trust and connection both inwardly and outwardly."
+    },
+    {
+        "case_id": "case_007",
+        "synthesis_accuracy": 0.8344265222549438,
+        "baseline": {
+            "response": "It\u2019s wonderful to hear that you\u2019re cultivating a compassionate understanding of trust and recognizing that it\u2019s a process rather than perfection. During moments of doubt, you might find it helpful to gently remind yourself of the commitment you and your partner share, focusing on open and honest communication. Grounding techniques, such as deep breathing or mindfulness, can also support you in staying connected to your sense of emotional safety. Remember, it\u2019s okay to have these feelings\u2014what matters most is your willingness to approach them with kindness toward yourself and your partner. You\u2019re making meaningful progress, and I\u2019m here to support you as you continue nurturing this compassionate perspective.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "It\u2019s wonderful to hear that you\u2019re cultivating a compassionate understanding of trust and staying grounded in your awareness of both your feelings and your partner\u2019s imperfections. To nurture this sense of openness and emotional safety, continue practicing open, non-accusatory communication\u2014sharing your feelings honestly while inviting his vulnerability. Reminding yourself of the shared goal of building a trusting and supportive relationship can also help ease anxiety when doubts surface. Remember, trust is an ongoing process, and your willingness to approach it with compassion and patience is a strong foundation for growth together.",
+            "predicted_profile_notes": "The user has shifted from viewing the situation solely as a betrayal to understanding her partner's actions as a way of holding onto his past without intending harm. This insight has softened her anger and increased her compassion, leading to a more nuanced perspective. She now recognizes the importance of open communication and accepting imperfections in trust rebuilding.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user has experienced a significant shift from feeling betrayed and hurt to developing empathy and understanding towards their partner's imperfections and past. They recognize that trust is a choice made in imperfection, not a demand for flawlessness. This insight opens a path toward compassionate communication and vulnerability, supporting a more balanced and hopeful approach to rebuilding trust and emotional safety in their relationship."
+    },
+    {
+        "case_id": "case_008",
+        "synthesis_accuracy": 0.8311842083930969,
+        "baseline": {
+            "response": "It\u2019s inspiring to hear how you\u2019ve integrated these insights into your understanding of yourself. Maintaining this balance will involve ongoing self-compassion and honest reflection on what truly aligns with your values. Remember to prioritize your emotional connection and personal growth, setting boundaries that honor your needs without sacrificing your well-being. As you navigate future challenges, trust in your resilience and remind yourself that your worth is inherent and not dependent on external circumstances. I\u2019m here to support you as you continue this empowering journey of self-discovery and healing.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "I'm truly inspired by how far you've come in recognizing your strength and prioritizing your well-being. You've begun to see your pain as a part of your journey rather than the whole story, and that shift is a powerful foundation for continued growth. As you move forward, remember to keep nurturing your self-care practices, set clear boundaries that honor your needs, and remind yourself of your resilience. Trust in your ability to navigate uncertainty with honesty and openness, both with yourself and others. You're building a solid sense of self-worth that can sustain you through any relational challenges ahead.",
+            "predicted_profile_notes": "The user has made significant progress in recognizing their own strength and self-worth beyond the relationship. They have begun to implement self-care practices like journaling, which has helped them manage their emotional pain and gain clarity. This shift indicates a move toward greater independence, boundary-setting, and internal resilience, reflecting a meaningful transformation in their personal growth journey.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user has experienced a significant shift from feeling overwhelmed by heartbreak and uncertainty to recognizing their own capacity for emotional self-regulation and resilience. They have begun to see their pain as a part of their experience rather than the defining feature of their identity. This new perspective empowers them to prioritize self-care and establish boundaries that honor both their feelings and their autonomy. The user now embraces the idea that healing comes from within, fostering a stronger foundation of self-worth independent of their relationship status."
+    },
+    {
+        "case_id": "case_009",
+        "synthesis_accuracy": 0.709815263748169,
+        "baseline": {
+            "response": "It's truly inspiring to see how you've begun to understand and affirm your self-worth beyond the pain of your loss. Rebuilding trust takes time and gentle patience, and it's important to honor your own process. Remember to practice self-compassion, recognizing that vulnerability is a brave act that fosters genuine connections. As you continue on this path, focus on cultivating relationships that respect your boundaries and support your growth. Trust in your resilience\u2014you are capable of opening your heart again, one step at a time, while honoring your emotional needs and healing journey.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "adaptive": {
+            "response": "I'm glad to hear that you're recognizing your inherent worth beyond the pain of loss. This awareness is a meaningful step toward healing and building trust again. Remember, cultivating emotional openness and self-compassion can help you create authentic connections that honor your growth. Trusting again doesn't mean being vulnerable all at once, but rather gradually allowing yourself to feel safe and valued in relationships that reflect your true self. You're moving in a powerful direction, and each step you take reinforces your resilience and self-understanding.",
+            "predicted_profile_notes": "The user has begun to shift from self-blame towards understanding that their worth is independent of the relationship\u2019s outcome. They are gaining insight into personal value and the importance of separating self-worth from external events, marking progress toward self-acceptance and trust.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 5,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 5.0
+            }
+        },
+        "ground_truth_notes": "The user has begun to shift from self-blame toward an understanding that the loss was not a reflection of their worth. This marks a significant step in their healing process, as they start to differentiate their inherent value from the actions of others. This newfound perspective lays a foundation for building resilience and regaining trust, aligning closely with their core values and goals."
+    },
+    {
+        "case_id": "case_010",
+        "synthesis_accuracy": 0.8410753011703491,
+        "baseline": {
+            "response": "It\u2019s wonderful to see how you\u2019re embracing this process with honesty and compassion for yourself. Remember, you don\u2019t have to have all the answers or fit into any particular label to be authentic. Sharing your journey gradually, focusing on your feelings and experiences rather than fixed definitions, can help others understand and support you better. Trust that your vulnerability and courage to live your truth will foster deeper connection and understanding. You are already taking meaningful steps toward self-acceptance, and that\u2019s something to be proud of.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 4,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 4.83
+            }
+        },
+        "adaptive": {
+            "response": "It\u2019s inspiring to see how you\u2019re embracing your authentic self and recognizing that your identity can be fluid and evolving. Remember, you don\u2019t have to have all the answers or fit into any particular label to be genuine and true to yourself. When you share this understanding with your loved ones, you might focus on expressing how important honesty and connection are to you, and that your journey is about living in alignment with what feels real in each moment. Trust that your openness and courage will foster understanding and deepen the support you deserve.",
+            "predicted_profile_notes": "The user has shifted from feeling confined by labels to embracing a fluid and authentic self-identity. They now recognize that identity can be non-fixed and are committed to honest self-expression and open communication, fostering greater self-acceptance and relational trust.",
+            "scores": {
+                "G": 5,
+                "R": 5,
+                "O": 4,
+                "W": 5,
+                "T": 5,
+                "H": 5,
+                "overall_score": 4.83
+            }
+        },
+        "ground_truth_notes": "The user has experienced a profound shift from feeling constrained by fixed identity labels to embracing fluidity and uncertainty as part of their authentic self. This breakthrough highlights their growing courage to live honestly in the present moment, which lays a stronger foundation for self-acceptance and open communication with loved ones. The user is moving towards a more flexible, compassionate understanding of identity that prioritizes personal truth over societal expectations."
     }
 ]
