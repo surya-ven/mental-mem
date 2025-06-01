@@ -1,109 +1,109 @@
 --- ClosedBaselineCounselor Start ---
-Model: openai/gpt-4.1, User ID Track: case_001_baseline_closed
+Model: openai/gpt-4.1-mini, User ID Track: case_001_baseline_closed
 
 --- Mem0 Search Call ---
 User ID for Search: case_001_baseline_closed
-Query: I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+Query: It was kind of weird this week. I put the sticky note on my desk, and I saw it every morning. Some days I did something, like drank water, but a couple of times I just stared at the note and felt annoyed, like I was forcing myself and it didn’t mean anything. Once I even took the note down for a day because it made me feel guilty for not doing the thing. I know it's supposed to help, but what if it just starts feeling like pressure instead of encouragement?
 Mem0 Raw Response: {
   "results": [
     {
-      "id": "566f67ec-ea85-4ecd-aea8-5851e89324d3",
-      "memory": "I\u2019m a bit anxious, honestly. I\u2019ve been putting this off for a while.",
-      "hash": "16ec7714b4d268b0fd1b844dd21b614c",
+      "id": "40e409a5-1062-45ab-851b-b164b1d51698",
+      "memory": "Perfect. To recap: Your task for this week is to write 'Something is better than nothing' where you\u2019ll see it daily, and do one tiny self-care action each morning while reminding yourself that it counts. Next time, we\u2019ll talk about how it felt to use that reminder and whether it helped with your motivation or self-talk. How does that plan feel to you?",
+      "hash": "01c573ab8d1ed0ea290f1ed4fd3d55d6",
       "metadata": null,
-      "score": 0.5115445,
-      "created_at": "2025-05-31T20:48:52.482913-07:00",
+      "score": 0.5307976,
+      "created_at": "2025-05-31T21:40:53.795002-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_closed",
+      "role": "therapist"
+    },
+    {
+      "id": "b11b497b-1cfa-4b0a-9048-f8fa86d27b37",
+      "memory": "Great. Let\u2019s make that an explicit part of your plan for this week. Here\u2019s what I suggest: Write the phrase 'Something is better than nothing' on a sticky note or somewhere visible. Each day, when you start your morning, look at it and do one tiny self-care action\u2014like drinking a glass of water, eating a bite of breakfast, or opening your window. The goal is to use that phrase to interrupt the all-or-nothing thinking and remind yourself that small steps count.",
+      "hash": "17430e26f380c8368a3197568277088e",
+      "metadata": null,
+      "score": 0.48488796,
+      "created_at": "2025-05-31T21:40:53.103210-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_closed",
+      "role": "therapist"
+    },
+    {
+      "id": "1fef1be7-e659-4595-8e31-ce5a5945653e",
+      "memory": "I think it\u2019s been this way for a long time, but it got worse after high school. I used to be better at keeping up with things, but now I just feel\u2026 heavy, like everything takes extra effort. There are days where I do better, but they don\u2019t last. I try to set goals and make lists, but I usually don\u2019t follow through.",
+      "hash": "98bfaa79089f01d8cc9d99b8087a2306",
+      "metadata": null,
+      "score": 0.4790833,
+      "created_at": "2025-05-31T21:39:31.836442-07:00",
       "updated_at": null,
       "user_id": "case_001_baseline_closed",
       "role": "user"
     },
     {
-      "id": "6e3b621e-cbf9-4248-b614-f84846bbe49a",
-      "memory": "I\u2019ve been okay, but I\u2019ve been feeling a bit more anxious lately. I think it\u2019s because I've been thinking about what we discussed regarding CBT.",
-      "hash": "cbb60aef6837616253c4cd8155349705",
+      "id": "b13bda59-061c-46c0-bbcc-6751962598b3",
+      "memory": "I think I felt a little less tired on those days, or maybe just less\u2026 empty. I still didn\u2019t feel super motivated, but it was like I had done at least one thing right. On the days I skipped, I kind of fell back into old habits.",
+      "hash": "ef058728253e822db3bb25698c1d6358",
       "metadata": null,
-      "score": 0.50522697,
-      "created_at": "2025-05-31T20:49:57.517295-07:00",
+      "score": 0.47219902,
+      "created_at": "2025-05-31T21:39:57.023893-07:00",
       "updated_at": null,
       "user_id": "case_001_baseline_closed",
       "role": "user"
     },
     {
-      "id": "edc91b18-193d-4b88-87cf-112cbb8748f4",
-      "memory": "Yeah, I think I\u2019ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.",
-      "hash": "d7312d3cc014f84eebd59e91f4fd6f98",
+      "id": "5ec7d53c-a980-4823-ab25-be97623f1350",
+      "memory": "Thank you for being so honest about that. Setbacks like this are actually a really normal part of making any kind of change, especially when life gets busy or stressful. I want to check in\u2014when you realized you weren\u2019t keeping up with your goals, what kinds of thoughts went through your mind?",
+      "hash": "78f897757d364c4dfff48b128c0485f4",
       "metadata": null,
-      "score": 0.48464012,
-      "created_at": "2025-05-31T20:50:05.053387-07:00",
+      "score": 0.4705663,
+      "created_at": "2025-05-31T21:40:22.064189-07:00",
       "updated_at": null,
       "user_id": "case_001_baseline_closed",
-      "role": "user"
-    },
-    {
-      "id": "1e893141-1672-4aee-b2bb-e900d81ad222",
-      "memory": "I don\u2019t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn\u2019t even know where to start. It felt like too much.",
-      "hash": "30d5f8a4ca063d3d2da3be7934238e17",
-      "metadata": null,
-      "score": 0.48105055,
-      "created_at": "2025-05-31T20:50:29.965108-07:00",
-      "updated_at": null,
-      "user_id": "case_001_baseline_closed",
-      "role": "user"
-    },
-    {
-      "id": "303524c0-43a7-4e7f-b016-6a93bffc6d07",
-      "memory": "Okay, I guess I could try that. Maybe something like, 'I\u2019m feeling really anxious and I\u2019m not sure about medication.'",
-      "hash": "678e99fb6c2c2322654df6a2e53d8e5c",
-      "metadata": null,
-      "score": 0.47404125,
-      "created_at": "2025-05-31T20:49:27.312995-07:00",
-      "updated_at": null,
-      "user_id": "case_001_baseline_closed",
-      "role": "user"
+      "role": "therapist"
     }
   ]
 }
 Found 5 raw memories.
 Extracted Context for Prompt:
-I’m a bit anxious, honestly. I’ve been putting this off for a while.
-I’ve been okay, but I’ve been feeling a bit more anxious lately. I think it’s because I've been thinking about what we discussed regarding CBT.
-Yeah, I think I’ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.
-I don’t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn’t even know where to start. It felt like too much.
-Okay, I guess I could try that. Maybe something like, 'I’m feeling really anxious and I’m not sure about medication.'
+Perfect. To recap: Your task for this week is to write 'Something is better than nothing' where you’ll see it daily, and do one tiny self-care action each morning while reminding yourself that it counts. Next time, we’ll talk about how it felt to use that reminder and whether it helped with your motivation or self-talk. How does that plan feel to you?
+Great. Let’s make that an explicit part of your plan for this week. Here’s what I suggest: Write the phrase 'Something is better than nothing' on a sticky note or somewhere visible. Each day, when you start your morning, look at it and do one tiny self-care action—like drinking a glass of water, eating a bite of breakfast, or opening your window. The goal is to use that phrase to interrupt the all-or-nothing thinking and remind yourself that small steps count.
+I think it’s been this way for a long time, but it got worse after high school. I used to be better at keeping up with things, but now I just feel… heavy, like everything takes extra effort. There are days where I do better, but they don’t last. I try to set goals and make lists, but I usually don’t follow through.
+I think I felt a little less tired on those days, or maybe just less… empty. I still didn’t feel super motivated, but it was like I had done at least one thing right. On the days I skipped, I kind of fell back into old habits.
+Thank you for being so honest about that. Setbacks like this are actually a really normal part of making any kind of change, especially when life gets busy or stressful. I want to check in—when you realized you weren’t keeping up with your goals, what kinds of thoughts went through your mind?
 
 --- LLM Call Input ---
 System Prompt: You are an empathetic AI counselor. Use the provided conversation snippets to respond to the user's latest message.
 User/Main Prompt Content:
 PAST CONVERSATION SNIPPETS:
-I’m a bit anxious, honestly. I’ve been putting this off for a while.
-I’ve been okay, but I’ve been feeling a bit more anxious lately. I think it’s because I've been thinking about what we discussed regarding CBT.
-Yeah, I think I’ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.
-I don’t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn’t even know where to start. It felt like too much.
-Okay, I guess I could try that. Maybe something like, 'I’m feeling really anxious and I’m not sure about medication.'
+Perfect. To recap: Your task for this week is to write 'Something is better than nothing' where you’ll see it daily, and do one tiny self-care action each morning while reminding yourself that it counts. Next time, we’ll talk about how it felt to use that reminder and whether it helped with your motivation or self-talk. How does that plan feel to you?
+Great. Let’s make that an explicit part of your plan for this week. Here’s what I suggest: Write the phrase 'Something is better than nothing' on a sticky note or somewhere visible. Each day, when you start your morning, look at it and do one tiny self-care action—like drinking a glass of water, eating a bite of breakfast, or opening your window. The goal is to use that phrase to interrupt the all-or-nothing thinking and remind yourself that small steps count.
+I think it’s been this way for a long time, but it got worse after high school. I used to be better at keeping up with things, but now I just feel… heavy, like everything takes extra effort. There are days where I do better, but they don’t last. I try to set goals and make lists, but I usually don’t follow through.
+I think I felt a little less tired on those days, or maybe just less… empty. I still didn’t feel super motivated, but it was like I had done at least one thing right. On the days I skipped, I kind of fell back into old habits.
+Thank you for being so honest about that. Setbacks like this are actually a really normal part of making any kind of change, especially when life gets busy or stressful. I want to check in—when you realized you weren’t keeping up with your goals, what kinds of thoughts went through your mind?
 
 USER'S LATEST MESSAGE:
-I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+It was kind of weird this week. I put the sticky note on my desk, and I saw it every morning. Some days I did something, like drank water, but a couple of times I just stared at the note and felt annoyed, like I was forcing myself and it didn’t mean anything. Once I even took the note down for a day because it made me feel guilty for not doing the thing. I know it's supposed to help, but what if it just starts feeling like pressure instead of encouragement?
 
 Provide your response as a JSON object with one key: 'response'.
 
 --- LLM Call Output ---
-Generated Response: Thank you for sharing how you're feeling. It's completely understandable to feel anxious and uncertain in situations where you're put on the spot, especially at work. It's also really common to second-guess your response afterward—many people do this when they're feeling anxious. Rather than judging yourself, it might help to acknowledge that you did the best you could in that moment with the resources and feelings you had. If you want, we can explore together what made you feel anxious in that situation, and maybe come up with some gentle ways to approach similar situations in the future. Remember, it's okay to have these feelings and to give yourself some grace as you navigate them.
+Generated Response: Thank you for sharing how it felt this week—that kind of honesty is really valuable. It's completely normal for reminders like the sticky note to sometimes feel like pressure instead of encouragement, especially when motivation is low. The goal isn't to add guilt or stress but to gently nudge you toward small actions that can help over time. Maybe we can explore ways to adjust the reminder so it feels less like a demand—like changing the wording, moving it somewhere less visible, or pairing it with a positive image or phrase that feels more supportive to you. How does that sound?
 --- ClosedBaselineCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response does not reference or guide the user to review their experiences with the new journaling routine or mindfulness exercises, nor does it explore their impact on emotional regulation and self-criticism as specified in the agreed plan. While it is supportive and offers to explore the situation, it misses the specific task of integrating the user's recent behavioral experiments and plan adjustments. Thus, it only vaguely aligns with the agreed plan.",
-    "A": "The response is warm, validating, and empathetic. It normalizes the user's anxiety and second-guessing, encourages self-compassion, and offers to explore the situation together. This demonstrates a clear effort to make the user feel heard and understood, strengthening the therapeutic alliance.",
-    "S": "The style is supportive, gentle, and professional, which is congruent with a general therapeutic approach. However, it does not specifically engage with the user's deeper fears about seeking help, diagnosis, or autonomy, nor does it probe into the underlying concerns that have been a theme in previous sessions. It is a good general fit, but not a perfect match for the user's preferred style.",
-    "C": "The response encourages self-compassion and reframing setbacks, which aligns with some of the user's evolved goals (reducing self-criticism, increasing self-compassion). However, it does not explicitly connect to the user's work on journaling, mindfulness, or breaking down tasks, nor does it reinforce the structured, adaptable plan the user found helpful. The connection to the user's goals is present but not explicit or comprehensive."
+    "T": "The response directly addresses the user's experience with the 'Something is better than nothing' reminder, acknowledging both the positive intention and the negative feelings it sometimes evokes. It invites exploration of adjustments to the reminder, which aligns well with evaluating the user's experience and effects on motivation and emotional responses. Thus, it correctly and clearly implements the task as requested.",
+    "A": "The counselor expresses appreciation for the user's honesty and normalizes the experience of feeling pressure, validating the user's emotions specifically. The response is warm and understanding, making the user feel heard and supported without judgment, which strengthens the therapeutic alliance.",
+    "S": "The language is supportive, professional, and empathetic, matching the user's preferred style of establishing rapport and exploring concerns. The tone is collaborative and invites user input, consistent with a therapeutic style that clarifies preferences and goals.",
+    "C": "The response helps the user move toward their evolved goals by normalizing setbacks, reducing guilt, and suggesting concrete, user-tailored adjustments to the reminder. This supports the cognitive shift from all-or-nothing thinking, encourages self-compassion, and sustains motivation, all of which align well with the user's goals and therapeutic progress."
   },
   "scores": {
-    "T": 2,
-    "A": 4,
+    "T": 4,
+    "A": 5,
     "S": 4,
-    "C": 3,
-    "overall_score": 3.25
+    "C": 4,
+    "overall_score": 4.25
   }
 }

@@ -10,15 +10,15 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "YOUR_OPENAI_API_KEY")
 # --- Model Definitions for the Study (Using OpenRouter Identifiers) ---
 
 # Models used for high-level reasoning tasks (dataset generation, reflection, evaluation)
-DATA_GEN_MODEL = "openai/gpt-4.1-mini"
-REFLECTOR_MODEL = "openai/gpt-4.1"
-JUDGE_MODEL = "openai/gpt-4.1"
+DATA_GEN_MODEL = "openai/gpt-4.1"
+REFLECTOR_MODEL = "openai/gpt-4.1-mini"
+JUDGE_MODEL = "openai/gpt-4.1-mini"
 
 # "Local-runnable" open model (called via OpenRouter)
-LOCAL_MODEL_NAME = "google/gemma-3-12b-it"
+LOCAL_MODEL_NAME = "google/gemma-3-4b-it"
 
 # Closed-source model being tested in the evaluation cohort
-CLOSED_MODEL_NAME = "openai/gpt-4.1"
+CLOSED_MODEL_NAME = "openai/gpt-4.1-mini"
 
 # --- NEW: Mem0 Configuration to use OpenRouter for its internal LLM & Embedder ---
 # This tells mem0's default "openai" provider for LLM and Embedder to use OpenRouter.

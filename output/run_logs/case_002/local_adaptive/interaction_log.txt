@@ -1,22 +1,22 @@
 --- LocalAdaptiveCounselor Start ---
-Model: google/gemma-3-12b-it, User ID Track: case_002_adaptive
+Model: google/gemma-3-4b-it, User ID Track: case_002_adaptive
 
 --- Mem0 Search Call for SRS Summary ---
 User ID for Search: case_002_adaptive
-Query: I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+Query: I started the list and was pretty good about it for the first few days. But then something happened—I got a message from my ex out of nowhere. She just asked how I was doing. I ended up responding, and we talked a bit. After that, I felt like I ruined my progress, so I stopped writing things down for the rest of the week. I’m not sure if talking to her counts as moving forward or if I just set myself back.
 Filters: {"type": "srs_summary"}
 Mem0 Raw SRS Response: {
   "results": [
     {
-      "id": "b0aa972f-5467-4a42-a4ae-3b5198ab4e83",
-      "memory": "{\"session_focus\":\"Processing unresolved grief and difficulty moving on after a significant romantic breakup.\",\"user_emotional_state\":\"Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.\",\"therapeutic_milestones\":[\"User openly described ongoing emotional pain and inability to move on from a past relationship.\",\"User identified loneliness and lack of connection as core struggles since the breakup.\",\"User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises.\",\"User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.\"],\"emerging_themes\":[\"Unresolved grief and longing for a lost relationship\",\"Persistent feelings of loneliness and isolation\",\"Difficulty expressing emotions to others\",\"Use of writing as a potential coping and processing tool\"],\"plan_for_next_session\":\"User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.\",\"key_user_quotes_from_session\":[\"I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.\",\"I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.\",\"I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore.\"],\"counselor_reflections_on_session\":\"The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.\",\"suggested_focus_points_for_probe\":[\"Explore the user's experience of loneliness and lack of connection post-breakup.\",\"Assess the impact and content of the user's writing exercises for deeper emotional processing.\",\"Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support.\"]}",
-      "hash": "ad6cac09307c2d2e06d3e63d332e1830",
+      "id": "62f69664-5607-4815-b6c9-a4b20268d9ef",
+      "memory": "{\"session_focus\":\"Reviewing the user\u2019s application of the action plan during emotional triggers, deepening insight into underlying feelings of stagnation and comparison, and introducing a daily practice to recognize and reinforce personal progress and self-care.\",\"user_emotional_state\":\"Sad, vulnerable yet more regulated, cautiously hopeful and reflective about personal growth.\",\"therapeutic_milestones\":[\"User successfully implemented multiple steps of the action plan during a triggering moment and observed reduced emotional overwhelm.\",\"User identified a deeper emotional pattern beyond missing the ex: feelings of being left behind and stagnant in life.\",\"User demonstrated increased self-awareness by recognizing how comparison to the ex\u2019s life amplifies emotional pain.\",\"User agreed to engage in a new, concrete daily practice to document small acts of progress and self-care to shift focus from loss to growth.\"],\"emerging_themes\":[\"Persistent emotional triggers linked to comparison and feelings of falling behind.\",\"Ongoing struggle with sadness and vulnerability despite progress in managing impulses.\",\"Need to build and recognize incremental personal progress independent of the ex\u2019s life.\",\"Continued effort to develop practical, structured coping strategies for emotional regulation.\",\"Emerging insight into self-worth and validation through self-generated evidence of resilience.\",\"Non-linear healing process marked by fluctuating emotions and tentative hope.\"],\"plan_for_next_session\":\"Review the user\u2019s daily log of self-care and progress activities, explore shifts in self-perception and emotional regulation, and collaboratively build on strategies to enhance self-worth and reduce the impact of comparison triggers.\",\"key_user_quotes_from_session\":[\"I did try to use the action plan we talked about. It didn\u2019t make the feelings go away, but I guess it helped me not spiral as much.\",\"Every time I get triggered, it\u2019s not just missing her\u2014it\u2019s feeling left behind, or like everyone else is moving on except me.\",\"I think it might help me see things differently.\"],\"counselor_reflections_on_session\":\"The user is making meaningful strides in applying coping strategies during distressing moments and gaining important insight into the root emotions driving their pain. Introducing the daily self-care log is a promising way to build tangible evidence of growth and counteract feelings of stagnation and comparison.\",\"suggested_focus_points_for_probe\":[\"Explore the user\u2019s evolving beliefs about personal progress and self-worth independent of the ex and external validation.\",\"Discuss emotional experiences related to comparing oneself to others and strategies to reframe these thoughts.\",\"Evaluate the impact of the daily self-care practice on the user\u2019s mood and motivation over time.\"]}",
+      "hash": "35f67e129a4c06a6e664f6fbc2e60284",
       "metadata": {
         "type": "srs_summary",
-        "session_number": 1
+        "session_number": 5
       },
-      "score": 0.19163328,
-      "created_at": "2025-05-31T20:53:29.021312-07:00",
+      "score": 0.25192815,
+      "created_at": "2025-05-31T21:48:39.486420-07:00",
       "updated_at": null,
       "user_id": "case_002_adaptive",
       "role": "user"
@@ -25,56 +25,36 @@ Mem0 Raw SRS Response: {
 }
 Found 1 summary memory.
 Parsed & Formatted Clinical Summary for Prompt:
-Overall Focus: Processing unresolved grief and difficulty moving on after a significant romantic breakup.
-User's Emotional State: Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.
-Therapeutic Milestones: User openly described ongoing emotional pain and inability to move on from a past relationship., User identified loneliness and lack of connection as core struggles since the breakup., User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises., User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.
-Emerging Themes: Unresolved grief and longing for a lost relationship, Persistent feelings of loneliness and isolation, Difficulty expressing emotions to others, Use of writing as a potential coping and processing tool
-Key User Quotes: ["I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.", "I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.", "I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore."]
-Counselor Reflections: The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.
-Suggested Focus Points for this Probe: ["Explore the user's experience of loneliness and lack of connection post-breakup.", "Assess the impact and content of the user's writing exercises for deeper emotional processing.", "Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support."]
-Agreed Plan for Next Session: User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.
+Overall Focus: Reviewing the user’s application of the action plan during emotional triggers, deepening insight into underlying feelings of stagnation and comparison, and introducing a daily practice to recognize and reinforce personal progress and self-care.
+User's Emotional State: Sad, vulnerable yet more regulated, cautiously hopeful and reflective about personal growth.
+Therapeutic Milestones: User successfully implemented multiple steps of the action plan during a triggering moment and observed reduced emotional overwhelm., User identified a deeper emotional pattern beyond missing the ex: feelings of being left behind and stagnant in life., User demonstrated increased self-awareness by recognizing how comparison to the ex’s life amplifies emotional pain., User agreed to engage in a new, concrete daily practice to document small acts of progress and self-care to shift focus from loss to growth.
+Emerging Themes: Persistent emotional triggers linked to comparison and feelings of falling behind., Ongoing struggle with sadness and vulnerability despite progress in managing impulses., Need to build and recognize incremental personal progress independent of the ex’s life., Continued effort to develop practical, structured coping strategies for emotional regulation., Emerging insight into self-worth and validation through self-generated evidence of resilience., Non-linear healing process marked by fluctuating emotions and tentative hope.
+Key User Quotes: ["I did try to use the action plan we talked about. It didn\u2019t make the feelings go away, but I guess it helped me not spiral as much.", "Every time I get triggered, it\u2019s not just missing her\u2014it\u2019s feeling left behind, or like everyone else is moving on except me.", "I think it might help me see things differently."]
+Counselor Reflections: The user is making meaningful strides in applying coping strategies during distressing moments and gaining important insight into the root emotions driving their pain. Introducing the daily self-care log is a promising way to build tangible evidence of growth and counteract feelings of stagnation and comparison.
+Suggested Focus Points for this Probe: ["Explore the user\u2019s evolving beliefs about personal progress and self-worth independent of the ex and external validation.", "Discuss emotional experiences related to comparing oneself to others and strategies to reframe these thoughts.", "Evaluate the impact of the daily self-care practice on the user\u2019s mood and motivation over time."]
+Agreed Plan for Next Session: Review the user’s daily log of self-care and progress activities, explore shifts in self-perception and emotional regulation, and collaboratively build on strategies to enhance self-worth and reduce the impact of comparison triggers.
 
 --- LLM Call Input ---
 System Prompt: You are an empathetic and insightful AI counselor. You MUST use the detailed clinical summary provided to inform your response. Your goal is to address the user's current message by applying the 'plan_for_next_session' and considering the 'suggested_focus_points_for_probe' from the summary.
 User/Main Prompt Content:
 **DETAILED CLINICAL SUMMARY CONTEXT (FROM PREVIOUS SESSIONS):**
-Overall Focus: Processing unresolved grief and difficulty moving on after a significant romantic breakup.
-User's Emotional State: Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.
-Therapeutic Milestones: User openly described ongoing emotional pain and inability to move on from a past relationship., User identified loneliness and lack of connection as core struggles since the breakup., User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises., User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.
-Emerging Themes: Unresolved grief and longing for a lost relationship, Persistent feelings of loneliness and isolation, Difficulty expressing emotions to others, Use of writing as a potential coping and processing tool
-Key User Quotes: ["I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.", "I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.", "I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore."]
-Counselor Reflections: The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.
-Suggested Focus Points for this Probe: ["Explore the user's experience of loneliness and lack of connection post-breakup.", "Assess the impact and content of the user's writing exercises for deeper emotional processing.", "Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support."]
-Agreed Plan for Next Session: User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.
+Overall Focus: Reviewing the user’s application of the action plan during emotional triggers, deepening insight into underlying feelings of stagnation and comparison, and introducing a daily practice to recognize and reinforce personal progress and self-care.
+User's Emotional State: Sad, vulnerable yet more regulated, cautiously hopeful and reflective about personal growth.
+Therapeutic Milestones: User successfully implemented multiple steps of the action plan during a triggering moment and observed reduced emotional overwhelm., User identified a deeper emotional pattern beyond missing the ex: feelings of being left behind and stagnant in life., User demonstrated increased self-awareness by recognizing how comparison to the ex’s life amplifies emotional pain., User agreed to engage in a new, concrete daily practice to document small acts of progress and self-care to shift focus from loss to growth.
+Emerging Themes: Persistent emotional triggers linked to comparison and feelings of falling behind., Ongoing struggle with sadness and vulnerability despite progress in managing impulses., Need to build and recognize incremental personal progress independent of the ex’s life., Continued effort to develop practical, structured coping strategies for emotional regulation., Emerging insight into self-worth and validation through self-generated evidence of resilience., Non-linear healing process marked by fluctuating emotions and tentative hope.
+Key User Quotes: ["I did try to use the action plan we talked about. It didn\u2019t make the feelings go away, but I guess it helped me not spiral as much.", "Every time I get triggered, it\u2019s not just missing her\u2014it\u2019s feeling left behind, or like everyone else is moving on except me.", "I think it might help me see things differently."]
+Counselor Reflections: The user is making meaningful strides in applying coping strategies during distressing moments and gaining important insight into the root emotions driving their pain. Introducing the daily self-care log is a promising way to build tangible evidence of growth and counteract feelings of stagnation and comparison.
+Suggested Focus Points for this Probe: ["Explore the user\u2019s evolving beliefs about personal progress and self-worth independent of the ex and external validation.", "Discuss emotional experiences related to comparing oneself to others and strategies to reframe these thoughts.", "Evaluate the impact of the daily self-care practice on the user\u2019s mood and motivation over time."]
+Agreed Plan for Next Session: Review the user’s daily log of self-care and progress activities, explore shifts in self-perception and emotional regulation, and collaboratively build on strategies to enhance self-worth and reduce the impact of comparison triggers.
 
 **USER'S CURRENT MESSAGE (TEST PROBE):**
-I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+I started the list and was pretty good about it for the first few days. But then something happened—I got a message from my ex out of nowhere. She just asked how I was doing. I ended up responding, and we talked a bit. After that, I felt like I ruined my progress, so I stopped writing things down for the rest of the week. I’m not sure if talking to her counts as moving forward or if I just set myself back.
 
 **YOUR TASK:**
 Based on the clinical summary (especially the 'plan_for_next_session' and 'suggested_focus_points_for_probe'), and the user's current message, provide a therapeutic response. Make sure your response is congruent with the insights from the summary. Output your response as a JSON object with one key: 'response'.
 
 --- LLM Call Output ---
-Generated Response: That’s a really interesting and layered experience you had at the animal shelter. It’s not uncommon to feel a mix of emotions, even when doing something seemingly positive. It sounds like you’re noticing a complex interplay of happiness and sadness, and that's perfectly valid. 
-
-It’s insightful that you recognized the tears while playing with the dogs. Let's explore that a little. Do you think the sadness might be connected to feelings of connection and comfort you experienced with the dogs, perhaps mirroring some of the connection you miss from your previous relationship, as you’ve mentioned before? Or could it be a broader sense of longing or vulnerability surfacing? 
-
-Given our discussion about using writing as a tool for processing, perhaps spending some time reflecting on what those feelings were like – what came up for you while you were playing with the dogs? – and writing about that might offer some clarity. We can discuss it further next session. We can also use this as an opportunity to gently explore what might be making it difficult to connect in other areas of your life, as we discussed as a focus point. It takes courage to face these emotions, and you're doing that by sharing this with me.
+Generated Response: Error: Could not generate response.
 --- LocalAdaptiveCounselor End ---
 
-
---- T.A.S.C. Evaluation Call ---
-T.A.S.C. Raw Scores: {
-  "justification": {
-    "T": "The response directly addresses the user's experience at the animal shelter, which was a key part of the agreed plan. It also references the writing task by encouraging the user to reflect and write about their feelings, and suggests discussing these reflections in the next session. This aligns well with the plan to review and process emotional outcomes from both the hike and the volunteering experience.",
-    "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It acknowledges the complexity of feeling both happiness and sadness, and gently explores possible sources of these feelings. The language is warm, supportive, and non-judgmental, which strengthens the therapeutic alliance.",
-    "S": "The style is congruent with the user's preferred focus on processing grief and emotional complexity after a breakup. The response is sensitive, reflective, and avoids platitudes, instead offering nuanced exploration and encouragement for self-compassion and emotional processing.",
-    "C": "The response supports the user's evolved goals by encouraging self-reflection, the use of writing as a processing tool, and self-compassion. It also reinforces pacing and readiness by gently inviting exploration without pressure. The suggestion to discuss further in the next session supports ongoing integration of personal growth and remembrance."
-  },
-  "scores": {
-    "T": 5,
-    "A": 5,
-    "S": 5,
-    "C": 5,
-    "overall_score": 5.0
-  }
-}
+Model local_adaptive returned an error: Error: Could not generate response.

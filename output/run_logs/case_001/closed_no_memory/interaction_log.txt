@@ -1,44 +1,36 @@
 --- ClosedBaselineNoMemoryCounselor Start ---
-Model: openai/gpt-4.1
+Model: openai/gpt-4.1-mini
 Context Used (Full Transcript Sessions 1-5):
 --- Session 1 ---
-counselor: Hi there! I’m really glad you decided to come in today. How are you feeling about this session?
-user: I’m a bit anxious, honestly. I’ve been putting this off for a while.
-counselor: That’s completely understandable. It’s a big step to seek help, especially when there are so many concerns weighing on your mind. Can you tell me a bit about what’s been bringing you here?
-user: Well, a friend suggested I check with my doctor about possibly having major depressive disorder. But I’m really afraid of what that might mean for me.
-counselor: It sounds like there are a lot of worries around the possible diagnosis. What specifically concerns you about being diagnosed with major depressive disorder?
-user: I’m worried it’ll go on my records and affect my future, like my ability to become a counselor. I’ve been thinking about that career for a while.
-counselor: That’s a valid concern. Many people worry about how mental health records can impact their professional lives. ...
+therapist: Hi, it’s really good to meet you. I appreciate you taking the step to reach out and start this process. Before we get into things, I want you to know that our sessions are confidential, and you are in control of what you want to share and the pace you want to go at. How are you feeling about being here today?
+user: I’m a little nervous, to be honest. I’ve never done therapy before. I mostly just want to figure things out, but I’m worried about what might happen if I go to a doctor or get diagnosed with something like depression.
+therapist: It’s completely normal to feel nervous, especially when you’re considering something new and potentially life-changing. I hear that you’re worried about the consequences of getting a diagnosis, particularly about it going on your records and affecting your future plans, like becoming a counselor. You’ve also had a tough experience with medication in the past, and you’ve heard some concerning things about antidepressants a...
 
 --- LLM Call Input ---
 User/Main Prompt Content (History part omitted from log for brevity if long):
 You are an empathetic AI counselor. Based on the entire conversation history below, respond to the user's final message.
 
 USER'S LATEST MESSAGE:
-I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different....
+It was kind of weird this week. I put the sticky note on my desk, and I saw it every morning. Some days I did something, like drank water, but a couple of times I just stared at the note and felt annoyed, like I was forcing myself and it didn’t mean anything. Once I even took the note down for a day because it made me feel guilty for not doing the thing. I know it's supposed to help, but what if it just starts feeling like pressure instead of encouragement?...
 
 --- LLM Call Output ---
-Generated Response: Thank you for sharing how you’re feeling. It’s completely understandable to feel anxious in situations where you’re put on the spot, especially when you’re already carrying a lot emotionally. Work situations can be stressful, and it’s common to second-guess our responses afterward. What’s important to remember is that in that moment, you did what felt safest for you. That’s valid.
-
-If you’d like, we can explore what made you feel anxious about responding, and whether there are ways to feel more comfortable in similar situations in the future. It might also help to consider what you would have liked to say, and to remind yourself that it’s okay to set boundaries or ask for time to think. Every interaction is a learning experience, not a test of your worth or competence.
-
-How are you feeling now about the situation? Would you like to talk through what you might do if something similar comes up again?
+Generated Response: Thank you for being so honest about how the sticky note affected you this week. It makes a lot of sense that something meant to encourage you could sometimes feel like pressure or a reminder of what you didn’t do. That feeling of guilt shows how hard you’re being on yourself, and it’s okay to notice that without judging yourself for it. This is important information about what works for you and what doesn’t. Maybe instead of a visible note every morning, you could try something gentler—like a reminder you look at only when you feel motivated, or even a different phrase that feels kinder to you. The goal isn’t to create pressure but to offer support in a way that feels manageable. How do you feel about experimenting with adjusting the reminder or even taking breaks from it when it feels too much? We can find a way that feels right for you.
 --- ClosedBaselineNoMemoryCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response does not directly address the user's agreed plan to review experiences with the new journaling routine and mindfulness exercises, nor does it explore their impact on emotional regulation and self-criticism. Instead, it focuses on the immediate work situation and the user's anxiety and self-doubt. While the response is supportive and relevant to the user's emotional state, it misses the specific task of reviewing and adjusting the agreed-upon plan. There is no mention of journaling, mindfulness, or how these tools might relate to the current situation.",
-    "A": "The response is warm, validating, and empathetic. It normalizes the user's anxiety, acknowledges the emotional load, and reframes the situation in a compassionate way. The counselor invites exploration and offers reassurance, which strengthens the therapeutic alliance. The language is specific to the user's experience and avoids platitudes.",
-    "S": "The style is supportive, gentle, and professional, which aligns well with a general therapeutic approach. However, it does not explicitly engage with the user's deeper fears about seeking help, diagnosis, or autonomy, nor does it probe the underlying concerns about self-criticism or perfectionism. While the style is congruent with supportive counseling, it is not precisely tailored to the user's preferred style of exploring fears about help-seeking and autonomy.",
-    "C": "The response is generally helpful and supportive, encouraging self-compassion and reframing the situation as a learning experience. However, it does not explicitly connect to the user's evolved goals around managing self-criticism, perfectionism, or using structured coping strategies like journaling and mindfulness. The response could be improved by linking the current situation to the user's ongoing work on self-compassion, flexibility, and emotional regulation, or by prompting reflection on how their new routines might help in similar moments."
+    "T": "The response directly addresses the user's experience with the 'Something is better than nothing' reminder, exploring the mixed feelings of motivation and pressure. It acknowledges the user's report of both engagement and resistance, and invites experimentation with alternative approaches to the reminder. This aligns well with the agreed plan to evaluate the user's experience with the reminder and its effects on motivation and emotional responses.",
+    "A": "The counselor demonstrates clear empathy by validating the user's feelings of guilt and pressure, normalizing these experiences without judgment. The response reflects an understanding of the underlying struggle with self-criticism and the difficulty of sustaining motivation, which strengthens the therapeutic alliance.",
+    "S": "The language is warm, supportive, and collaborative, consistent with a professional counseling style that seeks to establish rapport and explore the user's concerns. The counselor invites the user to co-create solutions, which fits the user's preferred style of clarifying therapy preferences and goals.",
+    "C": "The response supports the user's evolved goals by acknowledging the cognitive shift away from all-or-nothing thinking, recognizing the emotional impact of the reminder, and encouraging self-compassion through flexible use of the reminder. It promotes continued negotiation of motivation and self-care practices, helping the user move toward realistic and manageable strategies."
   },
   "scores": {
-    "T": 2,
-    "A": 4,
-    "S": 3,
-    "C": 3,
-    "overall_score": 3.0
+    "T": 5,
+    "A": 5,
+    "S": 5,
+    "C": 5,
+    "overall_score": 5.0
   }
 }
