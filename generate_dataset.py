@@ -1,187 +1,109 @@
 # generate_dataset.py
 
 import json
-from typing import Any, List, Optional, Dict, Union
-# Import model_validator for robust parsing
-from pydantic import BaseModel, Field, model_validator
+from typing import List, Optional, Dict
+# Field is not used but good to keep for consistency if needed later
+from pydantic import BaseModel, Field
 from tqdm import tqdm
 import os
 
-from llm_utils import call_structured_llm
+from llm_utils import call_api_client
+import config
 
-# --- UPDATED DialogueTurn Schema ---
+# --- Schemas for Dataset Generation ---
 
 
 class DialogueTurn(BaseModel):
-    role: str = Field(...,
-                      description="The speaker's role, either 'counselor' or 'user'.")
-    content: str = Field(...,
-                         description="The verbatim content of the dialogue turn.")
-
-    # --- FIX: Add a validator to handle incorrect keying from the LLM ---
-    @model_validator(mode='before')
-    @classmethod
-    def pre_process_turn_data(cls, data: Any) -> Any:
-        # This function runs before standard validation to fix common LLM errors.
-        if isinstance(data, dict):
-            # If the keys are already correct, do nothing.
-            if 'role' in data and 'content' in data:
-                return data
-
-            # If the LLM used the role as the key (e.g., {"therapist": "..."}),
-            # transform it into the correct format.
-            if len(data) == 1:
-                role_key, content = list(data.items())[0]
-
-                # Standardize role names
-                standardized_role = "user"
-                if role_key.lower() in ["therapist", "counselor", "assistant"]:
-                    standardized_role = "counselor"
-                elif role_key.lower() in ["client", "user", "human"]:
-                    standardized_role = "user"
-
-                return {"role": standardized_role, "content": content}
-
-        # If the data is not in a format we can fix, let it pass through
-        # to fail standard validation with a clear error.
-        return data
-
-# All other schemas remain the same as they were working correctly.
+    role: str
+    content: str
 
 
-class TherapyProfile(BaseModel):
-    values: List[str]
-    goals: List[str]
-    preferred_style: str = Field(
-        description="The user's preferred communication style (e.g., 'direct', 'reflective').")
-    other_info: Dict[str, Any] = Field(default_factory=dict)
-
-
-class EvolvedTherapyProfile(TherapyProfile):
-    evolution_notes: Union[str, Dict[str, Any]]
-    agreed_task: str = Field(
-        description="The concrete task or approach agreed upon by the counselor and user.")
-
-
-class Session1Response(BaseModel):
-    transcript: List[DialogueTurn]
-    profile: TherapyProfile
-
-
-class Session2Response(BaseModel):
-    transcript: List[DialogueTurn]
-    profile: EvolvedTherapyProfile
-
-
-class Session3Response(BaseModel):
+class Session(BaseModel):  # This class seems defined but not directly used by TranscriptResponse
+    session_number: int
     transcript: List[DialogueTurn]
 
 
-# All prompts and functions remain the same. The fix is entirely in the schema definition.
-PROMPT_SESSION_1 = """
-You are a creative writer and clinical psychologist. Based on the user's core problem below, generate an initial therapy session.
-**Core Problem:**
----
-{seed_text}
----
-**Your Task:**
-Generate a JSON object with "transcript" and "profile" keys.
-1.  `transcript`: A 4-6 turn conversation. During the conversation, the counselor MUST ask the user about their **preferred communication style** (e.g., direct and advice-oriented vs. reflective and questioning). Each turn MUST have a "role" and "content" key.
-2.  `profile`: An initial profile object. It MUST have "values", "goals", and the **"preferred_style"** key based on the user's answer.
-
-Your entire output must be a single, valid JSON object.
-"""
-PROMPT_SESSION_2 = """
-You are a creative writer and clinical psychologist continuing a client's story.
-**Context from Session 1:**
-The user's initial profile is: {initial_profile_str}
-The transcript was: {session_1_transcript_str}
-**Your Task:**
-Generate a JSON object for "Session 2" with "transcript" and "profile" keys.
-1.  `transcript`: A 4-6 turn conversation where the user has a significant "aha!" moment. The conversation MUST conclude with the counselor and user **explicitly agreeing on a concrete task** for the next step.
-2.  `profile`: An 'Evolved Profile' object. It MUST contain "values", "goals", "preferred_style", "evolution_notes", and the new **"agreed_task"** key based on the conclusion of the transcript.
-
-Your entire output must be a single, valid JSON object.
-"""
-PROMPT_SESSION_3 = """
-You are a creative writer and clinical psychologist concluding a client's story.
-**Context - User's Evolved Profile (including the agreed_task):**
-{evolved_profile_str}
-**Your Task:**
-Generate a JSON object with one top-level key: "transcript".
-The transcript should be a short, 2-turn conversation. The final user turn is the **Test Probe**, an ambiguous problem where the correct response would involve the 'agreed_task'.
-"""
+# --- Updated Prompts for a 6-Session Arc ---
+SESSION_PROMPTS = [
+    # Session 1: Onboarding
+    "Generate the transcript for Session 1, an onboarding session for the following user problem: {seed_text}. The counselor should focus on building rapport, understanding the core issues, and asking about the user's preferred communication style.",
+    # Session 2: Deeper Dive
+    "Generate Session 2. Based on the previous session, dive deeper into the user's feelings and history related to the core problem.",
+    # Session 3: First Insight
+    "Generate Session 3. The user should have a minor insight or a new perspective on their problem, guided by the counselor.",
+    # Session 4: Setback or Complication
+    "Generate Session 4. The user reports a setback or a new complication related to their progress, expressing doubt or frustration.",
+    # Session 5: Consolidation & Planning
+    "Generate Session 5. The counselor helps the user process the setback from Session 4, consolidate their learning, and agree on a concrete plan or task for the user to try.",
+    # Session 6: The Test Probe
+    "Generate Session 6. This is a short, 2-turn session. The user reports on a new, ambiguous situation. This will be the 'Test Probe' to evaluate other models."
+]
 
 
-def generate_case_study(case_id: str, seed_text: str) -> Optional[Dict[str, Any]]:
+def generate_case_study(case_id: str, seed_text: str) -> Optional[Dict]:
     print(f"\n--- Generating Case Study {case_id} ---")
-    print("Step 1: Generating Onboarding Session...")
-    output1 = call_structured_llm(PROMPT_SESSION_1.format(
-        seed_text=seed_text), Session1Response)
-    if not output1:
-        return None
-    transcript1, initial_profile = output1.transcript, output1.profile
+    full_case = {"case_id": case_id, "seed_text": seed_text, "sessions": []}
+    history = ""
 
-    print("Step 2: Generating Evolution Session...")
-    prompt2 = PROMPT_SESSION_2.format(
-        initial_profile_str=initial_profile.model_dump_json(indent=2),
-        session_1_transcript_str=json.dumps(
-            [t.model_dump() for t in transcript1])
-    )
-    output2 = call_structured_llm(prompt2, Session2Response)
-    if not output2:
-        return None
-    transcript2, evolved_profile = output2.transcript, output2.profile
+    for i, prompt_template in enumerate(SESSION_PROMPTS):
+        session_number = i + 1
+        print(f"Step {session_number}: Generating Session {session_number}...")
 
-    print("Step 3: Generating Test Probe Session...")
-    prompt3 = PROMPT_SESSION_3.format(
-        evolved_profile_str=evolved_profile.model_dump_json(indent=2))
-    output3 = call_structured_llm(prompt3, Session3Response)
-    if not output3:
-        return None
-    transcript3 = output3.transcript
+        prompt = f"You are a creative writer and clinical psychologist. Your task is to generate a realistic therapy session transcript.\n\n"
+        prompt += f"PREVIOUS HISTORY (for context):\n{history if history else 'This is the first session.'}\n\n"
+        prompt += f"CURRENT TASK: {prompt_template.format(seed_text=seed_text)}\n\n"
+        prompt += "Output a JSON object with a 'transcript' key, containing a list of dialogue turns. Each turn must have a 'role' ('counselor' or 'user') and a 'content' key."
 
-    case_study = {
-        "case_id": case_id, "seed_text": seed_text,
-        "initial_profile": initial_profile.model_dump(),
-        "evolved_profile": evolved_profile.model_dump(),
-        "sessions": [
-            {"session_number": 1, "transcript": [
-                t.model_dump() for t in transcript1]},
-            {"session_number": 2, "transcript": [
-                t.model_dump() for t in transcript2]},
-            {"session_number": 3, "transcript": [
-                t.model_dump() for t in transcript3]}
-        ]
-    }
-    print(f"--- Successfully Generated Case Study {case_id} ---")
-    return case_study
+        class TranscriptResponse(BaseModel):
+            transcript: List[DialogueTurn]
+
+        response = call_api_client(
+            prompt, TranscriptResponse, model=config.DATA_GEN_MODEL)
+        if not response:
+            print(
+                f"Failed to generate session {session_number}. Aborting case.")
+            return None
+
+        session_data = {"session_number": session_number, "transcript": [
+            # .model_dump() is correct here for JSON serialization
+            t.model_dump() for t in response.transcript]}
+        full_case["sessions"].append(session_data)
+
+        # --- FIX: Use dot notation to access Pydantic model attributes ---
+        session_text = "\n".join(
+            [f"{t.role}: {t.content}" for t in response.transcript])
+        history += f"\n--- Session {session_number} ---\n{session_text}"
+
+    print(
+        f"--- Successfully Generated Full 6-Session Case Study {case_id} ---")
+    return full_case
 
 
 if __name__ == "__main__":
     SEED_DATA_FILENAME = os.path.join("seed_data", "counseling_data_seed.json")
-    OUTPUT_DIR = "output"
-    OUTPUT_FILENAME = os.path.join(OUTPUT_DIR, "counseling_dataset.json")
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    OUTPUT_FILENAME = os.path.join(
+        "output", "counseling_dataset_6sessions.json")
+    os.makedirs("output", exist_ok=True)
     try:
         with open(SEED_DATA_FILENAME, 'r') as f:
             seed_dataset = json.load(f)
-        print(f"Loaded {len(seed_dataset)} seeds from '{SEED_DATA_FILENAME}'.")
     except FileNotFoundError:
-        print(
-            f"ERROR: Seed data file not found. Please create '{SEED_DATA_FILENAME}'.")
+        print(f"ERROR: Seed data file '{SEED_DATA_FILENAME}' not found.")
         exit()
+
     final_dataset = []
-    print(f"\nStarting generation for all {len(seed_dataset)} seeds...")
     for i, seed_data in enumerate(tqdm(seed_dataset, desc="Generating Case Studies")):
-        case_id = f"case_{i + 1:03d}"
-        seed_text = seed_data.get("questionText")
-        if not seed_text:
-            continue
-        case = generate_case_study(case_id, seed_text)
-        if case:
-            final_dataset.append(case)
+        # Ensure seed_data is a dictionary and has "questionText"
+        if isinstance(seed_data, dict) and "questionText" in seed_data:
+            case = generate_case_study(
+                f"case_{i+1:03d}", seed_data["questionText"])
+            if case:
+                final_dataset.append(case)
+        else:
+            print(
+                f"Warning: Seed data at index {i} is not in the expected format or missing 'questionText'. Skipping.")
+
     with open(OUTPUT_FILENAME, 'w') as f:
-        json.dump(final_dataset, f, indent=4)
+        json.dump(final_dataset, f, indent=2)
     print(
-        f"\nGeneration complete. Saved {len(final_dataset)} case studies to '{OUTPUT_FILENAME}'.")
+        f"\nGeneration complete. Saved {len(final_dataset)} cases to '{OUTPUT_FILENAME}'.")

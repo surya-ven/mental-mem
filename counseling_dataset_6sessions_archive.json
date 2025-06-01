@@ -1,0 +1,946 @@
+[
+  {
+    "case_id": "case_001",
+    "seed_text": "A friend of mine taking psychology advised I go to my doctor to check if I have major depressive disorder. I'm afraid of the consequences of doing so. If I do become diagnosed with major depressive disorder, won\u2019t that go on my records? I will never be able to become a counselor along with a list of other things I may be prohibited from. I\u2019m also afraid of taking any anti-depressants. This year, my doctor gave me some for a \"dislocated hip.\" I had a severe reaction and passed out moments after taking them. Everyone I know who has taken anti-depressants says it\u2019s a bad idea all around and you\u2019re better getting treatment without them. I\u2019m concerned they might take me to a clinic and force me to take medication because I am unable to make decisions on my own. I\u2019m not really suicidal, but I am not really taking care of myself either. Someone also told me they still use electroshock therapy. I\u2019m not keen on that. I\u2019m wondering if I am better off just getting self-help and working things out on my own. It\u2019s just that I've been an emotional mess since I was in elementary school. I\u2019ve graduated now and tried to stay positive and be happy, but I cannot deny I still am not good.",
+    "sessions": [
+      {
+        "session_number": 1,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi there! I\u2019m really glad you decided to come in today. How are you feeling about this session?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019m a bit anxious, honestly. I\u2019ve been putting this off for a while."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s completely understandable. It\u2019s a big step to seek help, especially when there are so many concerns weighing on your mind. Can you tell me a bit about what\u2019s been bringing you here?"
+          },
+          {
+            "role": "user",
+            "content": "Well, a friend suggested I check with my doctor about possibly having major depressive disorder. But I\u2019m really afraid of what that might mean for me."
+          },
+          {
+            "role": "counselor",
+            "content": "It sounds like there are a lot of worries around the possible diagnosis. What specifically concerns you about being diagnosed with major depressive disorder?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019m worried it\u2019ll go on my records and affect my future, like my ability to become a counselor. I\u2019ve been thinking about that career for a while."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a valid concern. Many people worry about how mental health records can impact their professional lives. Have you had a chance to explore what steps you can take to manage your mental health while pursuing your goals?"
+          },
+          {
+            "role": "user",
+            "content": "I mean, I thought about self-help options, but it feels like a lot. I\u2019m just not really taking care of myself lately."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s okay to feel overwhelmed. Sometimes self-help can be a good starting point, but it\u2019s also important to recognize when support from a professional could be beneficial. What do you think has held you back from seeking help until now?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019m really afraid of medication. I had a bad reaction to some pain meds earlier this year, and everyone I talk to says antidepressants are a bad idea."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds really frightening. It\u2019s understandable to have concerns about medication, especially after a negative experience. Have you considered discussing these fears with a doctor or a therapist?"
+          },
+          {
+            "role": "user",
+            "content": "Not really. I\u2019m worried they might force me to take something or send me to a clinic. I\u2019ve heard stories about electroshock therapy too, and I\u2019m not okay with that."
+          },
+          {
+            "role": "counselor",
+            "content": "It sounds like there are a lot of misconceptions and fears around treatment options. It\u2019s important to know that you have a say in your treatment and that no one can force you into anything without your consent. How do you feel about discussing what alternatives to medication might look like?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I\u2019d be open to that. I just want to feel better and not be an emotional mess anymore."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a great place to start. Let\u2019s work together to find a path that feels safe and comfortable for you. What kind of communication style do you prefer? Do you like straightforward talk, or do you prefer a more gentle approach?"
+          },
+          {
+            "role": "user",
+            "content": "I think straightforward is best for me. I want to know what I\u2019m dealing with."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely, I can do that. It\u2019s important for you to feel informed and empowered in this process. We can take it step by step, and I\u2019ll be here to support you along the way."
+          },
+          {
+            "role": "user",
+            "content": "Thank you. I appreciate that."
+          },
+          {
+            "role": "counselor",
+            "content": "You\u2019re welcome. I\u2019m glad you\u2019re here, and we\u2019ll work through this together. How about we explore some self-help strategies today?"
+          }
+        ]
+      },
+      {
+        "session_number": 2,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Welcome back! I\u2019m glad to see you again. How have you been feeling since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "Honestly, I\u2019ve been feeling a bit heavier. I\u2019ve been thinking a lot about what we talked about."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s normal for these feelings to linger, especially when you\u2019re exploring something as significant as your mental health. Can you tell me more about what\u2019s been on your mind?"
+          },
+          {
+            "role": "user",
+            "content": "I keep going back and forth about whether I should talk to my doctor. Part of me wants to, but I\u2019m scared."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s understandable. Fear can often hold us back from taking the next step. What specifically are you scared of when you think about talking to your doctor?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019m worried they might not take me seriously or just push medication on me without really listening to what I want."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s valid to want to feel heard and respected in that conversation. Have you thought about how you might express your concerns to them?"
+          },
+          {
+            "role": "user",
+            "content": "I haven\u2019t really figured that out. I just imagine sitting there and feeling overwhelmed."
+          },
+          {
+            "role": "counselor",
+            "content": "That makes sense. It can be daunting to voice your feelings. What if we practiced a little? You could think about how you\u2019d like to start the conversation."
+          },
+          {
+            "role": "user",
+            "content": "Okay, I guess I could try that. Maybe something like, 'I\u2019m feeling really anxious and I\u2019m not sure about medication.'"
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a great opening! It\u2019s honest and sets the tone for an open discussion. How does saying that make you feel?"
+          },
+          {
+            "role": "user",
+            "content": "A little relieved, actually. I like that it\u2019s straightforward."
+          },
+          {
+            "role": "counselor",
+            "content": "I\u2019m glad to hear that! Being straightforward can help ensure that your needs are communicated clearly. What else might you want to discuss with your doctor?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I want to ask about alternatives to medication. Like, what other options are out there?"
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s an excellent point. There are various approaches, such as therapy, lifestyle changes, or even support groups. Would you be open to exploring some of these alternatives together?"
+          },
+          {
+            "role": "user",
+            "content": "Yeah, I think I\u2019d like that. I just want to feel like I\u2019m doing something to help myself."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely! Taking proactive steps can be very empowering. Which of these alternatives sounds most appealing to you?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019ve heard that cognitive-behavioral therapy can be helpful. I think I\u2019d like to learn more about that."
+          },
+          {
+            "role": "counselor",
+            "content": "Cognitive-behavioral therapy, or CBT, is a well-researched approach that focuses on changing negative thought patterns and behaviors. It can be a great tool in managing anxiety and depression. Would you like to dive deeper into how it works?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, that sounds good. I want to know how it might help me."
+          },
+          {
+            "role": "counselor",
+            "content": "Great! CBT typically involves identifying negative thoughts, challenging them, and replacing them with more positive or realistic ones. It also focuses on developing coping strategies. How does that resonate with you?"
+          },
+          {
+            "role": "user",
+            "content": "That makes sense. I often feel stuck in my thoughts, and it would be nice to have tools to change that."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a strong insight. Having tools to navigate those thoughts can be incredibly helpful. Would you like to set some goals for what you\u2019d like to achieve with CBT?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I\u2019d like to feel more in control of my emotions and not feel so overwhelmed."
+          },
+          {
+            "role": "counselor",
+            "content": "Those are excellent goals. We can focus on strategies that help you gain that control and manage feelings of overwhelm. Would you like to start by creating a plan for your next steps?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I think that would help. I want to feel like I\u2019m making progress."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely, let\u2019s work on a plan together. You\u2019re taking important steps, and I\u2019m here to support you through this journey."
+          }
+        ]
+      },
+      {
+        "session_number": 3,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Welcome back! It\u2019s good to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019ve been okay, but I\u2019ve been feeling a bit more anxious lately. I think it\u2019s because I've been thinking about what we discussed regarding CBT."
+          },
+          {
+            "role": "counselor",
+            "content": "It's completely normal to feel a bit of anxiety when thinking about new approaches. What specifically has been on your mind about CBT?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I\u2019m just worried about whether I\u2019ll be able to change my thought patterns. It feels like they\u2019ve been there for so long."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a valid concern. Change can feel daunting, especially when we\u2019re used to certain thought patterns. What if we explored the idea that change doesn\u2019t have to happen all at once?"
+          },
+          {
+            "role": "user",
+            "content": "That actually makes sense. I mean, I\u2019ve been thinking I need to make huge changes right away, but maybe small steps could be more manageable."
+          },
+          {
+            "role": "counselor",
+            "content": "Exactly! Small, incremental changes can often lead to significant progress over time. What small step do you think you could take to start challenging those negative thoughts?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe I could try keeping a journal for a few days? I could write down the negative thoughts as they come up and then try to challenge them."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds like a great plan! Journaling can help you become more aware of your thoughts and patterns. How do you feel about committing to that this week?"
+          },
+          {
+            "role": "user",
+            "content": "I think I can do that. It feels less overwhelming to think of it as just a few entries instead of a big change."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely! It\u2019s about building momentum. As you write, you might find new insights or patterns emerging. Is there a particular time or place where you think journaling would work best for you?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe in the evenings? I usually have some downtime then, and I can reflect on my day."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds perfect! Setting aside time in the evening can provide a nice space for reflection. What do you think you\u2019ll do if you notice a particularly challenging thought?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I could try to challenge it right away, like thinking about evidence for and against that thought."
+          },
+          {
+            "role": "counselor",
+            "content": "Exactly! That\u2019s a key aspect of CBT\u2014evaluating thoughts critically. It might also help to remind yourself that it\u2019s okay to have difficult days as you work through this."
+          },
+          {
+            "role": "user",
+            "content": "Yeah, I think I\u2019ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a wonderful insight. Self-compassion is a crucial part of the healing process. How do you think you could practice being kinder to yourself this week?"
+          },
+          {
+            "role": "user",
+            "content": "I could try replacing negative self-talk with something more supportive. Like, instead of saying 'I shouldn\u2019t be feeling this way,' I could say 'It\u2019s okay to feel anxious sometimes.'"
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a fantastic shift! Affirmations like that can be powerful. It sounds like you\u2019re starting to see your situation from a new perspective."
+          },
+          {
+            "role": "user",
+            "content": "I think I am. I feel a bit more hopeful about the process now."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s great to hear! Hope is an important part of this journey. Let\u2019s check in on your journaling and self-compassion practices in our next session. You\u2019re making meaningful progress!"
+          },
+          {
+            "role": "user",
+            "content": "Thanks! I\u2019m looking forward to it."
+          }
+        ]
+      },
+      {
+        "session_number": 4,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Welcome back! It\u2019s good to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "Honestly, it\u2019s been a bit rough. I tried journaling like we talked about, but I just didn\u2019t stick with it."
+          },
+          {
+            "role": "counselor",
+            "content": "I appreciate your honesty. It\u2019s okay to have setbacks; they\u2019re a normal part of the process. Can you tell me more about what made it difficult to stick with journaling?"
+          },
+          {
+            "role": "user",
+            "content": "I don\u2019t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn\u2019t even know where to start. It felt like too much."
+          },
+          {
+            "role": "counselor",
+            "content": "That makes sense. Sometimes those feelings can create a block. It\u2019s okay to feel overwhelmed; it\u2019s part of the journey. What do you think could help make journaling feel more manageable?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe if I set a timer or something, just to write for a few minutes instead of trying to fill a whole page."
+          },
+          {
+            "role": "counselor",
+            "content": "Setting a timer could be a great way to reduce pressure! It allows you to focus on just those few minutes without feeling the need for perfection. How does that sound?"
+          },
+          {
+            "role": "user",
+            "content": "Yeah, that sounds better. But even with that, I just feel so frustrated with myself for not being able to do it."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s completely normal to feel frustrated, especially when you\u2019re trying to make changes. How do you usually cope with feelings of frustration?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I typically just shut down and avoid things. Like, if I can\u2019t do it perfectly, I don\u2019t want to do it at all."
+          },
+          {
+            "role": "counselor",
+            "content": "I understand that impulse. It can be hard to push through when we feel that way. What if we reframe this situation? Instead of seeing it as failing to stick to journaling, how about viewing it as a learning experience?"
+          },
+          {
+            "role": "user",
+            "content": "I guess that makes sense. But it\u2019s just hard to shake off that feeling of disappointment."
+          },
+          {
+            "role": "counselor",
+            "content": "That disappointment is valid, and it\u2019s okay to feel that way. What if you acknowledged that feeling but also reminded yourself of the progress you\u2019ve made, like even considering journaling in the first place?"
+          },
+          {
+            "role": "user",
+            "content": "That\u2019s true. I did take the step to try it, even if it didn\u2019t go perfectly."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely! Recognizing those efforts is important. It\u2019s also okay to take a break if you need it. We can explore other coping strategies or activities that can help bridge the gap while you ease back into journaling."
+          },
+          {
+            "role": "user",
+            "content": "Maybe I could try some mindfulness exercises instead? I\u2019ve heard those can help with anxiety."
+          },
+          {
+            "role": "counselor",
+            "content": "Mindfulness exercises can be a wonderful complement to journaling. They can help ground you and manage overwhelming thoughts. Would you like to explore some techniques today?"
+          },
+          {
+            "role": "user",
+            "content": "Yeah, I\u2019d like that. I just want to feel a bit more in control."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a great goal. Let\u2019s work on some mindfulness strategies together to help you feel more centered. You\u2019re doing the best you can, and that\u2019s what matters."
+          }
+        ]
+      },
+      {
+        "session_number": 5,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Welcome back! It\u2019s good to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019ve been okay, but I\u2019ve still been feeling frustrated about the journaling. I didn\u2019t stick with it, and I keep beating myself up for it."
+          },
+          {
+            "role": "counselor",
+            "content": "I appreciate you sharing that. It\u2019s completely normal to feel frustrated when things don\u2019t go as planned. Can you tell me more about what specifically has been bothering you about the journaling setback?"
+          },
+          {
+            "role": "user",
+            "content": "I just feel like I should be able to handle this. I thought I was making progress, but now it feels like I\u2019m back at square one."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s understandable to feel that way, but setbacks are a natural part of any growth process. They don\u2019t erase the progress you\u2019ve made. What do you think you\u2019ve learned from this experience?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I\u2019ve learned that I can feel really overwhelmed when I try to do too much at once. And that it\u2019s okay to not be perfect."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s an important realization. Recognizing your limits and the need for flexibility can be powerful. How might you apply that learning moving forward?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe I could start with shorter journaling sessions, like just a few minutes, without the pressure to write a lot."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds like a great plan! Setting a shorter time limit can help make it feel less daunting. Would you like to set a specific goal for how often you\u2019d like to try that this week?"
+          },
+          {
+            "role": "user",
+            "content": "I think I could try it three times this week, maybe just for five minutes each time."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds very doable! How do you feel about combining that with some mindfulness exercises to help you ground yourself before journaling?"
+          },
+          {
+            "role": "user",
+            "content": "I like that idea. It might help clear my mind before I start writing."
+          },
+          {
+            "role": "counselor",
+            "content": "Great! Let\u2019s create a simple plan. You can spend a few minutes doing a mindfulness exercise, then set a timer for five minutes to journal. How does that sound?"
+          },
+          {
+            "role": "user",
+            "content": "That sounds good. I think having a structure will help me feel more in control."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely! And remember, if you find that journaling feels too much one day, it\u2019s okay to adjust. You can always just focus on the mindfulness practice instead."
+          },
+          {
+            "role": "user",
+            "content": "That makes me feel better. I don\u2019t want to feel like I have to do it perfectly."
+          },
+          {
+            "role": "counselor",
+            "content": "Exactly. It\u2019s all about progress, not perfection. How about we check in on your experiences with journaling and mindfulness in our next session?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019d like that. I hope I can stick with it this time."
+          },
+          {
+            "role": "counselor",
+            "content": "You\u2019re capable of doing this. Just take it one step at a time, and remember that I\u2019m here to support you. You\u2019re making meaningful strides."
+          },
+          {
+            "role": "user",
+            "content": "Thank you, I really appreciate your support."
+          },
+          {
+            "role": "counselor",
+            "content": "You\u2019re very welcome! I\u2019m looking forward to hearing about your progress next time."
+          }
+        ]
+      },
+      {
+        "session_number": 6,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Welcome back! It\u2019s great to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn\u2019t know how to respond, and I ended up just saying I didn\u2019t have time. Now, I\u2019m second-guessing if I should have said something different."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "case_002",
+    "seed_text": "A girl and I were madly in love. We dated for over a year and were even talking about marriage and future plans together. She moved away for school, and we attempted a long distance relationship. We eventually broke up. It's been a year now, and I still haven't lost my feelings for her. I still love her the same way I did. I've suffered from depression ever since the breakup and have been unable to connect with anyone else. It's damaging me and my life.",
+    "sessions": [
+      {
+        "session_number": 1,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi there! I'm glad you could make it today. My name is Dr. Smith, and I\u2019m here to support you. How are you feeling as we start this session?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know... I guess I'm just feeling a bit nervous. It's been tough for a while now."
+          },
+          {
+            "role": "counselor",
+            "content": "It's completely normal to feel nervous, especially when talking about things that are heavy on your heart. Would you like to share a bit about what\u2019s been tough for you?"
+          },
+          {
+            "role": "user",
+            "content": "Well, I was in a really serious relationship for over a year. We had plans for the future, and then she moved away for school. We tried long distance, but it just didn\u2019t work out. It\u2019s been a year since we broke up, and I still feel the same way about her."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds really painful. It\u2019s clear that you had a deep connection with her, and losing that can be incredibly hard. Can you tell me more about what you\u2019ve been feeling since the breakup?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut. I keep thinking about her, and it\u2019s like I can\u2019t move on."
+          },
+          {
+            "role": "counselor",
+            "content": "Feeling stuck and unable to move on is a common experience after a significant loss. It seems like this relationship meant a lot to you. What aspects of that relationship do you miss the most?"
+          },
+          {
+            "role": "user",
+            "content": "I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now."
+          },
+          {
+            "role": "counselor",
+            "content": "Loneliness can be really overwhelming, especially when you\u2019re missing that deep connection. Have you been able to talk to anyone else about how you\u2019re feeling?"
+          },
+          {
+            "role": "user",
+            "content": "Not really. I haven\u2019t felt comfortable sharing this with friends or family. I guess I worry they won\u2019t understand."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s understandable. It can be difficult to open up about such personal feelings. Here, you can share without judgment. How do you prefer to communicate about your feelings? Are there any specific ways that help you express yourself?"
+          },
+          {
+            "role": "user",
+            "content": "I think I\u2019m more comfortable writing things down. Sometimes it\u2019s easier to organize my thoughts that way."
+          },
+          {
+            "role": "counselor",
+            "content": "Writing can be a powerful tool for processing emotions. If it feels right, I can suggest some exercises that involve writing. How does that sound to you?"
+          },
+          {
+            "role": "user",
+            "content": "That sounds good. I\u2019d be open to trying that."
+          },
+          {
+            "role": "counselor",
+            "content": "Great! We can work on that together. As we continue, I want to create a safe space for you to explore these feelings. Is there anything specific you hope to achieve through our sessions?"
+          },
+          {
+            "role": "user",
+            "content": "I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a very valid goal. We can work on strategies to help you process your feelings and explore ways to move forward. I\u2019m here to support you through this journey."
+          },
+          {
+            "role": "user",
+            "content": "Thank you. That means a lot to me."
+          },
+          {
+            "role": "counselor",
+            "content": "You\u2019re welcome! I\u2019m looking forward to working together. Let\u2019s take this one step at a time, okay?"
+          },
+          {
+            "role": "user",
+            "content": "Okay, that sounds good."
+          },
+          {
+            "role": "counselor",
+            "content": "To wrap up today\u2019s session, I\u2019d like you to think about what you might want to write about before our next meeting. It could be anything related to your feelings, memories of the relationship, or even what you\u2019re hoping for in the future."
+          },
+          {
+            "role": "user",
+            "content": "I can do that."
+          },
+          {
+            "role": "counselor",
+            "content": "Perfect! I\u2019m looking forward to hearing what you come up with. Remember, it\u2019s okay to take your time with this process. I\u2019ll see you next week?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, see you then."
+          }
+        ]
+      },
+      {
+        "session_number": 2,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi! Welcome back. I'm glad to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I've been okay, I guess. I did try writing a little, but I didn't get far."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s alright! Writing can be challenging sometimes. What did you find difficult about it?"
+          },
+          {
+            "role": "user",
+            "content": "I just felt stuck. I started to write about my feelings, but then I got overwhelmed and couldn't continue."
+          },
+          {
+            "role": "counselor",
+            "content": "It makes sense that you would feel overwhelmed. These feelings can be heavy. Would you like to talk about what specifically overwhelmed you?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I started thinking about all the good times we had, and it just made me miss her even more."
+          },
+          {
+            "role": "counselor",
+            "content": "Nostalgia can be a double-edged sword, can\u2019t it? It can bring comfort but also deepen the pain of loss. What good times stand out the most to you?"
+          },
+          {
+            "role": "user",
+            "content": "There was this one time we went hiking together. We just talked and laughed the whole day. It felt like nothing else mattered."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds like a beautiful memory. It\u2019s clear that moments like that were really special for you. How do you feel when you think about that hike?"
+          },
+          {
+            "role": "user",
+            "content": "It makes me feel happy but also really sad. I miss those connections and just having someone to share those experiences with."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s understandable to feel both joy and sadness when recalling such meaningful times. Have you had any moments since the breakup that brought you joy, even if they were small?"
+          },
+          {
+            "role": "user",
+            "content": "I went out with some friends last weekend, and we had a good time. It was nice to laugh, but then I felt guilty for having fun without her."
+          },
+          {
+            "role": "counselor",
+            "content": "Guilt can be a common reaction. It sounds like you\u2019re navigating a complex mix of emotions. What do you think contributes to that guilt?"
+          },
+          {
+            "role": "user",
+            "content": "I feel like I\u2019m supposed to be sad all the time, you know? Like, if I\u2019m moving on, it means I didn\u2019t care enough about her."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a really insightful observation. It can feel like moving forward means letting go of the past, but that\u2019s not necessarily true. You can cherish the memories while also allowing yourself to experience joy."
+          },
+          {
+            "role": "user",
+            "content": "I guess I hadn\u2019t thought about it that way. It feels like a betrayal to her somehow."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s important to remember that you honoring your feelings and allowing yourself to heal does not diminish the love you had for her. It\u2019s a natural part of the grieving process. What do you think would help you navigate these feelings of guilt?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe I could try to remind myself that it\u2019s okay to feel happy and that she would want me to be okay."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a wonderful thought. Perhaps we could explore ways to memorialize that relationship while also allowing yourself the freedom to find joy. How does that sound?"
+          },
+          {
+            "role": "user",
+            "content": "That sounds good. I think I need to find a balance between remembering her and living my life."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely. Finding that balance is key. For next week, would you be open to writing about ways you can honor her memory while also allowing yourself to embrace joy?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I can do that. I think it will help."
+          },
+          {
+            "role": "counselor",
+            "content": "Great! I\u2019m looking forward to hearing what you come up with. Remember, it\u2019s all part of the healing process. I\u2019ll see you next week?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, see you then. Thank you for today."
+          }
+        ]
+      },
+      {
+        "session_number": 3,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi! Welcome back. It's great to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I\u2019ve been doing a bit better, actually. I worked on the writing you suggested."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s fantastic to hear! What was your experience like while writing?"
+          },
+          {
+            "role": "user",
+            "content": "It felt good to put my thoughts down. I wrote about some memories and how I can still honor her while moving forward."
+          },
+          {
+            "role": "counselor",
+            "content": "I\u2019m glad you found it helpful. What insights did you gain from that writing process?"
+          },
+          {
+            "role": "user",
+            "content": "I realized that I can still carry her memory with me without feeling like I\u2019m betraying her. It\u2019s like I can hold on to the good parts while also living my life."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a significant realization! It sounds like you\u2019re beginning to differentiate between memory and grief, which can be an important step in healing. How does that make you feel?"
+          },
+          {
+            "role": "user",
+            "content": "It feels freeing. Like I don't have to choose between being happy and remembering her."
+          },
+          {
+            "role": "counselor",
+            "content": "Exactly! You can hold space for both your memories and your joy. What are some ways you might honor her memory that also allow you to embrace happiness?"
+          },
+          {
+            "role": "user",
+            "content": "I thought about maybe doing something in her honor, like going hiking again or volunteering for a cause she cared about."
+          },
+          {
+            "role": "counselor",
+            "content": "Those sound like beautiful ways to both remember her and engage with life. How do you feel about incorporating those activities into your routine?"
+          },
+          {
+            "role": "user",
+            "content": "I think it would be nice. It would make me feel connected to her while also allowing me to enjoy my life."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a wonderful approach! Remember, it\u2019s all about finding those moments that bring you joy while honoring your past. Is there anything else you\u2019d like to explore today?"
+          },
+          {
+            "role": "user",
+            "content": "I think I just want to keep working on this balance. It feels like a journey."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely, it is a journey, and you\u2019re making great progress. For our next session, would you be open to writing about specific activities you want to try and how they can help you honor her?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I\u2019d like that. I feel more motivated now."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s wonderful! I\u2019m looking forward to hearing about what you come up with. Remember, this is all part of your healing process. I\u2019ll see you next week?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, see you then. Thank you!"
+          }
+        ]
+      },
+      {
+        "session_number": 4,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi! Welcome back. It\u2019s good to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "Honestly, I\u2019ve been struggling a bit. I had a setback."
+          },
+          {
+            "role": "counselor",
+            "content": "I\u2019m sorry to hear that. Would you like to share what happened?"
+          },
+          {
+            "role": "user",
+            "content": "I tried to go hiking last weekend like we talked about, but it didn\u2019t go well. I was overwhelmed with memories and ended up feeling worse."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds really tough. It\u2019s understandable that being in a place filled with memories could trigger strong emotions. What specifically overwhelmed you during the hike?"
+          },
+          {
+            "role": "user",
+            "content": "I kept thinking about our hikes together, how happy we were, and it just made me feel really sad. I felt like I was stuck in that moment and couldn\u2019t move forward."
+          },
+          {
+            "role": "counselor",
+            "content": "It sounds like the hike brought up a lot of feelings of loss and longing. It\u2019s completely normal to have those emotions surface, especially in a place that held such significance for you. How did you handle those feelings in the moment?"
+          },
+          {
+            "role": "user",
+            "content": "I ended up cutting the hike short. I just felt like I couldn\u2019t take it anymore. I feel so frustrated because I thought I was making progress."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s okay to feel frustrated. Progress isn\u2019t always linear, and setbacks are part of the healing process. It\u2019s important to be gentle with yourself. What do you think contributed to the intensity of those feelings?"
+          },
+          {
+            "role": "user",
+            "content": "I think I was expecting to feel better, but being there just reminded me of everything I lost. It felt like a big step backward."
+          },
+          {
+            "role": "counselor",
+            "content": "That makes a lot of sense. Sometimes we can have high expectations for ourselves, and when we don't meet them, it can feel disheartening. Remember that healing is a journey, and it\u2019s okay to have ups and downs. What do you think you might need right now to support yourself?"
+          },
+          {
+            "role": "user",
+            "content": "I guess I need to remind myself that it\u2019s okay to feel sad. I don\u2019t have to force myself into happy moments right away."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely. Allowing yourself to feel sadness without judgment is a very important part of the process. You can take your time with this. How would it feel to incorporate that understanding into your next steps?"
+          },
+          {
+            "role": "user",
+            "content": "I think it would help. I don\u2019t want to give up on honoring her memory, but I also don\u2019t want to feel pressured to be okay all the time."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a healthy perspective. We can work together on finding ways to honor her memory that feel manageable and supportive for you. For our next session, would you be open to exploring ways to process those feelings of sadness alongside your memories?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I\u2019d like that. I think that could help me find a better balance."
+          },
+          {
+            "role": "counselor",
+            "content": "Great! Remember, it\u2019s all part of your healing journey, and I\u2019m here to support you through it. I\u2019m looking forward to our next session. Take care of yourself until then."
+          },
+          {
+            "role": "user",
+            "content": "Thank you. I appreciate that."
+          }
+        ]
+      },
+      {
+        "session_number": 5,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi! Welcome back. It\u2019s great to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I've been okay, but I\u2019m still feeling a bit down after that hike. It\u2019s been hard to shake off the feelings from that day."
+          },
+          {
+            "role": "counselor",
+            "content": "I understand. It\u2019s completely normal to still feel the impact of that experience. Would you like to share more about what you\u2019ve been feeling since then?"
+          },
+          {
+            "role": "user",
+            "content": "I think I just feel disappointed in myself. I thought I was ready to handle those memories, but it turned out I wasn't."
+          },
+          {
+            "role": "counselor",
+            "content": "It\u2019s important to remember that setbacks don\u2019t erase the progress you\u2019ve made. You\u2019re still on a journey, and it\u2019s okay to have moments where it feels harder. How do you feel about acknowledging that disappointment?"
+          },
+          {
+            "role": "user",
+            "content": "I guess it would help. I just don\u2019t want to feel stuck again."
+          },
+          {
+            "role": "counselor",
+            "content": "Absolutely, and recognizing your feelings is a crucial step. It can be helpful to give yourself permission to feel that disappointment without judgment. What might that look like for you?"
+          },
+          {
+            "role": "user",
+            "content": "Maybe I could write about it again? Like, why I felt disappointed and what I expected going in."
+          },
+          {
+            "role": "counselor",
+            "content": "That sounds like a great idea! Writing can help you process those feelings. Would you be open to exploring what you can learn from the hike experience as part of that writing?"
+          },
+          {
+            "role": "user",
+            "content": "Yeah, I can definitely do that. I think reflecting on it might help me see it in a different light."
+          },
+          {
+            "role": "counselor",
+            "content": "Exactly. Sometimes, looking back can provide insights that help us move forward. In addition to writing about the disappointment, how about also focusing on one or two things you learned from that hike experience?"
+          },
+          {
+            "role": "user",
+            "content": "I think I learned that it\u2019s okay to not be okay. And that I shouldn\u2019t rush myself into situations that might be too emotional."
+          },
+          {
+            "role": "counselor",
+            "content": "Those are very valuable lessons. Taking things at your own pace is crucial for healing. How do you feel about creating a plan for your next steps, incorporating these insights?"
+          },
+          {
+            "role": "user",
+            "content": "That sounds good. I think I need to take a break from hiking for a little while, but maybe I could focus on other activities that remind me of her without the same emotional weight."
+          },
+          {
+            "role": "counselor",
+            "content": "That\u2019s a wise decision. You can still honor her memory through different activities. What are some alternatives you might consider?"
+          },
+          {
+            "role": "user",
+            "content": "I thought about visiting a local animal shelter, since she loved animals. I could volunteer there and help out."
+          },
+          {
+            "role": "counselor",
+            "content": "Volunteering at an animal shelter sounds like a beautiful way to honor her memory while doing something positive. How does that make you feel?"
+          },
+          {
+            "role": "user",
+            "content": "It makes me feel excited. It\u2019s something I can look forward to, and it feels meaningful."
+          },
+          {
+            "role": "counselor",
+            "content": "I\u2019m glad to hear that! Let\u2019s plan for you to write about your experience with the hike and what you\u2019ve learned, and also set a date to volunteer at the shelter. How does that sound?"
+          },
+          {
+            "role": "user",
+            "content": "That sounds perfect. I think I\u2019m ready to take that step."
+          },
+          {
+            "role": "counselor",
+            "content": "Wonderful! Remember, it\u2019s all part of your healing journey. I\u2019m here to support you along the way. I\u2019m looking forward to hearing about your experiences next week. Take care until then."
+          },
+          {
+            "role": "user",
+            "content": "Thank you! I appreciate your support."
+          }
+        ]
+      },
+      {
+        "session_number": 6,
+        "transcript": [
+          {
+            "role": "counselor",
+            "content": "Hi! Welcome back. It\u2019s great to see you again. How have you been since our last session?"
+          },
+          {
+            "role": "user",
+            "content": "I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not."
+          }
+        ]
+      }
+    ]
+  }
+]

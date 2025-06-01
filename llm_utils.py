@@ -7,68 +7,47 @@ from typing import Type, TypeVar, Optional
 
 import config
 
-# --- OpenRouter Client Initialization ---
-# Check for the API key
-if not config.OPENROUTER_API_KEY or config.OPENROUTER_API_KEY == "YOUR_API_KEY_HERE":
+# --- Client for OpenRouter (All Models) ---
+if not config.OPENROUTER_API_KEY or config.OPENROUTER_API_KEY == "YOUR_OPENROUTER_API_KEY":
     raise ValueError(
-        "OpenRouter API key is not set. Please set it in config.py or as an environment variable.")
+        "OpenRouter API key is not set. Please set it in config.py or as an environment variable."
+    )
 
-# Instantiate the client to point to the OpenRouter API
-client = OpenAI(
+openrouter_client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=config.OPENROUTER_API_KEY,
 )
-print("OpenAI client configured for OpenRouter.")
-# -----------------------------------------
-
+print("OpenAI client configured for OpenRouter for all LLM calls.")
 
 # Pydantic model type variable for generic responses
 T = TypeVar('T', bound=BaseModel)
 
 
-def call_structured_llm(
-    prompt: str,
-    response_model: Type[T],
-    model: str = config.MAIN_MODEL,
-    temperature: float = 0.7
-) -> Optional[T]:
+def call_api_client(prompt: str, response_model: Type[T], model: str, temperature: float = 0.7, system_prompt: Optional[str] = None) -> Optional[T]:
     """
-    Calls a large language model via OpenRouter and parses the response into a Pydantic model.
-
-    Args:
-        prompt (str): The prompt to send to the model.
-        response_model (Type[T]): The Pydantic class to validate the response against.
-        model (str): The model name to use for the call (must be an OpenRouter identifier).
-        temperature (float): The creativity of the response.
-
-    Returns:
-        Optional[T]: An instance of the response_model or None if an error occurs.
+    Calls a model via the OpenRouter API and parses the response into a Pydantic model.
+    Supports an optional system prompt.
     """
+    messages = []
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    messages.append({"role": "user", "content": prompt})
+
     try:
-        response = client.chat.completions.create(
+        response = openrouter_client.chat.completions.create(
             model=model,
-            messages=[{"role": "user", "content": prompt}],
+            messages=messages,
+            # Assuming model supports JSON mode via OpenRouter
             response_format={"type": "json_object"},
             temperature=temperature,
         )
         response_content = response.choices[0].message.content
-
-        # Validate the JSON output against the Pydantic model
-        validated_response = response_model.model_validate_json(
-            response_content)
-        return validated_response
-
+        return response_model.model_validate_json(response_content)
     except ValidationError as e:
-        print(f"--- Pydantic Validation Error ---")
-        print(f"Error: {e}")
-        print(f"Model Output: {response_content}")
-        return None
-    except json.JSONDecodeError as e:
-        print(f"--- JSON Decode Error ---")
-        print(f"Error: {e}")
-        print(f"Model Output: {response_content}")
+        print(f"--- Pydantic Validation Error ({model}) --- \n{e}")
+        print(
+            f"Model Output: {response_content if 'response_content' in locals() else 'N/A'}")
         return None
     except Exception as e:
-        print(f"--- An unexpected error occurred via OpenRouter ---")
-        print(f"Error: {e}")
+        print(f"--- API Client Error ({model}) --- \n{e}")
         return None
