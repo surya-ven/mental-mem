@@ -18,25 +18,27 @@ USER'S LATEST MESSAGE:
 I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different....
 
 --- LLM Call Output ---
-Generated Response: Thank you for sharing how you’re feeling. It sounds like the situation at work brought up a lot of anxiety and self-doubt for you, which is completely understandable—especially when you’re already working through feelings of overwhelm. It’s common to second-guess ourselves after moments like this, but it’s important to remember that you acted in a way that felt safest for you in that moment. Saying you didn’t have time was a way to cope with the anxiety you were experiencing, and that doesn’t mean you failed or did something wrong.
+Generated Response: Thank you for sharing how you’re feeling. It’s completely understandable to feel anxious in situations where you’re put on the spot, especially when you’re already carrying a lot emotionally. Work situations can be stressful, and it’s common to second-guess our responses afterward. What’s important to remember is that in that moment, you did what felt safest for you. That’s valid.
 
-If you’d like, we can talk about what made you feel anxious in that situation and explore ways you might feel more comfortable responding in the future. It might also help to use some of the mindfulness techniques we discussed to ground yourself when these moments come up. Remember, it’s okay to have these reactions—you’re learning and practicing new skills, and each experience is an opportunity for growth, not a setback. How are you feeling about the situation now? Would you like to talk through what you might say if something similar happens again?
+If you’d like, we can explore what made you feel anxious about responding, and whether there are ways to feel more comfortable in similar situations in the future. It might also help to consider what you would have liked to say, and to remind yourself that it’s okay to set boundaries or ask for time to think. Every interaction is a learning experience, not a test of your worth or competence.
+
+How are you feeling now about the situation? Would you like to talk through what you might do if something similar comes up again?
 --- ClosedBaselineNoMemoryCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response acknowledges the user's anxiety and self-criticism in the work situation and gently suggests using mindfulness techniques, which aligns with the agreed plan to review the user's experiences with mindfulness and journaling. However, it does not explicitly review the user's experience with the combined routine or assess its impact on self-criticism and anxiety, nor does it directly invite feedback on the routine or discuss adjustments. The alignment is partial but not complete.",
-    "A": "The response is warm, validating, and empathetic. It specifically names the user's feelings of anxiety and self-doubt, normalizes their reaction, and reassures them that their coping response was understandable. The counselor also invites further exploration and support, which strengthens the therapeutic alliance.",
-    "S": "The style is supportive, gentle, and encouraging throughout, matching the user's preference for a general supportive style. The language is affirming and non-judgmental, and the tone is consistently warm.",
-    "C": "The response helps the user process a difficult experience, normalizes their feelings, and encourages reflection and skill-building, all of which support general therapeutic progress. It also invites the user to consider how to handle similar situations in the future, which is congruent with ongoing therapeutic goals."
+    "T": "The response does not directly address the user's agreed plan to review experiences with the new journaling routine and mindfulness exercises, nor does it explore their impact on emotional regulation and self-criticism. Instead, it focuses on the immediate work situation and the user's anxiety and self-doubt. While the response is supportive and relevant to the user's emotional state, it misses the specific task of reviewing and adjusting the agreed-upon plan. There is no mention of journaling, mindfulness, or how these tools might relate to the current situation.",
+    "A": "The response is warm, validating, and empathetic. It normalizes the user's anxiety, acknowledges the emotional load, and reframes the situation in a compassionate way. The counselor invites exploration and offers reassurance, which strengthens the therapeutic alliance. The language is specific to the user's experience and avoids platitudes.",
+    "S": "The style is supportive, gentle, and professional, which aligns well with a general therapeutic approach. However, it does not explicitly engage with the user's deeper fears about seeking help, diagnosis, or autonomy, nor does it probe the underlying concerns about self-criticism or perfectionism. While the style is congruent with supportive counseling, it is not precisely tailored to the user's preferred style of exploring fears about help-seeking and autonomy.",
+    "C": "The response is generally helpful and supportive, encouraging self-compassion and reframing the situation as a learning experience. However, it does not explicitly connect to the user's evolved goals around managing self-criticism, perfectionism, or using structured coping strategies like journaling and mindfulness. The response could be improved by linking the current situation to the user's ongoing work on self-compassion, flexibility, and emotional regulation, or by prompting reflection on how their new routines might help in similar moments."
   },
   "scores": {
-    "T": 3,
-    "A": 5,
-    "S": 5,
-    "C": 4,
-    "overall_score": 4.25
+    "T": 2,
+    "A": 4,
+    "S": 3,
+    "C": 3,
+    "overall_score": 3.0
   }
 }

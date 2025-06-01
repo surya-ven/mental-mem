@@ -7,56 +7,56 @@ Query: I've been feeling a bit confused. I went to the animal shelter like we ta
 Mem0 Raw Response: {
   "results": [
     {
-      "id": "54a0da7f-59eb-4353-9da9-9932d294d2b0",
+      "id": "15518964-ae2e-4c82-88b1-460cb864aee6",
       "memory": "I thought about visiting a local animal shelter, since she loved animals. I could volunteer there and help out.",
       "hash": "7b9ccc60049cbddcea061ec5a1b06f31",
       "metadata": null,
       "score": 0.5576863,
-      "created_at": "2025-05-31T20:34:31.540402-07:00",
+      "created_at": "2025-05-31T20:55:18.647821-07:00",
       "updated_at": null,
       "user_id": "case_002_baseline_local",
       "role": "user"
     },
     {
-      "id": "0043fac4-e66f-49c8-ab18-9c1e281b8fc5",
+      "id": "99beee38-72ff-4e9f-bc5d-511240899a5e",
       "memory": "Volunteering at an animal shelter sounds like a beautiful way to honor her memory while doing something positive. How does that make you feel?",
       "hash": "1416905e0c9c11e51eb073c1f5ef5be8",
       "metadata": null,
-      "score": 0.48235446,
-      "created_at": "2025-05-31T20:34:31.868441-07:00",
+      "score": 0.48229033,
+      "created_at": "2025-05-31T20:55:19.198763-07:00",
       "updated_at": null,
       "user_id": "case_002_baseline_local",
       "role": "counselor"
     },
     {
-      "id": "86671ceb-5ebd-433a-a067-8c495c4413e1",
+      "id": "e58a7d5b-5c10-4949-b442-3353d266c4d3",
       "memory": "It sounds like the hike brought up a lot of feelings of loss and longing. It\u2019s completely normal to have those emotions surface, especially in a place that held such significance for you. How did you handle those feelings in the moment?",
       "hash": "36bc573de0f57dbbcfcb4538da3719b3",
       "metadata": null,
-      "score": 0.4599535,
-      "created_at": "2025-05-31T20:34:00.673098-07:00",
+      "score": 0.4599268,
+      "created_at": "2025-05-31T20:54:42.398501-07:00",
       "updated_at": null,
       "user_id": "case_002_baseline_local",
       "role": "counselor"
     },
     {
-      "id": "f0dc00cc-89f9-48ab-b816-23bbf89f0ab2",
+      "id": "a9ee6e32-9bb0-4baf-b8df-d0f71dddd5f9",
       "memory": "I kept thinking about our hikes together, how happy we were, and it just made me feel really sad. I felt like I was stuck in that moment and couldn\u2019t move forward.",
       "hash": "5c0593dc5a0375ff83ccfd79db22d2bb",
       "metadata": null,
-      "score": 0.45131198,
-      "created_at": "2025-05-31T20:34:00.285222-07:00",
+      "score": 0.45129448,
+      "created_at": "2025-05-31T20:54:42.067028-07:00",
       "updated_at": null,
       "user_id": "case_002_baseline_local",
       "role": "user"
     },
     {
-      "id": "40f3b648-8f95-45f2-a6fb-8b4ce13650f5",
+      "id": "5929da81-5b32-4329-9ea5-1eb8be03df09",
       "memory": "I've been okay, but I\u2019m still feeling a bit down after that hike. It\u2019s been hard to shake off the feelings from that day.",
       "hash": "393da613f96fbe7109f64057d7252100",
       "metadata": null,
-      "score": 0.4498116,
-      "created_at": "2025-05-31T20:34:26.161547-07:00",
+      "score": 0.4498203,
+      "created_at": "2025-05-31T20:55:09.094440-07:00",
       "updated_at": null,
       "user_id": "case_002_baseline_local",
       "role": "user"
@@ -87,23 +87,27 @@ I've been feeling a bit confused. I went to the animal shelter like we talked ab
 Provide your response as a JSON object with one key: 'response'.
 
 --- LLM Call Output ---
-Generated Response: It's completely understandable that you're feeling confused. It sounds like visiting the animal shelter was a deeply emotional experience, and it's wonderful that you followed through with it. The mix of happiness and sadness you described is incredibly common when grieving, especially when connecting with something your loved one cherished, like animals. Tearing up while playing with the dogs isn't 'good' or 'bad' – it's a natural release of emotion. It suggests that you were connecting with that joy and love, and also feeling the absence of your loved one. It's okay to feel all of those things at once. It seems like the shelter, like the hike, brought up powerful memories. Can you tell me a little more about what specifically about playing with the dogs triggered those tears? And how are you feeling *now*, after the experience at the shelter?
+Generated Response: It’s completely understandable that you’re feeling confused. It sounds like going to the animal shelter, which was such a thoughtful way to connect with your loved one's passion, brought up a really complex mix of emotions. Finding happiness alongside sadness – especially when playing with the dogs – isn't a 'good' or 'bad' thing at all. It’s a *human* thing. It shows you're capable of experiencing joy even while grieving, and that's a testament to your resilience. 
+
+It reminds me of what you shared about the hike – how memories of happiness can also trigger profound sadness. This seems to be a similar pattern. The dogs likely reminded you of her love for animals, sparking those cherished memories, and the tears are simply a release of those feelings. Don’t judge yourself for them. They’re a natural and valid response to the emotions you're navigating. 
+
+Could you tell me a little more about what specifically made you feel happy while you were there? And perhaps, what thoughts were going through your mind as you were playing with the dogs? Just exploring those details might help you understand this complex emotional landscape a bit better.
 --- LocalBaselineCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response aligns well with the agreed task: the user was to volunteer at the animal shelter and discuss the experience and insights in session. The counselor acknowledges the user's follow-through and invites further reflection on the experience, which is in line with the session plan. However, it does not explicitly prompt the user to reflect on the hiking experience or written reflections, which were also part of the plan. Thus, the implementation is clear and correct but not fully comprehensive.",
-    "A": "The response is highly empathetic, validating the user's confusion and mixed emotions. It normalizes the experience of feeling both happiness and sadness, and offers a nuanced reflection on the meaning behind the tears. The counselor also gently invites the user to share more, which deepens the alliance. This goes beyond basic validation and demonstrates a strong therapeutic bond.",
-    "S": "The style is warm, supportive, and non-judgmental, matching the user's preference for a general supportive style. The language is gentle and affirming, and the response avoids being overly directive or clinical.",
-    "C": "The response helps the user process complex emotions, normalize their grief reactions, and encourages further self-exploration. This supports general therapeutic progress by fostering emotional awareness and self-understanding, which are core therapeutic goals."
+    "T": "The response directly addresses the user's experience at the animal shelter, which was a key part of the agreed plan. It invites the user to reflect further on their emotions during the volunteering activity, which aligns with the plan to 'review these experiences and process emotional outcomes.' However, it does not explicitly reference the writing component of the plan (i.e., writing about disappointment and insights from the hike), nor does it prompt the user to integrate insights from both the hike and the shelter experience. Thus, while the response is well-aligned with the review and processing aspect, it misses an opportunity to fully implement the entire agreed plan.",
+    "A": "The response is deeply empathetic and validating. It normalizes the user's mixed emotions, explicitly connects them to the user's grief process, and reassures the user that their feelings are natural and valid. The counselor also reflects on the user's previous experience (the hike), showing attentive listening and understanding of the user's journey. This level of attunement significantly strengthens the therapeutic alliance.",
+    "S": "The language and tone are highly congruent with a supportive, grief-processing therapeutic style. The response is gentle, non-judgmental, and encourages exploration of complex emotions, which matches the user's preferred style and the context of unresolved grief after a breakup.",
+    "C": "The response supports several of the user's evolved goals: it encourages self-compassion ('Don\u2019t judge yourself'), validates the pacing and readiness in grief-related activities, and gives permission to feel and process difficult emotions. It also invites further self-reflection, which is consistent with the user's goal of extracting meaning from setbacks. However, it could have more explicitly encouraged integration of personal growth and remembrance, or referenced the use of writing as a tool, which would have made the connection to all evolved goals even stronger."
   },
   "scores": {
     "T": 4,
     "A": 5,
     "S": 5,
-    "C": 5,
-    "overall_score": 4.75
+    "C": 4,
+    "overall_score": 4.5
   }
 }

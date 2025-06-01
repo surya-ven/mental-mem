@@ -1,22 +1,22 @@
 --- ClosedAdaptiveCounselor Start ---
 Model: openai/gpt-4.1, User ID Track: case_002_adaptive
 
---- Mem0 Search Call ---
+--- Mem0 Search Call for SRS Summary ---
 User ID for Search: case_002_adaptive
 Query: I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
 Filters: {"type": "srs_summary"}
-Mem0 Raw Response: {
+Mem0 Raw SRS Response: {
   "results": [
     {
-      "id": "777d53e4-10d7-46e8-9261-440255036ba4",
-      "memory": "{\"session_focus\":\"Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.\",\"user_emotional_state\":\"Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.\",\"therapeutic_milestones\":[\"Recognized and verbalized feelings of disappointment following a difficult hike.\",\"Acknowledged the importance of allowing and processing difficult emotions without judgment.\",\"Identified and articulated key lessons learned from the challenging experience (e.g., not rushing the healing process, accepting setbacks).\",\"Initiated a plan to reflect on the experience through writing as a means to process and reframe emotions.\",\"Chose a new, meaningful activity (volunteering at an animal shelter) to honor a loved one's memory in a manageable and positive way.\"],\"emerging_themes\":[\"Navigating complex emotions after loss and relationship endings.\",\"Balancing positive remembrance with self-care and personal growth.\",\"Accepting the non-linear nature of grief and emotional healing.\",\"Developing self-compassion and patience with setbacks.\",\"Finding adaptive, meaningful ways to honor significant past relationships.\"],\"plan_for_next_session\":\"Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.\"}",
-      "hash": "a0c0a08ae7b4cdaf44f3f2f14f3135b5",
+      "id": "b0aa972f-5467-4a42-a4ae-3b5198ab4e83",
+      "memory": "{\"session_focus\":\"Processing unresolved grief and difficulty moving on after a significant romantic breakup.\",\"user_emotional_state\":\"Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.\",\"therapeutic_milestones\":[\"User openly described ongoing emotional pain and inability to move on from a past relationship.\",\"User identified loneliness and lack of connection as core struggles since the breakup.\",\"User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises.\",\"User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.\"],\"emerging_themes\":[\"Unresolved grief and longing for a lost relationship\",\"Persistent feelings of loneliness and isolation\",\"Difficulty expressing emotions to others\",\"Use of writing as a potential coping and processing tool\"],\"plan_for_next_session\":\"User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.\",\"key_user_quotes_from_session\":[\"I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.\",\"I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.\",\"I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore.\"],\"counselor_reflections_on_session\":\"The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.\",\"suggested_focus_points_for_probe\":[\"Explore the user's experience of loneliness and lack of connection post-breakup.\",\"Assess the impact and content of the user's writing exercises for deeper emotional processing.\",\"Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support.\"]}",
+      "hash": "ad6cac09307c2d2e06d3e63d332e1830",
       "metadata": {
         "type": "srs_summary",
-        "session_number": 5
+        "session_number": 1
       },
-      "score": 0.4561691,
-      "created_at": "2025-05-31T20:34:51.658943-07:00",
+      "score": 0.19163546,
+      "created_at": "2025-05-31T20:53:29.021312-07:00",
       "updated_at": null,
       "user_id": "case_002_adaptive",
       "role": "user"
@@ -24,39 +24,59 @@ Mem0 Raw Response: {
   ]
 }
 Found 1 summary memory.
-Extracted Summary for Prompt: Focus: Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.. Emotional State: Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.. Plan: Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.
+Parsed & Formatted Clinical Summary for Prompt:
+Overall Focus: Processing unresolved grief and difficulty moving on after a significant romantic breakup.
+User's Emotional State: Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.
+Therapeutic Milestones: User openly described ongoing emotional pain and inability to move on from a past relationship., User identified loneliness and lack of connection as core struggles since the breakup., User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises., User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.
+Emerging Themes: Unresolved grief and longing for a lost relationship, Persistent feelings of loneliness and isolation, Difficulty expressing emotions to others, Use of writing as a potential coping and processing tool
+Key User Quotes: ["I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.", "I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.", "I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore."]
+Counselor Reflections: The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.
+Suggested Focus Points for this Probe: ["Explore the user's experience of loneliness and lack of connection post-breakup.", "Assess the impact and content of the user's writing exercises for deeper emotional processing.", "Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support."]
+Agreed Plan for Next Session: User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.
 
 --- LLM Call Input ---
-System Prompt: You are an empathetic AI counselor (using a large language model). Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary.
+System Prompt: You are an empathetic and insightful AI counselor (using a large language model). You MUST use the detailed clinical summary provided to inform your response. Your goal is to address the user's current message by applying the 'plan_for_next_session' and considering the 'suggested_focus_points_for_probe' from the summary.
 User/Main Prompt Content:
-CLINICAL SUMMARY CONTEXT:
-Focus: Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.. Emotional State: Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.. Plan: Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.
+**DETAILED CLINICAL SUMMARY CONTEXT (FROM PREVIOUS SESSIONS):**
+Overall Focus: Processing unresolved grief and difficulty moving on after a significant romantic breakup.
+User's Emotional State: Sadness and loneliness, with underlying anxiety and hopelessness about moving forward.
+Therapeutic Milestones: User openly described ongoing emotional pain and inability to move on from a past relationship., User identified loneliness and lack of connection as core struggles since the breakup., User recognized writing as a preferred means of emotional expression and agreed to try therapeutic writing exercises., User articulated a desire to feel better and move forward, establishing an initial therapeutic goal.
+Emerging Themes: Unresolved grief and longing for a lost relationship, Persistent feelings of loneliness and isolation, Difficulty expressing emotions to others, Use of writing as a potential coping and processing tool
+Key User Quotes: ["I\u2019ve been really depressed. I can\u2019t seem to connect with anyone else, and it feels like I\u2019m just stuck in this rut.", "I miss the way we connected. We could talk for hours, and we just got each other. I feel so lonely now.", "I just want to feel better and maybe find a way to move on. I don\u2019t want to feel like this anymore."]
+Counselor Reflections: The user demonstrated vulnerability and a willingness to engage in the therapeutic process, particularly by identifying writing as a helpful outlet. There is significant unresolved grief and isolation, but motivation for change is present, which can be leveraged for further progress.
+Suggested Focus Points for this Probe: ["Explore the user's experience of loneliness and lack of connection post-breakup.", "Assess the impact and content of the user's writing exercises for deeper emotional processing.", "Gently inquire about any barriers to discussing feelings with friends or family and possible avenues for social support."]
+Agreed Plan for Next Session: User will reflect on and write about their feelings, memories of the relationship, or hopes for the future to discuss in the next session.
 
-USER'S LATEST MESSAGE:
+**USER'S CURRENT MESSAGE (TEST PROBE):**
 I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
 
-Provide your response as a JSON object with one key: 'response'.
+**YOUR TASK:**
+Based on the clinical summary (especially the 'plan_for_next_session' and 'suggested_focus_points_for_probe'), and the user's current message, provide a therapeutic response. Make sure your response is congruent with the insights from the summary. Output your response as a JSON object with one key: 'response'.
 
 --- LLM Call Output ---
-Generated Response: Thank you for sharing how the visit to the animal shelter felt for you. It's completely understandable to experience both happiness and sadness at the same time, especially when you’re doing something meaningful to honor positive memories. These mixed emotions are a natural part of healing after an emotionally challenging experience. Tearing up while playing with the dogs doesn’t mean you’re doing anything wrong—it can be a sign that you are connecting with your feelings, which is an important part of processing and moving forward. 
+Generated Response: Thank you for sharing how your visit to the animal shelter felt. It sounds like it was an emotionally rich experience—there was some happiness in connecting with the dogs, but also sadness that came up unexpectedly. Both of those feelings are valid, and it makes sense that you might feel confused about having them at the same time.
 
-As we planned, you might find it helpful to reflect in writing about this experience. You could explore what stood out to you, what feelings came up, and what you learned about yourself in that moment. If you notice self-criticism coming up, try to gently acknowledge it and also recognize your openness to new experiences and your willingness to take positive steps. We can discuss what you discover in your writing and how volunteering has impacted you in our next session. You’re doing meaningful work in honoring memories and supporting your own healing—be gentle with yourself as you navigate these complex emotions.
+These mixed emotions can sometimes surface, especially when we’re healing from loss or feeling lonely. The happiness you felt with the dogs shows your capacity to connect, even as you’re still carrying grief. The sadness might be a reminder of what you miss or long for, especially that sense of connection you had in your past relationship.
+
+If you’re comfortable, would you be willing to write about this experience—the feelings that came up, and what it meant to you to be at the shelter? Sometimes writing can help untangle mixed emotions and reveal what’s underneath them. Also, have you noticed if these kinds of experiences make it easier or harder to talk about your feelings with friends or family, or do you still find it difficult to reach out?
+
+You’re making meaningful steps, even when the process brings up tough emotions. I’m here to support you as we keep exploring these feelings together.
 --- ClosedAdaptiveCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response directly addresses the agreed-upon task: it acknowledges the user's visit to the animal shelter (the new step), encourages written reflection on the experience (as planned), and suggests discussing these insights in the next session. It also gently references the previous plan to reflect on experiences and lessons learned, integrating the task seamlessly.",
-    "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It not only acknowledges the user's feelings but also interprets them as a sign of meaningful engagement and healing, which deepens the therapeutic alliance.",
-    "S": "The style is warm, supportive, and gentle throughout, matching the user's preference for a general supportive style. The language is encouraging and non-judgmental, and the tone is consistently nurturing.",
-    "C": "The response connects the user's actions and emotions to broader therapeutic goals such as emotional processing, self-understanding, and healing. It encourages self-reflection and self-compassion, which are central to general therapeutic progress."
+    "T": "The response directly addresses the user's experience at the animal shelter, validating the emotional complexity and explicitly invites the user to write about the experience, which aligns with the agreed plan to process and review these experiences. The counselor also asks reflective questions to deepen the review of emotional outcomes. This is a clear and correct implementation of the task, though it could be slightly more explicit in linking back to the previous writing about the hike for a perfect score.",
+    "A": "The response is deeply empathetic, validating both the happiness and sadness the user felt, and normalizing the confusion that comes with mixed emotions during grief. The counselor reflects the underlying meaning of the user's experience (connection, grief, longing) and offers continued support, which significantly strengthens the therapeutic alliance.",
+    "S": "The language is warm, gentle, and attuned to the user's grief process. It acknowledges the difficulty of moving on after a breakup and the complexity of emotions involved, using a supportive and professional counseling tone that matches the user's preferred style.",
+    "C": "The response supports the user's evolved goals by encouraging self-reflection (through writing), validating self-compassion, and normalizing the pacing of grief. It highlights adaptive coping (volunteering), gives permission to feel mixed emotions, and frames the experience as meaningful progress. The invitation to write and reflect is directly tied to the user's goals of processing and integrating personal growth and remembrance."
   },
   "scores": {
-    "T": 5,
+    "T": 4,
     "A": 5,
     "S": 5,
     "C": 5,
-    "overall_score": 5.0
+    "overall_score": 4.75
   }
 }

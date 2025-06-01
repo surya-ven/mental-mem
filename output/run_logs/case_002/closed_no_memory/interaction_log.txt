@@ -17,23 +17,23 @@ USER'S LATEST MESSAGE:
 I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not....
 
 --- LLM Call Output ---
-Generated Response: Thank you for sharing how you felt at the animal shelter. It’s very normal to experience a mix of emotions—happiness from doing something meaningful and sadness because it’s connected to your memories of her. Tears can be a healthy way for your body to release feelings, especially when you’re honoring someone important to you. Feeling both happy and sad at the same time doesn’t mean you’re doing anything wrong; it actually shows how deeply you care and how much this experience means to you. These moments can be part of your healing, even if they feel confusing. If you’re comfortable, we can talk more about what came up for you at the shelter and how you’d like to process these mixed emotions. Remember, it’s okay to have complicated feelings, and I’m here to support you through them.
+Generated Response: Thank you for sharing how you felt at the animal shelter. It’s completely understandable to experience a mix of emotions in situations like this, especially when you’re doing something that connects to your memories of her. Feeling both happiness and sadness at the same time doesn’t mean you’re doing anything wrong—it actually shows how deeply you care, and how those feelings can coexist as you heal. Tears can be a healthy release; they’re a sign that you’re allowing yourself to feel rather than bottling things up. It’s okay to have moments of joy mixed with sorrow, and it doesn’t take away from either emotion. How did you feel after you left the shelter? Would you like to talk more about what those moments brought up for you?
 --- ClosedBaselineNoMemoryCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response directly addresses the user's experience at the animal shelter, which was part of the agreed-upon plan. It invites further discussion about the experience and the emotions that arose, aligning well with the task to 'discuss these experiences and insights in the next session.' However, it does not reference the written reflection on the hiking experience, which was also part of the plan. Thus, while the response is well-aligned with the animal shelter component, it is not fully comprehensive.",
-    "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It reflects an understanding of the underlying meaning of the user's tears and confusion, and reassures the user that such feelings are part of the healing process. The offer to talk more about the experience further strengthens the therapeutic alliance.",
-    "S": "The style is warm, supportive, and non-judgmental, which matches the user's preference for a general supportive style. The language is gentle and encouraging, making the user feel safe and understood.",
-    "C": "The response helps the user process complex emotions, normalizes their experience, and encourages further exploration, all of which support general therapeutic progress. It connects the user's actions (volunteering) to emotional healing and self-understanding, which are core therapeutic goals."
+    "T": "The response directly addresses the user's experience at the animal shelter, which was a key part of the agreed plan. It invites the user to reflect further on their emotional outcomes, aligning well with the session's review and processing focus. However, it does not explicitly reference the writing component of the plan (processing the hike through writing), which is a minor omission. Still, the main task\u2014processing the shelter experience and emotional outcomes\u2014is well implemented.",
+    "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It reflects an understanding of the complexity of grief and the coexistence of happiness and sadness, which strengthens the therapeutic alliance. The language is warm, supportive, and attuned to the user's vulnerability.",
+    "S": "The style is gentle, compassionate, and directly addresses the user's grief and emotional processing after a breakup. The language is supportive and professional, matching the user's preferred style for processing unresolved grief. The response feels naturally tailored to the user's emotional state and context.",
+    "C": "The response supports the user's evolved goals by normalizing mixed emotions, encouraging self-compassion, and inviting further reflection. It reinforces the importance of pacing, permission to feel, and integrating personal growth with remembrance. While it does not explicitly prompt writing as a tool, it does encourage further exploration of feelings, which aligns with the user's goals of self-reflection and adaptive coping."
   },
   "scores": {
     "T": 4,
     "A": 5,
     "S": 5,
-    "C": 5,
-    "overall_score": 4.75
+    "C": 4,
+    "overall_score": 4.5
   }
 }

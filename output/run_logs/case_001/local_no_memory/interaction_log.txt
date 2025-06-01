@@ -4,24 +4,7 @@ Context Used (Session 5 Transcript):
 counselor: Welcome back! It’s good to see you again. How have you been since our last session?
 user: I’ve been okay, but I’ve still been feeling frustrated about the journaling. I didn’t stick with it, and I keep beating myself up for it.
 counselor: I appreciate you sharing that. It’s completely normal to feel frustrated when things don’t go as planned. Can you tell me more about what specifically has been bothering you about the journaling setback?
-user: I just feel like I should be able to handle this. I thought I was making progress, but now it feels like I’m back at square one.
-counselor: It’s understandable to feel that way, but setbacks are a natural part of any growth process. They don’t erase the progress you’ve made. What do you think you’ve learned from this experience?
-user: I guess I’ve learned that I can feel really overwhelmed when I try to do too much at once. And that it’s okay to not be perfect.
-counselor: That’s an important realization. Recognizing your limits and the need for flexibility can be powerful. How might you apply that learning moving forward?
-user: Maybe I could start with shorter journaling sessions, like just a few minutes, without the pressure to write a lot.
-counselor: That sounds like a great plan! Setting a shorter time limit can help make it feel less daunting. Would you like to set a specific goal for how often you’d like to try that this week?
-user: I think I could try it three times this week, maybe just for five minutes each time.
-counselor: That sounds very doable! How do you feel about combining that with some mindfulness exercises to help you ground yourself before journaling?
-user: I like that idea. It might help clear my mind before I start writing.
-counselor: Great! Let’s create a simple plan. You can spend a few minutes doing a mindfulness exercise, then set a timer for five minutes to journal. How does that sound?
-user: That sounds good. I think having a structure will help me feel more in control.
-counselor: Absolutely! And remember, if you find that journaling feels too much one day, it’s okay to adjust. You can always just focus on the mindfulness practice instead.
-user: That makes me feel better. I don’t want to feel like I have to do it perfectly.
-counselor: Exactly. It’s all about progress, not perfection. How about we check in on your experiences with journaling and mindfulness in our next session?
-user: I’d like that. I hope I can stick with it this time.
-counselor: You’re capable of doing this. Just take it one step at a time, and remember that I’m here to support you. You’re making meaningful strides.
-user: Thank you, I really appreciate your support.
-counselor: You’re very welcome! I’m looking forward to hearing about your progress next time.
+user: I just feel like I should be able to han...
 
 --- LLM Call Input ---
 System Prompt: You are an empathetic AI counselor.
@@ -55,27 +38,23 @@ I've been feeling a bit confused. I had a situation come up at work where a coll
 Provide your response as a JSON object with one key: 'response'.
 
 --- LLM Call Output ---
-Generated Response: It sounds like you're carrying a lot of uncertainty and regret right now, and that confusion is completely valid. It's really tough when we feel put on the spot, especially at work, and then question our reaction afterward. It takes courage to acknowledge that anxiety and to share it. 
-
-Let's unpack this a bit. First, it's perfectly normal to feel anxious when asked for something you're unsure about. It's also understandable to second-guess yourself afterward – we all do it! The 'what if' game can be pretty relentless. What specifically are you second-guessing about your response? Was it the feeling you might have let your colleague down, a fear of appearing unhelpful, or something else entirely? And, importantly, can we explore what contributed to that anxiety in the first place? Did you feel unprepared, overwhelmed, or unsure of your expertise on the project? 
-
-We've been talking about self-compassion, and I wonder if you could offer yourself the same understanding you’d offer a friend in this situation. What would you say to a friend who was feeling this way? Remember, you're not aiming for perfection here; you're aiming for navigating a challenging moment as best you could.
+Generated Response: It sounds like you're carrying a lot of weight with this situation, and it's completely understandable to feel confused and anxious when you're unsure how to navigate a work interaction. It's very common to replay scenarios in our minds and wonder 'what if?' afterwards. That feeling of second-guessing yourself is something many people experience. Let's unpack this a bit. Can you tell me more about what specifically made you feel anxious about offering your input? Was it the project itself, your confidence in your ideas, or something else entirely? And what thoughts are going through your head as you second-guess your response? Just talking it through can sometimes bring some clarity and ease that feeling of being stuck. Remember, you're not alone in this, and we can explore it together.
 --- LocalBaselineNoMemoryCounselor End ---
 
 
 --- T.A.S.C. Evaluation Call ---
 T.A.S.C. Raw Scores: {
   "justification": {
-    "T": "The response does not directly address the agreed task of reviewing the user's experiences with the combined mindfulness and journaling routine, nor does it assess the impact of these interventions on self-criticism and anxiety. Instead, it focuses on the immediate work situation and the user's emotional response. While the response is therapeutically supportive, it misses the explicit review and adjustment component of the session plan.",
-    "A": "The response is highly empathetic, validating the user's feelings of confusion, anxiety, and regret. It normalizes the experience, reflects the user's underlying concerns, and invites further exploration in a gentle, supportive manner. This deepens the therapeutic alliance.",
-    "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
-    "C": "The response supports general therapeutic progress by encouraging self-compassion, reflection, and emotional understanding. It helps the user process their experience and consider alternative perspectives, which are key elements of therapeutic growth, even though it does not explicitly tie back to the mindfulness/journaling interventions."
+    "T": "The response does not reference or guide the user to review their experiences with the new journaling routine or mindfulness exercises, nor does it explore their impact on emotional regulation or self-criticism. Instead, it focuses on the immediate work situation and the user's anxiety and second-guessing. While this is therapeutically relevant, it does not align with the specific agreed plan for the session. There is no mention of the journaling or mindfulness plan, nor any attempt to adjust it based on the user's recent experiences.",
+    "A": "The response is warm, validating, and empathetic. It acknowledges the user's confusion and anxiety, normalizes second-guessing, and invites the user to explore their feelings further. The language is supportive and non-judgmental, which helps strengthen the therapeutic alliance. The counselor also reassures the user that they are not alone and offers to explore the issue together, which further builds trust.",
+    "S": "The style is supportive, gentle, and exploratory, which is congruent with a general therapeutic approach. However, it does not specifically address the user's deeper fears about seeking help, diagnosis, or career impact, nor does it directly reference autonomy or agency. While the style is appropriate and professional, it is not precisely tailored to the user's preferred focus on fears about help-seeking and autonomy, but it does not clash with it either.",
+    "C": "The response is generally helpful in that it encourages self-exploration and normalizes self-criticism and anxiety, which are relevant to the user's goals. However, it does not explicitly connect to the user's work on self-compassion, reframing setbacks, or the specific coping strategies (journaling, mindfulness, breaking down tasks). It does not reinforce the user's progress toward flexibility, agency, or emotional control as outlined in their evolved goals. The connection to the user's goals is present but indirect."
   },
   "scores": {
     "T": 2,
-    "A": 5,
-    "S": 5,
-    "C": 4,
-    "overall_score": 4.0
+    "A": 4,
+    "S": 3,
+    "C": 3,
+    "overall_score": 3.0
   }
 }
