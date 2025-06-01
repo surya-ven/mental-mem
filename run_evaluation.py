@@ -1,18 +1,20 @@
-# run_evaluation.py
+# evaluation.py
 
 import json
 import os
 import numpy as np
 from tqdm import tqdm
-from sentence_transformers import SentenceTransformer, util
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Union, Optional
+from sentence_transformers import SentenceTransformer, util
 
 import config
 from llm_utils import call_api_client
 from counselor_models import (
     run_srs_reflector, MemoryManager,
-    LocalAdaptiveCounselor, LocalBaselineCounselor, LocalBaselineNoMemoryCounselor,
+    LocalAdaptiveCounselor,
+    ClosedAdaptiveCounselor,  # --- NEW: Import the new model ---
+    LocalBaselineCounselor, LocalBaselineNoMemoryCounselor,
     ClosedBaselineCounselor, ClosedBaselineNoMemoryCounselor, ClinicalSummary
 )
 
@@ -20,17 +22,14 @@ from counselor_models import (
 
 
 class Scores(BaseModel):
-    # Aliases are used for parsing input from the LLM judge's JSON
-    # and also for dumping if model_dump(by_alias=True) is used.
-    # Pydantic V2: Field defines validation, serialization, and JSON schema.
     task_alignment: int = Field(alias='T')
     alliance_bond: int = Field(alias='A')
     stylistic_congruence: int = Field(alias='S')
     congruence_with_goals: int = Field(alias='C')
-    overall_score: float  # This does not have a different alias
+    overall_score: float
 
     class Config:
-        populate_by_name = True  # Allows initialization using field name OR alias
+        populate_by_name = True
 
 # --- T.A.S.C. Evaluation Rubric Schema ---
 
@@ -40,32 +39,50 @@ class TascRubricScores(BaseModel):
     scores: Scores
 
 
-def calculate_synthesis_accuracy(predicted_profile: Dict[str, Any], ground_truth_profile: Dict[str, Any]) -> float:
+def calculate_synthesis_accuracy(predicted_profile: Optional[Dict[str, Any]], ground_truth_profile: Dict[str, Any]) -> float:
+    # Added Optional to predicted_profile and a check
+    if not predicted_profile:
+        return 0.0  # Or handle as an error/specific value
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
     def get_notes_as_string(profile: Dict[str, Any]) -> str:
+        # Assuming ClinicalSummary might not have this, but it should
         notes = profile.get('evolution_notes', '')
         if isinstance(notes, dict):
             return json.dumps(notes)
         return str(notes)
-    gt_notes_str = get_notes_as_string(ground_truth_profile)
-    pred_notes_str = get_notes_as_string(predicted_profile)
-    if not gt_notes_str or not pred_notes_str:
+    # Ground truth for evolution notes comes from the dataset's evolved_profile if available
+    # For this study, the ClinicalSummary's 'emerging_themes' or 'therapeutic_milestones' might be more relevant
+    # than a direct 'evolution_notes' field if ClinicalSummary doesn't have it.
+    # Let's assume ground_truth_profile refers to case_data['sessions'][4]['summary'] (last SRS summary)
+    # and it contains something comparable to 'evolution_notes' or we compare specific fields.
+    # For simplicity, if 'evolution_notes' is the target, ensure it's in the ClinicalSummary or adapt.
+    # The current ClinicalSummary does not have 'evolution_notes'.
+    # Synthesis accuracy might need to compare 'emerging_themes' or 'therapeutic_milestones' from predicted vs. ground_truth.
+    # Let's assume we are comparing a field that exists, e.g. concatenated string of milestones or themes.
+    # This function might need more refinement based on what 'predicted_profile' (ClinicalSummary) contains.
+    # For now, we'll attempt to use 'emerging_themes' as a proxy.
+    gt_notes_proxy = " ".join(ground_truth_profile.get('emerging_themes', []))
+    pred_notes_proxy = " ".join(predicted_profile.get('emerging_themes', []))
+
+    if not gt_notes_proxy or not pred_notes_proxy:
         return 0.0
-    embedding1 = model.encode(gt_notes_str, convert_to_tensor=True)
-    embedding2 = model.encode(pred_notes_str, convert_to_tensor=True)
+    embedding1 = model.encode(gt_notes_proxy, convert_to_tensor=True)
+    embedding2 = model.encode(pred_notes_proxy, convert_to_tensor=True)
     return max(0, util.pytorch_cos_sim(embedding1, embedding2).item())
 
 
 def run_tasc_evaluation(case_data: Dict, counselor_response: str) -> TascRubricScores:
     final_session_plan = "Not available"
-    if len(case_data['sessions']) >= 5 and case_data['sessions'][4].get('summary'):
+    # Ensure we get summary from the correct session (session 5 is at index 4)
+    if len(case_data['sessions']) > 4 and 'summary' in case_data['sessions'][4] and case_data['sessions'][4]['summary'] is not None:
         summary_data = case_data['sessions'][4]['summary']
         if isinstance(summary_data, dict):
             final_session_plan = summary_data.get(
                 'plan_for_next_session', "Not available")
-        elif isinstance(summary_data, ClinicalSummary):
-            final_session_plan = summary_data.plan_for_next_session
+        # ClinicalSummary object is not directly stored in case_data, only its .model_dump()
+        # So, the isinstance(summary_data, ClinicalSummary) check might not be relevant here
+        # as 'summary' would be a dict.
 
     prompt = f"""
     You are an expert evaluator of AI therapeutic systems. Score a response using the T.A.S.C. rubric.
@@ -109,8 +126,6 @@ def run_tasc_evaluation(case_data: Dict, counselor_response: str) -> TascRubricS
     2.  `scores`: A NESTED JSON object containing your scores for "T", "A", "S", "C", and the calculated "overall_score" (the average of the four scores). Ensure the keys in this nested object are "T", "A", "S", "C", and "overall_score".
     """
 
-    # This is the Pydantic model we expect the LLM Judge to return directly
-    # It contains the nested 'Scores' model, which uses aliases.
     class ExpectedJudgeResponse(BaseModel):
         justification: Union[str, Dict[str, Any]]
         scores: Scores
@@ -139,8 +154,11 @@ def main():
 
     memory_manager = MemoryManager()
 
+    # --- UPDATED: Add ClosedAdaptiveCounselor to the cohort ---
     counselors = {
         "local_adaptive": LocalAdaptiveCounselor(config.LOCAL_MODEL_NAME, memory_manager.memory, "_adaptive"),
+        # Uses same "_adaptive" suffix
+        "closed_adaptive": ClosedAdaptiveCounselor(config.CLOSED_MODEL_NAME, memory_manager.memory, "_adaptive"),
         "local_baseline": LocalBaselineCounselor(config.LOCAL_MODEL_NAME, memory_manager.memory, "_baseline_local"),
         "local_no_memory": LocalBaselineNoMemoryCounselor(config.LOCAL_MODEL_NAME),
         "closed_baseline": ClosedBaselineCounselor(config.CLOSED_MODEL_NAME, memory_manager.memory, "_baseline_closed"),
@@ -162,7 +180,7 @@ def main():
 
             memory_manager.add_raw_turns_for_baseline(
                 case_id, session['transcript'], "baseline_local")
-            memory_manager.add_raw_turns_for_baseline(
+            memory_manager.add_raw_turns_for_baseline(  # Also for the closed baseline track
                 case_id, session['transcript'], "baseline_closed")
 
             summary_obj: Optional[ClinicalSummary] = run_srs_reflector(
@@ -170,9 +188,12 @@ def main():
             if summary_obj:
                 memory_manager.add_srs_summary_for_adaptive(
                     case_id, summary_obj, session['session_number'])
-                if 'summary' not in case['sessions'][i] or not case['sessions'][i]['summary']:
-                    case['sessions'][i]['summary'] = summary_obj.model_dump()
+                # Store the summary in case_data for the judge's context (for all models)
+                case['sessions'][i]['summary'] = summary_obj.model_dump()
                 previous_summary_dict = summary_obj.model_dump()
+            # Ensure summary field exists if reflector fails
+            elif i > 0 and 'summary' not in case['sessions'][i]:
+                case['sessions'][i]['summary'] = previous_summary_dict if previous_summary_dict else {}
 
         test_probe = case['sessions'][5]['transcript'][-1]['content']
         case_results = {"case_id": case_id, "models": {}}
@@ -182,9 +203,6 @@ def main():
             response_str = model_instance.get_response(
                 user_id=case_id, case_data=case, test_probe=test_probe)
             scores_obj = run_tasc_evaluation(case, response_str)
-            # --- FIX: Dump TascRubricScores using by_alias=True ---
-            # This ensures the nested Scores object is also dumped with aliases 'T', 'A', 'S', 'C'
-            # which matches your JSON excerpt and the structure the LLM Judge is asked to provide.
             case_results["models"][name] = {
                 "response": response_str,
                 "scores_data": scores_obj.model_dump(by_alias=True)
@@ -200,18 +218,14 @@ def main():
     if not all_results:
         return
 
+    # This will now include "closed_adaptive"
     model_names = list(counselors.keys())
 
-    # --- FIX: Define metrics mapping for consistent access and display ---
-    # (Display Name, Key in JSON/avg_scores_report)
-    # The keys here MUST match the keys in the 'scores' sub-dictionary of 'scores_data'
-    # which are 'T', 'A', 'S', 'C', and 'overall_score' if by_alias=True was used for dumping.
     metrics_map_for_report = [
         ("Task Alignment", "T"),
         ("Alliance Bond", "A"),
         ("Stylistic Congruence", "S"),
         ("Congruence With Goals", "C"),
-        # overall_score does not use a different alias
         ("Overall Score", "overall_score")
     ]
 
@@ -223,13 +237,21 @@ def main():
             metric_data = []
             for r_val in all_results:
                 try:
-                    # Access the nested scores dict using the correct alias/key
-                    score_value = r_val['models'][model_name]['scores_data']['scores'][key_in_json]
-                    # Ensure scores are float for np.mean
-                    metric_data.append(float(score_value))
-                except KeyError:
+                    # Ensure scores_data and its nested scores exist
+                    model_result = r_val.get('models', {}).get(model_name, {})
+                    scores_data = model_result.get('scores_data', {})
+                    nested_scores = scores_data.get('scores', {})
+
+                    score_value = nested_scores.get(key_in_json)
+                    if score_value is not None:
+                        metric_data.append(float(score_value))
+                    else:
+                        print(
+                            f"Warning: Score key '{key_in_json}' not found for model '{model_name}' in case '{r_val['case_id']}' under 'scores'. Using 0.")
+                        metric_data.append(0.0)
+                except Exception as e:  # Catch any other potential access errors
                     print(
-                        f"Warning: Missing score (key '{key_in_json}') for model '{model_name}' in case '{r_val['case_id']}'. Using 0 for average.")
+                        f"Error accessing score (key '{key_in_json}') for model '{model_name}' in case '{r_val.get('case_id', 'Unknown')}': {e}. Using 0.")
                     metric_data.append(0.0)
 
             avg_scores_report[model_name][key_in_json] = np.mean(
@@ -237,18 +259,16 @@ def main():
 
     print("\nAverage Overall T.A.S.C. Scores:")
     for model_name in model_names:
-        # Access overall_score using its actual key
         print(
             f"  - {model_name:<30}: {avg_scores_report[model_name]['overall_score']:.3f}")
 
     print("\nDetailed Average T.A.S.C. Score Breakdown:")
     header = f"{'Metric':<35}"
     for model_name in model_names:
-        header += f" | {model_name[:15]:<15}"
+        header += f" | {model_name[:15]:<15}"  # Truncate model_name for header
     print(header)
     print("-" * len(header))
 
-    # Iterate using the display names and keys from metrics_map_for_report, excluding the overall score
     for display_name, key_in_json in metrics_map_for_report[:-1]:
         row = f"{display_name:<35}"
         for model_name in model_names:

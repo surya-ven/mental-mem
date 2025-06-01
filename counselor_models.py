@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 
 import config
+# call_api_client is used for OpenRouter models
 from llm_utils import call_api_client
 
 # Schemas (ClinicalSummary, CounselorResponse) remain the same
@@ -53,7 +54,7 @@ def run_srs_reflector(session_transcript: List[Dict], previous_summary: Optional
                               model=config.REFLECTOR_MODEL)
     return summary
 
-# MemoryManager remains the same in its structure
+# MemoryManager remains the same
 
 
 class MemoryManager:
@@ -72,12 +73,14 @@ class MemoryManager:
 
     def add_srs_summary_for_adaptive(self, user_id: str, summary: ClinicalSummary, session_num: int):
         summary_json_string = summary.model_dump_json()
-        # This metadata is crucial for the LocalAdaptiveCounselor's filtering
         metadata = {"type": "srs_summary", "session_number": session_num}
+        # Both local_adaptive and closed_adaptive will read from user_id_adaptive memories
         self.memory.add(
             summary_json_string, user_id=f"{user_id}_adaptive", metadata=metadata, infer=False)
 
     def clear_user_history(self, user_id: str):
+        # Ensure all relevant user_id tracks are cleared
+        # For both adaptive models
         self.memory.delete_all(user_id=f"{user_id}_adaptive")
         self.memory.delete_all(user_id=f"{user_id}_baseline_local")
         self.memory.delete_all(user_id=f"{user_id}_baseline_closed")
@@ -94,24 +97,21 @@ class BaseCounselor:
     def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
         raise NotImplementedError
 
-# Counselor model implementations
+# --- Counselor model implementations ---
 
 
 class LocalAdaptiveCounselor(BaseCounselor):
     def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
         latest_summary_text = "No clinical summary available for context."
         if self.memory:
+            # user_id_track_suffix for adaptive models is "_adaptive"
             user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
-
-            # --- Use simple key-value for mem0's filters parameter ---
-            # mem0 should handle translating this to the Qdrant (or other) backend syntax.
-            # The user_id parameter is the primary scope for mem0.
             srs_metadata_filter = {"type": "srs_summary"}
 
             memories_response = self.memory.search(
                 query=test_probe,
-                user_id=user_id_for_search,  # Scoping by user
-                filters=srs_metadata_filter,  # Additional metadata filter
+                user_id=user_id_for_search,
+                filters=srs_metadata_filter,
                 limit=1
             )
             memories_result = memories_response.get('results', [])
@@ -130,12 +130,46 @@ class LocalAdaptiveCounselor(BaseCounselor):
         system_prompt = "You are an empathetic AI counselor. Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary."
         prompt_content = f"CLINICAL SUMMARY CONTEXT:\n{latest_summary_text}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
 
-        response_obj = call_api_client(
+        response_obj = call_api_client(  # Uses call_api_client for OpenRouter
             prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
         return response_obj.response if response_obj else "Error: Could not generate response."
 
-# Other counselor models (LocalBaselineCounselor, etc.) remain unchanged as their
-# mem0.search calls only use user_id and query, not additional metadata 'filters'.
+# --- NEW: ClosedAdaptiveCounselor ---
+
+
+class ClosedAdaptiveCounselor(BaseCounselor):
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
+        latest_summary_text = "No clinical summary available for context."
+        if self.memory:
+            # It uses the same "_adaptive" track for summaries as LocalAdaptiveCounselor
+            user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
+            srs_metadata_filter = {"type": "srs_summary"}
+
+            memories_response = self.memory.search(
+                query=test_probe,
+                user_id=user_id_for_search,
+                filters=srs_metadata_filter,
+                limit=1
+            )
+            memories_result = memories_response.get('results', [])
+            if memories_result:
+                try:
+                    summary_data = json.loads(memories_result[0]['memory'])
+                    if isinstance(summary_data, dict):
+                        plan = summary_data.get(
+                            "plan_for_next_session", "Continue exploring feelings.")
+                        latest_summary_text = f"Focus: {summary_data.get('session_focus', 'N/A')}. Emotional State: {summary_data.get('user_emotional_state', 'N/A')}. Plan: {plan}"
+                    else:
+                        latest_summary_text = memories_result[0]['memory']
+                except json.JSONDecodeError:
+                    latest_summary_text = memories_result[0]['memory']
+
+        system_prompt = "You are an empathetic AI counselor (using a large language model). Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary."
+        prompt_content = f"CLINICAL SUMMARY CONTEXT:\n{latest_summary_text}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
+
+        response_obj = call_api_client(  # Uses call_api_client as it's a closed model via OpenRouter
+            prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
+        return response_obj.response if response_obj else "Error: Could not generate response."
 
 
 class LocalBaselineCounselor(BaseCounselor):
@@ -159,7 +193,7 @@ class LocalBaselineCounselor(BaseCounselor):
 
 
 class LocalBaselineNoMemoryCounselor(BaseCounselor):
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str):  # Does not need memory_instance or suffix
         super().__init__(model_name, None, "")
 
     def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
@@ -173,7 +207,7 @@ class LocalBaselineNoMemoryCounselor(BaseCounselor):
 
 
 class ClosedBaselineNoMemoryCounselor(BaseCounselor):
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str):  # Does not need memory_instance or suffix
         super().__init__(model_name, None, "")
 
     def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
