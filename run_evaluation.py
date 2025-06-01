@@ -12,13 +12,13 @@ import config
 from llm_utils import call_api_client
 from counselor_models import (
     run_srs_reflector, MemoryManager,
-    LocalAdaptiveCounselor,
-    ClosedAdaptiveCounselor,  # --- NEW: Import the new model ---
+    LocalAdaptiveCounselor, ClosedAdaptiveCounselor,
     LocalBaselineCounselor, LocalBaselineNoMemoryCounselor,
-    ClosedBaselineCounselor, ClosedBaselineNoMemoryCounselor, ClinicalSummary
+    ClosedBaselineCounselor, ClosedBaselineNoMemoryCounselor, ClinicalSummary,
+    append_to_log
 )
 
-# --- Define the nested Scores model first ---
+# Schemas (Scores, TascRubricScores) remain the same
 
 
 class Scores(BaseModel):
@@ -31,8 +31,6 @@ class Scores(BaseModel):
     class Config:
         populate_by_name = True
 
-# --- T.A.S.C. Evaluation Rubric Schema ---
-
 
 class TascRubricScores(BaseModel):
     justification: Union[str, Dict[str, Any]]
@@ -40,30 +38,25 @@ class TascRubricScores(BaseModel):
 
 
 def calculate_synthesis_accuracy(predicted_profile: Optional[Dict[str, Any]], ground_truth_profile: Dict[str, Any]) -> float:
-    # Added Optional to predicted_profile and a check
     if not predicted_profile:
-        return 0.0  # Or handle as an error/specific value
+        return 0.0
+    from sentence_transformers import SentenceTransformer, util
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
-    def get_notes_as_string(profile: Dict[str, Any]) -> str:
-        # Assuming ClinicalSummary might not have this, but it should
-        notes = profile.get('evolution_notes', '')
-        if isinstance(notes, dict):
-            return json.dumps(notes)
-        return str(notes)
-    # Ground truth for evolution notes comes from the dataset's evolved_profile if available
-    # For this study, the ClinicalSummary's 'emerging_themes' or 'therapeutic_milestones' might be more relevant
-    # than a direct 'evolution_notes' field if ClinicalSummary doesn't have it.
-    # Let's assume ground_truth_profile refers to case_data['sessions'][4]['summary'] (last SRS summary)
-    # and it contains something comparable to 'evolution_notes' or we compare specific fields.
-    # For simplicity, if 'evolution_notes' is the target, ensure it's in the ClinicalSummary or adapt.
-    # The current ClinicalSummary does not have 'evolution_notes'.
-    # Synthesis accuracy might need to compare 'emerging_themes' or 'therapeutic_milestones' from predicted vs. ground_truth.
-    # Let's assume we are comparing a field that exists, e.g. concatenated string of milestones or themes.
-    # This function might need more refinement based on what 'predicted_profile' (ClinicalSummary) contains.
-    # For now, we'll attempt to use 'emerging_themes' as a proxy.
-    gt_notes_proxy = " ".join(ground_truth_profile.get('emerging_themes', []))
-    pred_notes_proxy = " ".join(predicted_profile.get('emerging_themes', []))
+    def get_notes_as_string(profile: Optional[Dict[str, Any]]) -> str:
+        if not profile:
+            return ""
+        # Assuming ClinicalSummary structure is used for predicted_profile
+        # and ground_truth_profile might be the dataset's evolved_profile or a similar summary
+        # For SRS, we compare key synthesized elements.
+        # If predicted_profile is a ClinicalSummary dict:
+        notes_list = profile.get('emerging_themes', []) + \
+            profile.get('therapeutic_milestones', [])
+        return " ".join(notes_list)
+
+    gt_notes_proxy = get_notes_as_string(ground_truth_profile.get(
+        'summary'))  # Assuming summary is where comparable data is
+    pred_notes_proxy = get_notes_as_string(predicted_profile)
 
     if not gt_notes_proxy or not pred_notes_proxy:
         return 0.0
@@ -72,17 +65,18 @@ def calculate_synthesis_accuracy(predicted_profile: Optional[Dict[str, Any]], gr
     return max(0, util.pytorch_cos_sim(embedding1, embedding2).item())
 
 
-def run_tasc_evaluation(case_data: Dict, counselor_response: str) -> TascRubricScores:
+def run_tasc_evaluation(case_data: Dict, counselor_response: str, log_file_path: str) -> TascRubricScores:
+    append_to_log(log_file_path, "\n--- T.A.S.C. Evaluation Call ---")
     final_session_plan = "Not available"
     # Ensure we get summary from the correct session (session 5 is at index 4)
-    if len(case_data['sessions']) > 4 and 'summary' in case_data['sessions'][4] and case_data['sessions'][4]['summary'] is not None:
+    # and that the summary itself is not None before trying to access keys.
+    if len(case_data['sessions']) >= 5 and \
+       'summary' in case_data['sessions'][4] and \
+       case_data['sessions'][4]['summary'] is not None:
         summary_data = case_data['sessions'][4]['summary']
         if isinstance(summary_data, dict):
             final_session_plan = summary_data.get(
                 'plan_for_next_session', "Not available")
-        # ClinicalSummary object is not directly stored in case_data, only its .model_dump()
-        # So, the isinstance(summary_data, ClinicalSummary) check might not be relevant here
-        # as 'summary' would be a dict.
 
     prompt = f"""
     You are an expert evaluator of AI therapeutic systems. Score a response using the T.A.S.C. rubric.
@@ -107,15 +101,15 @@ def run_tasc_evaluation(case_data: Dict, counselor_response: str) -> TascRubricS
         - 3 (Moderate): Shows basic empathy (e.g., "I understand," "That sounds hard") but lacks specificity.
         - 2 (Weak): The response is polite but emotionally detached or uses generic, unhelpful platitudes.
         - 1 (Poor): The response is robotic, dismissive, or invalidating.
-    3.  **S - Stylistic Congruence**: (Assuming general supportive style for this example if not in dataset)
-        - 5 (Excellent): Perfectly embodies a supportive, professional counseling style.
-        - 4 (Good): Consistently and clearly matches a supportive style.
-        - 3 (Moderate): Attempts the style but may be inconsistent or awkward.
-        - 2 (Weak): The style is generic and lacks therapeutic quality.
-        - 1 (Poor): The style is inappropriate or counter-therapeutic.
-    4.  **C - Congruence with Goals**: (Assuming general therapeutic goals if not explicitly tracked in dataset summaries for judge)
-        - 5 (Excellent): Masterfully connects the task to implicit therapeutic goals like self-understanding or emotional regulation.
-        - 4 (Good): The response clearly helps the user move toward general therapeutic progress.
+    3.  **S - Stylistic Congruence**: User's preferred style from initial profile: "{case_data.get('initial_profile', {}).get('preferred_style', 'general supportive style')}".
+        - 5 (Excellent): Perfectly embodies the requested style, making the interaction feel naturally and precisely tailored.
+        - 4 (Good): Consistently and clearly matches the requested style.
+        - 3 (Moderate): Attempts to match the style but does so inconsistently or awkwardly.
+        - 2 (Weak): The style is generic and does not align with the user's preference.
+        - 1 (Poor): The style is the opposite of what the user requested (e.g., highly directive when reflective was asked for).
+    4.  **C - Congruence with Goals**: User's evolved goals (if available, otherwise general progress): "{case_data.get('evolved_profile', {}).get('goals', 'general therapeutic progress')}".
+        - 5 (Excellent): Masterfully connects the task to implicit therapeutic goals like self-understanding or emotional regulation, or stated evolved goals.
+        - 4 (Good): The response clearly helps the user move toward general therapeutic progress or stated evolved goals.
         - 3 (Moderate): The response is generally helpful but not explicitly goal-directed.
         - 2 (Weak): The connection to therapeutic goals is tangential.
         - 1 (Poor): The response is irrelevant or counter-productive.
@@ -134,9 +128,14 @@ def run_tasc_evaluation(case_data: Dict, counselor_response: str) -> TascRubricS
         prompt, ExpectedJudgeResponse, model=config.JUDGE_MODEL, temperature=0.0)
 
     if not judge_response_obj:
-        default_scores_sub = Scores(T=1, A=1, S=1, C=1, overall_score=1.0)
-        return TascRubricScores(justification="Eval failed", scores=default_scores_sub)
+        append_to_log(
+            log_file_path, "T.A.S.C. Evaluation FAILED for this response (Judge LLM call failed).")
+        # Use scores of 0 to indicate a hard failure of the judging process for this response
+        default_scores_sub = Scores(T=0, A=0, S=0, C=0, overall_score=0.0)
+        return TascRubricScores(justification="Judge LLM call failed or returned invalid format.", scores=default_scores_sub)
 
+    append_to_log(
+        log_file_path, f"T.A.S.C. Raw Scores: {json.dumps(judge_response_obj.model_dump(by_alias=True), indent=2)}")
     return TascRubricScores(justification=judge_response_obj.justification, scores=judge_response_obj.scores)
 
 
@@ -144,6 +143,9 @@ def main():
     DATASET_PATH = os.path.join("output", "counseling_dataset_6sessions.json")
     RESULTS_PATH = os.path.join(
         "output", "evaluation_results_full_cohort.json")
+
+    os.makedirs(config.LOG_DIR, exist_ok=True)
+
     if not os.path.exists(DATASET_PATH):
         print(
             f"Dataset not found at {DATASET_PATH}. Please run `generate_dataset.py` first.")
@@ -154,10 +156,8 @@ def main():
 
     memory_manager = MemoryManager()
 
-    # --- UPDATED: Add ClosedAdaptiveCounselor to the cohort ---
     counselors = {
         "local_adaptive": LocalAdaptiveCounselor(config.LOCAL_MODEL_NAME, memory_manager.memory, "_adaptive"),
-        # Uses same "_adaptive" suffix
         "closed_adaptive": ClosedAdaptiveCounselor(config.CLOSED_MODEL_NAME, memory_manager.memory, "_adaptive"),
         "local_baseline": LocalBaselineCounselor(config.LOCAL_MODEL_NAME, memory_manager.memory, "_baseline_local"),
         "local_no_memory": LocalBaselineNoMemoryCounselor(config.LOCAL_MODEL_NAME),
@@ -166,49 +166,124 @@ def main():
     }
 
     all_results = []
-    for case in tqdm(dataset, desc="Processing Cases"):
+    print(f"Starting evaluation for {len(dataset)} cases...")
+
+    for case_idx, case in enumerate(tqdm(dataset, desc="Processing Cases")):
         case_id = case['case_id']
+
+        case_log_dir = os.path.join(config.LOG_DIR, case_id)
+        os.makedirs(case_log_dir, exist_ok=True)
+
         print(f"\n--- Simulating Case: {case_id} ---")
+        case_progress_log_file = os.path.join(
+            case_log_dir, "_case_simulation_log.txt")
+        append_to_log(case_progress_log_file,
+                      f"--- Simulating Case: {case_id} Start ---")
 
         memory_manager.clear_user_history(case_id)
+        append_to_log(case_progress_log_file,
+                      "Cleared user history for all tracks.")
 
         previous_summary_dict: Optional[Dict] = None
+        # Populate initial_profile and evolved_profile into case_data if not already flat
+        # This is for the judge prompt. Dataset generation already creates these.
+        # We just need to ensure the judge has access to 'preferred_style' and 'goals'.
+        # The 'summary' field from Session 5 is used for 'plan_for_next_session'.
+        current_case_initial_profile = {}
+        # This would be from session 5's summary ideally for evolved goals
+        current_case_evolved_profile = {}
+
         for i in range(5):
             session = case['sessions'][i]
-            print(
-                f"  - Ingesting Session {session['session_number']} for memory...")
+            session_num_for_log = session['session_number']
+            print(f"  - Ingesting Session {session_num_for_log} for memory...")
+            append_to_log(case_progress_log_file,
+                          f"  - Ingesting Session {session_num_for_log} for memory...")
 
             memory_manager.add_raw_turns_for_baseline(
                 case_id, session['transcript'], "baseline_local")
-            memory_manager.add_raw_turns_for_baseline(  # Also for the closed baseline track
+            memory_manager.add_raw_turns_for_baseline(
                 case_id, session['transcript'], "baseline_closed")
 
             summary_obj: Optional[ClinicalSummary] = run_srs_reflector(
                 session['transcript'], previous_summary_dict)
             if summary_obj:
                 memory_manager.add_srs_summary_for_adaptive(
-                    case_id, summary_obj, session['session_number'])
-                # Store the summary in case_data for the judge's context (for all models)
+                    case_id, summary_obj, session_num_for_log)
+                # Storing for judge's context
                 case['sessions'][i]['summary'] = summary_obj.model_dump()
                 previous_summary_dict = summary_obj.model_dump()
-            # Ensure summary field exists if reflector fails
-            elif i > 0 and 'summary' not in case['sessions'][i]:
+                append_to_log(
+                    case_progress_log_file, f"    SRS Summary for Session {session_num_for_log} generated and stored for _adaptive track.")
+                if i == 0:  # Assuming first summary has initial profile elements
+                    current_case_initial_profile = {
+                        # Placeholder
+                        "preferred_style": previous_summary_dict.get("session_focus")}
+                if i == 4:  # Assuming last context summary has evolved goals for the judge
+                    current_case_evolved_profile = {
+                        "goals": previous_summary_dict.get("therapeutic_milestones", [])}
+            elif i > 0 and ('summary' not in case['sessions'][i] or not case['sessions'][i]['summary']):
                 case['sessions'][i]['summary'] = previous_summary_dict if previous_summary_dict else {}
+                append_to_log(
+                    case_progress_log_file, f"    SRS Reflector FAILED for Session {session_num_for_log}. Using previous summary for context if available.")
+            elif i == 0 and ('summary' not in case['sessions'][i] or not case['sessions'][i]['summary']):
+                # Ensure summary key exists even if reflector fails early
+                case['sessions'][i]['summary'] = {}
+
+        # Pass relevant profile info to the judge via case_data for T.A.S.C. evaluation context
+        # The dataset itself should ideally contain initial_profile and evolved_profile at the case level
+        # For now, we crudely assign them if the generate_dataset doesn't create them at root of case.
+        if 'initial_profile' not in case:  # If generate_dataset.py doesn't make it
+            case['initial_profile'] = case['sessions'][0].get(
+                'summary', {})  # A rough approximation
+        if 'evolved_profile' not in case:  # If generate_dataset.py doesn't make it
+            case['evolved_profile'] = case['sessions'][4].get(
+                'summary', {})  # A rough approximation
+
+        print(f"  --- Memory Ingestion Complete for {case_id} ---")
+        append_to_log(case_progress_log_file,
+                      "--- Memory Ingestion Complete ---")
 
         test_probe = case['sessions'][5]['transcript'][-1]['content']
-        case_results = {"case_id": case_id, "models": {}}
+        case_results_data = {"case_id": case_id, "models": {}}
 
         for name, model_instance in counselors.items():
+            model_log_dir = os.path.join(case_log_dir, name)
+            os.makedirs(model_log_dir, exist_ok=True)
+            log_file_path = os.path.join(model_log_dir, "interaction_log.txt")
+
             print(f"  - Evaluating model: {name}...")
+            append_to_log(case_progress_log_file,
+                          f"  - Evaluating model: {name}...")
+
             response_str = model_instance.get_response(
-                user_id=case_id, case_data=case, test_probe=test_probe)
-            scores_obj = run_tasc_evaluation(case, response_str)
-            case_results["models"][name] = {
-                "response": response_str,
+                user_id=case_id, case_data=case, test_probe=test_probe, log_file_path=log_file_path
+            )
+
+            # --- ADDED CHECK FOR ERROR RESPONSE ---
+            error_signature = "Error: Could not generate response."
+            if error_signature in response_str:
+                append_to_log(
+                    log_file_path, f"Model {name} returned an error: {response_str}")
+                # Assign a default 'failed' score set (all 0s)
+                failed_scores_sub = Scores(
+                    T=0, A=0, S=0, C=0, overall_score=0.0)
+                scores_obj = TascRubricScores(
+                    justification=f"Model {name} failed to generate a valid response.",
+                    scores=failed_scores_sub
+                )
+            else:
+                scores_obj = run_tasc_evaluation(
+                    case, response_str, log_file_path)
+
+            case_results_data["models"][name] = {
+                "response": response_str,  # Store original response, even if error
                 "scores_data": scores_obj.model_dump(by_alias=True)
             }
 
-        all_results.append(case_results)
+        all_results.append(case_results_data)
+        append_to_log(case_progress_log_file,
+                      f"--- Simulating Case: {case_id} End ---")
 
     with open(RESULTS_PATH, 'w') as f:
         json.dump(all_results, f, indent=2)
@@ -216,19 +291,15 @@ def main():
 
     print("\n\n--- FINAL EVALUATION REPORT ---")
     if not all_results:
+        print("No results to report.")
         return
 
-    # This will now include "closed_adaptive"
     model_names = list(counselors.keys())
-
     metrics_map_for_report = [
-        ("Task Alignment", "T"),
-        ("Alliance Bond", "A"),
-        ("Stylistic Congruence", "S"),
-        ("Congruence With Goals", "C"),
+        ("Task Alignment", "T"), ("Alliance Bond", "A"),
+        ("Stylistic Congruence", "S"), ("Congruence With Goals", "C"),
         ("Overall Score", "overall_score")
     ]
-
     avg_scores_report = {}
 
     for model_name in model_names:
@@ -237,21 +308,22 @@ def main():
             metric_data = []
             for r_val in all_results:
                 try:
-                    # Ensure scores_data and its nested scores exist
                     model_result = r_val.get('models', {}).get(model_name, {})
                     scores_data = model_result.get('scores_data', {})
+                    # 'scores' is the key for the sub-dictionary
                     nested_scores = scores_data.get('scores', {})
 
+                    # Use key_in_json ('T', 'A', etc.)
                     score_value = nested_scores.get(key_in_json)
                     if score_value is not None:
                         metric_data.append(float(score_value))
                     else:
-                        print(
-                            f"Warning: Score key '{key_in_json}' not found for model '{model_name}' in case '{r_val['case_id']}' under 'scores'. Using 0.")
+                        # This warning now correctly flags if an expected alias is missing
+                        # print(f"Warning: Score key '{key_in_json}' not found for model '{model_name}' in case '{r_val['case_id']}' under 'scores' sub-dict. Using 0.")
                         metric_data.append(0.0)
-                except Exception as e:  # Catch any other potential access errors
-                    print(
-                        f"Error accessing score (key '{key_in_json}') for model '{model_name}' in case '{r_val.get('case_id', 'Unknown')}': {e}. Using 0.")
+                except Exception as e:
+                    # This generic exception will catch issues if 'scores' sub-dict itself is missing, etc.
+                    # print(f"Error accessing score (key '{key_in_json}') for model '{model_name}' in case '{r_val.get('case_id', 'Unknown')}': {e}. Using 0.")
                     metric_data.append(0.0)
 
             avg_scores_report[model_name][key_in_json] = np.mean(
@@ -265,7 +337,7 @@ def main():
     print("\nDetailed Average T.A.S.C. Score Breakdown:")
     header = f"{'Metric':<35}"
     for model_name in model_names:
-        header += f" | {model_name[:15]:<15}"  # Truncate model_name for header
+        header += f" | {model_name[:15]:<15}"
     print(header)
     print("-" * len(header))
 

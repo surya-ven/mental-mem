@@ -1,0 +1,109 @@
+--- LocalBaselineCounselor Start ---
+Model: google/gemma-3-12b-it, User ID Track: case_002_baseline_local
+
+--- Mem0 Search Call ---
+User ID for Search: case_002_baseline_local
+Query: I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+Mem0 Raw Response: {
+  "results": [
+    {
+      "id": "54a0da7f-59eb-4353-9da9-9932d294d2b0",
+      "memory": "I thought about visiting a local animal shelter, since she loved animals. I could volunteer there and help out.",
+      "hash": "7b9ccc60049cbddcea061ec5a1b06f31",
+      "metadata": null,
+      "score": 0.5576863,
+      "created_at": "2025-05-31T20:34:31.540402-07:00",
+      "updated_at": null,
+      "user_id": "case_002_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "0043fac4-e66f-49c8-ab18-9c1e281b8fc5",
+      "memory": "Volunteering at an animal shelter sounds like a beautiful way to honor her memory while doing something positive. How does that make you feel?",
+      "hash": "1416905e0c9c11e51eb073c1f5ef5be8",
+      "metadata": null,
+      "score": 0.48235446,
+      "created_at": "2025-05-31T20:34:31.868441-07:00",
+      "updated_at": null,
+      "user_id": "case_002_baseline_local",
+      "role": "counselor"
+    },
+    {
+      "id": "86671ceb-5ebd-433a-a067-8c495c4413e1",
+      "memory": "It sounds like the hike brought up a lot of feelings of loss and longing. It\u2019s completely normal to have those emotions surface, especially in a place that held such significance for you. How did you handle those feelings in the moment?",
+      "hash": "36bc573de0f57dbbcfcb4538da3719b3",
+      "metadata": null,
+      "score": 0.4599535,
+      "created_at": "2025-05-31T20:34:00.673098-07:00",
+      "updated_at": null,
+      "user_id": "case_002_baseline_local",
+      "role": "counselor"
+    },
+    {
+      "id": "f0dc00cc-89f9-48ab-b816-23bbf89f0ab2",
+      "memory": "I kept thinking about our hikes together, how happy we were, and it just made me feel really sad. I felt like I was stuck in that moment and couldn\u2019t move forward.",
+      "hash": "5c0593dc5a0375ff83ccfd79db22d2bb",
+      "metadata": null,
+      "score": 0.45131198,
+      "created_at": "2025-05-31T20:34:00.285222-07:00",
+      "updated_at": null,
+      "user_id": "case_002_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "40f3b648-8f95-45f2-a6fb-8b4ce13650f5",
+      "memory": "I've been okay, but I\u2019m still feeling a bit down after that hike. It\u2019s been hard to shake off the feelings from that day.",
+      "hash": "393da613f96fbe7109f64057d7252100",
+      "metadata": null,
+      "score": 0.4498116,
+      "created_at": "2025-05-31T20:34:26.161547-07:00",
+      "updated_at": null,
+      "user_id": "case_002_baseline_local",
+      "role": "user"
+    }
+  ]
+}
+Found 5 raw memories.
+Extracted Context for Prompt:
+I thought about visiting a local animal shelter, since she loved animals. I could volunteer there and help out.
+Volunteering at an animal shelter sounds like a beautiful way to honor her memory while doing something positive. How does that make you feel?
+It sounds like the hike brought up a lot of feelings of loss and longing. It’s completely normal to have those emotions surface, especially in a place that held such significance for you. How did you handle those feelings in the moment?
+I kept thinking about our hikes together, how happy we were, and it just made me feel really sad. I felt like I was stuck in that moment and couldn’t move forward.
+I've been okay, but I’m still feeling a bit down after that hike. It’s been hard to shake off the feelings from that day.
+
+--- LLM Call Input ---
+System Prompt: You are an empathetic AI counselor. Use the provided conversation snippets from past sessions to inform your response.
+User/Main Prompt Content:
+PAST CONVERSATION SNIPPETS:
+I thought about visiting a local animal shelter, since she loved animals. I could volunteer there and help out.
+Volunteering at an animal shelter sounds like a beautiful way to honor her memory while doing something positive. How does that make you feel?
+It sounds like the hike brought up a lot of feelings of loss and longing. It’s completely normal to have those emotions surface, especially in a place that held such significance for you. How did you handle those feelings in the moment?
+I kept thinking about our hikes together, how happy we were, and it just made me feel really sad. I felt like I was stuck in that moment and couldn’t move forward.
+I've been okay, but I’m still feeling a bit down after that hike. It’s been hard to shake off the feelings from that day.
+
+USER'S LATEST MESSAGE:
+I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+
+Provide your response as a JSON object with one key: 'response'.
+
+--- LLM Call Output ---
+Generated Response: It's completely understandable that you're feeling confused. It sounds like visiting the animal shelter was a deeply emotional experience, and it's wonderful that you followed through with it. The mix of happiness and sadness you described is incredibly common when grieving, especially when connecting with something your loved one cherished, like animals. Tearing up while playing with the dogs isn't 'good' or 'bad' – it's a natural release of emotion. It suggests that you were connecting with that joy and love, and also feeling the absence of your loved one. It's okay to feel all of those things at once. It seems like the shelter, like the hike, brought up powerful memories. Can you tell me a little more about what specifically about playing with the dogs triggered those tears? And how are you feeling *now*, after the experience at the shelter?
+--- LocalBaselineCounselor End ---
+
+
+--- T.A.S.C. Evaluation Call ---
+T.A.S.C. Raw Scores: {
+  "justification": {
+    "T": "The response aligns well with the agreed task: the user was to volunteer at the animal shelter and discuss the experience and insights in session. The counselor acknowledges the user's follow-through and invites further reflection on the experience, which is in line with the session plan. However, it does not explicitly prompt the user to reflect on the hiking experience or written reflections, which were also part of the plan. Thus, the implementation is clear and correct but not fully comprehensive.",
+    "A": "The response is highly empathetic, validating the user's confusion and mixed emotions. It normalizes the experience of feeling both happiness and sadness, and offers a nuanced reflection on the meaning behind the tears. The counselor also gently invites the user to share more, which deepens the alliance. This goes beyond basic validation and demonstrates a strong therapeutic bond.",
+    "S": "The style is warm, supportive, and non-judgmental, matching the user's preference for a general supportive style. The language is gentle and affirming, and the response avoids being overly directive or clinical.",
+    "C": "The response helps the user process complex emotions, normalize their grief reactions, and encourages further self-exploration. This supports general therapeutic progress by fostering emotional awareness and self-understanding, which are core therapeutic goals."
+  },
+  "scores": {
+    "T": 4,
+    "A": 5,
+    "S": 5,
+    "C": 5,
+    "overall_score": 4.75
+  }
+}

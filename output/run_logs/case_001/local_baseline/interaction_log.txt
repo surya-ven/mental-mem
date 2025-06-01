@@ -1,0 +1,113 @@
+--- LocalBaselineCounselor Start ---
+Model: google/gemma-3-12b-it, User ID Track: case_001_baseline_local
+
+--- Mem0 Search Call ---
+User ID for Search: case_001_baseline_local
+Query: I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+Mem0 Raw Response: {
+  "results": [
+    {
+      "id": "a497cffc-9941-45ad-a4d1-0089708443a0",
+      "memory": "I\u2019m a bit anxious, honestly. I\u2019ve been putting this off for a while.",
+      "hash": "16ec7714b4d268b0fd1b844dd21b614c",
+      "metadata": null,
+      "score": 0.5115543,
+      "created_at": "2025-05-31T20:28:08.099041-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "f0abef86-7832-4872-a3b3-44cbda31e2b8",
+      "memory": "I\u2019ve been okay, but I\u2019ve been feeling a bit more anxious lately. I think it\u2019s because I've been thinking about what we discussed regarding CBT.",
+      "hash": "cbb60aef6837616253c4cd8155349705",
+      "metadata": null,
+      "score": 0.50528973,
+      "created_at": "2025-05-31T20:29:02.212990-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "a70db51e-76ea-4537-a975-8c14e9958aaf",
+      "memory": "Yeah, I think I\u2019ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.",
+      "hash": "d7312d3cc014f84eebd59e91f4fd6f98",
+      "metadata": null,
+      "score": 0.484642,
+      "created_at": "2025-05-31T20:29:08.518393-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "e417abdb-b3b1-4215-8f39-d2c340dfafab",
+      "memory": "I don\u2019t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn\u2019t even know where to start. It felt like too much.",
+      "hash": "30d5f8a4ca063d3d2da3be7934238e17",
+      "metadata": null,
+      "score": 0.48100126,
+      "created_at": "2025-05-31T20:29:30.224579-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_local",
+      "role": "user"
+    },
+    {
+      "id": "e74ad5e4-0286-4091-961d-c9a3af753217",
+      "memory": "Okay, I guess I could try that. Maybe something like, 'I\u2019m feeling really anxious and I\u2019m not sure about medication.'",
+      "hash": "678e99fb6c2c2322654df6a2e53d8e5c",
+      "metadata": null,
+      "score": 0.47399813,
+      "created_at": "2025-05-31T20:28:36.676639-07:00",
+      "updated_at": null,
+      "user_id": "case_001_baseline_local",
+      "role": "user"
+    }
+  ]
+}
+Found 5 raw memories.
+Extracted Context for Prompt:
+I’m a bit anxious, honestly. I’ve been putting this off for a while.
+I’ve been okay, but I’ve been feeling a bit more anxious lately. I think it’s because I've been thinking about what we discussed regarding CBT.
+Yeah, I think I’ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.
+I don’t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn’t even know where to start. It felt like too much.
+Okay, I guess I could try that. Maybe something like, 'I’m feeling really anxious and I’m not sure about medication.'
+
+--- LLM Call Input ---
+System Prompt: You are an empathetic AI counselor. Use the provided conversation snippets from past sessions to inform your response.
+User/Main Prompt Content:
+PAST CONVERSATION SNIPPETS:
+I’m a bit anxious, honestly. I’ve been putting this off for a while.
+I’ve been okay, but I’ve been feeling a bit more anxious lately. I think it’s because I've been thinking about what we discussed regarding CBT.
+Yeah, I think I’ve been really hard on myself about feeling anxious. Maybe I need to be more compassionate with myself.
+I don’t know. I just felt overwhelmed by my thoughts, and when I sat down to write, I didn’t even know where to start. It felt like too much.
+Okay, I guess I could try that. Maybe something like, 'I’m feeling really anxious and I’m not sure about medication.'
+
+USER'S LATEST MESSAGE:
+I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+
+Provide your response as a JSON object with one key: 'response'.
+
+--- LLM Call Output ---
+Generated Response: It sounds like you're carrying a lot of uncertainty right now, and that confusion is understandably adding to your anxiety. It's really common to replay situations in our minds and wonder 'what if?' especially when we feel anxious and put on the spot. You mentioned previously feeling overwhelmed by your thoughts and struggling to know where to start when writing – this feels similar, doesn't it? A situation arose, it triggered anxiety, and now you're caught in a cycle of second-guessing.
+
+It's brave of you to acknowledge this and to share it. Let's unpack this a little. You chose to say you didn't have time, and while that might not have been the 'ideal' response in your mind, it *was* a response. It was a way you managed the situation in that moment. Often, when anxiety kicks in, our responses aren’t about what we *think* we should have said, but about what felt safest and most manageable *at that time*.
+
+Remember what we discussed about self-compassion? Could you try offering yourself some kindness right now? Perhaps something like, 'It's okay that I felt anxious and didn't know what to say. I did the best I could in that moment.' We can explore the thoughts and feelings behind this situation further if you'd like, and maybe even consider what a more helpful response *might* look like in a similar situation in the future, but let’s start with acknowledging the discomfort and being gentle with yourself. What are some of the thoughts swirling around about what you *should* have said?
+--- LocalBaselineCounselor End ---
+
+
+--- T.A.S.C. Evaluation Call ---
+T.A.S.C. Raw Scores: {
+  "justification": {
+    "T": "The response does not directly review the user's experiences with the combined mindfulness and brief journaling routine, nor does it assess the impact of these interventions on self-criticism and anxiety as specified in the session plan. While it addresses the user's current experience of anxiety and self-criticism, it misses the explicit task of linking this to the agreed-upon interventions or adjusting the approach based on feedback. There is a brief allusion to previous struggles with overwhelming thoughts and writing, but this is not clearly tied to the mindfulness/journaling routine or its impact.",
+    "A": "The response is highly empathetic and validating. It acknowledges the user's confusion and anxiety, normalizes their experience, and highlights their courage in sharing. The counselor reflects the underlying process (anxiety leading to avoidance and self-criticism) and encourages self-compassion, which strengthens the therapeutic alliance.",
+    "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
+    "C": "The response supports general therapeutic progress by encouraging self-compassion, normalizing the user's experience, and inviting further exploration of thoughts and feelings. However, it does not explicitly connect to the user's specific interventions (mindfulness and journaling) or assess their impact, which would have more directly supported the user's progress as outlined in the session plan."
+  },
+  "scores": {
+    "T": 3,
+    "A": 5,
+    "S": 5,
+    "C": 4,
+    "overall_score": 4.25
+  }
+}

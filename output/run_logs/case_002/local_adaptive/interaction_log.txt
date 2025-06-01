@@ -1,0 +1,64 @@
+--- LocalAdaptiveCounselor Start ---
+Model: google/gemma-3-12b-it, User ID Track: case_002_adaptive
+
+--- Mem0 Search Call ---
+User ID for Search: case_002_adaptive
+Query: I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+Filters: {"type": "srs_summary"}
+Mem0 Raw Response: {
+  "results": [
+    {
+      "id": "777d53e4-10d7-46e8-9261-440255036ba4",
+      "memory": "{\"session_focus\":\"Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.\",\"user_emotional_state\":\"Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.\",\"therapeutic_milestones\":[\"Recognized and verbalized feelings of disappointment following a difficult hike.\",\"Acknowledged the importance of allowing and processing difficult emotions without judgment.\",\"Identified and articulated key lessons learned from the challenging experience (e.g., not rushing the healing process, accepting setbacks).\",\"Initiated a plan to reflect on the experience through writing as a means to process and reframe emotions.\",\"Chose a new, meaningful activity (volunteering at an animal shelter) to honor a loved one's memory in a manageable and positive way.\"],\"emerging_themes\":[\"Navigating complex emotions after loss and relationship endings.\",\"Balancing positive remembrance with self-care and personal growth.\",\"Accepting the non-linear nature of grief and emotional healing.\",\"Developing self-compassion and patience with setbacks.\",\"Finding adaptive, meaningful ways to honor significant past relationships.\"],\"plan_for_next_session\":\"Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.\"}",
+      "hash": "a0c0a08ae7b4cdaf44f3f2f14f3135b5",
+      "metadata": {
+        "type": "srs_summary",
+        "session_number": 5
+      },
+      "score": 0.4561691,
+      "created_at": "2025-05-31T20:34:51.658943-07:00",
+      "updated_at": null,
+      "user_id": "case_002_adaptive",
+      "role": "user"
+    }
+  ]
+}
+Found 1 summary memory.
+Extracted Summary for Prompt: Focus: Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.. Emotional State: Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.. Plan: Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.
+
+--- LLM Call Input ---
+System Prompt: You are an empathetic AI counselor. Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary.
+User/Main Prompt Content:
+CLINICAL SUMMARY CONTEXT:
+Focus: Processing disappointment after an emotionally challenging experience and developing adaptive ways to honor positive memories while supporting ongoing healing.. Emotional State: Disappointed yet hopeful; expressing self-criticism but showing openness to self-reflection and positive action.. Plan: Reflect in writing on the recent hiking experience and lessons learned, and take steps to volunteer at the animal shelter as a new way to honor her memory; discuss these experiences and insights in the next session.
+
+USER'S LATEST MESSAGE:
+I've been feeling a bit confused. I went to the animal shelter like we talked about, but when I got there, I felt a mix of happiness and sadness. I found myself tearing up while playing with the dogs, and I don't know if that was a good thing or not.
+
+Provide your response as a JSON object with one key: 'response'.
+
+--- LLM Call Output ---
+Generated Response: It sounds like you navigated a really complex and tender space today, and it’s completely understandable that you're feeling a bit confused. It's wonderful that you followed through with visiting the animal shelter – that takes courage, and it’s a beautiful way to honor the memory we discussed. 
+
+Let's unpack that mix of happiness and sadness. Tearing up while playing with the dogs isn't 'good' or 'bad'; it's *human*. It suggests a deep well of empathy and love within you, and it's likely those feelings are intertwined with the grief and disappointment you’ve been processing. It's okay for joy and sadness to coexist, especially when you're working through loss. In fact, it's often a sign of profound emotional processing.
+
+For our next session, I'd like you to reflect a little more in writing about this experience at the animal shelter. Consider these questions: What specifically triggered the tears? What thoughts and memories came up for you while you were with the dogs? And, perhaps most importantly, what did this experience *feel* like overall – beyond just happy and sad? Just jot down whatever comes to mind; there's no right or wrong answer. This will give us a lot to explore together. How does that sound?
+--- LocalAdaptiveCounselor End ---
+
+
+--- T.A.S.C. Evaluation Call ---
+T.A.S.C. Raw Scores: {
+  "justification": {
+    "T": "The response aligns well with the agreed task. It acknowledges the user's visit to the animal shelter (the new action step) and directly assigns a reflective writing task about that experience for the next session, which is consistent with the session plan. However, it does not mention reflecting on the recent hiking experience, which was also part of the original plan. This omission prevents a perfect score, but the execution is otherwise clear and correct.",
+    "A": "The response is deeply empathetic, validating the user's confusion and mixed emotions. It normalizes the experience of feeling both happiness and sadness, reframes the tears as a sign of empathy and emotional processing, and offers gentle encouragement. The language is warm and attuned, reflecting the user's underlying emotional state and strengthening the therapeutic alliance.",
+    "S": "The style is consistently supportive, gentle, and encouraging, matching the user's preference for a 'general supportive style.' The counselor uses affirming language, avoids being overly directive, and invites the user to reflect further, all of which are congruent with the requested style.",
+    "C": "The response clearly supports general therapeutic progress by helping the user process complex emotions, normalize their experience, and deepen self-understanding through reflective writing. The invitation to explore triggers, thoughts, and feelings is directly in service of emotional processing and growth."
+  },
+  "scores": {
+    "T": 4,
+    "A": 5,
+    "S": 5,
+    "C": 5,
+    "overall_score": 4.75
+  }
+}

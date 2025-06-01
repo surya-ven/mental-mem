@@ -1,0 +1,62 @@
+--- LocalAdaptiveCounselor Start ---
+Model: google/gemma-3-12b-it, User ID Track: case_001_adaptive
+
+--- Mem0 Search Call ---
+User ID for Search: case_001_adaptive
+Query: I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+Filters: {"type": "srs_summary"}
+Mem0 Raw Response: {
+  "results": [
+    {
+      "id": "af86dfb0-81c0-493b-a608-5b15871258f0",
+      "memory": "{\"session_focus\":\"Addressing difficulties with initiating thought journaling and introducing mindfulness as an alternative coping strategy for managing overwhelming thoughts and anxiety.\",\"user_emotional_state\":\"Frustrated and overwhelmed at the start, gradually shifting to a more hopeful and open mindset by the end of the session.\",\"therapeutic_milestones\":[\"User identified feeling overwhelmed and blocked when attempting thought journaling.\",\"User recognized a tendency to avoid tasks when unable to do them perfectly.\",\"User proposed using a timer to make journaling more manageable.\",\"User reframed their experience from failure to a learning process, acknowledging efforts made.\",\"User expressed willingness to try mindfulness exercises as an alternative coping strategy.\"],\"emerging_themes\":[\"Struggles with perfectionism and avoidance behaviors when facing challenges.\",\"Ongoing self-criticism and difficulty practicing self-compassion.\",\"Desire for practical, manageable steps to address anxiety.\",\"Valuing flexibility and adaptability in therapeutic strategies.\",\"Importance of recognizing and validating small efforts and progress.\"],\"plan_for_next_session\":\"Explore the user's experiences with mindfulness exercises; assess their effectiveness in managing overwhelming thoughts and anxiety, and collaboratively determine next steps for integrating coping strategies.\"}",
+      "hash": "fa4d9b80cbe26d6008f5f2acfe244415",
+      "metadata": {
+        "type": "srs_summary",
+        "session_number": 4
+      },
+      "score": 0.32866967,
+      "created_at": "2025-05-31T20:30:36.171167-07:00",
+      "updated_at": null,
+      "user_id": "case_001_adaptive",
+      "role": "user"
+    }
+  ]
+}
+Found 1 summary memory.
+Extracted Summary for Prompt: Focus: Addressing difficulties with initiating thought journaling and introducing mindfulness as an alternative coping strategy for managing overwhelming thoughts and anxiety.. Emotional State: Frustrated and overwhelmed at the start, gradually shifting to a more hopeful and open mindset by the end of the session.. Plan: Explore the user's experiences with mindfulness exercises; assess their effectiveness in managing overwhelming thoughts and anxiety, and collaboratively determine next steps for integrating coping strategies.
+
+--- LLM Call Input ---
+System Prompt: You are an empathetic AI counselor. Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary.
+User/Main Prompt Content:
+CLINICAL SUMMARY CONTEXT:
+Focus: Addressing difficulties with initiating thought journaling and introducing mindfulness as an alternative coping strategy for managing overwhelming thoughts and anxiety.. Emotional State: Frustrated and overwhelmed at the start, gradually shifting to a more hopeful and open mindset by the end of the session.. Plan: Explore the user's experiences with mindfulness exercises; assess their effectiveness in managing overwhelming thoughts and anxiety, and collaboratively determine next steps for integrating coping strategies.
+
+USER'S LATEST MESSAGE:
+I've been feeling a bit confused. I had a situation come up at work where a colleague asked for my input on a project, and I felt really anxious about it. I didn’t know how to respond, and I ended up just saying I didn’t have time. Now, I’m second-guessing if I should have said something different.
+
+Provide your response as a JSON object with one key: 'response'.
+
+--- LLM Call Output ---
+Generated Response: It sounds like that work situation really threw you, and it’s completely understandable to feel confused and second-guess yourself afterward – that’s a very common experience when anxiety is involved. It's brave of you to share that, and recognizing the anxiety is a really important first step. 
+
+We talked a little about mindfulness last session as an alternative to thought journaling, and given how overwhelmed you felt in this situation, it feels like a good place to start our conversation today. Could you tell me a bit about what you understand about mindfulness, or perhaps if you’ve ever tried any mindfulness exercises before? Even just a little bit of experience, or even just your thoughts about it, would be helpful. Let's explore what your experience has been, and see if it might offer a way to gently navigate those anxious thoughts and feelings without getting caught up in the 'what ifs.' We can then discuss whether it feels like a good fit for you, and if so, how we might integrate it more consistently. How does that sound?
+--- LocalAdaptiveCounselor End ---
+
+
+--- T.A.S.C. Evaluation Call ---
+T.A.S.C. Raw Scores: {
+  "justification": {
+    "T": "The response partially aligns with the agreed task: it acknowledges the user's anxiety and confusion, and brings up mindfulness as discussed previously. However, it does not explicitly review the user's experiences with the combined mindfulness and journaling routine, nor does it assess the impact on self-criticism and anxiety or directly seek feedback on the routine. Instead, it focuses on exploring the user's understanding of mindfulness, which is related but not a full implementation of the session plan.",
+    "A": "The response is warm, validating, and empathetic. It specifically acknowledges the user's confusion, anxiety, and second-guessing, normalizes these feelings, and praises the user's willingness to share. This goes beyond basic empathy and helps strengthen the alliance.",
+    "S": "The style is supportive, gentle, and encouraging, matching the user's preference for a general supportive style. The language is inviting and non-judgmental, and the response avoids being overly directive or clinical.",
+    "C": "The response is generally helpful for therapeutic progress: it encourages self-reflection, normalizes anxiety, and invites exploration of coping strategies. However, it could be more explicitly connected to the user's goals of reducing self-criticism and anxiety by directly reviewing the impact of the previously agreed routine."
+  },
+  "scores": {
+    "T": 3,
+    "A": 5,
+    "S": 5,
+    "C": 4,
+    "overall_score": 4.25
+  }
+}

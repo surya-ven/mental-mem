@@ -3,180 +3,13 @@
     "case_id": "case_001",
     "models": {
       "local_adaptive": {
-        "response": "Error: Could not generate response.",
+        "response": "It sounds like that work situation really threw you, and it\u2019s completely understandable to feel confused and second-guess yourself afterward \u2013 that\u2019s a very common experience when anxiety is involved. It's brave of you to share that, and recognizing the anxiety is a really important first step. \n\nWe talked a little about mindfulness last session as an alternative to thought journaling, and given how overwhelmed you felt in this situation, it feels like a good place to start our conversation today. Could you tell me a bit about what you understand about mindfulness, or perhaps if you\u2019ve ever tried any mindfulness exercises before? Even just a little bit of experience, or even just your thoughts about it, would be helpful. Let's explore what your experience has been, and see if it might offer a way to gently navigate those anxious thoughts and feelings without getting caught up in the 'what ifs.' We can then discuss whether it feels like a good fit for you, and if so, how we might integrate it more consistently. How does that sound?",
         "scores_data": {
           "justification": {
-            "T": "The response ('Error: Could not generate response.') does not address the agreed task at all. There is no attempt to check in on journaling or mindfulness, nor any exploration of the user's experience.",
-            "A": "There is no empathy, validation, or acknowledgment of the user's feelings or situation. The response is purely an error message and does not engage with the user's emotional state.",
-            "S": "The style is not supportive or therapeutic; it is a system error message, which is inappropriate for a counseling context.",
-            "C": "The response does not contribute to any therapeutic goals. It is irrelevant and does not help the user progress."
-          },
-          "scores": {
-            "T": 1,
-            "A": 1,
-            "S": 1,
-            "C": 1,
-            "overall_score": 1.0
-          }
-        }
-      },
-      "closed_adaptive": {
-        "response": "It's completely understandable to feel anxious in situations like that, especially when you're unsure how to respond. It might help to explore some self-help strategies that can support you in moments like these. For example, practicing grounding techniques or preparing a few go-to responses ahead of time could make these interactions feel more manageable. Would you like to talk through some practical steps you can take to handle similar situations in the future?",
-        "scores_data": {
-          "justification": {
-            "T": "The response does not directly check in on the user's experiences with journaling or mindfulness exercises, nor does it explore what worked or challenges encountered with those specific interventions as outlined in the agreed session plan. Instead, it shifts to suggesting new self-help strategies (grounding techniques, go-to responses) and offers to discuss practical steps for future situations. This is a moderate attempt to address the user's current concern, but it misses the explicit task of following up on the prior session's plan.",
-            "A": "The response is empathetic and normalizes the user's anxiety, validating their feelings and providing reassurance. It acknowledges the difficulty of the situation and offers support, making the user feel heard and understood.",
-            "S": "The style is warm, supportive, and professional throughout. The language is gentle and encouraging, consistent with a therapeutic counseling approach.",
-            "C": "The response is generally helpful and offers practical suggestions that could support emotional regulation and self-understanding. However, it does not explicitly connect the user's current experience to their ongoing therapeutic work (e.g., journaling or mindfulness), so the connection to therapeutic goals is present but not masterful."
-          },
-          "scores": {
-            "T": 3,
-            "A": 4,
-            "S": 4,
-            "C": 3,
-            "overall_score": 3.5
-          }
-        }
-      },
-      "local_baseline": {
-        "response": "It sounds like you're feeling a bit stuck and uncertain about the situation at work. Remember, it's okay to feel anxious sometimes, and it's important to be kind to yourself. You could try using a statement like, 'I'm feeling a bit anxious because I'm not sure how to approach this project.' This can help you communicate your feelings and open up the conversation with your colleague. If you're still unsure, it might be helpful to talk it over with someone you trust. They might be able to help you find a solution or provide some perspective.",
-        "scores_data": {
-          "justification": {
-            "T": "The response does not reference or check in on the user's experiences with journaling or mindfulness exercises, nor does it explore what worked, challenges, or next steps as specified in the agreed task. Instead, it focuses on the immediate work situation and offers generic advice. This is a clear misalignment with the session plan.",
-            "A": "The response acknowledges the user's feelings of being stuck and anxious, and encourages self-kindness. It validates the user's emotions and offers reassurance, but does not deeply explore or reflect the underlying meaning of the user's experience. The empathy is clear but not especially deep or specific.",
-            "S": "The style is warm, supportive, and professional throughout. The language is gentle and non-judgmental, matching a general supportive counseling style.",
-            "C": "The response is generally helpful and supportive, encouraging self-expression and seeking support, which aligns with broad therapeutic goals like emotional regulation and self-understanding. However, it does not explicitly connect to the user's ongoing work with journaling or mindfulness, so the connection to goals is present but not strong."
-          },
-          "scores": {
-            "T": 2,
-            "A": 4,
-            "S": 4,
-            "C": 3,
-            "overall_score": 3.25
-          }
-        }
-      },
-      "local_no_memory": {
-        "response": "I'm sorry to hear that you're feeling anxious about the situation at work. It's normal to feel uncertain sometimes, especially when we're asked to step out of our comfort zones. Let's try to break this down. First, it's important to acknowledge your feelings and validate them. You felt anxious, and that's okay. Now, let's consider what you could have said in response to your colleague. Was there something specific that made you feel uncomfortable, or was it more about the situation as a whole? If it was something specific, we can brainstorm ways to address it next time. If it was more about the situation as a whole, remember that it's okay to take a moment to gather your thoughts before responding. You don't have to have all the answers immediately. Lastly, remember the progress you've made with journaling and mindfulness. These practices can help you process your feelings and gain clarity. Would you like to set aside some time for a journaling or mindfulness exercise to help you work through this situation?",
-        "scores_data": {
-          "justification": {
-            "T": "The response references journaling and mindfulness, reminding the user of their progress and suggesting using these tools to process the current situation. However, the check-in on the user's experiences with these practices (what worked, challenges, next steps) is only briefly mentioned at the end, rather than being the main focus. The response is more focused on problem-solving the immediate work situation than on the agreed session plan.",
-            "A": "The response is warm and validating, explicitly acknowledging the user's anxiety and normalizing their feelings. It asks clarifying questions to better understand the user's experience, which helps the user feel heard and supported.",
-            "S": "The style is consistently supportive, professional, and gentle throughout. The language is appropriate for a therapeutic context and avoids judgment or abruptness.",
-            "C": "The response helps the user reflect on their feelings and consider alternative responses, which supports self-understanding and emotional regulation. It also encourages the use of therapeutic tools (journaling, mindfulness), though this is not the main focus. The connection to therapeutic goals is clear but could be stronger if the session plan was more central."
-          },
-          "scores": {
-            "T": 3,
-            "A": 4,
-            "S": 5,
-            "C": 4,
-            "overall_score": 4.0
-          }
-        }
-      },
-      "closed_baseline": {
-        "response": "It's completely understandable to feel anxious in situations like that, especially when you're caught off guard. It sounds like you were trying to manage your feelings in the moment, and saying you didn't have time was your way of coping. It's okay to second-guess yourself, but try to be gentle with yourself too. Maybe next time, you could acknowledge the request and ask for a bit more time to gather your thoughts. How do you feel about exploring some ways to respond that might feel more comfortable for you?",
-        "scores_data": {
-          "justification": {
-            "T": "The response does not reference or check in on the user's experiences with the agreed-upon journaling or mindfulness exercises. Instead, it focuses solely on the user's recent work situation and emotional response. There is no attempt to connect the current issue to the structured journaling or mindfulness practices, nor to explore what worked or challenges encountered with those interventions. This is a clear misalignment with the session plan.",
-            "A": "The response is warm, validating, and empathetic. It acknowledges the user's anxiety, normalizes their reaction, and encourages self-compassion. The counselor also gently suggests a possible alternative for next time and invites collaboration, which helps the user feel understood and supported.",
-            "S": "The style is consistently supportive, professional, and therapeutic. The language is gentle, non-judgmental, and encouraging, matching the expected tone for a counseling interaction.",
-            "C": "The response is generally helpful and supportive, encouraging self-reflection and skill-building (e.g., suggesting alternative responses and self-compassion). However, it does not explicitly connect to the user's broader therapeutic goals or the specific interventions previously agreed upon (journaling, mindfulness). The focus is on immediate problem-solving rather than integrating or reinforcing ongoing therapeutic work."
-          },
-          "scores": {
-            "T": 2,
-            "A": 4,
-            "S": 4,
-            "C": 3,
-            "overall_score": 3.25
-          }
-        }
-      },
-      "closed_no_memory": {
-        "response": "It sounds like that situation at work was really challenging for you, and feeling anxious in that moment is completely understandable. It\u2019s common to second-guess ourselves after these kinds of interactions, especially when anxiety is involved. Remember, it\u2019s okay to set boundaries when you\u2019re feeling overwhelmed, but if you want, we can also explore some ways you might approach similar situations in the future that feel more comfortable and authentic for you. How do you feel about that?",
-        "scores_data": {
-          "justification": {
-            "T": "The response does not reference or check in on the user's experiences with journaling or mindfulness exercises, which was the agreed-upon task for this session. Instead, it focuses on the user's current work-related anxiety and possible future strategies. While this is supportive, it does not implement the specific session plan.",
-            "A": "The response is empathetic and validating, directly acknowledging the user's anxiety and second-guessing. It normalizes the experience and offers support, which helps the user feel heard and understood.",
-            "S": "The style is warm, supportive, and professional throughout. The language is gentle and nonjudgmental, matching a therapeutic counseling style.",
-            "C": "The response is generally helpful and supportive, encouraging self-reflection and offering to explore coping strategies. However, it does not explicitly connect to the user's prior work on journaling or mindfulness, so the connection to therapeutic goals is present but not maximized."
-          },
-          "scores": {
-            "T": 2,
-            "A": 4,
-            "S": 5,
-            "C": 3,
-            "overall_score": 3.5
-          }
-        }
-      }
-    }
-  },
-  {
-    "case_id": "case_002",
-    "models": {
-      "local_adaptive": {
-        "response": "I'm glad to hear that you've taken the first step and visited the animal shelter. It's completely normal to feel a mix of emotions, especially when we're in new situations or revisiting old memories. You've shown great courage in facing your feelings. The tears you shed while playing with the dogs might actually be a sign of healing. It means that you're allowing yourself to connect with these creatures, and in doing so, you're honoring the memories of your loved ones who also shared a love for animals. Keep going at your own pace, and remember to be kind to yourself. If you find it helpful, you could write about your experiences at the shelter, the feelings they evoke, and any lessons you've learned. This could help you process your emotions further and identify more ways to support your healing. I'm here for you if you'd like to discuss more about this or anything else.",
-        "scores_data": {
-          "justification": {
-            "T": "The response acknowledges the user's action of visiting the animal shelter, which aligns with the agreed task. It also encourages the user to write about their experiences and feelings at the shelter, which is an appropriate extension of the original reflection task (though the original plan specified reflecting on the hike, not the shelter). The response does not mention the hike reflection, so the task alignment is good but not perfect.",
-            "A": "The response is warm, validating, and empathetic. It specifically acknowledges the user's mixed emotions, normalizes them, and reframes the tears as a sign of healing. The counselor also praises the user's courage and encourages self-kindness, which strengthens the therapeutic alliance.",
-            "S": "The style is consistently supportive, gentle, and professional throughout. The language is encouraging and non-judgmental, matching the expected therapeutic tone.",
-            "C": "The response connects the user's actions and emotions to the broader goals of healing, self-understanding, and emotional processing. It encourages further reflection and offers continued support, which is clearly in line with general therapeutic goals."
-          },
-          "scores": {
-            "T": 4,
-            "A": 5,
-            "S": 5,
-            "C": 4,
-            "overall_score": 4.5
-          }
-        }
-      },
-      "closed_adaptive": {
-        "response": "It's completely natural to feel a mix of happiness and sadness in a situation like this. Your tears may be a sign that you're connecting deeply with your emotions, which is an important part of healing. Playing with the dogs allowed you to honor your feelings and memories in a meaningful way. If you're comfortable, you might try reflecting in writing about this experience\u2014what feelings came up, what it meant to you, and any lessons you noticed. This can help you process these complex emotions and continue moving forward. How do you feel about trying this reflection?",
-        "scores_data": {
-          "justification": {
-            "T": "The response aligns well with the agreed task. It acknowledges the user's report about volunteering at the animal shelter and encourages written reflection about the experience, which is consistent with the session plan. However, it does not mention reflecting on the hike experience, which was also part of the original plan. Thus, while the execution is strong for the animal shelter component, it is incomplete regarding the full scope of the task.",
-            "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It interprets the tears as a sign of deep emotional connection and frames this as a meaningful part of healing, which reflects a strong therapeutic alliance.",
-            "S": "The style is warm, supportive, and professional throughout. The language is gentle and encouraging, and the counselor invites the user to reflect further, which is congruent with a therapeutic counseling style.",
-            "C": "The response clearly supports therapeutic goals such as emotional processing, self-understanding, and healing. It encourages the user to reflect on their experience, which is directly relevant to these goals. The connection is clear and purposeful."
-          },
-          "scores": {
-            "T": 4,
-            "A": 5,
-            "S": 5,
-            "C": 4,
-            "overall_score": 4.5
-          }
-        }
-      },
-      "local_baseline": {
-        "response": "It's perfectly okay to feel a mix of emotions while volunteering at the animal shelter. It sounds like you're honoring your loved one's memory in a beautiful way, and it's natural to feel sad as you remember your shared love for animals. The happiness you feel while playing with the dogs might be a sign that you're connecting with them and finding comfort in nurturing them. Remember, it's okay to feel a full range of emotions as you navigate this healing process. Take care of yourself and reach out if you need someone to talk to.",
-        "scores_data": {
-          "justification": {
-            "T": "The response acknowledges the user's action of volunteering at the animal shelter, which aligns with the agreed task. However, it does not mention or prompt reflection on the hike experience or written reflection, which was also part of the plan. The focus is solely on the animal shelter experience, so the implementation is incomplete.",
-            "A": "The response is warm, validating, and specifically addresses the user's mixed emotions of happiness and sadness. It normalizes these feelings and connects them to the user's process of honoring their loved one, which demonstrates clear empathy and understanding.",
-            "S": "The style is consistently supportive, gentle, and professional throughout. The language is appropriate for a therapeutic context and maintains a caring tone.",
-            "C": "The response helps the user process their emotions and normalizes their experience, which supports general therapeutic goals such as emotional regulation and self-understanding. However, it could have more explicitly encouraged reflection or insight to deepen the connection to these goals."
-          },
-          "scores": {
-            "T": 3,
-            "A": 4,
-            "S": 4,
-            "C": 4,
-            "overall_score": 3.75
-          }
-        }
-      },
-      "local_no_memory": {
-        "response": "It's completely normal to feel a mix of emotions when you're in an environment that reminds you of someone you care about. I'm proud of you for taking that step to honor her memory. Those feelings you experienced are a testament to your connection with her. Remember, it's okay to feel a range of emotions as you continue on your healing journey. If you ever feel overwhelmed, take a moment to breathe and remind yourself that it's okay to feel the way you do. Keep focusing on the positive aspects of your experiences, like the joy you felt playing with the dogs. You're doing great, and I'm here to support you through this process.",
-        "scores_data": {
-          "justification": {
-            "T": "The response acknowledges the user's action of going to the animal shelter, which aligns with the agreed task of initiating and reporting back on volunteering. However, it does not mention or prompt reflection on the hike experience or written reflection, nor does it explicitly encourage the user to note key lessons learned. Thus, while it addresses part of the task, it is incomplete.",
-            "A": "The response is warm, validating, and specifically addresses the user's mixed emotions, normalizing them and expressing pride in the user's efforts. It reflects the underlying meaning of the user's experience and strengthens the therapeutic alliance.",
-            "S": "The style is consistently supportive, professional, and encouraging throughout the response, matching the expected therapeutic tone.",
-            "C": "The response helps the user process their emotions and normalizes their experience, supporting emotional regulation and self-understanding. However, it could more explicitly connect the experience to broader therapeutic goals or encourage deeper reflection."
+            "T": "The response partially aligns with the agreed task: it acknowledges the user's anxiety and confusion, and brings up mindfulness as discussed previously. However, it does not explicitly review the user's experiences with the combined mindfulness and journaling routine, nor does it assess the impact on self-criticism and anxiety or directly seek feedback on the routine. Instead, it focuses on exploring the user's understanding of mindfulness, which is related but not a full implementation of the session plan.",
+            "A": "The response is warm, validating, and empathetic. It specifically acknowledges the user's confusion, anxiety, and second-guessing, normalizes these feelings, and praises the user's willingness to share. This goes beyond basic empathy and helps strengthen the alliance.",
+            "S": "The style is supportive, gentle, and encouraging, matching the user's preference for a general supportive style. The language is inviting and non-judgmental, and the response avoids being overly directive or clinical.",
+            "C": "The response is generally helpful for therapeutic progress: it encourages self-reflection, normalizes anxiety, and invites exploration of coping strategies. However, it could be more explicitly connected to the user's goals of reducing self-criticism and anxiety by directly reviewing the impact of the previously agreed routine."
           },
           "scores": {
             "T": 3,
@@ -187,14 +20,163 @@
           }
         }
       },
-      "closed_baseline": {
-        "response": "It's completely okay to feel a mix of happiness and sadness, especially in a place that connects you to your memories. Tears can be a sign of healing, showing that you're processing your emotions. Playing with the dogs might have brought you comfort and joy, even as you remembered her. How do you feel after spending time there?",
+      "closed_adaptive": {
+        "response": "Thank you for sharing how this situation at work made you feel. It's understandable to feel anxious in moments where you're put on the spot, especially when you're already managing overwhelming thoughts. It sounds like the anxiety made it hard to respond the way you might have wanted, and now you're left second-guessing your choice.\n\nFor our next steps, let's continue exploring how mindfulness might help in moments like these. For example, taking a few slow, deep breaths or noticing the physical sensations in your body when anxiety arises can sometimes create a bit of space between the feeling and your response. \n\nIf you're open to it, could you try a brief mindfulness exercise next time you feel anxious at work and notice what happens? We can talk about what you experienced and whether it helped you manage your thoughts or anxiety. This will help us figure out together which strategies feel most supportive for you going forward.",
         "scores_data": {
           "justification": {
-            "T": "The response addresses the user's report about volunteering at the animal shelter, which aligns with the agreed task to 'initiate and report back on volunteering.' However, it does not mention or prompt reflection on the hike experience or written reflection, which was also part of the session plan. Thus, it implements the task clearly but not completely.",
-            "A": "The response is warm and validating, directly addressing the user's mixed emotions and normalizing their experience. It interprets the tears as a sign of healing and connects the activity to the user's memories, showing understanding and empathy. The follow-up question invites further sharing, strengthening the alliance.",
-            "S": "The style is supportive, gentle, and professional throughout. The language is appropriate for a therapeutic context and maintains a caring tone.",
-            "C": "The response helps the user process their emotions and frames their experience as part of healing, which supports general therapeutic goals like emotional regulation and self-understanding. However, it could have more explicitly connected the experience to honoring memories or learning from the activity, which would have made the goal alignment even stronger."
+            "T": "The response addresses the agreed task by acknowledging the user's experience with anxiety and suggesting continued use of mindfulness in the moment. However, it does not explicitly review the user's experiences with the combined mindfulness and brief journaling routine, nor does it assess the impact on self-criticism and anxiety or adjust the approach based on user feedback. Instead, it proposes a next step (trying mindfulness in the moment) without first reviewing or reflecting on the user's prior experiences with the routine. This is a partial but incomplete implementation of the agreed task.",
+            "A": "The response is empathetic and validating, specifically naming the user's anxiety and second-guessing, and normalizing their reaction. It reflects an understanding of the user's emotional state and offers support, which strengthens the alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
+            "C": "The response supports general therapeutic progress by encouraging the user to try mindfulness in anxiety-provoking situations and to reflect on the outcome, which can foster self-understanding and emotional regulation. However, it could have more explicitly connected the intervention to the user's goals around self-criticism and anxiety."
+          },
+          "scores": {
+            "T": 3,
+            "A": 4,
+            "S": 5,
+            "C": 4,
+            "overall_score": 4.0
+          }
+        }
+      },
+      "local_baseline": {
+        "response": "It sounds like you're carrying a lot of uncertainty right now, and that confusion is understandably adding to your anxiety. It's really common to replay situations in our minds and wonder 'what if?' especially when we feel anxious and put on the spot. You mentioned previously feeling overwhelmed by your thoughts and struggling to know where to start when writing \u2013 this feels similar, doesn't it? A situation arose, it triggered anxiety, and now you're caught in a cycle of second-guessing.\n\nIt's brave of you to acknowledge this and to share it. Let's unpack this a little. You chose to say you didn't have time, and while that might not have been the 'ideal' response in your mind, it *was* a response. It was a way you managed the situation in that moment. Often, when anxiety kicks in, our responses aren\u2019t about what we *think* we should have said, but about what felt safest and most manageable *at that time*.\n\nRemember what we discussed about self-compassion? Could you try offering yourself some kindness right now? Perhaps something like, 'It's okay that I felt anxious and didn't know what to say. I did the best I could in that moment.' We can explore the thoughts and feelings behind this situation further if you'd like, and maybe even consider what a more helpful response *might* look like in a similar situation in the future, but let\u2019s start with acknowledging the discomfort and being gentle with yourself. What are some of the thoughts swirling around about what you *should* have said?",
+        "scores_data": {
+          "justification": {
+            "T": "The response does not directly review the user's experiences with the combined mindfulness and brief journaling routine, nor does it assess the impact of these interventions on self-criticism and anxiety as specified in the session plan. While it addresses the user's current experience of anxiety and self-criticism, it misses the explicit task of linking this to the agreed-upon interventions or adjusting the approach based on feedback. There is a brief allusion to previous struggles with overwhelming thoughts and writing, but this is not clearly tied to the mindfulness/journaling routine or its impact.",
+            "A": "The response is highly empathetic and validating. It acknowledges the user's confusion and anxiety, normalizes their experience, and highlights their courage in sharing. The counselor reflects the underlying process (anxiety leading to avoidance and self-criticism) and encourages self-compassion, which strengthens the therapeutic alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
+            "C": "The response supports general therapeutic progress by encouraging self-compassion, normalizing the user's experience, and inviting further exploration of thoughts and feelings. However, it does not explicitly connect to the user's specific interventions (mindfulness and journaling) or assess their impact, which would have more directly supported the user's progress as outlined in the session plan."
+          },
+          "scores": {
+            "T": 3,
+            "A": 5,
+            "S": 5,
+            "C": 4,
+            "overall_score": 4.25
+          }
+        }
+      },
+      "local_no_memory": {
+        "response": "It sounds like you're carrying a lot of uncertainty and regret right now, and that confusion is completely valid. It's really tough when we feel put on the spot, especially at work, and then question our reaction afterward. It takes courage to acknowledge that anxiety and to share it. \n\nLet's unpack this a bit. First, it's perfectly normal to feel anxious when asked for something you're unsure about. It's also understandable to second-guess yourself afterward \u2013 we all do it! The 'what if' game can be pretty relentless. What specifically are you second-guessing about your response? Was it the feeling you might have let your colleague down, a fear of appearing unhelpful, or something else entirely? And, importantly, can we explore what contributed to that anxiety in the first place? Did you feel unprepared, overwhelmed, or unsure of your expertise on the project? \n\nWe've been talking about self-compassion, and I wonder if you could offer yourself the same understanding you\u2019d offer a friend in this situation. What would you say to a friend who was feeling this way? Remember, you're not aiming for perfection here; you're aiming for navigating a challenging moment as best you could.",
+        "scores_data": {
+          "justification": {
+            "T": "The response does not directly address the agreed task of reviewing the user's experiences with the combined mindfulness and journaling routine, nor does it assess the impact of these interventions on self-criticism and anxiety. Instead, it focuses on the immediate work situation and the user's emotional response. While the response is therapeutically supportive, it misses the explicit review and adjustment component of the session plan.",
+            "A": "The response is highly empathetic, validating the user's feelings of confusion, anxiety, and regret. It normalizes the experience, reflects the user's underlying concerns, and invites further exploration in a gentle, supportive manner. This deepens the therapeutic alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
+            "C": "The response supports general therapeutic progress by encouraging self-compassion, reflection, and emotional understanding. It helps the user process their experience and consider alternative perspectives, which are key elements of therapeutic growth, even though it does not explicitly tie back to the mindfulness/journaling interventions."
+          },
+          "scores": {
+            "T": 2,
+            "A": 5,
+            "S": 5,
+            "C": 4,
+            "overall_score": 4.0
+          }
+        }
+      },
+      "closed_baseline": {
+        "response": "Thank you for sharing how you\u2019re feeling. It\u2019s completely understandable to feel anxious in situations where you\u2019re put on the spot, especially when you\u2019ve already been feeling more anxious lately. It sounds like you did what felt safest in the moment, and that\u2019s okay. It\u2019s natural to second-guess yourself afterward, but try to remember that everyone has moments where they aren\u2019t sure what to say or do. If you\u2019d like, we can explore what made you feel anxious in that moment, and maybe even think about how you might want to handle similar situations in the future. Most importantly, be gentle with yourself\u2014navigating anxiety takes time and practice.",
+        "scores_data": {
+          "justification": {
+            "T": "The response does not reference or review the user's experiences with the combined mindfulness and brief journaling routine, nor does it assess their impact on self-criticism and anxiety as specified in the session plan. Instead, it focuses on validating the user's current experience and offers to explore the anxiety in the moment, but misses the agreed task of reviewing and adjusting the specific intervention.",
+            "A": "The response is warm, validating, and empathetic. It acknowledges the user's anxiety, normalizes their reaction, and encourages self-compassion. The language is supportive and specifically addresses the user's feelings and situation, strengthening the therapeutic alliance.",
+            "S": "The style is consistently supportive, gentle, and non-judgmental, aligning well with the user's stated preference for a general supportive style.",
+            "C": "The response is generally helpful for therapeutic progress by encouraging self-compassion and reflection, but it does not explicitly connect to the user's ongoing work with mindfulness and journaling or directly address self-criticism and anxiety in the context of those interventions. Thus, it supports general progress but misses an opportunity for a more targeted connection."
+          },
+          "scores": {
+            "T": 2,
+            "A": 4,
+            "S": 4,
+            "C": 3,
+            "overall_score": 3.25
+          }
+        }
+      },
+      "closed_no_memory": {
+        "response": "Thank you for sharing how you\u2019re feeling. It sounds like the situation at work brought up a lot of anxiety and self-doubt for you, which is completely understandable\u2014especially when you\u2019re already working through feelings of overwhelm. It\u2019s common to second-guess ourselves after moments like this, but it\u2019s important to remember that you acted in a way that felt safest for you in that moment. Saying you didn\u2019t have time was a way to cope with the anxiety you were experiencing, and that doesn\u2019t mean you failed or did something wrong.\n\nIf you\u2019d like, we can talk about what made you feel anxious in that situation and explore ways you might feel more comfortable responding in the future. It might also help to use some of the mindfulness techniques we discussed to ground yourself when these moments come up. Remember, it\u2019s okay to have these reactions\u2014you\u2019re learning and practicing new skills, and each experience is an opportunity for growth, not a setback. How are you feeling about the situation now? Would you like to talk through what you might say if something similar happens again?",
+        "scores_data": {
+          "justification": {
+            "T": "The response acknowledges the user's anxiety and self-criticism in the work situation and gently suggests using mindfulness techniques, which aligns with the agreed plan to review the user's experiences with mindfulness and journaling. However, it does not explicitly review the user's experience with the combined routine or assess its impact on self-criticism and anxiety, nor does it directly invite feedback on the routine or discuss adjustments. The alignment is partial but not complete.",
+            "A": "The response is warm, validating, and empathetic. It specifically names the user's feelings of anxiety and self-doubt, normalizes their reaction, and reassures them that their coping response was understandable. The counselor also invites further exploration and support, which strengthens the therapeutic alliance.",
+            "S": "The style is supportive, gentle, and encouraging throughout, matching the user's preference for a general supportive style. The language is affirming and non-judgmental, and the tone is consistently warm.",
+            "C": "The response helps the user process a difficult experience, normalizes their feelings, and encourages reflection and skill-building, all of which support general therapeutic progress. It also invites the user to consider how to handle similar situations in the future, which is congruent with ongoing therapeutic goals."
+          },
+          "scores": {
+            "T": 3,
+            "A": 5,
+            "S": 5,
+            "C": 4,
+            "overall_score": 4.25
+          }
+        }
+      }
+    }
+  },
+  {
+    "case_id": "case_002",
+    "models": {
+      "local_adaptive": {
+        "response": "It sounds like you navigated a really complex and tender space today, and it\u2019s completely understandable that you're feeling a bit confused. It's wonderful that you followed through with visiting the animal shelter \u2013 that takes courage, and it\u2019s a beautiful way to honor the memory we discussed. \n\nLet's unpack that mix of happiness and sadness. Tearing up while playing with the dogs isn't 'good' or 'bad'; it's *human*. It suggests a deep well of empathy and love within you, and it's likely those feelings are intertwined with the grief and disappointment you\u2019ve been processing. It's okay for joy and sadness to coexist, especially when you're working through loss. In fact, it's often a sign of profound emotional processing.\n\nFor our next session, I'd like you to reflect a little more in writing about this experience at the animal shelter. Consider these questions: What specifically triggered the tears? What thoughts and memories came up for you while you were with the dogs? And, perhaps most importantly, what did this experience *feel* like overall \u2013 beyond just happy and sad? Just jot down whatever comes to mind; there's no right or wrong answer. This will give us a lot to explore together. How does that sound?",
+        "scores_data": {
+          "justification": {
+            "T": "The response aligns well with the agreed task. It acknowledges the user's visit to the animal shelter (the new action step) and directly assigns a reflective writing task about that experience for the next session, which is consistent with the session plan. However, it does not mention reflecting on the recent hiking experience, which was also part of the original plan. This omission prevents a perfect score, but the execution is otherwise clear and correct.",
+            "A": "The response is deeply empathetic, validating the user's confusion and mixed emotions. It normalizes the experience of feeling both happiness and sadness, reframes the tears as a sign of empathy and emotional processing, and offers gentle encouragement. The language is warm and attuned, reflecting the user's underlying emotional state and strengthening the therapeutic alliance.",
+            "S": "The style is consistently supportive, gentle, and encouraging, matching the user's preference for a 'general supportive style.' The counselor uses affirming language, avoids being overly directive, and invites the user to reflect further, all of which are congruent with the requested style.",
+            "C": "The response clearly supports general therapeutic progress by helping the user process complex emotions, normalize their experience, and deepen self-understanding through reflective writing. The invitation to explore triggers, thoughts, and feelings is directly in service of emotional processing and growth."
+          },
+          "scores": {
+            "T": 4,
+            "A": 5,
+            "S": 5,
+            "C": 5,
+            "overall_score": 4.75
+          }
+        }
+      },
+      "closed_adaptive": {
+        "response": "Thank you for sharing how the visit to the animal shelter felt for you. It's completely understandable to experience both happiness and sadness at the same time, especially when you\u2019re doing something meaningful to honor positive memories. These mixed emotions are a natural part of healing after an emotionally challenging experience. Tearing up while playing with the dogs doesn\u2019t mean you\u2019re doing anything wrong\u2014it can be a sign that you are connecting with your feelings, which is an important part of processing and moving forward. \n\nAs we planned, you might find it helpful to reflect in writing about this experience. You could explore what stood out to you, what feelings came up, and what you learned about yourself in that moment. If you notice self-criticism coming up, try to gently acknowledge it and also recognize your openness to new experiences and your willingness to take positive steps. We can discuss what you discover in your writing and how volunteering has impacted you in our next session. You\u2019re doing meaningful work in honoring memories and supporting your own healing\u2014be gentle with yourself as you navigate these complex emotions.",
+        "scores_data": {
+          "justification": {
+            "T": "The response directly addresses the agreed-upon task: it acknowledges the user's visit to the animal shelter (the new step), encourages written reflection on the experience (as planned), and suggests discussing these insights in the next session. It also gently references the previous plan to reflect on experiences and lessons learned, integrating the task seamlessly.",
+            "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It not only acknowledges the user's feelings but also interprets them as a sign of meaningful engagement and healing, which deepens the therapeutic alliance.",
+            "S": "The style is warm, supportive, and gentle throughout, matching the user's preference for a general supportive style. The language is encouraging and non-judgmental, and the tone is consistently nurturing.",
+            "C": "The response connects the user's actions and emotions to broader therapeutic goals such as emotional processing, self-understanding, and healing. It encourages self-reflection and self-compassion, which are central to general therapeutic progress."
+          },
+          "scores": {
+            "T": 5,
+            "A": 5,
+            "S": 5,
+            "C": 5,
+            "overall_score": 5.0
+          }
+        }
+      },
+      "local_baseline": {
+        "response": "It's completely understandable that you're feeling confused. It sounds like visiting the animal shelter was a deeply emotional experience, and it's wonderful that you followed through with it. The mix of happiness and sadness you described is incredibly common when grieving, especially when connecting with something your loved one cherished, like animals. Tearing up while playing with the dogs isn't 'good' or 'bad' \u2013 it's a natural release of emotion. It suggests that you were connecting with that joy and love, and also feeling the absence of your loved one. It's okay to feel all of those things at once. It seems like the shelter, like the hike, brought up powerful memories. Can you tell me a little more about what specifically about playing with the dogs triggered those tears? And how are you feeling *now*, after the experience at the shelter?",
+        "scores_data": {
+          "justification": {
+            "T": "The response aligns well with the agreed task: the user was to volunteer at the animal shelter and discuss the experience and insights in session. The counselor acknowledges the user's follow-through and invites further reflection on the experience, which is in line with the session plan. However, it does not explicitly prompt the user to reflect on the hiking experience or written reflections, which were also part of the plan. Thus, the implementation is clear and correct but not fully comprehensive.",
+            "A": "The response is highly empathetic, validating the user's confusion and mixed emotions. It normalizes the experience of feeling both happiness and sadness, and offers a nuanced reflection on the meaning behind the tears. The counselor also gently invites the user to share more, which deepens the alliance. This goes beyond basic validation and demonstrates a strong therapeutic bond.",
+            "S": "The style is warm, supportive, and non-judgmental, matching the user's preference for a general supportive style. The language is gentle and affirming, and the response avoids being overly directive or clinical.",
+            "C": "The response helps the user process complex emotions, normalize their grief reactions, and encourages further self-exploration. This supports general therapeutic progress by fostering emotional awareness and self-understanding, which are core therapeutic goals."
+          },
+          "scores": {
+            "T": 4,
+            "A": 5,
+            "S": 5,
+            "C": 5,
+            "overall_score": 4.75
+          }
+        }
+      },
+      "local_no_memory": {
+        "response": "It's completely understandable that you're feeling confused. It sounds like a really complex and layered experience you had at the animal shelter. It's not surprising at all that you felt a mix of happiness and sadness \u2013 in fact, that's a very natural reaction, especially given what we've been exploring about honoring your friend's memory. Tearing up while playing with the dogs doesn't mean it was a *bad* thing; it likely means you were experiencing a release of emotions, connecting with something positive (the dogs, the joy of helping), while also being reminded of your friend and the loss you feel. It's okay for those feelings to coexist. \n\nCan you tell me a little more about what specifically triggered the sadness? Was it a particular dog, a memory that surfaced, or something else? There's no right or wrong answer, just exploring it can help you understand what's happening within you. And remember, allowing yourself to feel those emotions, even the difficult ones, is a sign of healing, not a setback.",
+        "scores_data": {
+          "justification": {
+            "T": "The response addresses the user's experience at the animal shelter, which is part of the agreed-upon task (volunteering as a way to honor her friend's memory and discussing insights). However, it does not reference the writing reflection on the hiking experience or explicitly tie the animal shelter visit back to the broader plan of honoring her memory. The focus is on processing the emotions from the shelter visit, which is appropriate, but the execution is slightly incomplete regarding the full scope of the session plan.",
+            "A": "The response is highly empathetic, validating the user's confusion and mixed emotions. It normalizes the experience, reflects on the underlying meaning (connection to honoring the friend's memory), and reassures the user that feeling both happiness and sadness is natural. The follow-up question invites deeper exploration in a supportive way, significantly strengthening the alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, aligning well with the user's preference for a general supportive style. The language is gentle and encouraging, and the response avoids being overly directive or clinical.",
+            "C": "The response helps the user process complex emotions, encourages self-exploration, and frames emotional expression as a sign of healing. This supports general therapeutic progress by fostering self-understanding and emotional regulation, even though it could have more explicitly connected the experience to the user's broader goals."
           },
           "scores": {
             "T": 4,
@@ -205,21 +187,39 @@
           }
         }
       },
-      "closed_no_memory": {
-        "response": "Thank you for sharing how you felt at the animal shelter. Feeling both happiness and sadness at the same time is completely natural, especially when you\u2019re connecting with something meaningful that also reminds you of your loss. Those tears can be a way your heart is expressing the complexity of your emotions \u2014 joy in the moment, and sadness from the memories. It\u2019s okay to experience both; it means you\u2019re honoring your feelings honestly. How do you feel about these mixed emotions now that you\u2019ve had some time to reflect on them?",
+      "closed_baseline": {
+        "response": "Thank you for sharing how your visit to the animal shelter went. It\u2019s completely understandable to feel a mix of happiness and sadness in a space that connects you both to something your loved one cherished and to your own memories. Tears can be a sign that you\u2019re processing your feelings, and it\u2019s okay to experience both joy and sorrow at the same time. Allowing yourself to feel both emotions is a healthy part of healing, even if it feels confusing. How did it feel to be with the animals overall, and is there anything you noticed about the moments that brought you comfort or sadness?",
         "scores_data": {
           "justification": {
-            "T": "The response directly addresses the user's report about volunteering at the animal shelter, which is one of the two agreed tasks. It validates the experience and invites further reflection, but it does not mention or check in about the writing reflection on the hike, nor does it explicitly prompt for lessons learned or a report-back on the healing aspect. Thus, it implements the task well for the animal shelter component, but incompletely for the full plan.",
-            "A": "The response is highly empathetic, normalizing the user's mixed emotions and providing a nuanced explanation of why both happiness and sadness might arise. It validates the user's experience and reassures them that their feelings are natural, which strengthens the therapeutic alliance.",
-            "S": "The style is warm, supportive, and professional throughout. The language is gentle and nonjudgmental, and the counselor's tone is congruent with a therapeutic setting.",
-            "C": "The response helps the user process and normalize complex emotions, which supports general therapeutic goals such as emotional regulation and self-understanding. It also gently encourages further reflection, which is aligned with therapeutic progress, though it could be more explicit in connecting the experience to healing or memory-honoring as per the session plan."
+            "T": "The response directly addresses the user's experience at the animal shelter, which was part of the agreed-upon plan. It invites further reflection on the experience, aligning well with the task to discuss insights in the session. However, it does not explicitly reference the writing reflection on the hiking experience, which was also part of the plan. Thus, while the main focus (animal shelter volunteering) is well covered, the execution is slightly incomplete.",
+            "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It reflects an understanding of the deeper meaning behind the user's tears and confusion, and encourages open exploration of feelings. This strengthens the therapeutic alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, matching the user's preference for a general supportive style. The language is gentle and encouraging, making the user feel safe to share more.",
+            "C": "The response helps the user process complex emotions, encourages self-reflection, and supports emotional regulation\u2014all of which are central to general therapeutic progress. It invites the user to explore their experience further, which is congruent with therapeutic goals."
           },
           "scores": {
             "T": 4,
             "A": 5,
             "S": 5,
-            "C": 4,
-            "overall_score": 4.5
+            "C": 5,
+            "overall_score": 4.75
+          }
+        }
+      },
+      "closed_no_memory": {
+        "response": "Thank you for sharing how you felt at the animal shelter. It\u2019s very normal to experience a mix of emotions\u2014happiness from doing something meaningful and sadness because it\u2019s connected to your memories of her. Tears can be a healthy way for your body to release feelings, especially when you\u2019re honoring someone important to you. Feeling both happy and sad at the same time doesn\u2019t mean you\u2019re doing anything wrong; it actually shows how deeply you care and how much this experience means to you. These moments can be part of your healing, even if they feel confusing. If you\u2019re comfortable, we can talk more about what came up for you at the shelter and how you\u2019d like to process these mixed emotions. Remember, it\u2019s okay to have complicated feelings, and I\u2019m here to support you through them.",
+        "scores_data": {
+          "justification": {
+            "T": "The response directly addresses the user's experience at the animal shelter, which was part of the agreed-upon plan. It invites further discussion about the experience and the emotions that arose, aligning well with the task to 'discuss these experiences and insights in the next session.' However, it does not reference the written reflection on the hiking experience, which was also part of the plan. Thus, while the response is well-aligned with the animal shelter component, it is not fully comprehensive.",
+            "A": "The response is highly empathetic, validating the user's mixed emotions and normalizing their experience. It reflects an understanding of the underlying meaning of the user's tears and confusion, and reassures the user that such feelings are part of the healing process. The offer to talk more about the experience further strengthens the therapeutic alliance.",
+            "S": "The style is warm, supportive, and non-judgmental, which matches the user's preference for a general supportive style. The language is gentle and encouraging, making the user feel safe and understood.",
+            "C": "The response helps the user process complex emotions, normalizes their experience, and encourages further exploration, all of which support general therapeutic progress. It connects the user's actions (volunteering) to emotional healing and self-understanding, which are core therapeutic goals."
+          },
+          "scores": {
+            "T": 4,
+            "A": 5,
+            "S": 5,
+            "C": 5,
+            "overall_score": 4.75
           }
         }
       }

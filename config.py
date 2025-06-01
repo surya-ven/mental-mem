@@ -15,10 +15,10 @@ REFLECTOR_MODEL = "openai/gpt-4.1"
 JUDGE_MODEL = "openai/gpt-4.1"
 
 # "Local-runnable" open model (called via OpenRouter)
-LOCAL_MODEL_NAME = "mistralai/mistral-7b-instruct"
+LOCAL_MODEL_NAME = "google/gemma-3-12b-it"
 
 # Closed-source model being tested in the evaluation cohort
-CLOSED_MODEL_NAME = "openai/gpt-4.1-mini"
+CLOSED_MODEL_NAME = "openai/gpt-4.1"
 
 # --- NEW: Mem0 Configuration to use OpenRouter for its internal LLM & Embedder ---
 # This tells mem0's default "openai" provider for LLM and Embedder to use OpenRouter.
@@ -64,3 +64,5 @@ MEM0_CONFIG = {
     # Optional: history_db_path if you don't want the default ./mem0_history.db
     # "history_db_path": "./mem0_data/history.db"
 }
+
+LOG_DIR = os.path.join("output", "run_logs")

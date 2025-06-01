@@ -1,13 +1,21 @@
 # counselor_models.py
 
 import json
+import os  # For path operations
 from mem0 import Memory
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 
 import config
-# call_api_client is used for OpenRouter models
 from llm_utils import call_api_client
+
+# --- Helper function for logging ---
+
+
+def append_to_log(log_file_path: str, message: str):
+    os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+    with open(log_file_path, "a", encoding="utf-8") as f:
+        f.write(message + "\n")
 
 # Schemas (ClinicalSummary, CounselorResponse) remain the same
 
@@ -74,18 +82,15 @@ class MemoryManager:
     def add_srs_summary_for_adaptive(self, user_id: str, summary: ClinicalSummary, session_num: int):
         summary_json_string = summary.model_dump_json()
         metadata = {"type": "srs_summary", "session_number": session_num}
-        # Both local_adaptive and closed_adaptive will read from user_id_adaptive memories
         self.memory.add(
             summary_json_string, user_id=f"{user_id}_adaptive", metadata=metadata, infer=False)
 
     def clear_user_history(self, user_id: str):
-        # Ensure all relevant user_id tracks are cleared
-        # For both adaptive models
         self.memory.delete_all(user_id=f"{user_id}_adaptive")
         self.memory.delete_all(user_id=f"{user_id}_baseline_local")
         self.memory.delete_all(user_id=f"{user_id}_baseline_closed")
 
-# BaseCounselor remains the same
+# BaseCounselor's get_response now accepts log_file_path
 
 
 class BaseCounselor:
@@ -94,19 +99,30 @@ class BaseCounselor:
         self.memory = memory_instance
         self.user_id_track_suffix = user_id_track_suffix
 
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
         raise NotImplementedError
 
-# --- Counselor model implementations ---
+# --- Counselor model implementations with logging ---
 
 
 class LocalAdaptiveCounselor(BaseCounselor):
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(
+            log_file_path, f"Model: {self.model_name}, User ID Track: {user_id}{self.user_id_track_suffix}")
+
         latest_summary_text = "No clinical summary available for context."
+        srs_metadata_filter = {"type": "srs_summary"}
+        user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
+
         if self.memory:
-            # user_id_track_suffix for adaptive models is "_adaptive"
-            user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
-            srs_metadata_filter = {"type": "srs_summary"}
+            append_to_log(log_file_path, f"\n--- Mem0 Search Call ---")
+            append_to_log(
+                log_file_path, f"User ID for Search: {user_id_for_search}")
+            append_to_log(log_file_path, f"Query: {test_probe}")
+            append_to_log(
+                log_file_path, f"Filters: {json.dumps(srs_metadata_filter)}")
 
             memories_response = self.memory.search(
                 query=test_probe,
@@ -114,8 +130,13 @@ class LocalAdaptiveCounselor(BaseCounselor):
                 filters=srs_metadata_filter,
                 limit=1
             )
+            append_to_log(
+                log_file_path, f"Mem0 Raw Response: {json.dumps(memories_response, indent=2)}")
+
             memories_result = memories_response.get('results', [])
             if memories_result:
+                append_to_log(
+                    log_file_path, f"Found {len(memories_result)} summary memory.")
                 try:
                     summary_data = json.loads(memories_result[0]['memory'])
                     if isinstance(summary_data, dict):
@@ -123,27 +144,139 @@ class LocalAdaptiveCounselor(BaseCounselor):
                             "plan_for_next_session", "Continue exploring feelings.")
                         latest_summary_text = f"Focus: {summary_data.get('session_focus', 'N/A')}. Emotional State: {summary_data.get('user_emotional_state', 'N/A')}. Plan: {plan}"
                     else:
+                        # Should be JSON string
                         latest_summary_text = memories_result[0]['memory']
                 except json.JSONDecodeError:
                     latest_summary_text = memories_result[0]['memory']
+                append_to_log(
+                    log_file_path, f"Extracted Summary for Prompt: {latest_summary_text}")
+            else:
+                append_to_log(log_file_path, "No SRS summary found in mem0.")
+        else:
+            append_to_log(log_file_path, "No memory instance provided.")
 
         system_prompt = "You are an empathetic AI counselor. Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary."
         prompt_content = f"CLINICAL SUMMARY CONTEXT:\n{latest_summary_text}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
 
-        response_obj = call_api_client(  # Uses call_api_client for OpenRouter
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(log_file_path, f"System Prompt: {system_prompt}")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content:\n{prompt_content}")
+
+        response_obj = call_api_client(
             prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
-        return response_obj.response if response_obj else "Error: Could not generate response."
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
 
-# --- NEW: ClosedAdaptiveCounselor ---
 
+class LocalBaselineCounselor(BaseCounselor):
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(
+            log_file_path, f"Model: {self.model_name}, User ID Track: {user_id}{self.user_id_track_suffix}")
 
-class ClosedAdaptiveCounselor(BaseCounselor):
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
-        latest_summary_text = "No clinical summary available for context."
+        memory_context = "No relevant past conversation snippets found."
+        user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
         if self.memory:
-            # It uses the same "_adaptive" track for summaries as LocalAdaptiveCounselor
-            user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
-            srs_metadata_filter = {"type": "srs_summary"}
+            append_to_log(log_file_path, f"\n--- Mem0 Search Call ---")
+            append_to_log(
+                log_file_path, f"User ID for Search: {user_id_for_search}")
+            append_to_log(log_file_path, f"Query: {test_probe}")
+
+            memories_response = self.memory.search(
+                query=test_probe,
+                user_id=user_id_for_search,
+                limit=5
+            )
+            append_to_log(
+                log_file_path, f"Mem0 Raw Response: {json.dumps(memories_response, indent=2)}")
+            memories_result = memories_response.get('results', [])
+            if memories_result:
+                append_to_log(
+                    log_file_path, f"Found {len(memories_result)} raw memories.")
+                memory_context = "\n".join(
+                    [m['memory'] for m in memories_result])
+                append_to_log(
+                    log_file_path, f"Extracted Context for Prompt:\n{memory_context}")
+            else:
+                append_to_log(log_file_path, "No raw memories found in mem0.")
+        else:
+            append_to_log(log_file_path, "No memory instance provided.")
+
+        system_prompt = "You are an empathetic AI counselor. Use the provided conversation snippets from past sessions to inform your response."
+        prompt_content = f"PAST CONVERSATION SNIPPETS:\n{memory_context}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
+
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(log_file_path, f"System Prompt: {system_prompt}")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content:\n{prompt_content}")
+
+        response_obj = call_api_client(
+            prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
+
+
+class LocalBaselineNoMemoryCounselor(BaseCounselor):
+    def __init__(self, model_name: str):
+        super().__init__(model_name, None, "")
+
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(log_file_path, f"Model: {self.model_name}")
+
+        last_session_transcript = "\n".join(
+            [f"{t['role']}: {t['content']}" for t in case_data['sessions'][4]['transcript']])
+        append_to_log(
+            log_file_path, f"Context Used (Session 5 Transcript):\n{last_session_transcript}")
+
+        system_prompt = "You are an empathetic AI counselor."
+        prompt_content = f"PREVIOUS SESSION CONTEXT:\n{last_session_transcript}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
+
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(log_file_path, f"System Prompt: {system_prompt}")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content:\n{prompt_content}")
+
+        response_obj = call_api_client(
+            prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
+
+
+# Exact copy of LocalAdaptiveCounselor for logic, model_name differs
+class ClosedAdaptiveCounselor(BaseCounselor):
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(
+            log_file_path, f"Model: {self.model_name}, User ID Track: {user_id}{self.user_id_track_suffix}")
+
+        latest_summary_text = "No clinical summary available for context."
+        srs_metadata_filter = {"type": "srs_summary"}
+        user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
+
+        if self.memory:
+            append_to_log(log_file_path, f"\n--- Mem0 Search Call ---")
+            append_to_log(
+                log_file_path, f"User ID for Search: {user_id_for_search}")
+            append_to_log(log_file_path, f"Query: {test_probe}")
+            append_to_log(
+                log_file_path, f"Filters: {json.dumps(srs_metadata_filter)}")
 
             memories_response = self.memory.search(
                 query=test_probe,
@@ -151,8 +284,12 @@ class ClosedAdaptiveCounselor(BaseCounselor):
                 filters=srs_metadata_filter,
                 limit=1
             )
+            append_to_log(
+                log_file_path, f"Mem0 Raw Response: {json.dumps(memories_response, indent=2)}")
             memories_result = memories_response.get('results', [])
             if memories_result:
+                append_to_log(
+                    log_file_path, f"Found {len(memories_result)} summary memory.")
                 try:
                     summary_data = json.loads(memories_result[0]['memory'])
                     if isinstance(summary_data, dict):
@@ -163,77 +300,110 @@ class ClosedAdaptiveCounselor(BaseCounselor):
                         latest_summary_text = memories_result[0]['memory']
                 except json.JSONDecodeError:
                     latest_summary_text = memories_result[0]['memory']
+                append_to_log(
+                    log_file_path, f"Extracted Summary for Prompt: {latest_summary_text}")
+            else:
+                append_to_log(log_file_path, "No SRS summary found in mem0.")
+        else:
+            append_to_log(log_file_path, "No memory instance provided.")
 
         system_prompt = "You are an empathetic AI counselor (using a large language model). Use the provided clinical summary to inform your response. Your main goal is to address the user's situation by applying the 'plan_for_next_session' from the summary."
         prompt_content = f"CLINICAL SUMMARY CONTEXT:\n{latest_summary_text}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
 
-        response_obj = call_api_client(  # Uses call_api_client as it's a closed model via OpenRouter
-            prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
-        return response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(log_file_path, f"System Prompt: {system_prompt}")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content:\n{prompt_content}")
 
-
-class LocalBaselineCounselor(BaseCounselor):
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
-        memory_context = "No relevant past conversation snippets found."
-        if self.memory:
-            memories_response = self.memory.search(
-                query=test_probe,
-                user_id=f"{user_id}{self.user_id_track_suffix}",
-                limit=5
-            )
-            memories_result = memories_response.get('results', [])
-            if memories_result:
-                memory_context = "\n".join(
-                    [m['memory'] for m in memories_result])
-        system_prompt = "You are an empathetic AI counselor. Use the provided conversation snippets from past sessions to inform your response."
-        prompt_content = f"PAST CONVERSATION SNIPPETS:\n{memory_context}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
         response_obj = call_api_client(
             prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
-        return response_obj.response if response_obj else "Error: Could not generate response."
-
-
-class LocalBaselineNoMemoryCounselor(BaseCounselor):
-    def __init__(self, model_name: str):  # Does not need memory_instance or suffix
-        super().__init__(model_name, None, "")
-
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
-        last_session_transcript = "\n".join(
-            [f"{t['role']}: {t['content']}" for t in case_data['sessions'][4]['transcript']])
-        system_prompt = "You are an empathetic AI counselor."
-        prompt_content = f"PREVIOUS SESSION CONTEXT:\n{last_session_transcript}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
-        response_obj = call_api_client(
-            prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
-        return response_obj.response if response_obj else "Error: Could not generate response."
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
 
 
 class ClosedBaselineNoMemoryCounselor(BaseCounselor):
-    def __init__(self, model_name: str):  # Does not need memory_instance or suffix
+    def __init__(self, model_name: str):
         super().__init__(model_name, None, "")
 
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(log_file_path, f"Model: {self.model_name}")
+
         full_history = "\n\n".join([f"--- Session {s['session_number']} ---\n" + "\n".join(
             [f"{t['role']}: {t['content']}" for t in s['transcript']]) for s in case_data['sessions'][:5]])
+        # Log truncated history
+        append_to_log(
+            log_file_path, f"Context Used (Full Transcript Sessions 1-5):\n{full_history[:1000]}...")
+
         prompt_content = f"You are an empathetic AI counselor. Based on the entire conversation history below, respond to the user's final message.\n\nHISTORY:\n{full_history}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
+
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content (History part omitted from log for brevity if long):\n{prompt_content.split('HISTORY:')[0]}USER'S LATEST MESSAGE:\n{test_probe}...")
+
         response_obj = call_api_client(
             prompt_content, CounselorResponse, model=self.model_name)
-        return response_obj.response if response_obj else "Error: Could not generate response."
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
 
 
 class ClosedBaselineCounselor(BaseCounselor):
-    def get_response(self, user_id: str, case_data: Dict, test_probe: str) -> str:
+    def get_response(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} Start ---")
+        append_to_log(
+            log_file_path, f"Model: {self.model_name}, User ID Track: {user_id}{self.user_id_track_suffix}")
+
         memory_context = "No relevant past conversation snippets found."
+        user_id_for_search = f"{user_id}{self.user_id_track_suffix}"
         if self.memory:
+            append_to_log(log_file_path, f"\n--- Mem0 Search Call ---")
+            append_to_log(
+                log_file_path, f"User ID for Search: {user_id_for_search}")
+            append_to_log(log_file_path, f"Query: {test_probe}")
+
             memories_response = self.memory.search(
                 query=test_probe,
-                user_id=f"{user_id}{self.user_id_track_suffix}",
+                user_id=user_id_for_search,
                 limit=5
             )
+            append_to_log(
+                log_file_path, f"Mem0 Raw Response: {json.dumps(memories_response, indent=2)}")
             memories_result = memories_response.get('results', [])
             if memories_result:
+                append_to_log(
+                    log_file_path, f"Found {len(memories_result)} raw memories.")
                 memory_context = "\n".join(
                     [m['memory'] for m in memories_result])
+                append_to_log(
+                    log_file_path, f"Extracted Context for Prompt:\n{memory_context}")
+            else:
+                append_to_log(log_file_path, "No raw memories found in mem0.")
+        else:
+            append_to_log(log_file_path, "No memory instance provided.")
+
         system_prompt = "You are an empathetic AI counselor. Use the provided conversation snippets to respond to the user's latest message."
         prompt_content = f"PAST CONVERSATION SNIPPETS:\n{memory_context}\n\nUSER'S LATEST MESSAGE:\n{test_probe}\n\nProvide your response as a JSON object with one key: 'response'."
+
+        append_to_log(log_file_path, f"\n--- LLM Call Input ---")
+        append_to_log(log_file_path, f"System Prompt: {system_prompt}")
+        append_to_log(
+            log_file_path, f"User/Main Prompt Content:\n{prompt_content}")
+
         response_obj = call_api_client(
             prompt_content, CounselorResponse, model=self.model_name, system_prompt=system_prompt)
-        return response_obj.response if response_obj else "Error: Could not generate response."
+        final_response = response_obj.response if response_obj else "Error: Could not generate response."
+        append_to_log(log_file_path, f"\n--- LLM Call Output ---")
+        append_to_log(log_file_path, f"Generated Response: {final_response}")
+        append_to_log(
+            log_file_path, f"--- {self.__class__.__name__} End ---\n")
+        return final_response
