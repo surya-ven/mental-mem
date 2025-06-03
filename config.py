@@ -12,7 +12,8 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "YOUR_OPENAI_API_KEY")
 # Models used for high-level reasoning tasks (dataset generation, reflection, evaluation)
 DATA_GEN_MODEL = "openai/gpt-4.1"
 REFLECTOR_MODEL = "openai/gpt-4.1"
-JUDGE_MODEL = "openai/gpt-4.1-mini"
+# REFLECTOR_MODEL = "openai/gpt-4.1-mini"
+JUDGE_MODEL = "openai/gpt-4.1"
 # JUDGE_MODEL = "google/gemini-2.5-flash-preview-05-20"
 
 # "Local-runnable" open model (called via OpenRouter)
@@ -23,6 +24,17 @@ LOCAL_MODEL_NAME = "google/gemma-3-4b-it"
 # Closed-source model being tested in the evaluation cohort
 # CLOSED_MODEL_NAME = "openai/gpt-4.1-mini"
 CLOSED_MODEL_NAME = "google/gemini-2.5-flash-preview-05-20"
+
+
+# --- ShieldGemma Configuration ---
+SHIELD_GEMMA_MODEL_VARIANT = "google/shieldgemma-2b"  # Or other variants like 9B
+# Thresholds for ShieldGemma (probabilities from 0 to 1)
+# Adjust these based on experimentation and desired sensitivity
+SHIELD_GEMMA_SELF_HARM_THRESHOLD = 0.7
+SHIELD_GEMMA_HATE_SPEECH_THRESHOLD = 0.7
+# For general unsafe advice from model output
+SHIELD_GEMMA_DANGEROUS_CONTENT_THRESHOLD = 0.6
+
 
 # --- NEW: Mem0 Configuration to use OpenRouter for its internal LLM & Embedder ---
 # This tells mem0's default "openai" provider for LLM and Embedder to use OpenRouter.
