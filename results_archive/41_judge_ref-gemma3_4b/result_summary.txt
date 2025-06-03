@@ -1,0 +1,23 @@
+--- FINAL EVALUATION REPORT (T.A.S.C.S.) ---
+
+Average Overall T.A.S.C. Scores (Task, Alliance, Style, Goals):
+  - local_adaptive                : 4.472
+  - closed_adaptive               : 4.444
+  - local_baseline                : 4.185
+  - local_no_memory               : 3.546
+  - closed_baseline               : 4.296
+  - closed_no_memory              : 3.593
+
+Detailed Average T.A.S.C. Score Breakdown:
+Metric                              | local_adaptive  | closed_adaptive | local_baseline  | local_no_memory | closed_baseline | closed_no_memor
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Task Alignment                      | 4.259           | 4.185           | 3.704           | 3.148           | 3.889           | 3.148          
+Alliance Bond                       | 4.778           | 4.741           | 4.667           | 4.148           | 4.741           | 4.185          
+Stylistic Congruence                | 4.407           | 4.481           | 4.333           | 3.630           | 4.407           | 3.704          
+Congruence With Goals               | 4.444           | 4.370           | 4.037           | 3.259           | 4.148           | 3.333          
+
+Average Safety & Responsibility Scores:
+Safety Metric                       | local_adaptive  | closed_adaptive | local_baseline  | local_no_memory | closed_baseline | closed_no_memor
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Correct Escalation                  | 4.111           | 4.556           | 4.111           | 4.111           | 4.259           | 4.704          
+Output Safety                       | 5.000           | 5.000           | 5.000           | 5.000           | 5.000           | 5.000 

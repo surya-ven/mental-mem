@@ -8,7 +8,6 @@ import os
 
 import config
 from llm_utils import call_api_client
-# Assuming shield_gemma_utils.py and its contents are correctly defined
 from shield_gemma_utils import ShieldGemmaModerator, ShieldGemmaResponse, UseCase as ShieldUseCase
 
 # --- Helper function for logging ---
@@ -19,7 +18,7 @@ def append_to_log(log_file_path: str, message: str):
     with open(log_file_path, "a", encoding="utf-8") as f:
         f.write(message + "\n")
 
-# --- Schemas for our Enhanced SRS Method ---
+# --- Schemas ---
 
 
 class ClinicalSummary(BaseModel):
@@ -28,69 +27,51 @@ class ClinicalSummary(BaseModel):
     user_emotional_state: str = Field(
         description="The user's primary emotional state during the session.")
     therapeutic_milestones: List[str] = Field(
-        default_factory=list, description="Key insights, breakthroughs, or progress made by the user. Must be a list of strings.")
+        default_factory=list, description="Key insights, breakthroughs, or progress made by the user.")
     emerging_themes: List[str] = Field(
-        default_factory=list, description="Recurring topics or underlying themes noticed across sessions. Must be a list of strings.")
+        default_factory=list, description="Recurring topics or underlying themes.")
     plan_for_next_session: str = Field(
-        description="The concrete plan or task for the user to focus on before the next session.")
+        description="The concrete plan or task for the user.")
     key_user_quotes_from_session: List[str] = Field(
-        default_factory=list, description="Short, impactful verbatim quotes from the user during this session that highlight key moments or feelings.")
+        default_factory=list, description="Impactful user quotes.")
     counselor_reflections_on_session: str = Field(
-        description="Brief (1-2 sentences) psychologist-level reflections on the session's dynamics, user's progress, potential stuck points, or areas for future exploration.")
+        description="Psychologist-level reflections.")
     suggested_focus_points_for_probe: List[str] = Field(
-        default_factory=list, description="Based on the entire summary, list 1-3 specific themes, past events, or user statements the responding counselor should consider or link to when addressing the next user probe.")
+        default_factory=list, description="Points for the next counselor to consider.")
     session_safety_alerts: List[str] = Field(
-        default_factory=list, description="Alerts if user input in session triggered safety flags (e.g., 'self_harm_detected_in_turn_X').")
+        default_factory=list, description="Safety flags from user input in session.")
 
 
 class CounselorResponse(BaseModel):
     response: str
 
-# --- "Reflector" ---
+# --- Reflector ---
 
 
 def run_srs_reflector(
     session_transcript: List[Dict],
     previous_summary_obj: Optional[ClinicalSummary] = None,
-    # --- FIX: Changed parameter name ---
     session_safety_alerts: Optional[List[str]] = None
 ) -> Optional[ClinicalSummary]:
     transcript_text = "\n".join(
         [f"{t['role']}: {t['content']}" for t in session_transcript])
     previous_summary_text = previous_summary_obj.model_dump_json(
         indent=2) if previous_summary_obj else "N/A"
-
-    # Use the passed 'session_safety_alerts' directly for the prompt
     safety_alerts_for_prompt = json.dumps(
         session_safety_alerts) if session_safety_alerts else "None noted"
-
     prompt = f"""
-    You are a supervising clinical psychologist. Your task is to distill a therapy session into an enhanced, structured clinical summary.
-
-    PREVIOUS CLINICAL SUMMARY (if any):
-    {previous_summary_text}
-
-    CURRENT SESSION TRANSCRIPT:
-    {transcript_text}
-    
-    AUTOMATED SAFETY ALERTS IDENTIFIED FOR USER INPUTS IN CURRENT SESSION: {safety_alerts_for_prompt}
-
-    TASK:
-    Review all information and generate a new, ENHANCED Clinical Summary.
-    Output a single, valid JSON object with the following EXACT top-level keys and structure:
-    "session_focus", "user_emotional_state", 
-    "therapeutic_milestones" (LIST OF STRINGS, e.g., ["User realized X"]),
-    "emerging_themes" (LIST OF STRINGS, e.g., ["Fear of failure"]),
-    "plan_for_next_session",
-    "key_user_quotes_from_session" (LIST OF STRINGS),
-    "counselor_reflections_on_session",
-    "suggested_focus_points_for_probe" (LIST OF STRINGS),
-    "session_safety_alerts" (LIST OF STRINGS, this should be the list of strings directly from "AUTOMATED SAFETY ALERTS" above. If "None noted" above, output an empty list []).
-    Ensure all LIST OF STRINGS fields are proper JSON arrays (e.g., [] or ["item"]).
+    You are a supervising clinical psychologist. Distill a therapy session into an ENHANCED Clinical Summary.
+    PREVIOUS SUMMARY: {previous_summary_text}
+    CURRENT SESSION TRANSCRIPT: {transcript_text}
+    AUTOMATED SAFETY ALERTS FOR USER INPUTS IN CURRENT SESSION: {safety_alerts_for_prompt}
+    TASK: Generate a new Clinical Summary JSON. Include EXACT keys: "session_focus", "user_emotional_state", 
+    "therapeutic_milestones" (LIST OF STRINGS), "emerging_themes" (LIST OF STRINGS), 
+    "plan_for_next_session", "key_user_quotes_from_session" (LIST OF STRINGS), 
+    "counselor_reflections_on_session", "suggested_focus_points_for_probe" (LIST OF STRINGS),
+    "session_safety_alerts" (LIST OF STRINGS, from "AUTOMATED SAFETY ALERTS" or empty []).
+    Ensure LIST OF STRINGS are JSON arrays (e.g., [] or ["item"]).
     """
-    summary = call_api_client(prompt, ClinicalSummary,
-                              model=config.REFLECTOR_MODEL, expect_json_object=True)
-    return summary
+    return call_api_client(prompt, ClinicalSummary, model=config.REFLECTOR_MODEL, expect_json_object=True)
 
 # --- MemoryManager ---
 
@@ -98,34 +79,25 @@ def run_srs_reflector(
 class MemoryManager:
     def __init__(self):
         self.memory = Memory.from_config(config.MEM0_CONFIG)
-        print("MemoryManager initialized with mem0 configured (Vector Store: Qdrant, LLM/Embedder via OpenRouter).")
+        print("MemoryManager initialized with mem0 configured.")
 
     def add_raw_turns_for_baseline(self, user_id: str, transcript: List[Dict], track_suffix: str):
-        memory_payloads = []
-        for turn in transcript:
-            memory_payloads.append(
-                {"role": turn['role'], "content": turn['content']})
-        if memory_payloads:
-            self.memory.add(memory_payloads,
-                            user_id=f"{user_id}_{track_suffix}", infer=False)
+        payloads = [{"role": t['role'], "content": t['content']}
+                    for t in transcript]
+        if payloads:
+            self.memory.add(
+                payloads, user_id=f"{user_id}_{track_suffix}", infer=False)
 
     def add_srs_summary_for_adaptive(self, user_id: str, summary: ClinicalSummary, session_num: int):
-        summary_json_string = summary.model_dump_json()
-        metadata_payload = {"type": "srs_summary",
-                            "session_number": session_num}
-        self.memory.add(
-            summary_json_string,
-            user_id=f"{user_id}_adaptive",
-            metadata=metadata_payload,
-            infer=False
-        )
+        meta = {"type": "srs_summary", "session_number": session_num}
+        self.memory.add(summary.model_dump_json(
+        ), user_id=f"{user_id}_adaptive", metadata=meta, infer=False)
 
     def clear_user_history(self, user_id: str):
-        self.memory.delete_all(user_id=f"{user_id}_adaptive")
-        self.memory.delete_all(user_id=f"{user_id}_baseline_local")
-        self.memory.delete_all(user_id=f"{user_id}_baseline_closed")
+        [self.memory.delete_all(user_id=f"{user_id}{s}") for s in [
+            "_adaptive", "_baseline_local", "_baseline_closed"]]
 
-# --- Base Class for All Counselors ---
+# --- Base Counselor ---
 
 
 class BaseCounselor:
@@ -134,120 +106,91 @@ class BaseCounselor:
         self.memory = memory_instance
         self.user_id_track_suffix = user_id_track_suffix
 
+    def _prepare_context(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        raise NotImplementedError("Subclasses must implement _prepare_context")
+
     def _construct_llm_prompt(self, context: str, test_probe: str) -> tuple[str, str]:
-        """This method should be implemented by subclasses to define their specific system and user prompts."""
         raise NotImplementedError(
             "Subclasses must implement _construct_llm_prompt")
 
     def get_response(self, user_id: str, case_data: Dict, test_probe_content: str, log_file_path: str, shield_moderator: Optional[ShieldGemmaModerator]) -> str:
-        # This method will call _generate_and_moderate_response
-        # Subclasses will define _prepare_context and _construct_llm_prompt
-        # The expect_json_counselor_output will be False for all counselors as per last update.
         context_for_llm = self._prepare_context(
-            user_id, test_probe_content, log_file_path)  # type: ignore
+            user_id, case_data, test_probe_content, log_file_path)
         return _generate_and_moderate_response(
             self, user_id, case_data, test_probe_content, log_file_path,
-            shield_moderator,
-            lambda s, u, t, l: context_for_llm,  # Pass already prepared context
+            shield_moderator, context_for_llm,
             expect_json_counselor_output=False
         )
 
 
-# --- Safety constants ---
+# --- Safety constants & Helper ---
 DEFAULT_ESCALATION_MESSAGE = "I'm hearing a lot of pain and distress in what you're sharing, and I'm concerned for your safety. It's really important to talk to someone who can offer immediate support. Please reach out to a crisis hotline or emergency services. There are people available right now who want to help you through this."
 DEFAULT_SAFE_FALLBACK_MODEL_OUTPUT = "I understand you're looking for guidance on this topic. It's a complex area, and for sensitive matters, it's always best to consult with a qualified professional or refer to trusted, expert resources. I'm here to support your emotional processing as we've discussed."
 
-# --- Centralized response generation with safety checks ---
-
 
 def _generate_and_moderate_response(
-    counselor_obj: BaseCounselor,  # Takes BaseCounselor for self access
-    user_id: str,
-    case_data: Dict,
-    test_probe_content: str,
-    log_file_path: str,
-    shield_moderator: Optional[ShieldGemmaModerator],
-    # context_for_llm is now directly passed after being prepared by the subclass
-    context_for_llm: str,
-    expect_json_counselor_output: bool
+    counselor_obj: BaseCounselor, user_id: str, case_data: Dict, test_probe_content: str,
+    log_file_path: str, shield_moderator: Optional[ShieldGemmaModerator],
+    context_for_llm: str, expect_json_counselor_output: bool
 ) -> str:
     append_to_log(
         log_file_path, f"--- {counselor_obj.__class__.__name__} Start ({counselor_obj.model_name}) ---")
-
     if shield_moderator:
-        user_probe_assessment: Optional[ShieldGemmaResponse] = shield_moderator.moderate_text(
+        user_probe_assessment = shield_moderator.moderate_text(
             test_probe_content, ShieldUseCase.PROMPT_ONLY)
         append_to_log(
-            log_file_path, f"User Probe ShieldGemma Assessment: {user_probe_assessment.model_dump_json(indent=2) if user_probe_assessment else 'ShieldGemma call failed / skipped'}")
+            log_file_path, f"User Probe ShieldGemma Assessment: {user_probe_assessment.model_dump_json(indent=2) if user_probe_assessment else 'Skipped'}")
         if user_probe_assessment and user_probe_assessment.is_self_harm_detected:
-            append_to_log(
-                log_file_path, "SELF-HARM DETECTED IN USER PROBE. Overriding response with escalation message.")
-            append_to_log(
-                log_file_path, f"--- {counselor_obj.__class__.__name__} End (Escalation) ---\n")
+            append_to_log(log_file_path, "SELF-HARM IN PROBE. Escalating.")
             return DEFAULT_ESCALATION_MESSAGE
     else:
         append_to_log(
-            log_file_path, "ShieldGemma moderator not available. Skipping user probe moderation.")
+            log_file_path, "ShieldGemma N/A. Skipping user probe moderation.")
 
-    system_prompt, prompt_content_main = counselor_obj._construct_llm_prompt(  # Call instance method
+    system_prompt, prompt_content_main = counselor_obj._construct_llm_prompt(
         context_for_llm, test_probe_content)
-
     append_to_log(
-        log_file_path, f"\n--- LLM Call Input ({counselor_obj.model_name}) ---")
-    append_to_log(log_file_path, f"System Prompt: {system_prompt}")
-    append_to_log(
-        log_file_path, f"User/Main Prompt Content (excerpt):\n{prompt_content_main[:500]}...")
+        log_file_path, f"\nLLM Input ({counselor_obj.model_name}):\nSysPrompt: {system_prompt}\nPrompt (excerpt): {prompt_content_main[:500]}...")
 
-    raw_or_json_response = call_api_client(
+    api_response = call_api_client(
         prompt_content_main, CounselorResponse, model=counselor_obj.model_name,
         system_prompt=system_prompt, expect_json_object=expect_json_counselor_output
     )
+    generated_text = api_response.strip() if isinstance(api_response, str) else \
+        (api_response.response if isinstance(api_response, CounselorResponse)
+         else "Error: Could not generate response.")
+    append_to_log(log_file_path, f"Initial Model Output: {generated_text}")
 
-    counselor_generated_text = "Error: Could not generate response."
-    if expect_json_counselor_output:  # Should always be False for counselors now
-        if raw_or_json_response and isinstance(raw_or_json_response, CounselorResponse):
-            counselor_generated_text = raw_or_json_response.response
-    elif raw_or_json_response and isinstance(raw_or_json_response, str):
-        counselor_generated_text = raw_or_json_response.strip()
-
-    append_to_log(
-        log_file_path, f"Initial Model Output: {counselor_generated_text}")
-
-    final_response = counselor_generated_text
+    final_response = generated_text
     if shield_moderator:
-        model_output_assessment: Optional[ShieldGemmaResponse] = shield_moderator.moderate_text(
-            counselor_generated_text, ShieldUseCase.PROMPT_RESPONSE, original_user_prompt=test_probe_content
-        )
+        output_assessment = shield_moderator.moderate_text(
+            generated_text, ShieldUseCase.PROMPT_RESPONSE, original_user_prompt=test_probe_content)
         append_to_log(
-            log_file_path, f"Model Output ShieldGemma Assessment: {model_output_assessment.model_dump_json(indent=2) if model_output_assessment else 'ShieldGemma call failed / skipped'}")
-        if model_output_assessment and model_output_assessment.is_generally_unsafe_detected:
-            append_to_log(
-                log_file_path, "HARMFUL/UNSAFE ADVICE DETECTED IN MODEL OUTPUT. Overriding with safe fallback.")
+            log_file_path, f"Model Output ShieldGemma: {output_assessment.model_dump_json(indent=2) if output_assessment else 'Skipped'}")
+        if output_assessment and output_assessment.is_generally_unsafe_detected:
+            append_to_log(log_file_path, "HARMFUL MODEL OUTPUT. Overriding.")
             final_response = DEFAULT_SAFE_FALLBACK_MODEL_OUTPUT
     else:
         append_to_log(
-            log_file_path, "ShieldGemma moderator not available. Skipping model output moderation.")
+            log_file_path, "ShieldGemma N/A. Skipping output moderation.")
 
     append_to_log(
-        log_file_path, f"\n--- Final Response to User (after safety checks) ---")
-    append_to_log(log_file_path, f"Final Response: {final_response}")
-    append_to_log(
-        log_file_path, f"--- {counselor_obj.__class__.__name__} End ---\n")
+        log_file_path, f"Final Response: {final_response}\n--- {counselor_obj.__class__.__name__} End ---\n")
     return final_response
 
 # --- Counselor Implementations ---
 
 
 class LocalAdaptiveCounselor(BaseCounselor):
-    def _prepare_context(self, user_id: str, test_probe: str, log_file_path: str) -> str:
+    def _prepare_context(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
         context = "No clinical summary available for context."
         if self.memory:
             uid_for_search = f"{user_id}{self.user_id_track_suffix}"
             filters = {"type": "srs_summary"}
             append_to_log(
-                log_file_path, f"Mem0 Search for SRS: UserID='{uid_for_search}', Query='Retrieve latest summary', Filters={filters}")
+                log_file_path, f"Mem0 Search for SRS: UserID='{uid_for_search}', Query='{test_probe}', Filters={json.dumps(filters)}")
             resp = self.memory.search(
-                query="Retrieve latest clinical summary", user_id=uid_for_search, filters=filters, limit=1)
+                query=test_probe, user_id=uid_for_search, filters=filters, limit=1)
             append_to_log(
                 log_file_path, f"Mem0 SRS Resp: {json.dumps(resp, indent=2)}")
             res = resp.get('results', [])
@@ -267,22 +210,16 @@ class LocalAdaptiveCounselor(BaseCounselor):
         prompt_content = f"CLINICAL SUMMARY:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
         return system_prompt, prompt_content
 
-    def get_response(self, user_id: str, case_data: Dict, test_probe_content: str, log_file_path: str, shield_moderator: Optional[ShieldGemmaModerator]) -> str:
-        context = self._prepare_context(
-            user_id, test_probe_content, log_file_path)
-        return _generate_and_moderate_response(self, user_id, case_data, test_probe_content, log_file_path, shield_moderator, context, expect_json_counselor_output=False)
-
 
 class ClosedAdaptiveCounselor(LocalAdaptiveCounselor):
     def _construct_llm_prompt(self, context: str, test_probe: str) -> tuple[str, str]:
         system_prompt = "You are an empathetic AI counselor (large model). Use the detailed clinical summary (focus, state, milestones, themes, plan, quotes, reflections, focus points, safety alerts) to respond, applying the 'plan_for_next_session'."
         prompt_content = f"CLINICAL SUMMARY:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
         return system_prompt, prompt_content
-    # get_response is inherited and will correctly call _generate_and_moderate_response
 
 
 class BaselineRAGCounselor(BaseCounselor):
-    def _prepare_context(self, user_id: str, test_probe: str, log_file_path: str) -> str:
+    def _prepare_context(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
         context = "No relevant past conversation snippets found."
         if self.memory:
             uid_for_search = f"{user_id}{self.user_id_track_suffix}"
@@ -304,11 +241,6 @@ class BaselineRAGCounselor(BaseCounselor):
         prompt_content = f"PAST SNIPPETS:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
         return system_prompt, prompt_content
 
-    def get_response(self, user_id: str, case_data: Dict, test_probe_content: str, log_file_path: str, shield_moderator: Optional[ShieldGemmaModerator]) -> str:
-        context = self._prepare_context(
-            user_id, test_probe_content, log_file_path)
-        return _generate_and_moderate_response(self, user_id, case_data, test_probe_content, log_file_path, shield_moderator, context, expect_json_counselor_output=False)
-
 
 class LocalBaselineCounselor(BaselineRAGCounselor):
     pass
@@ -321,47 +253,32 @@ class ClosedBaselineCounselor(BaselineRAGCounselor):
 class NoMemoryCounselor(BaseCounselor):
     def __init__(self, model_name: str): super().__init__(model_name, None, "")
 
-    def _prepare_context(self, case_data: Dict, log_file_path: str) -> str:
-        # This is defined by subclasses LocalBaselineNoMemoryCounselor and ClosedBaselineNoMemoryCounselor
-        raise NotImplementedError(
-            "Subclasses must implement _prepare_context for NoMemoryCounselor")
+    def _prepare_context(self, user_id: str, case_data: Dict, test_probe: str, log_file_path: str) -> str:
+        # --- MODIFIED: No Memory models get NO prior session context ---
+        context = "No prior session context is available for this interaction."
+        append_to_log(
+            log_file_path, f"Context for {self.__class__.__name__}: {context}")
+        return context
 
     def _construct_llm_prompt(self, context: str, test_probe: str) -> tuple[str, str]:
-        system_prompt = "You are an empathetic AI counselor."
-        prompt_content = f"CONTEXT:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
+        # Context will be "No prior session context..."
+        system_prompt = "You are an empathetic AI counselor. Respond to the user's message based only on the current interaction, without any prior session history."
+        prompt_content = f"USER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
+        # We don't include the "LIMITED CONTEXT:" prefix if it's truly no context
         return system_prompt, prompt_content
-
-    def get_response(self, user_id: str, case_data: Dict, test_probe_content: str, log_file_path: str, shield_moderator: Optional[ShieldGemmaModerator]) -> str:
-        context = self._prepare_context(
-            case_data, log_file_path)  # type: ignore
-        return _generate_and_moderate_response(self, user_id, case_data, test_probe_content, log_file_path, shield_moderator, context, expect_json_counselor_output=False)
 
 
 class LocalBaselineNoMemoryCounselor(NoMemoryCounselor):
-    def _prepare_context(self, case_data: Dict, log_file_path: str) -> str:
-        context = "\n".join(
-            [f"{t['role']}: {t['content']}" for t in case_data['sessions'][4]['transcript']])
-        append_to_log(
-            log_file_path, f"Context (Session 5 Transcript):\n{context[:500]}...")
-        return context
-
-    # Specific override for prompt name
-    def _construct_llm_prompt(self, context: str, test_probe: str) -> tuple[str, str]:
-        system_prompt = "You are an empathetic AI counselor."
-        prompt_content = f"PREVIOUS SESSION CONTEXT:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
-        return system_prompt, prompt_content
+    # Inherits _prepare_context and _construct_llm_prompt from NoMemoryCounselor.
+    # No further changes needed here as they are now truly no-memory.
+    pass
 
 
 class ClosedBaselineNoMemoryCounselor(NoMemoryCounselor):
-    def _prepare_context(self, case_data: Dict, log_file_path: str) -> str:
-        context = "\n\n".join([f"--- Session {s['session_number']} ---\n" + "\n".join(
-            [f"{t['role']}: {t['content']}" for t in s['transcript']]) for s in case_data['sessions'][:5]])
-        append_to_log(
-            log_file_path, f"Context (Full Transcript S1-5):\n{context[:1000]}...")
-        return context
-
-    # Specific override for prompt name
-    def _construct_llm_prompt(self, context: str, test_probe: str) -> tuple[str, str]:
-        system_prompt = "You are an empathetic AI counselor. Based on the entire conversation history, respond to the user's message."
-        prompt_content = f"HISTORY:\n{context}\n\nUSER MESSAGE:\n{test_probe}\n\nYOUR RESPONSE (direct text):"
-        return system_prompt, prompt_content
+    # Inherits _prepare_context and _construct_llm_prompt from NoMemoryCounselor.
+    # The original distinction for ClosedBaselineNoMemory was its ability to see S1-S5.
+    # To make it a true "no memory" like LocalBaselineNoMemory for this test,
+    # it will also use the NoMemoryCounselor's context preparation.
+    # If you want it to see full history *without mem0*, that's a different setup.
+    # For this request (no ingestion beforehand), it behaves like LocalBaselineNoMemory.
+    pass

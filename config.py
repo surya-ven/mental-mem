@@ -13,7 +13,7 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "YOUR_OPENAI_API_KEY")
 DATA_GEN_MODEL = "openai/gpt-4.1"
 REFLECTOR_MODEL = "openai/gpt-4.1"
 # REFLECTOR_MODEL = "openai/gpt-4.1-mini"
-JUDGE_MODEL = "openai/gpt-4.1"
+JUDGE_MODEL = "google/gemini-2.5-pro-preview"
 # JUDGE_MODEL = "google/gemini-2.5-flash-preview-05-20"
 
 # "Local-runnable" open model (called via OpenRouter)
