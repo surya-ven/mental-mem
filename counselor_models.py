@@ -270,15 +270,9 @@ class NoMemoryCounselor(BaseCounselor):
 
 class LocalBaselineNoMemoryCounselor(NoMemoryCounselor):
     # Inherits _prepare_context and _construct_llm_prompt from NoMemoryCounselor.
-    # No further changes needed here as they are now truly no-memory.
     pass
 
 
 class ClosedBaselineNoMemoryCounselor(NoMemoryCounselor):
     # Inherits _prepare_context and _construct_llm_prompt from NoMemoryCounselor.
-    # The original distinction for ClosedBaselineNoMemory was its ability to see S1-S5.
-    # To make it a true "no memory" like LocalBaselineNoMemory for this test,
-    # it will also use the NoMemoryCounselor's context preparation.
-    # If you want it to see full history *without mem0*, that's a different setup.
-    # For this request (no ingestion beforehand), it behaves like LocalBaselineNoMemory.
     pass

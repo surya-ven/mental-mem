@@ -27,8 +27,8 @@ def call_api_client(
     model: str,
     temperature: float = 0.7,
     system_prompt: Optional[str] = None,
-    expect_json_object: bool = True  # --- NEW FLAG ---
-) -> Optional[Union[T, str]]:  # --- RETURN TYPE CAN BE STRING NOW ---
+    expect_json_object: bool = True
+) -> Optional[Union[T, str]]:
     """
     Calls a model via the OpenRouter API.
     If expect_json_object is True, parses the response into a Pydantic model.
@@ -67,8 +67,6 @@ def call_api_client(
         return None  # Keep returning None on Pydantic error
     except Exception as e:
         print(f"--- API Client Error ({model}) --- \n{e}")
-        # If not expecting JSON, an error might still occur, but it won't be Pydantic's fault.
-        # We might return the raw content if it exists, or a specific error marker.
         # For simplicity, if we expected JSON and failed, or any other API error, return None.
         # If we didn't expect JSON and an API error occurs, also None.
         return None

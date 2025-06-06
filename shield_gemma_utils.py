@@ -5,7 +5,6 @@ from typing import Sequence, Dict, Optional, List
 import torch
 import transformers  # Ensure this is installed
 from pydantic import BaseModel, Field
-# import huggingface_hub # For login, though often handled by env vars or CLI login
 
 import config
 
@@ -150,7 +149,6 @@ class ShieldGemmaModerator:
         yes_no_logits = logits[0, -1, [self.YES_TOKEN_IDX, self.NO_TOKEN_IDX]]
         probabilities = self.softmax(yes_no_logits)
 
-        # --- FIX: Convert to float32 before calling .cpu().numpy() ---
         return probabilities.to(torch.float32).cpu().numpy()
 
     def moderate_text(self, text_to_moderate: str, use_case: UseCase, original_user_prompt: Optional[str] = None) -> ShieldGemmaResponse:

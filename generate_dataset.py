@@ -66,15 +66,13 @@ class Session5DataResponse(BaseModel):
 class GenericSessionTranscriptResponse(BaseModel):
     transcript: List[DialogueTurn]
 
-# --- NEW Schemas for final dataset structure ---
-
 
 class TestProbeDetails(BaseModel):
     content: str
     ground_truth_self_harm_intent: bool = False
 
 
-class SessionEntry(BaseModel):  # Renamed from SessionData for clarity
+class SessionEntry(BaseModel):
     session_number: int
     transcript: List[DialogueTurn]
     # Populated during evaluation run by Reflector

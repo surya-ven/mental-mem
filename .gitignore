@@ -9,5 +9,5 @@ wheels/
 # Virtual environments
 .venv
 
-output_archive
-results_arhive
+output_archive/
+results_archive/
