@@ -1,51 +1,79 @@
 # Project: Longitudinal Profile Synthesis for Adaptive AI Counseling
 
-This project implements and evaluates an AI counselor that adapts to a user's personal evolution over time. It compares a **Static Counselor** (Baseline) against an **Adaptive Counselor** (Proposed Method) that uses a "Profile Synthesis" step to update its understanding of the user.
+This project implements and evaluates AI counselors that adapt to a user's personal evolution over multiple simulated therapy sessions. It compares various counselor models, including those that use a "Profile Synthesis" step (via a Reflector module) to update their understanding of the user against baseline and no-memory versions.
 
 ## How It Works
 
-The core idea is to test if an AI can detect shifts in a user's values and goals across multiple sessions and use that understanding to provide better-aligned responses.
+The core process involves generating a synthetic dataset, running different counselor models, and evaluating their responses.
 
-1.  **Dataset Generation**: A synthetic dataset of multi-session therapy cases is created. Each case includes an `initial_profile`, an `evolved_profile` after a key insight, and a final `test_probe`.
-2.  **Baseline Model (Static Counselor)**: This model uses _only_ the user's `initial_profile` to inform its personality and response.
-3.  **Proposed Model (Adaptive Counselor)**: This model first performs **Profile Synthesis**. It analyzes the conversation history to create a _predicted_ `evolved_profile`. It then uses this new, updated profile to inform its response.
-4.  **Evaluation**: We use a two-pronged approach:
-    -   **Synthesis Accuracy**: We quantitatively measure how accurately the Adaptive Counselor's predicted profile matches the ground-truth evolved profile from the dataset.
-    -   **G.R.O.W.T.H. Rubric**: An LLM-as-Judge scores the final responses from both models on therapeutic quality, measuring alignment with the user's _actual_ evolved state.
+1.  **Dataset Generation**:
+
+    -   The `generate_dataset.py` script creates multi-session therapy case studies.
+    -   It uses seed problem statements from `seed_data/counseling_data_seed.json`.
+    -   Each generated case includes session transcripts and details about the user's evolving state.
+    -   The output dataset (e.g., `counseling_dataset_*.json`) is saved in the `output/` directory.
+
+2.  **Counselor Models & Configuration**:
+
+    -   `counselor_models.py` defines the various AI counselors, such as:
+        -   **Adaptive Counselors**: Utilize a "Reflector" (`run_srs_reflector`) to perform profile synthesis, creating a `ClinicalSummary` to adapt to the user over sessions.
+        -   **Baseline Counselors**: May use RAG from initial information but do not dynamically update the user profile in the same way.
+        -   **No-Memory Counselors**: Serve as a control.
+    -   Models can be run using "local" open-source LLMs or "closed" proprietary LLMs.
+    -   Key model choices are configured in `config.py`, specifically:
+        -   `LOCAL_MODEL_NAME`: For open-source counselor models.
+        -   `CLOSED_MODEL_NAME`: For proprietary counselor models.
+        -   `REFLECTOR_MODEL`: Used for the profile synthesis step.
+        -   `JUDGE_MODEL`: Used in the evaluation phase.
+
+3.  **Evaluation**:
+    -   The `evaluation.py` script runs the full evaluation pipeline.
+    -   It tests the different counselor models against the generated dataset.
+    -   An LLM-as-Judge (using `JUDGE_MODEL`) scores counselor responses based on:
+        -   **T.A.S.C.S. Rubric**: Assessing Task Alignment, Alliance Bond, Stylistic Congruence, and Congruence With Goals.
+        -   **Safety Scores**: Evaluating the safety of the model's output and its handling of sensitive situations.
+    -   Detailed evaluation results (e.g., `evaluation_results_*.json`) are saved in the `output/` directory.
+    -   Historical evaluation runs and their detailed logs can be found in the `results_archive/` directory for inspection.
 
 ## Setup
 
-1.  **Prerequisites**: Make sure you have Python 3.9+ installed.
-2.  **Create Project Structure**: Create the folders and files as described in the project documentation.
-3.  **API Key**: Open `config.py` and enter your OpenAI API key.
-4.  **Install Dependencies**:
+1.  **Prerequisites**:
+
+    -   Python 3.9+
+    -   Access to the LLM APIs used in `config.py`.
+
+2.  **API Keys**:
+
+    -   Open `config.py` and set your `OPENROUTER_API_KEY` and `OPENAI_API_KEY` (and any other relevant API keys for the models you intend to use).
+
+3.  **Install Dependencies**:
+
     ```bash
-    pip install -r requirements.txt
+    uv sync
     ```
-5.  **Seed Data**: Place your seed data file in the `seed_data/` directory and name it `counseling_data_seed.json`. It should be a JSON array of objects, where each object has a `"questionText"` field containing the initial user problem.
+
+4.  **Seed Data**:
+    -   Ensure your seed data file, `counseling_data_seed.json`, is located in the `seed_data/` directory. This file should contain initial user problem statements used by `generate_dataset.py`.
+    -   The `source_data/` folder contains other raw data that may have been used to prepare the seed data.
 
 ## How to Run
 
-Execute the scripts in order.
+Execute the scripts in the following order:
 
 **Step 1: Generate the Dataset**
-This script uses the seed data to generate the multi-session case studies.
+This script uses the seed data to generate multi-session case studies.
 
 ```bash
 python generate_dataset.py
 ```
 
-This will create `counseling_dataset.json` in the `output/` folder.
+This will create `counseling_dataset_*.json` (or similar) in the `output/` folder.
 
 **Step 2: Run the Full Evaluation**
-This script will run both the baseline and adaptive models on the generated dataset and then evaluate their performance.
+This script runs the different counselor models on the generated dataset and evaluates their performance.
 
 ```bash
-python run_evaluation.py
+python evaluation.py
 ```
 
-The script will print a detailed report to the console and save the full results to `evaluation_results.json` in the `output/` folder.
-
-## Note on `mem0`
-
-The attached documentation for `mem0` describes a valuable memory layer for AI. In a production version of this system, a tool like `mem0` would be ideal for storing and retrieving the user profiles and conversation transcripts discussed here. For this specific research experiment, we focus on the higher-level **synthesis logic** itself, using local JSON files as our data store to clearly isolate and evaluate the core contribution.
+The script will output a summary to the console and save detailed results (e.g., `evaluation_results_*.json`) in the `output/` folder. Check `output/run_logs/` for detailed logs of each case and model.
